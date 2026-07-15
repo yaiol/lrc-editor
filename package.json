@@ -1,0 +1,108 @@
+{
+  "name": "lrc-editor",
+  "productName": "LRC Editor",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "LRC Files Editor",
+  "private": true,
+  "author": "yaiol",
+  "main": "electron/main.mjs",
+  "homepage": "./",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaiol/music-lrc-editor.git"
+  },
+  "devPort": 3002,
+  "storagePrefix": "lrc",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "electron": "electron .",
+    "electron:dev": "concurrently \"npm start\" \"wait-on http://localhost:3002 && electron .\"",
+    "dist": "npm run build && electron-builder --win --x64",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux"
+  },
+  "dependencies": {
+    "brace-expansion": "^5.0.5",
+    "express": "^5.2.1",
+    "music-metadata": "^11.13.0",
+    "path-to-regexp": "^8.4.2",
+    "picomatch": "^4.0.4",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "concurrently": "^10.0.3",
+    "electron": "^42.5.0",
+    "electron-builder": "^26.15.3",
+    "electron-is-dev": "^3.0.1",
+    "lucide-react": "^1.21.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite": "^8.1.0",
+    "wait-on": "^9.0.10"
+  },
+  "build": {
+    "appId": "com.yaiol.lrc-editor.app",
+    "productName": "LRC Editor",
+    "extends": null,
+    "extraMetadata": {
+      "main": "electron/main.mjs"
+    },
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "public/app.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/app.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/app.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "menuCategory": "yaiol",
+      "shortcutName": "LRC Editor",
+      "uninstallDisplayName": "yaiol LRC Editor"
+    },
+    "fileAssociations": [
+      {
+        "ext": "lrc",
+        "name": "LRC Lyrics File",
+        "description": "Synchronized Lyrics File",
+        "role": "Editor",
+        "icon": "public/ext-lrc"
+      }
+    ],
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "yaiol",
+        "repo": "music-lrc-editor"
+      }
+    ]
+  }
+}
