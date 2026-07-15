@@ -10,7 +10,7 @@
   "homepage": "./",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yaiol/music-lrc-editor.git"
+    "url": "git+https://github.com/yaiol/lrc-editor.git"
   },
   "devPort": 3002,
   "storagePrefix": "lrc",
@@ -101,7 +101,7 @@
       {
         "provider": "github",
         "owner": "yaiol",
-        "repo": "music-lrc-editor"
+        "repo": "lrc-editor"
       }
     ]
   }
