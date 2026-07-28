@@ -14,6 +14,7 @@ import { UpdateBanner } from './lib/ui-update-banner';
 import { AppHeader } from './lib/ui-header';
 import { GithubIcon } from './lib/ui-icons';
 import { Splitter } from './lib/ui-ctl-splitter';
+import { useToast } from './lib/ui-fx-toast';
 import { NumberField } from './lib/ui-ctl-numberfield';
 import { CollapseToggle } from './lib/ui-ctl-collapsetoggle';
 import { useFileDrop } from './lib/ui-fx-filedrop';
@@ -124,25 +125,50 @@ function applyLrcTimeChange(lines, index, newTime) {
   const result = lines.map(l => ({ ...l }));
   result[index].time = clamped;
   if (clamped < lines[index].time) {
-    // Decreased: cascade upward - each violating line is set to its successor's time - CASCADE_GAP
-    // ⚠ CLAUDE: skip unsynced lines (time === 0) - cascading must never assign timestamps to them
+    // Decreased: cascade upward - each violating line is pulled to (nearest synced successor - CASCADE_GAP)
+    // ⚠ CLAUDE: skip unsynced lines (time === 0) - cascading must never assign timestamps to them,
+    // and the comparison must use the nearest SYNCED neighbour, never result[i+1] (an unsynced 0
+    // there would drag a valid timestamp down to 0 and silently unsync the line).
+    let next = clamped;
     for (let i = index - 1; i >= 0; i--) {
-      if (lines[i].time === 0) continue;
-      if (result[i].time >= result[i + 1].time) {
-        result[i].time = Math.max(0, result[i + 1].time - CASCADE_GAP);
-      } else break;
+      if (result[i].time === 0) continue;
+      if (result[i].time < next) break;
+      if (next - CASCADE_GAP <= 0) break; // no room left before the start of the track
+      result[i].time = next - CASCADE_GAP;
+      next = result[i].time;
     }
   } else {
-    // Increased: cascade downward - each violating line is set to its predecessor's time + CASCADE_GAP
-    // ⚠ CLAUDE: skip unsynced lines (time === 0) - cascading must never assign timestamps to them
+    // Increased: cascade downward - each violating line is pushed to (nearest synced predecessor + CASCADE_GAP)
+    // ⚠ CLAUDE: same rule as above - skip unsynced lines and compare against the nearest synced neighbour.
+    let prev = clamped;
     for (let i = index + 1; i < result.length; i++) {
-      if (lines[i].time === 0) continue;
-      if (result[i].time <= result[i - 1].time) {
-        result[i].time = result[i - 1].time + CASCADE_GAP;
-      } else break;
+      if (result[i].time === 0) continue;
+      if (result[i].time > prev) break;
+      result[i].time = prev + CASCADE_GAP;
+      prev = result[i].time;
     }
   }
   return result;
+}
+
+// ⚠ CLAUDE: a loaded file can carry inverted timestamps (line i stamped AFTER line i+1) - written
+// by another editor, or by a version of this app whose sync only cascaded forward. Order is repaired
+// on load by pulling the EARLIER line back, never by moving the later one, so every stamp the user
+// actually synced against the audio keeps its value.
+function normalizeLrcTimes(lines) {
+  const result = lines.map(l => ({ ...l }));
+  let fixed = 0;
+  let next = null; // nearest synced time below - unsynced lines (time 0) are skipped, never stamped
+  for (let i = result.length - 1; i >= 0; i--) {
+    if (result[i].time === 0) continue;
+    if (next !== null && result[i].time >= next) {
+      // halve instead of subtracting the gap when there is no room before the start of the track
+      result[i].time = next - CASCADE_GAP > 0 ? next - CASCADE_GAP : next / 2;
+      fixed++;
+    }
+    next = result[i].time;
+  }
+  return { lines: result, fixed };
 }
 
 function shiftLRCLine(lines, index, deltaSeconds) {
@@ -195,8 +221,6 @@ function buildCss() {
     input, textarea, select { font-family: inherit; font-size: inherit; color: var(--text); background: var(--bg-input); border: 1px solid var(--border); border-radius: 4px; outline: none; }
     input:focus, textarea:focus, select:focus { border-color: var(--accent); }
     textarea { resize: none; }
-    @keyframes toastIn { from { opacity: 0; transform: translateX(-50%) translateY(8px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
-    .toast-msg { animation: toastIn 0.2s ease; }
     /* .barh-app-version — shared, unscoped, in ui-app.css (bg = --bar-bgd). Not redefined here. */
     .lyric-line { padding: 5px 10px; cursor: pointer; border-bottom: 1px solid var(--border)20; display: flex; align-items: center; min-height: 28px; user-select: none; }
     .lyric-line.selected { background: var(--bg-hov); color: var(--accent); }
@@ -292,14 +316,15 @@ export default function App() {
   const [showMeta, setShowMeta] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [tabSettingsActive, setTabSettingsActive] = useState('display');
-  const [toast, setToast] = useState(null);
+  // Lifted clear of the player bar (42px .barh-footer + the toast's own 28px gap) so the pill
+  // floats inside the content area instead of straddling the footer.
+  const { showToast, toast } = useToast({ bottom: 70 });
   const [confirm, setConfirm] = useState(null);
 
   // Refs
   const audioRef = useRef(null);
   const confirmResolveRef = useRef(null);
   const lrcOutputListRef = useRef(null);
-  const toastTimerRef = useRef(null);
   const verifyTimeoutRef = useRef(null);
   const splitCursorRef = useRef({ idx: -1, pos: 0 });
   const pendingCaretRef = useRef(null);
@@ -318,12 +343,6 @@ export default function App() {
     undoStackRef.current = undoStackRef.current.slice(0, -1);
     setLrcData(prev);
     setUnsaved(true);
-  }
-
-  function showToast(msg) {
-    if (toastTimerRef.current) clearTimeout(toastTimerRef.current);
-    setToast(msg);
-    toastTimerRef.current = setTimeout(() => setToast(null), 2500);
   }
 
   function showConfirmDialog(title, msg, noCancel = false) {
@@ -691,19 +710,10 @@ export default function App() {
     }
     if (activeLrcLine >= lrcData.lines.length) return;
     pushUndo();
-    setLrcData(prev => {
-      const lines = [...prev.lines];
-      lines[activeLrcLine] = { ...lines[activeLrcLine], time: lineTime };
-      // Push subsequent lines that were already synced but are now at or before lineTime.
-      // Skip unsynced lines (time=0) - continue past them to fix stale synced lines further down.
-      for (let i = activeLrcLine + 1; i < lines.length; i++) {
-        if (lines[i].time === 0) continue;
-        if (lines[i].time <= lineTime) {
-          lines[i] = { ...lines[i], time: lineTime + (i - activeLrcLine) * 0.01 };
-        } else break;
-      }
-      return { ...prev, lines };
-    });
+    // ⚠ CLAUDE: stamping a time goes through applyLrcTimeChange like every other time edit -
+    // it cascades BOTH ways (earlier lines pulled back, later lines pushed forward), so a line
+    // can never end up before its predecessor. Do not reintroduce a local one-directional push.
+    setLrcData(prev => ({ ...prev, lines: applyLrcTimeChange(prev.lines, activeLrcLine, lineTime) }));
     setLrcDraftTimes({});
     setUnsaved(true);
     if (activeLrcLine < lrcData.lines.length) setActiveLrcLine(activeLrcLine + 1);
@@ -839,11 +849,16 @@ export default function App() {
       } else { setEndLyricsTime(0); }
       parsed.editor = parsed.editor || 'LRC Editor';
       parsed.editorVersion = parsed.editorVersion || APP_VERSION;
+      const { lines: ordered, fixed } = normalizeLrcTimes(parsed.lines);
+      parsed.lines = ordered;
       setLrcData(parsed);
       setLrcFileName(result.filePath);
-      setUnsaved(false);
+      setUnsaved(fixed > 0);
       setActiveLrcLine(-1);
+      if (fixed > 0) showToast(t('tstAppTimesFixed'));
+      return fixed;
     }
+    return 0;
   }
 
   async function tryAutoLrc(mediaFilePath) {
@@ -852,8 +867,8 @@ export default function App() {
       body: JSON.stringify({ filePath: mediaFilePath }),
     }).then(r => r.json());
     if (!auto) return false;
-    applyLrcResult(auto);
-    showToast(t('tstAppAutoLrcLoaded'));
+    // the repair notice outranks "loaded automatically" - don't overwrite it
+    if (!applyLrcResult(auto)) showToast(t('tstAppAutoLrcLoaded'));
     return true;
   }
 
@@ -931,7 +946,7 @@ export default function App() {
     await fetch(`${API}/save-txt`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ lines: lrcData.lines.map(l => l.text), title: t('ttlOsdSaveTxt') }),
+      body: JSON.stringify({ lines: lrcData.lines.map(l => l.text), title: t('ttlOsdSaveTxt'), lrcFilePath: lrcFileName || null, mediaFilePath: mediaFilePath || null }),
     });
   }
 
@@ -1437,16 +1452,7 @@ export default function App() {
       />
 
       {/* ── Toast ───────────────────────────────────────────── */}
-      {toast && (
-        <div className="toast-msg" style={{
-          position: 'fixed', bottom: 24, left: '50%', transform: 'translateX(-50%)',
-          background: 'var(--accent)', color: '#fff', padding: '8px 20px',
-          borderRadius: 20, fontSize: 13, pointerEvents: 'none', zIndex: 9999,
-          whiteSpace: 'nowrap', boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-        }}>
-          {toast}
-        </div>
-      )}
+      {toast}
 
       {/* ── Modals ──────────────────────────────────────────── */}
       {ConfirmDialog()}

@@ -39,6 +39,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Out-of-order timestamps were corrected.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Open Music File",
@@ -161,6 +162,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Fichier de paroles chargé automatiquement.",
     tstAppFileError:                        "Impossible d'ouvrir le fichier.",
     tstAppSaveError:                        "Impossible d'enregistrer.",
+    tstAppTimesFixed:                       "Horodatages désordonnés corrigés.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Ouvrir un fichier musical",
@@ -282,6 +284,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Liedtextdatei automatisch geladen.",
     tstAppFileError:                        "Datei konnte nicht geöffnet werden.",
     tstAppSaveError:                        "Datei konnte nicht gespeichert werden.",
+    tstAppTimesFixed:                       "Zeitstempelreihenfolge korrigiert.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Musikdatei öffnen",
@@ -403,6 +406,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Archivo de letras cargado automáticamente.",
     tstAppFileError:                        "Error al abrir el archivo.",
     tstAppSaveError:                        "Error al guardar el archivo.",
+    tstAppTimesFixed:                       "Marcas de tiempo desordenadas corregidas.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Abrir archivo de música",
@@ -524,6 +528,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Arquivo de letras carregado automaticamente.",
     tstAppFileError:                        "Erro ao abrir ficheiro.",
     tstAppSaveError:                        "Erro ao guardar ficheiro.",
+    tstAppTimesFixed:                       "Carimbos de data/hora fora de ordem corrigidos.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Abrir ficheiro de música",
@@ -645,6 +650,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Ficheiro de letras carregado automaticamente.",
     tstAppFileError:                        "Erro ao abrir ficheiro.",
     tstAppSaveError:                        "Erro ao guardar ficheiro.",
+    tstAppTimesFixed:                       "Carimbos de data/hora desordenados corrigidos.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Abrir ficheiro de música",
@@ -766,6 +772,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "File testo caricato automaticamente.",
     tstAppFileError:                        "Impossibile aprire il file.",
     tstAppSaveError:                        "Impossibile salvare il file.",
+    tstAppTimesFixed:                       "Timestamp fuori ordine corretti.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Apri file musicale",
@@ -887,6 +894,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "歌詞ファイルを自動的に読み込みました。",
     tstAppFileError:                        "ファイルを開けませんでした。",
     tstAppSaveError:                        "ファイルを保存できませんでした。",
+    tstAppTimesFixed:                       "順不同のタイムスタンプを修正しました。",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "音楽ファイルを開く",
@@ -1008,6 +1016,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "가사 파일이 자동으로 로드되었습니다.",
     tstAppFileError:                        "파일을 열 수 없습니다.",
     tstAppSaveError:                        "파일을 저장할 수 없습니다.",
+    tstAppTimesFixed:                       "타임스탬프 순서 오류 수정됨.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "음악 파일 열기",
@@ -1129,6 +1138,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "歌词文件已自动加载。",
     tstAppFileError:                        "无法打开文件。",
     tstAppSaveError:                        "无法保存文件。",
+    tstAppTimesFixed:                       "已修正乱序时间戳。",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "打开音乐文件",
@@ -1250,6 +1260,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "歌詞檔案已自動載入。",
     tstAppFileError:                        "無法開啟檔案。",
     tstAppSaveError:                        "無法儲存檔案。",
+    tstAppTimesFixed:                       "已修正亂序時間戳。",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "開啟音樂檔案",
@@ -1371,6 +1382,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "تم تصحيح ترتيب الطوابع الزمنية.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "فتح ملف موسيقي",
@@ -1492,6 +1504,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Marques de temps desordenades corregides.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Obre un fitxer de música",
@@ -1613,6 +1626,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Časové značky mimo pořadí opraveny.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Otevřít hudební soubor",
@@ -1734,6 +1748,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Uordnede tidsstempler korrigeret.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Åbn musikfil",
@@ -1855,6 +1870,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Tijdstempels buiten volgorde gecorrigeerd.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Muziekbestand openen",
@@ -1976,6 +1992,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Aikaleimojen järjestys korjattu.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Avaa musiikkitiedosto",
@@ -2097,6 +2114,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Χρονοσφραγίδες εκτός σειράς διορθώθηκαν.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Άνοιγμα αρχείου μουσικής",
@@ -2218,6 +2236,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "סדר חותמות הזמן תוקן.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "פתח קובץ מוזיקה",
@@ -2339,6 +2358,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Ispravljene vremenske oznake izvan redoslijeda.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Otvori glazbenu datoteku",
@@ -2460,6 +2480,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Uordnede tidsstempler korrigert.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Åpne musikkfil",
@@ -2581,6 +2602,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "ترتیب مهر‌های زمانی اصلاح شد.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "باز کردن فایل موسیقی",
@@ -2702,6 +2724,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Skorygowano nieuporządkowane znaczniki czasu.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Otwórz plik muzyczny",
@@ -2823,6 +2846,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Marcaje temporale dezordonate corectate.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Deschide fișier muzical",
@@ -2944,6 +2968,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Tidsstämplar i fel ordning korrigerade.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Öppna musikfil",
@@ -3065,6 +3090,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Đã sửa các dấu thời gian không theo thứ tự.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Mở tệp nhạc",
@@ -3186,6 +3212,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Sırasız zaman damgaları düzeltildi.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Müzik Dosyası Aç",
@@ -3307,6 +3334,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "File lirik dimuat secara otomatis.",
     tstAppFileError:                        "Gagal membuka file.",
     tstAppSaveError:                        "Gagal menyimpan file.",
+    tstAppTimesFixed:                       "Stempel waktu tidak berurutan dikoreksi.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Buka file musik",
@@ -3428,6 +3456,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Fail lirik dimuatkan secara automatik.",
     tstAppFileError:                        "Gagal membuka fail.",
     tstAppSaveError:                        "Gagal menyimpan fail.",
+    tstAppTimesFixed:                       "Cap masa tidak teratur diperbetulkan.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Buka fail muzik",
@@ -3549,6 +3578,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Файл текста загружен автоматически.",
     tstAppFileError:                        "Не удалось открыть файл.",
     tstAppSaveError:                        "Не удалось сохранить файл.",
+    tstAppTimesFixed:                       "Порядок меток времени исправлен.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Открыть музыкальный файл",
@@ -3670,6 +3700,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "โหลดไฟล์เนื้อเพลงอัตโนมัติแล้ว",
     tstAppFileError:                        "ไม่สามารถเปิดไฟล์ได้",
     tstAppSaveError:                        "ไม่สามารถบันทึกไฟล์ได้",
+    tstAppTimesFixed:                       "แก้ไขลำดับเวลาแล้ว.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "เปิดไฟล์เพลง",
@@ -3791,6 +3822,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
     tstAppSaveError:                        "Failed to save file.",
+    tstAppTimesFixed:                       "Порядок міток часу виправлено.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Відкрити музичний файл",
@@ -3912,6 +3944,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Տեքստի ֆայլը ավտոմատ բեռնված է:",
     tstAppFileError:                        "Չհաջողվեց բացել ֆայլը:",
     tstAppSaveError:                        "Չհաջողվեց պահպանել ֆայլը:",
+    tstAppTimesFixed:                       "Ժամանակային դրոշմների անկանոնությունը շտկվել է։",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Բացել երաժշտական ֆայլ",
@@ -4033,6 +4066,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Файлът с текст е зареден автоматично.",
     tstAppFileError:                        "Неуспешно отваряне на файла.",
     tstAppSaveError:                        "Неуспешно запазване на файла.",
+    tstAppTimesFixed:                       "Времеви клейма извън ред коригирани.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Отвори музикален файл",
@@ -4154,6 +4188,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Ficheiro de letra cargado automaticamente.",
     tstAppFileError:                        "Erro ao abrir o ficheiro.",
     tstAppSaveError:                        "Erro ao gardar o ficheiro.",
+    tstAppTimesFixed:                       "Marcas de tempo desordenadas corrixidas.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Abrir ficheiro de música",
@@ -4275,6 +4310,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Dalszöveg fájl automatikusan betöltve.",
     tstAppFileError:                        "Nem sikerült megnyitni a fájlt.",
     tstAppSaveError:                        "Nem sikerült menteni a fájlt.",
+    tstAppTimesFixed:                       "Időbélyegek sorrendje javítva.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Zenefájl megnyitása",
@@ -4396,6 +4432,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Žodžių failas įkeltas automatiškai.",
     tstAppFileError:                        "Nepavyko atidaryti failo.",
     tstAppSaveError:                        "Nepavyko išsaugoti failo.",
+    tstAppTimesFixed:                       "Laiko žymių tvarka pataisyta.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Atidaryti muzikos failą",
@@ -4517,6 +4554,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Фајлот со текст е вчитан автоматски.",
     tstAppFileError:                        "Неуспешно отворање на фајлот.",
     tstAppSaveError:                        "Неуспешно зачувување на фајлот.",
+    tstAppTimesFixed:                       "Коригирани се неподредените временски печати.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Отвори музички фајл",
@@ -4638,6 +4676,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Фајл са текстом је аутоматски учитан.",
     tstAppFileError:                        "Отварање фајла није успело.",
     tstAppSaveError:                        "Чување фајла није успело.",
+    tstAppTimesFixed:                       "Исправљене временске ознаке ван редоследа.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Отвори музички фајл",
@@ -4759,6 +4798,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Súbor s textom bol načítaný automaticky.",
     tstAppFileError:                        "Nepodarilo sa otvoriť súbor.",
     tstAppSaveError:                        "Nepodarilo sa uložiť súbor.",
+    tstAppTimesFixed:                       "Časové pečiatky mimo poradia opravené.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Otvoriť hudobný súbor",
@@ -4880,6 +4920,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Datoteka z besedilom je bila samodejno naložena.",
     tstAppFileError:                        "Odpiranje datoteke ni uspelo.",
     tstAppSaveError:                        "Shranjevanje datoteke ni uspelo.",
+    tstAppTimesFixed:                       "Popravljeni časovni žigi izven vrstnega reda.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Odpri glasbeno datoteko",
@@ -5001,6 +5042,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "பாடல் வரிகள் கோப்பு தானாக ஏற்றப்பட்டது.",
     tstAppFileError:                        "கோப்பைத் திறக்க முடியவில்லை.",
     tstAppSaveError:                        "கோப்பை சேமிக்க முடியவில்லை.",
+    tstAppTimesFixed:                       "வரிசைப்படுத்தப்படாத நேரமுத்திரைகள் சரிசெய்யப்பட்டது.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "இசை கோப்பைத் திற",
@@ -5122,6 +5164,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "गीत फ़ाइल स्वचालित रूप से लोड हुई।",
     tstAppFileError:                        "फ़ाइल खोलने में विफल।",
     tstAppSaveError:                        "फ़ाइल सहेजने में विफल।",
+    tstAppTimesFixed:                       "क्रमहीन टाइमस्टैम्प ठीक किए गए।",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "संगीत फ़ाइल खोलें",
@@ -5243,6 +5286,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "গানের কথার ফাইল স্বয়ংক্রিয়ভাবে লোড হয়েছে।",
     tstAppFileError:                        "ফাইল খুলতে ব্যর্থ।",
     tstAppSaveError:                        "ফাইল সংরক্ষণ করতে ব্যর্থ।",
+    tstAppTimesFixed:                       "ক্রমবিহীন টাইমস্ট্যাম্পগুলি সংশোধন করা হয়েছে।",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "সংগীত ফাইল খুলুন",
@@ -5364,6 +5408,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "گانے کی فائل خودکار طور پر لوڈ ہو گئی۔",
     tstAppFileError:                        "فائل کھولنے میں ناکامی۔",
     tstAppSaveError:                        "فائل محفوظ کرنے میں ناکامی۔",
+    tstAppTimesFixed:                       "بے ترتیب ٹائم اسٹیمپ درست کیے گئے۔",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "موسیقی فائل کھولیں",
@@ -5485,6 +5530,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Faili la maneno limepakiwa kiotomatiki.",
     tstAppFileError:                        "Imeshindwa kufungua faili.",
     tstAppSaveError:                        "Imeshindwa kuhifadhi faili.",
+    tstAppTimesFixed:                       "Mihuri ya muda isiyo na mpangilio imerekebishwa.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Fungua faili la muziki",
@@ -5606,6 +5652,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "ਗੀਤ ਫਾਈਲ ਆਪਣੇ ਆਪ ਲੋਡ ਹੋ ਗਈ।",
     tstAppFileError:                        "ਫਾਈਲ ਖੋਲ੍ਹਣ ਵਿੱਚ ਅਸਫਲ।",
     tstAppSaveError:                        "ਫਾਈਲ ਸੰਭਾਲਣ ਵਿੱਚ ਅਸਫਲ।",
+    tstAppTimesFixed:                       "ਬੇਤਰਤੀਬੇ ਸਮਾਂ-ਮੋਹਰਾਂ ਠੀਕ ਕੀਤੀਆਂ ਗਈਆਂ।",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "ਸੰਗੀਤ ਫਾਈਲ ਖੋਲ੍ਹੋ",
@@ -5727,6 +5774,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "An loda fayil ɗin waƙa kai tsaye.",
     tstAppFileError:                        "An kasa buɗe fayil ɗin.",
     tstAppSaveError:                        "An kasa ajiye fayil ɗin.",
+    tstAppTimesFixed:                       "An gyara tambarin lokaci marasa tsari.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Buɗe fayil ɗin kiɗa",
@@ -5848,6 +5896,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "A ti ṣii fáìlì orin laifọwọyi.",
     tstAppFileError:                        "Kò ṣeéṣe láti ṣii fáìlì.",
     tstAppSaveError:                        "Kò ṣeéṣe láti pamọ fáìlì.",
+    tstAppTimesFixed:                       "A ti ṣatunṣe awọn ami akoko ti ko tọ.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Ṣii fáìlì orin",
@@ -5969,6 +6018,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "పాట ఫైల్ స్వయంచాలకంగా లోడ్ చేయబడింది.",
     tstAppFileError:                        "ఫైల్ తెరవడం విఫలమైంది.",
     tstAppSaveError:                        "ఫైల్ సేవ్ చేయడం విఫలమైంది.",
+    tstAppTimesFixed:                       "క్రమరహిత సమయ స్టాంపులు సరిచేయబడ్డాయి.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "సంగీత ఫైల్ తెరవండి",
@@ -6090,6 +6140,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "गीत फाइल आपोआप लोड झाली.",
     tstAppFileError:                        "फाइल उघडण्यात अयशस्वी.",
     tstAppSaveError:                        "फाइल जतन करण्यात अयशस्वी.",
+    tstAppTimesFixed:                       "अव्यवस्थित टाइमस्टॅम्प्स दुरुस्त केले.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "संगीत फाइल उघडा",
@@ -6211,6 +6262,7 @@ const TRANSLATIONS = {
     tstAppAutoLrcLoaded:                    "Awtomatikong na-load ang liriko file.",
     tstAppFileError:                        "Nabigong buksan ang file.",
     tstAppSaveError:                        "Nabigong i-save ang file.",
+    tstAppTimesFixed:                       "Naitama ang mga timestamp na wala sa ayos.",
 
     // Prefix:Osd - Scope:OS native dialog titles
     ttlOsdOpenMusic:                        "Buksan ang music file",

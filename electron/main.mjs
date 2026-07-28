@@ -296,10 +296,14 @@ function startServer(callback) {
   });
 
   api.post("/save-txt", async (req, res) => {
-    const { lines, title } = req.body;
+    const { lines, title, lrcFilePath, mediaFilePath } = req.body;
+    const sourcePath = lrcFilePath || mediaFilePath;
+    const defaultPath = sourcePath
+      ? sourcePath.replace(/\.[^.]+$/, '.txt')
+      : "lyrics.txt";
     const result = await dialog.showSaveDialog(mainWindow, {
       title,
-      defaultPath: "lyrics.txt",
+      defaultPath,
       filters: [
         { name: "Text Files", extensions: ["txt"] },
         { name: "All Files", extensions: ["*"] }
