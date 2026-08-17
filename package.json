@@ -1,7 +1,7 @@
 {
   "name": "lrc-editor",
   "productName": "LRC Editor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "LRC Files Editor",
   "private": true,
@@ -15,7 +15,9 @@
   "devPort": 3002,
   "storagePrefix": "lrc",
   "scripts": {
+    "prestart": "node ../../.common/i18n/i18n-split.mjs .",
     "start": "vite",
+    "prebuild": "node ../../.common/i18n/i18n-split.mjs .",
     "build": "vite build",
     "electron": "electron .",
     "electron:dev": "concurrently \"npm start\" \"wait-on http://localhost:3002 && electron .\"",

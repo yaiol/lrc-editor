@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2 — 2026-08-17
+
+- Split the translations into one chunk per language, loaded on demand, so the entry bundle no longer carries all 50
+- Add opt-in main-process startup timing, silent unless YAIOL_STARTUP_LOG is set
+
 ## 1.0.1 — 2026-07-28
 
 - Repair out-of-order timestamps automatically when a lyrics file is opened — a line stamped after the one that follows it is pulled back before it

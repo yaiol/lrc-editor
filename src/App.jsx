@@ -6,7 +6,7 @@
 //   Never paste translations by hand. The scripts ARE the work.
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Settings, HelpCircle, Music, FolderOpen, Save, SavePlus, FilePlus, X, Play, Pause, Square, Moon, Sun, ScrollText, Upload, SkipBack, SkipForward, Volume1, Volume2, VolumeX, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useT, LANGUAGES } from './i18n';
+import { useT, LANGUAGES } from './i18n-gen';
 import pkg from '../package.json';
 import yaiolLogo from './assets/yaiol-logo.svg';
 import { checkForUpdate } from './lib/update-check';

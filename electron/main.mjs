@@ -6,6 +6,8 @@ import net from "net";
 import express from "express";
 import { fileURLToPath } from "node:url";
 import pkg from "../package.json" with { type: "json" };
+import { mark, dumpStartupTiming } from "./startup-timing.mjs";
+mark("electron boot + module imports");
 
 // ESM has no __dirname - derive it from import.meta.url.
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -357,6 +359,7 @@ function startServer(callback) {
   findFreePort(4000, (port) => {
     SERVER_PORT = port;
     api.listen(port, () => {
+      mark("express listening");
       console.log(`${APP_NAME} API on http://localhost:${port}`);
       if (callback) callback(port);
     });
@@ -384,6 +387,8 @@ function createWindow(port) {
   } else {
     mainWindow.loadFile(path.join(__dirname, "../dist/index.html"), { query: { apiPort: String(port) } });
   }
+  mark("BrowserWindow created");
+  mainWindow.webContents.once('did-finish-load', () => { mark("renderer did-finish-load"); dumpStartupTiming({ appName: APP_NAME, isDev, userDataPath: app.getPath("userData") }); });
   mainWindow.webContents.on('did-finish-load', () => mainWindow.setTitle(isDev ? `${APP_NAME} (Dev)` : APP_NAME));
   // ⚠ CLAUDE: external links (help button, update banner) must open in the system
   // browser - window.open('_blank') otherwise spawns a new Electron BrowserWindow.
@@ -404,7 +409,7 @@ function createWindow(port) {
   }
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(() => { mark("app.whenReady");
   Menu.setApplicationMenu(null);
   startServer((port) => createWindow(port));
 });
