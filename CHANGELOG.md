@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.4 — 2026-08-22
+
+- Adopt the shared UI catalog through v7 — the `.count.over` badge (a count drawn inside an icon button so the button keeps its width), the `.pop-form` / `.pop-field` popover-panel classes, a containing block on `.btn.icon` for that badge, and the `--tag` / `--env` identity colour tokens. LRC Editor uses none of them yet; its copy is kept in step so the next feature can
+- Language modules now emit to `src/i18n-gen/lang/<lang>.js`, with English staying at the root. The dynamic import used to target its own directory, which made the bundler stop analyzing it and turned the chunks it should emit into a runtime gamble; English being both statically and dynamically imported was reported as a defect on every build. Both are gone and the runtime is unchanged
+- Shorten the app-icon marker comment in `electron/main.mjs` to just the `data-icon` tag
+
 ## 1.0.3 — 2026-08-17
 
 - Fix the release build failing on GitHub — the pre-build step reached outside the repository for the translation splitter, which exists only in the local workspace
