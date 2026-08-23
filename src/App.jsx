@@ -194,6 +194,11 @@ function basename(filePath) {
 // ─── App identity - single source of truth for the app name ──────────────────
 const APP_NAME    = pkg.productName;
 const APP_VERSION = pkg.version;
+// The full build IDENTITY shown to the user: the release version plus the build counter (the 4th
+// segment a buffered commit bumps), or just the release version on a clean release build.
+// ⚠ CLAUDE: APP_VERSION itself stays plain 3-part semver and must NOT absorb this - the update
+// check compares it against the published beacon, and a 4-part string is not semver. Display only.
+const APP_VERSION_BUILD = pkg.build?.buildNumber ? `${pkg.version}.${pkg.build.buildNumber}` : pkg.version;
 
 // GitHub source - owner is constant (yaiol); repo name is the app id (pkg.name).
 const GITHUB_URL = `https://github.com/yaiol/${pkg.name}`;
@@ -1170,7 +1175,7 @@ export default function App() {
               <img src={yaiolLogo} alt="Yaiol" style={{ width: 120, height: 'auto', flexShrink: 0 }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
                 <div className="dlg-about-id">
-                  {APP_NAME} <b>v{APP_VERSION}</b> by yaiol
+                  {APP_NAME} <b>v{APP_VERSION_BUILD}</b> by yaiol
                 </div>
                 <div className="dlg-about-desc">{t('msgDlgSettingsAboutDesc')}</div>
               </div>
@@ -1236,7 +1241,7 @@ export default function App() {
       <UpdateBanner info={updateInfo} appId={pkg.name} lang={langKey} storagePrefix={STORAGE_PREFIX} t={t} onClose={() => setUpdateInfo(null)} />
 
       {/* ── Header ──────────────────────────────────────────── */}
-      <AppHeader appName={APP_NAME} appVersion={APP_VERSION}>
+      <AppHeader appName={APP_NAME} appVersion={APP_VERSION_BUILD}>
         {/* File actions — one welded group: New · Open LRC · Open Music · Save · Save As.
             Open-Music keeps the Music-note icon (audio, distinct from the LRC open); it sits
             right after Open-LRC. Standard file icons per CLAUDE-ui-standards. */}
