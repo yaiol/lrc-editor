@@ -7,6 +7,7 @@ import express from "express";
 import { fileURLToPath } from "node:url";
 import pkg from "../package.json" with { type: "json" };
 import { mark, dumpStartupTiming } from "./startup-timing.mjs";
+import { lastDir, rememberDir } from "./dialog-memory.mjs";
 mark("electron boot + module imports");
 
 // ESM has no __dirname - derive it from import.meta.url.
@@ -168,6 +169,7 @@ function startServer(callback) {
     const { title } = req.body || {};
     const result = await dialog.showOpenDialog(mainWindow, {
       title,
+      defaultPath: lastDir("open-music"),
       filters: [
         { name: "Audio Files", extensions: ["mp3","wav","ogg","opus","flac","m4a","aac"] },
         { name: "All Files", extensions: ["*"] }
@@ -176,6 +178,7 @@ function startServer(callback) {
     });
     if (result.canceled || !result.filePaths.length) { res.json(null); return; }
     const filePath = result.filePaths[0];
+    rememberDir("open-music", filePath);
     const fileUrl = `http://localhost:${SERVER_PORT}/audio?path=${encodeURIComponent(Buffer.from(filePath).toString("base64"))}`;
     res.json({ filePath, fileUrl });
   });
@@ -188,6 +191,7 @@ function startServer(callback) {
     const { title } = req.body || {};
     const result = await dialog.showOpenDialog(mainWindow, {
       title,
+      defaultPath: lastDir("open-lyrics"),
       filters: [
         { name: "Lyrics Files", extensions: ["lrc", "txt"] },
         { name: "All Files", extensions: ["*"] }
@@ -196,6 +200,7 @@ function startServer(callback) {
     });
     if (result.canceled || !result.filePaths.length) { res.json(null); return; }
     const filePath = result.filePaths[0];
+    rememberDir("open-lyrics", filePath);
     const ext = path.extname(filePath).toLowerCase().replace(".", "");
     try {
       const text = fs.readFileSync(filePath, "utf8");
@@ -283,6 +288,7 @@ function startServer(callback) {
     const { title } = req.body || {};
     const result = await dialog.showOpenDialog(mainWindow, {
       title,
+      defaultPath: lastDir("open-txt"),
       filters: [
         { name: "Text Files", extensions: ["txt"] },
         { name: "All Files", extensions: ["*"] }
@@ -291,6 +297,7 @@ function startServer(callback) {
     });
     if (result.canceled || !result.filePaths.length) { res.json(null); return; }
     const filePath = result.filePaths[0];
+    rememberDir("open-txt", filePath);
     try {
       const raw = fs.readFileSync(filePath, "utf8");
       const lines = raw.replace(/\r/g, "").split("\n");

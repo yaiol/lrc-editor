@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.5 — 2026-08-23
+
+- All three Open dialogs — audio, lyrics, and plain text — reopen in the folder they last used instead of starting in Downloads, each remembered separately and kept across restarts
+- The header help button and the update banner's What's new / Download links open the page in the app's own language. They had been addressed through a four-language allowlist that silently sent every other UI language to English; they are now directory URLs in the app's language, and the site's own fallback decides what to serve
+- Update the dev toolchain — Electron 42 → 43, Vite 8.1 → 8.2, lucide-react 1.21 → 1.33, music-metadata 11.13 → 11.15, plus patch bumps to React, @vitejs/plugin-react, concurrently, wait-on, brace-expansion and picomatch
+- Rename `vite.config.js` to `vite.config.mjs` — the package declares no `type: module`, so the ESM config has to announce itself by extension
+
 ## 1.0.4 — 2026-08-22
 
 - Adopt the shared UI catalog through v7 — the `.count.over` badge (a count drawn inside an icon button so the button keeps its width), the `.pop-form` / `.pop-field` popover-panel classes, a containing block on `.btn.icon` for that badge, and the `--tag` / `--env` identity colour tokens. LRC Editor uses none of them yet; its copy is kept in step so the next feature can
