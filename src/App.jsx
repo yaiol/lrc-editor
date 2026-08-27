@@ -234,8 +234,12 @@ input[type=range] { accent-color: var(--accent); cursor: pointer; }
     input[type=range]:disabled { opacity: 0.4; }
     .lrc-out-line { display: flex; align-items: center; padding: 4px 6px 4px 4px; min-height: 28px; cursor: pointer; border-bottom: 1px solid var(--border)20; font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; user-select: none; }
     .lrc-out-line.active { background: #22ff8822; border-left: 3px solid #22ff8888; }
-    .lrc-out-line.playing { background: var(--accent)22; border-left: 3px solid var(--accent)88; }
-    .lrc-out-line.active.playing { background: var(--bg-hov); border-left: 3px solid var(--accent); }
+    /* .cursor = the row the playhead sits on, in every state. The list carries .is-playing only
+       while audio actually runs, so the cursor is grey at rest and accent only when it is moving. */
+    .lrc-out-line.cursor { background: var(--text-mute)18; border-left: 3px solid var(--text-mute)66; }
+    .lrc-out-line.active.cursor { background: var(--bg-hov); border-left: 3px solid var(--text-mute); }
+    .is-playing .lrc-out-line.cursor { background: var(--accent)22; border-left: 3px solid var(--accent)88; }
+    .is-playing .lrc-out-line.active.cursor { background: var(--bg-hov); border-left: 3px solid var(--accent); }
     .lrc-out-line:hover:not(.active) { background: var(--bg-row); }
     .lrc-out-line .lrc-time { color: var(--accent); flex-shrink: 0; margin-right: 6px; opacity: 0.8; }
     .lrc-out-line.active .lrc-time { opacity: 1; }
@@ -243,8 +247,9 @@ input[type=range] { accent-color: var(--accent); cursor: pointer; }
     .lrc-out-line input.lrc-text-input { flex: 1; min-width: 0; padding: 0 2px; }
     .lrc-out-line input.lrc-time-input { width: 9ch; color: var(--accent); flex-shrink: 0; padding: 0 2px; }
     .lrc-seek-btn { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--text-mute); margin-right: 4px; opacity: 0; transition: opacity 0.15s; }
-    .lrc-out-line.active .lrc-seek-btn { opacity: 1; color: var(--accent); }
-    .lrc-out-line.playing .lrc-seek-btn { opacity: 1; color: var(--accent); }
+    .lrc-out-line.cursor .lrc-seek-btn { opacity: 1; color: var(--text-mute); }
+    .is-playing .lrc-out-line.cursor .lrc-seek-btn { color: var(--accent); }
+    .lrc-seek-btn:hover { background: var(--accent)20; color: var(--accent) !important; opacity: 1 !important; }
     .lrc-nudge-btn { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--text-mute); opacity: 0; transition: opacity 0.15s; background: none; border: none; cursor: pointer; padding: 0; }
     .lrc-out-line.active .lrc-nudge-btn { opacity: 1; color: var(--text-dim); }
     .lrc-nudge-btn:hover { background: var(--accent)20; color: var(--accent) !important; opacity: 1 !important; }
@@ -295,7 +300,7 @@ export default function App() {
   // User-selected LRC line (for Earlier/Later/sync ops)
   const [activeLrcLine, setActiveLrcLine] = useState(-1);
   // Player cursor (auto-follows playback position)
-  const [playingLine, setPlayingLine] = useState(-1);
+  const [cursorLine, setCursorLine] = useState(-1);
 
   // UI
   const [notepadText, setNotepadText] = useState('');
@@ -463,9 +468,10 @@ export default function App() {
     if (audioRef.current) audioRef.current.volume = volume / 100;
   }, [volume]);
 
-  // Active LRC line tracking during playback
+  // Player cursor tracking — runs in every state, not just while playing: paused or stopped,
+  // the cursor must sit on the line playback would resume at, or it claims a position it hasn't got.
   useEffect(() => {
-    if (playbackState !== 'playing') return;
+    if (!mediaFilePath) return;
     const id = setInterval(() => {
       const audio = audioRef.current;
       if (!audio) return;
@@ -481,23 +487,17 @@ export default function App() {
       if (endLyricsTime > 0 && endLyricsTime <= adjusted && endLyricsTime > bestTime) {
         idx = lrcData.lines.length; // sentinel index = End of Lyrics row
       }
-      setPlayingLine(idx);
+      setCursorLine(idx);
     }, 100);
     return () => clearInterval(id);
-  }, [playbackState, lrcData, endLyricsTime]);
-
-
-  // Reset playingLine when stopped
-  useEffect(() => {
-    if (playbackState === 'stopped') setPlayingLine(-1);
-  }, [playbackState]);
+  }, [mediaFilePath, lrcData, endLyricsTime]);
 
   // Verify mode: auto-advance to next line after verificationDelay ms
   useEffect(() => {
     if (!isVerifyMode || playbackState !== 'playing') return;
     clearTimeout(verifyTimeoutRef.current);
-    // playingLine === -1 means we're before the first line - advance to lines[0]
-    const nextLine = playingLine < 0 ? lrcData.lines[0] : lrcData.lines[playingLine + 1];
+    // cursorLine === -1 means we're before the first line - advance to lines[0]
+    const nextLine = cursorLine < 0 ? lrcData.lines[0] : lrcData.lines[cursorLine + 1];
     if (!nextLine) return;
     verifyTimeoutRef.current = setTimeout(() => {
       const audio = audioRef.current;
@@ -506,14 +506,14 @@ export default function App() {
       setPosition(audio.currentTime);
     }, verificationDelay);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playingLine, isVerifyMode, playbackState, verificationDelay]);
+  }, [cursorLine, isVerifyMode, playbackState, verificationDelay]);
 
-  // Scroll playingLine into view during playback (+1 offset for phantom row)
+  // Scroll the cursor row into view (+1 offset for phantom row)
   useEffect(() => {
     if (!lrcOutputListRef.current) return;
-    const el = lrcOutputListRef.current.children[playingLine + 1];
+    const el = lrcOutputListRef.current.children[cursorLine + 1];
     if (el) el.scrollIntoView({ block: 'nearest' });
-  }, [playingLine]);
+  }, [cursorLine]);
 
   // Scroll user-selected line into view on manual click (+1 offset for phantom row)
   useEffect(() => {
@@ -1296,12 +1296,12 @@ export default function App() {
           <div style={{ padding: '4px 10px', borderBottom: `1px solid var(--border)`, fontSize: 11, color: 'var(--text-dim)', background: 'var(--bg-elev)', flexShrink: 0 }}>
             {lrcFileName ? basename(lrcFileName) : t('lblSyncNewFile')}{unsaved ? ' *' : ''} - {lrcData.lines.length} {t('lblSyncLines')}
           </div>
-          <div ref={lrcOutputListRef} style={{ flex: 1, overflowY: 'auto' }}>
+          <div ref={lrcOutputListRef} className={isPlaying ? 'is-playing' : ''} style={{ flex: 1, overflowY: 'auto' }}>
             {lrcData.lines.length === 0 && <div className="empty-state">{t('empSyncNoLrc')}</div>}
             {/* Phantom line - visual only, not saved */}
-            <div className={`lrc-out-line${playingLine === -1 && playbackState !== 'stopped' ? ' playing' : ''}`}
+            <div className={`lrc-out-line${cursorLine === -1 && mediaFilePath ? ' cursor' : ''}`}
               style={{ cursor: 'default', userSelect: 'none' }}>
-              <button className="lrc-seek-btn" style={{ marginRight: 4, opacity: 1 }} title="Seek to 00:00.00"
+              <button className="lrc-seek-btn" style={{ marginRight: 4 }} title="Seek to 00:00.00"
                 onClick={e => { e.stopPropagation(); doSeekTo(0); if (playbackState !== 'playing') doPlayPause(); }}>▶</button>
               <span style={{ width: '9ch', color: 'var(--accent)', fontFamily: 'monospace', flexShrink: 0, padding: '0 2px', fontSize: 12 }}>00:00.00</span>
               <span style={{ width: 18, flexShrink: 0 }} /><span style={{ width: 18, flexShrink: 0 }} />
@@ -1309,7 +1309,7 @@ export default function App() {
             </div>
             {lrcData.lines.map((line, idx) => (
               <div key={idx}
-                className={`lrc-out-line${idx === activeLrcLine ? ' active' : ''}${idx === playingLine ? ' playing' : ''}`}
+                className={`lrc-out-line${idx === activeLrcLine ? ' active' : ''}${idx === cursorLine ? ' cursor' : ''}`}
                 onClick={() => setActiveLrcLine(idx)}>
                 <button className="lrc-seek-btn" title={`Seek to ${convertToLRCTime(line.time)}`}
                   disabled={idx > 0 && line.time === 0}
@@ -1346,7 +1346,7 @@ export default function App() {
               </div>
             ))}
             {/* End of Lyrics sentinel - timestamp editable, text fixed, saved as trailing empty line */}
-            <div className={`lrc-out-line${activeLrcLine === lrcData.lines.length ? ' active' : ''}${playingLine === lrcData.lines.length ? ' playing' : ''}`} style={{ cursor: 'default', userSelect: 'none' }} onClick={() => setActiveLrcLine(lrcData.lines.length)}>
+            <div className={`lrc-out-line${activeLrcLine === lrcData.lines.length ? ' active' : ''}${cursorLine === lrcData.lines.length ? ' cursor' : ''}`} style={{ cursor: 'default', userSelect: 'none' }} onClick={() => setActiveLrcLine(lrcData.lines.length)}>
               <button className="lrc-seek-btn" title={`Seek to ${endLyricsTimeDraft ?? convertToLRCTime(endLyricsTime)}`}
                 onClick={() => { doSeekTo(endLyricsTime); if (playbackState !== 'playing') doPlayPause(); }}>
                 ▶

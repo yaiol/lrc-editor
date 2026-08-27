@@ -1,7 +1,7 @@
 {
   "name": "lrc-editor",
   "productName": "LRC Editor",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "description": "LRC Files Editor",
   "private": true,
@@ -108,7 +108,6 @@
         "owner": "yaiol",
         "repo": "lrc-editor"
       }
-    ],
-    "buildNumber": "2"
+    ]
   }
 }

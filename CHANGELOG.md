@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.6 — 2026-08-27
+
+- The playback cursor now marks where the player actually is in every state. It moved only while the track was playing and disappeared on stop; it now follows pauses and seeks too, so a freshly loaded file shows it on Start of Music - where pressing Play would begin. It is grey at rest and accent while the track is running
+- Only one row carries a cursor at a time. The Start of Music row's ▶ was permanently lit and the selected line carried an arrow of its own, so two or three could show at once and none of them meant "the player is here". The ▶ now marks the cursor row, and otherwise appears only under the pointer when you are on the button itself - pointing at a line's text no longer offers an arrow that would not have played from there
+- The version shown in the header and About line now includes the build number when you are running a buffered build, so two builds of the same release are told apart. Released builds show the plain version exactly as before
+- Add the svgr icon pipeline - .svg files in src/assets compile to React components at build time, so a custom icon stays an editable file and inherits its button's colour
+
 ## 1.0.5 — 2026-08-23
 
 - All three Open dialogs — audio, lyrics, and plain text — reopen in the folder they last used instead of starting in Downloads, each remembered separately and kept across restarts
