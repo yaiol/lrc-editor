@@ -23,7 +23,7 @@
   <span>&nbsp;·&nbsp;</span>
   <a href="#install">Install</a>
   <span>&nbsp;·&nbsp;</span>
-  <a href="#features">Features</a>
+  <a href="#what-it-is">Features</a>
   <span>&nbsp;·&nbsp;</span>
   <a href="#documentation">Documentation</a>
   <span>&nbsp;·&nbsp;</span>
