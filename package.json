@@ -34,6 +34,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
+    "@svgr/plugin-svgo": "^8.1.0",
     "@vitejs/plugin-react": "^6.1.0",
     "concurrently": "^10.0.5",
     "electron": "^43.4.1",
@@ -43,6 +44,7 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "vite": "^8.2.2",
+    "vite-plugin-svgr": "^5.2.0",
     "wait-on": "^9.1.0"
   },
   "build": {
@@ -88,7 +90,8 @@
       "createStartMenuShortcut": true,
       "menuCategory": "yaiol",
       "shortcutName": "LRC Editor",
-      "uninstallDisplayName": "yaiol LRC Editor"
+      "uninstallDisplayName": "yaiol LRC Editor",
+      "artifactName": "${productName} Setup ${buildVersion}.${ext}"
     },
     "fileAssociations": [
       {
@@ -105,6 +108,7 @@
         "owner": "yaiol",
         "repo": "lrc-editor"
       }
-    ]
+    ],
+    "buildNumber": "2"
   }
 }
