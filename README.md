@@ -31,7 +31,7 @@
 </h3>
 
 <div align="center">
-  <sub><a href="https://apps.yaiol.com/en/p/lrc-editor/help/"><b>Help in 27 languages</b></a></sub>
+  <sub><a href="https://apps.yaiol.com/en/p/lrc-editor/help/"><b>Help in 28 languages</b></a></sub>
 </div>
 
 <!-- /readme:nav -->
