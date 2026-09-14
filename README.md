@@ -19,7 +19,7 @@
 </div>
 
 <h3 align="center">
-  <a href="https://apps.yaiol.com/en/p/lrc-editor/">Website</a>
+  <a href="https://apps.yaiol.com/p/lrc-editor/">Website</a>
   <span>&nbsp;·&nbsp;</span>
   <a href="#install">Install</a>
   <span>&nbsp;·&nbsp;</span>
@@ -31,7 +31,7 @@
 </h3>
 
 <div align="center">
-  <sub><a href="https://apps.yaiol.com/en/p/lrc-editor/help/"><b>Help in 28 languages</b></a></sub>
+  <sub><a href="https://apps.yaiol.com/p/lrc-editor/help/"><b>Help in 28 languages</b></a></sub>
 </div>
 
 <!-- /readme:nav -->
@@ -80,10 +80,10 @@ LRC Editor turns that into a single-keypress flow. Load a track, get your lyric 
 
 | | |
 |---|---|
-| **User manual** | [Read it online](https://apps.yaiol.com/en/p/lrc-editor/help/) |
+| **User manual** | [Read it online](https://apps.yaiol.com/p/lrc-editor/help/) |
 | **Printable PDF** | attached to each [release](../../releases/latest) |
-| **What's new** | [Release notes](https://apps.yaiol.com/en/p/lrc-editor/help/releases/) |
-| **Product page** | [apps.yaiol.com](https://apps.yaiol.com/en/p/lrc-editor/) |
+| **What's new** | [Release notes](https://apps.yaiol.com/p/lrc-editor/help/releases/) |
+| **Product page** | [apps.yaiol.com](https://apps.yaiol.com/p/lrc-editor/) |
 
 ---
 
