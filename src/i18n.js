@@ -73,35 +73,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Seek forward by configured seconds (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Back",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Verification Delay",
-    lblDlgSettingsTimeSeekDelay:            "Seek Delay",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Verification Delay",
+    lblStgTimeSeekDelay:                    "Seek Delay",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -196,35 +197,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Reculer du nombre de secondes configuré (←)",
     tipFtrSeekNext:                         "Avancer du nombre de secondes configuré (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Paramètres",
-    tabDlgSettingsDisplay:                  "Affichage",
-    tabDlgSettingsTime:                     "Temps",
-    tabDlgSettingsMeta:                     "Métadonnées",
-    tabDlgSettingsAbout:                    "À propos",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Paramètres",
+    tipStgBack:                             "Retour",
+    tabStgDisplay:                          "Affichage",
+    tabStgTime:                             "Temps",
+    tabStgMeta:                             "Métadonnées",
+    tabStgAbout:                            "À propos",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Langue",
-    lblDlgSettingsDisplayTheme:             "Thème",
-    btnDlgSettingsDisplayThemeDark:         "Sombre",
-    btnDlgSettingsDisplayThemeLight:        "Clair",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Langue",
+    lblStgDisplayTheme:                     "Thème",
+    btnStgDisplayThemeDark:                 "Sombre",
+    btnStgDisplayThemeLight:                "Clair",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Décalage édition",
-    lblDlgSettingsTimeReactionDelay:        "Délai de réaction",
-    lblDlgSettingsTimeVerificationDelay:    "Délai de vérification",
-    lblDlgSettingsTimeSeekDelay:            "Délai de saut",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Décalage édition",
+    lblStgTimeReactionDelay:                "Délai de réaction",
+    lblStgTimeVerificationDelay:            "Délai de vérification",
+    lblStgTimeSeekDelay:                    "Délai de saut",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artiste",
-    plhDlgSettingsMetaArtist:               "Nom de l'artiste",
-    lblDlgSettingsMetaSongwriter:           "Auteur",
-    plhDlgSettingsMetaSongwriter:           "Parolier / compositeur",
-    lblDlgSettingsMetaLrcBy:                "LRC par",
-    plhDlgSettingsMetaLrcBy:                "Créateur du LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artiste",
+    plhStgMetaArtist:                       "Nom de l'artiste",
+    lblStgMetaSongwriter:                   "Auteur",
+    plhStgMetaSongwriter:                   "Parolier / compositeur",
+    lblStgMetaLrcBy:                        "LRC par",
+    plhStgMetaLrcBy:                        "Créateur du LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "créez des fichiers de paroles synchronisées.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "créez des fichiers de paroles synchronisées.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Métadonnées",
@@ -318,35 +320,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Eingestellte Sekunden zurück (←)",
     tipFtrSeekNext:                         "Eingestellte Sekunden vor (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Einstellungen",
-    tabDlgSettingsDisplay:                  "Anzeige",
-    tabDlgSettingsTime:                     "Zeiten",
-    tabDlgSettingsMeta:                     "Metadaten",
-    tabDlgSettingsAbout:                    "Über",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Einstellungen",
+    tipStgBack:                             "Zurück",
+    tabStgDisplay:                          "Anzeige",
+    tabStgTime:                             "Zeiten",
+    tabStgMeta:                             "Metadaten",
+    tabStgAbout:                            "Über",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Sprache",
-    lblDlgSettingsDisplayTheme:             "Design",
-    btnDlgSettingsDisplayThemeDark:         "Dunkel",
-    btnDlgSettingsDisplayThemeLight:        "Hell",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Sprache",
+    lblStgDisplayTheme:                     "Design",
+    btnStgDisplayThemeDark:                 "Dunkel",
+    btnStgDisplayThemeLight:                "Hell",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Zeilenversatz",
-    lblDlgSettingsTimeReactionDelay:        "Reaktionsverzögerung",
-    lblDlgSettingsTimeVerificationDelay:    "Verifikationsverzögerung",
-    lblDlgSettingsTimeSeekDelay:            "Sprungverzögerung",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Zeilenversatz",
+    lblStgTimeReactionDelay:                "Reaktionsverzögerung",
+    lblStgTimeVerificationDelay:            "Verifikationsverzögerung",
+    lblStgTimeSeekDelay:                    "Sprungverzögerung",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Künstler",
-    plhDlgSettingsMetaArtist:               "Künstlername",
-    lblDlgSettingsMetaSongwriter:           "Texter",
-    plhDlgSettingsMetaSongwriter:           "Texter / Komponist",
-    lblDlgSettingsMetaLrcBy:                "LRC von",
-    plhDlgSettingsMetaLrcBy:                "LRC-Ersteller",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Künstler",
+    plhStgMetaArtist:                       "Künstlername",
+    lblStgMetaSongwriter:                   "Texter",
+    plhStgMetaSongwriter:                   "Texter / Komponist",
+    lblStgMetaLrcBy:                        "LRC von",
+    plhStgMetaLrcBy:                        "LRC-Ersteller",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "synchronisierte Liedtextdateien erstellen.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "synchronisierte Liedtextdateien erstellen.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadaten",
@@ -440,35 +443,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Retroceder los segundos configurados (←)",
     tipFtrSeekNext:                         "Avanzar los segundos configurados (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Configuración",
-    tabDlgSettingsDisplay:                  "Pantalla",
-    tabDlgSettingsTime:                     "Tiempo",
-    tabDlgSettingsMeta:                     "Metadatos",
-    tabDlgSettingsAbout:                    "Acerca de",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Configuración",
+    tipStgBack:                             "Atrás",
+    tabStgDisplay:                          "Pantalla",
+    tabStgTime:                             "Tiempo",
+    tabStgMeta:                             "Metadatos",
+    tabStgAbout:                            "Acerca de",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Idioma",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Oscuro",
-    btnDlgSettingsDisplayThemeLight:        "Claro",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Idioma",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Oscuro",
+    btnStgDisplayThemeLight:                "Claro",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Retardo de edición",
-    lblDlgSettingsTimeReactionDelay:        "Retardo de reacción",
-    lblDlgSettingsTimeVerificationDelay:    "Retraso de verificación",
-    lblDlgSettingsTimeSeekDelay:            "Tiempo de salto",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Retardo de edición",
+    lblStgTimeReactionDelay:                "Retardo de reacción",
+    lblStgTimeVerificationDelay:            "Retraso de verificación",
+    lblStgTimeSeekDelay:                    "Tiempo de salto",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Nombre del artista",
-    lblDlgSettingsMetaSongwriter:           "Compositor",
-    plhDlgSettingsMetaSongwriter:           "Letrista / compositor",
-    lblDlgSettingsMetaLrcBy:                "LRC por",
-    plhDlgSettingsMetaLrcBy:                "Creador del LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Nombre del artista",
+    lblStgMetaSongwriter:                   "Compositor",
+    plhStgMetaSongwriter:                   "Letrista / compositor",
+    lblStgMetaLrcBy:                        "LRC por",
+    plhStgMetaLrcBy:                        "Creador del LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "crea archivos de letras sincronizadas.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "crea archivos de letras sincronizadas.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadatos",
@@ -562,35 +566,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Recuar os segundos configurados (←)",
     tipFtrSeekNext:                         "Avançar os segundos configurados (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Definições",
-    tabDlgSettingsDisplay:                  "Exibição",
-    tabDlgSettingsTime:                     "Tempo",
-    tabDlgSettingsMeta:                     "Metadados",
-    tabDlgSettingsAbout:                    "Sobre",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Definições",
+    tipStgBack:                             "Voltar",
+    tabStgDisplay:                          "Exibição",
+    tabStgTime:                             "Tempo",
+    tabStgMeta:                             "Metadados",
+    tabStgAbout:                            "Sobre",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Idioma",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Escuro",
-    btnDlgSettingsDisplayThemeLight:        "Claro",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Idioma",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Escuro",
+    btnStgDisplayThemeLight:                "Claro",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Atraso de edição",
-    lblDlgSettingsTimeReactionDelay:        "Atraso de reação",
-    lblDlgSettingsTimeVerificationDelay:    "Atraso de verificação",
-    lblDlgSettingsTimeSeekDelay:            "Tempo de salto",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Atraso de edição",
+    lblStgTimeReactionDelay:                "Atraso de reação",
+    lblStgTimeVerificationDelay:            "Atraso de verificação",
+    lblStgTimeSeekDelay:                    "Tempo de salto",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Nome do artista",
-    lblDlgSettingsMetaSongwriter:           "Compositor",
-    plhDlgSettingsMetaSongwriter:           "Letrista / compositor",
-    lblDlgSettingsMetaLrcBy:                "LRC por",
-    plhDlgSettingsMetaLrcBy:                "Criador do LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Nome do artista",
+    lblStgMetaSongwriter:                   "Compositor",
+    plhStgMetaSongwriter:                   "Letrista / compositor",
+    lblStgMetaLrcBy:                        "LRC por",
+    plhStgMetaLrcBy:                        "Criador do LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "crie ficheiros de letras sincronizadas.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadados",
@@ -684,35 +689,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Recuar os segundos configurados (←)",
     tipFtrSeekNext:                         "Avançar os segundos configurados (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Definições",
-    tabDlgSettingsDisplay:                  "Visualização",
-    tabDlgSettingsTime:                     "Tempo",
-    tabDlgSettingsMeta:                     "Metadados",
-    tabDlgSettingsAbout:                    "Sobre",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Definições",
+    tipStgBack:                             "Voltar",
+    tabStgDisplay:                          "Visualização",
+    tabStgTime:                             "Tempo",
+    tabStgMeta:                             "Metadados",
+    tabStgAbout:                            "Sobre",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Idioma",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Escuro",
-    btnDlgSettingsDisplayThemeLight:        "Claro",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Idioma",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Escuro",
+    btnStgDisplayThemeLight:                "Claro",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Atraso de edição",
-    lblDlgSettingsTimeReactionDelay:        "Atraso de reação",
-    lblDlgSettingsTimeVerificationDelay:    "Atraso de verificação",
-    lblDlgSettingsTimeSeekDelay:            "Tempo de salto",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Atraso de edição",
+    lblStgTimeReactionDelay:                "Atraso de reação",
+    lblStgTimeVerificationDelay:            "Atraso de verificação",
+    lblStgTimeSeekDelay:                    "Tempo de salto",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Nome do artista",
-    lblDlgSettingsMetaSongwriter:           "Compositor",
-    plhDlgSettingsMetaSongwriter:           "Letrista / compositor",
-    lblDlgSettingsMetaLrcBy:                "LRC por",
-    plhDlgSettingsMetaLrcBy:                "Criador do LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Nome do artista",
+    lblStgMetaSongwriter:                   "Compositor",
+    plhStgMetaSongwriter:                   "Letrista / compositor",
+    lblStgMetaLrcBy:                        "LRC por",
+    plhStgMetaLrcBy:                        "Criador do LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "crie ficheiros de letras sincronizadas.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadados",
@@ -806,35 +812,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Indietro i secondi configurati (←)",
     tipFtrSeekNext:                         "Avanzare i secondi configurati (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Impostazioni",
-    tabDlgSettingsDisplay:                  "Visualizzazione",
-    tabDlgSettingsTime:                     "Tempi",
-    tabDlgSettingsMeta:                     "Metadati",
-    tabDlgSettingsAbout:                    "Informazioni",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Impostazioni",
+    tipStgBack:                             "Indietro",
+    tabStgDisplay:                          "Visualizzazione",
+    tabStgTime:                             "Tempi",
+    tabStgMeta:                             "Metadati",
+    tabStgAbout:                            "Informazioni",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Lingua",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Scuro",
-    btnDlgSettingsDisplayThemeLight:        "Chiaro",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Lingua",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Scuro",
+    btnStgDisplayThemeLight:                "Chiaro",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Ritardo modifica",
-    lblDlgSettingsTimeReactionDelay:        "Ritardo di reazione",
-    lblDlgSettingsTimeVerificationDelay:    "Ritardo di verifica",
-    lblDlgSettingsTimeSeekDelay:            "Intervallo di ricerca",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Ritardo modifica",
+    lblStgTimeReactionDelay:                "Ritardo di reazione",
+    lblStgTimeVerificationDelay:            "Ritardo di verifica",
+    lblStgTimeSeekDelay:                    "Intervallo di ricerca",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Nome artista",
-    lblDlgSettingsMetaSongwriter:           "Autore",
-    plhDlgSettingsMetaSongwriter:           "Paroliere / compositore",
-    lblDlgSettingsMetaLrcBy:                "LRC di",
-    plhDlgSettingsMetaLrcBy:                "Creatore LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Nome artista",
+    lblStgMetaSongwriter:                   "Autore",
+    plhStgMetaSongwriter:                   "Paroliere / compositore",
+    lblStgMetaLrcBy:                        "LRC di",
+    plhStgMetaLrcBy:                        "Creatore LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "crea file di testi sincronizzati.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "crea file di testi sincronizzati.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadati",
@@ -928,35 +935,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "設定秒数戻る (←)",
     tipFtrSeekNext:                         "設定した秒数進む (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "設定",
-    tabDlgSettingsDisplay:                  "表示",
-    tabDlgSettingsTime:                     "タイミング",
-    tabDlgSettingsMeta:                     "メタデータ",
-    tabDlgSettingsAbout:                    "概要",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "設定",
+    tipStgBack:                             "戻る",
+    tabStgDisplay:                          "表示",
+    tabStgTime:                             "タイミング",
+    tabStgMeta:                             "メタデータ",
+    tabStgAbout:                            "概要",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "言語",
-    lblDlgSettingsDisplayTheme:             "テーマ",
-    btnDlgSettingsDisplayThemeDark:         "ダーク",
-    btnDlgSettingsDisplayThemeLight:        "ライト",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "言語",
+    lblStgDisplayTheme:                     "テーマ",
+    btnStgDisplayThemeDark:                 "ダーク",
+    btnStgDisplayThemeLight:                "ライト",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "編集ディレイ",
-    lblDlgSettingsTimeReactionDelay:        "反応ディレイ",
-    lblDlgSettingsTimeVerificationDelay:    "確認ディレイ",
-    lblDlgSettingsTimeSeekDelay:            "シーク時間",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "編集ディレイ",
+    lblStgTimeReactionDelay:                "反応ディレイ",
+    lblStgTimeVerificationDelay:            "確認ディレイ",
+    lblStgTimeSeekDelay:                    "シーク時間",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "アーティスト",
-    plhDlgSettingsMetaArtist:               "アーティスト名",
-    lblDlgSettingsMetaSongwriter:           "作詞家",
-    plhDlgSettingsMetaSongwriter:           "作詞家 / 作曲家",
-    lblDlgSettingsMetaLrcBy:                "LRC作成者",
-    plhDlgSettingsMetaLrcBy:                "LRC作成者",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "アーティスト",
+    plhStgMetaArtist:                       "アーティスト名",
+    lblStgMetaSongwriter:                   "作詞家",
+    plhStgMetaSongwriter:                   "作詞家 / 作曲家",
+    lblStgMetaLrcBy:                        "LRC作成者",
+    plhStgMetaLrcBy:                        "LRC作成者",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "同期歌詞ファイルを作成します。",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "同期歌詞ファイルを作成します。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "メタデータ",
@@ -1050,35 +1058,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "설정 초만큼 뒤로 (←)",
     tipFtrSeekNext:                         "설정된 초만큼 앞으로 이동 (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "설정",
-    tabDlgSettingsDisplay:                  "표시",
-    tabDlgSettingsTime:                     "시간",
-    tabDlgSettingsMeta:                     "메타데이터",
-    tabDlgSettingsAbout:                    "정보",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "설정",
+    tipStgBack:                             "뒤로",
+    tabStgDisplay:                          "표시",
+    tabStgTime:                             "시간",
+    tabStgMeta:                             "메타데이터",
+    tabStgAbout:                            "정보",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "언어",
-    lblDlgSettingsDisplayTheme:             "테마",
-    btnDlgSettingsDisplayThemeDark:         "어둡게",
-    btnDlgSettingsDisplayThemeLight:        "밝게",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "언어",
+    lblStgDisplayTheme:                     "테마",
+    btnStgDisplayThemeDark:                 "어둡게",
+    btnStgDisplayThemeLight:                "밝게",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "편집 딜레이",
-    lblDlgSettingsTimeReactionDelay:        "반응 딜레이",
-    lblDlgSettingsTimeVerificationDelay:    "확인 지연",
-    lblDlgSettingsTimeSeekDelay:            "이동 시간",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "편집 딜레이",
+    lblStgTimeReactionDelay:                "반응 딜레이",
+    lblStgTimeVerificationDelay:            "확인 지연",
+    lblStgTimeSeekDelay:                    "이동 시간",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "아티스트",
-    plhDlgSettingsMetaArtist:               "아티스트 이름",
-    lblDlgSettingsMetaSongwriter:           "작곡가",
-    plhDlgSettingsMetaSongwriter:           "작사가 / 작곡가",
-    lblDlgSettingsMetaLrcBy:                "LRC 작성자",
-    plhDlgSettingsMetaLrcBy:                "LRC 작성자",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "아티스트",
+    plhStgMetaArtist:                       "아티스트 이름",
+    lblStgMetaSongwriter:                   "작곡가",
+    plhStgMetaSongwriter:                   "작사가 / 작곡가",
+    lblStgMetaLrcBy:                        "LRC 작성자",
+    plhStgMetaLrcBy:                        "LRC 작성자",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "동기화된 가사 파일을 만듭니다.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "동기화된 가사 파일을 만듭니다.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "메타데이터",
@@ -1172,35 +1181,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "后退配置秒数（←）",
     tipFtrSeekNext:                         "按设定秒数快进 (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "设置",
-    tabDlgSettingsDisplay:                  "显示",
-    tabDlgSettingsTime:                     "时间",
-    tabDlgSettingsMeta:                     "元数据",
-    tabDlgSettingsAbout:                    "关于",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "设置",
+    tipStgBack:                             "返回",
+    tabStgDisplay:                          "显示",
+    tabStgTime:                             "时间",
+    tabStgMeta:                             "元数据",
+    tabStgAbout:                            "关于",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "语言",
-    lblDlgSettingsDisplayTheme:             "主题",
-    btnDlgSettingsDisplayThemeDark:         "深色",
-    btnDlgSettingsDisplayThemeLight:        "浅色",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "语言",
+    lblStgDisplayTheme:                     "主题",
+    btnStgDisplayThemeDark:                 "深色",
+    btnStgDisplayThemeLight:                "浅色",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "编辑延迟",
-    lblDlgSettingsTimeReactionDelay:        "反应延迟",
-    lblDlgSettingsTimeVerificationDelay:    "验证延迟",
-    lblDlgSettingsTimeSeekDelay:            "跳转时间",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "编辑延迟",
+    lblStgTimeReactionDelay:                "反应延迟",
+    lblStgTimeVerificationDelay:            "验证延迟",
+    lblStgTimeSeekDelay:                    "跳转时间",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "艺术家",
-    plhDlgSettingsMetaArtist:               "艺术家名称",
-    lblDlgSettingsMetaSongwriter:           "词曲作者",
-    plhDlgSettingsMetaSongwriter:           "词作者/曲作者",
-    lblDlgSettingsMetaLrcBy:                "LRC制作",
-    plhDlgSettingsMetaLrcBy:                "LRC创建者",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "艺术家",
+    plhStgMetaArtist:                       "艺术家名称",
+    lblStgMetaSongwriter:                   "词曲作者",
+    plhStgMetaSongwriter:                   "词作者/曲作者",
+    lblStgMetaLrcBy:                        "LRC制作",
+    plhStgMetaLrcBy:                        "LRC创建者",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "创建同步歌词文件。",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "创建同步歌词文件。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "元数据",
@@ -1294,35 +1304,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "倒退設定秒數（←）",
     tipFtrSeekNext:                         "按設定秒數快轉 (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "設定",
-    tabDlgSettingsDisplay:                  "顯示",
-    tabDlgSettingsTime:                     "時間",
-    tabDlgSettingsMeta:                     "詮釋資料",
-    tabDlgSettingsAbout:                    "關於",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "設定",
+    tipStgBack:                             "返回",
+    tabStgDisplay:                          "顯示",
+    tabStgTime:                             "時間",
+    tabStgMeta:                             "詮釋資料",
+    tabStgAbout:                            "關於",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "語言",
-    lblDlgSettingsDisplayTheme:             "主題",
-    btnDlgSettingsDisplayThemeDark:         "深色",
-    btnDlgSettingsDisplayThemeLight:        "淺色",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "語言",
+    lblStgDisplayTheme:                     "主題",
+    btnStgDisplayThemeDark:                 "深色",
+    btnStgDisplayThemeLight:                "淺色",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "編輯延遲",
-    lblDlgSettingsTimeReactionDelay:        "反應延遲",
-    lblDlgSettingsTimeVerificationDelay:    "驗證延遲",
-    lblDlgSettingsTimeSeekDelay:            "跳轉時間",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "編輯延遲",
+    lblStgTimeReactionDelay:                "反應延遲",
+    lblStgTimeVerificationDelay:            "驗證延遲",
+    lblStgTimeSeekDelay:                    "跳轉時間",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "藝術家",
-    plhDlgSettingsMetaArtist:               "藝術家名稱",
-    lblDlgSettingsMetaSongwriter:           "詞曲作者",
-    plhDlgSettingsMetaSongwriter:           "詞作者/曲作者",
-    lblDlgSettingsMetaLrcBy:                "LRC製作",
-    plhDlgSettingsMetaLrcBy:                "LRC建立者",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "藝術家",
+    plhStgMetaArtist:                       "藝術家名稱",
+    lblStgMetaSongwriter:                   "詞曲作者",
+    plhStgMetaSongwriter:                   "詞作者/曲作者",
+    lblStgMetaLrcBy:                        "LRC製作",
+    plhStgMetaLrcBy:                        "LRC建立者",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "建立同步歌詞檔案。",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "建立同步歌詞檔案。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "詮釋資料",
@@ -1416,35 +1427,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "التقديم بالثواني المحددة (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "رجوع",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "تأخير التحقق",
-    lblDlgSettingsTimeSeekDelay:            "تأخير البحث",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "تأخير التحقق",
+    lblStgTimeSeekDelay:                    "تأخير البحث",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1538,35 +1550,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Avançar els segons configurats (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Enrere",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Retard de verificació",
-    lblDlgSettingsTimeSeekDelay:            "Retard de salt",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Retard de verificació",
+    lblStgTimeSeekDelay:                    "Retard de salt",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1660,35 +1673,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Posunout vpřed o nastavené sekundy (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Zpět",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Prodleva ověření",
-    lblDlgSettingsTimeSeekDelay:            "Zpoždění skoku",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Prodleva ověření",
+    lblStgTimeSeekDelay:                    "Zpoždění skoku",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1782,35 +1796,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Gå fremad de konfigurerede sekunder (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Tilbage",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Verifikationsforsinkelse",
-    lblDlgSettingsTimeSeekDelay:            "Hopsekunder",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Verifikationsforsinkelse",
+    lblStgTimeSeekDelay:                    "Hopsekunder",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1904,35 +1919,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Ga het ingestelde aantal seconden vooruit (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Terug",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Verificatievertraging",
-    lblDlgSettingsTimeSeekDelay:            "Sprongtijd",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Verificatievertraging",
+    lblStgTimeSeekDelay:                    "Sprongtijd",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2026,35 +2042,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Siirry määritetyt sekunnit eteenpäin (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Takaisin",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Tarkistusviive",
-    lblDlgSettingsTimeSeekDelay:            "Hyppyaika",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Tarkistusviive",
+    lblStgTimeSeekDelay:                    "Hyppyaika",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2148,35 +2165,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Μετάβαση μπροστά κατά τα ρυθμισμένα δευτερόλεπτα (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Πίσω",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Καθυστέρηση επαλήθευσης",
-    lblDlgSettingsTimeSeekDelay:            "Χρόνος μετάβασης",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Καθυστέρηση επαλήθευσης",
+    lblStgTimeSeekDelay:                    "Χρόνος μετάβασης",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2270,35 +2288,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "קפוץ קדימה לפי שניות מוגדרות (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "חזור",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "עיכוב אימות",
-    lblDlgSettingsTimeSeekDelay:            "זמן קפיצה",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "עיכוב אימות",
+    lblStgTimeSeekDelay:                    "זמן קפיצה",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2392,35 +2411,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Preskočiti postavljene sekunde naprijed (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Natrag",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Kašnjenje provjere",
-    lblDlgSettingsTimeSeekDelay:            "Trajanje skoka",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Kašnjenje provjere",
+    lblStgTimeSeekDelay:                    "Trajanje skoka",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2514,35 +2534,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Gå fremover de konfigurerte sekundene (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Tilbake",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Verifiseringsforsinkelse",
-    lblDlgSettingsTimeSeekDelay:            "Hopptid",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Verifiseringsforsinkelse",
+    lblStgTimeSeekDelay:                    "Hopptid",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2636,35 +2657,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "رفتن به جلو به اندازه ثانیه‌های تنظیم‌شده (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "بازگشت",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "تاخیر تأیید",
-    lblDlgSettingsTimeSeekDelay:            "زمان جهش",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "تاخیر تأیید",
+    lblStgTimeSeekDelay:                    "زمان جهش",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2758,35 +2780,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Przewiń do przodu o ustawione sekundy (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Wstecz",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Opóźnienie weryfikacji",
-    lblDlgSettingsTimeSeekDelay:            "Czas skoku",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Opóźnienie weryfikacji",
+    lblStgTimeSeekDelay:                    "Czas skoku",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2880,35 +2903,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Avansați cu secundele configurate (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Înapoi",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Întârziere verificare",
-    lblDlgSettingsTimeSeekDelay:            "Timp de salt",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Întârziere verificare",
+    lblStgTimeSeekDelay:                    "Timp de salt",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3002,35 +3026,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Gå framåt de konfigurerade sekunderna (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Tillbaka",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Verifieringsfördröjning",
-    lblDlgSettingsTimeSeekDelay:            "Hopptid",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Verifieringsfördröjning",
+    lblStgTimeSeekDelay:                    "Hopptid",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3124,35 +3149,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Tua đi theo số giây đã cấu hình (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Quay lại",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Độ trễ xác nhận",
-    lblDlgSettingsTimeSeekDelay:            "Thời gian từa",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Độ trễ xác nhận",
+    lblStgTimeSeekDelay:                    "Thời gian từa",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3246,35 +3272,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Ayarlanan saniye kadar ileri git (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Geri",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Doğrulama Gecikmesi",
-    lblDlgSettingsTimeSeekDelay:            "Atlama süresi",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Doğrulama Gecikmesi",
+    lblStgTimeSeekDelay:                    "Atlama süresi",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3368,35 +3395,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Putar mundur beberapa detik (←)",
     tipFtrSeekNext:                         "Maju sesuai detik yang dikonfigurasi (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Pengaturan",
-    tabDlgSettingsDisplay:                  "Tampilan",
-    tabDlgSettingsTime:                     "Waktu",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "Tentang",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Pengaturan",
+    tipStgBack:                             "Kembali",
+    tabStgDisplay:                          "Tampilan",
+    tabStgTime:                             "Waktu",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "Tentang",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Bahasa",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Gelap",
-    btnDlgSettingsDisplayThemeLight:        "Terang",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Bahasa",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Gelap",
+    btnStgDisplayThemeLight:                "Terang",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Penundaan Edit Baris",
-    lblDlgSettingsTimeReactionDelay:        "Penundaan Reaksi",
-    lblDlgSettingsTimeVerificationDelay:    "Penundaan Verifikasi",
-    lblDlgSettingsTimeSeekDelay:            "Waktu lompat",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Penundaan Edit Baris",
+    lblStgTimeReactionDelay:                "Penundaan Reaksi",
+    lblStgTimeVerificationDelay:            "Penundaan Verifikasi",
+    lblStgTimeSeekDelay:                    "Waktu lompat",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artis",
-    plhDlgSettingsMetaArtist:               "Nama artis",
-    lblDlgSettingsMetaSongwriter:           "Penulis Lagu",
-    plhDlgSettingsMetaSongwriter:           "Penyair / penulis lagu",
-    lblDlgSettingsMetaLrcBy:                "LRC Oleh",
-    plhDlgSettingsMetaLrcBy:                "Pembuat LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artis",
+    plhStgMetaArtist:                       "Nama artis",
+    lblStgMetaSongwriter:                   "Penulis Lagu",
+    plhStgMetaSongwriter:                   "Penyair / penulis lagu",
+    lblStgMetaLrcBy:                        "LRC Oleh",
+    plhStgMetaLrcBy:                        "Pembuat LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "buat file lirik yang tersinkronisasi.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "buat file lirik yang tersinkronisasi.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3490,35 +3518,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Undur balik beberapa saat (←)",
     tipFtrSeekNext:                         "Ke hadapan mengikut saat yang dikonfigurasi (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Tetapan",
-    tabDlgSettingsDisplay:                  "Paparan",
-    tabDlgSettingsTime:                     "Masa",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "Tentang",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Tetapan",
+    tipStgBack:                             "Kembali",
+    tabStgDisplay:                          "Paparan",
+    tabStgTime:                             "Masa",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "Tentang",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Bahasa",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Gelap",
-    btnDlgSettingsDisplayThemeLight:        "Cerah",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Bahasa",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Gelap",
+    btnStgDisplayThemeLight:                "Cerah",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Kelewatan Edit Baris",
-    lblDlgSettingsTimeReactionDelay:        "Kelewatan Reaksi",
-    lblDlgSettingsTimeVerificationDelay:    "Kelewatan Pengesahan",
-    lblDlgSettingsTimeSeekDelay:            "Masa lompat",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Kelewatan Edit Baris",
+    lblStgTimeReactionDelay:                "Kelewatan Reaksi",
+    lblStgTimeVerificationDelay:            "Kelewatan Pengesahan",
+    lblStgTimeSeekDelay:                    "Masa lompat",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artis",
-    plhDlgSettingsMetaArtist:               "Nama artis",
-    lblDlgSettingsMetaSongwriter:           "Penulis Lagu",
-    plhDlgSettingsMetaSongwriter:           "Penyajak / penulis lagu",
-    lblDlgSettingsMetaLrcBy:                "LRC Oleh",
-    plhDlgSettingsMetaLrcBy:                "Pencipta LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artis",
+    plhStgMetaArtist:                       "Nama artis",
+    lblStgMetaSongwriter:                   "Penulis Lagu",
+    plhStgMetaSongwriter:                   "Penyajak / penulis lagu",
+    lblStgMetaLrcBy:                        "LRC Oleh",
+    plhStgMetaLrcBy:                        "Pencipta LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "cipta fail lirik yang disegerakkan.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "cipta fail lirik yang disegerakkan.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3612,35 +3641,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Перемотать назад (←)",
     tipFtrSeekNext:                         "Перемотать вперёд на заданные секунды (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Настройки",
-    tabDlgSettingsDisplay:                  "Отображение",
-    tabDlgSettingsTime:                     "Время",
-    tabDlgSettingsMeta:                     "Метаданные",
-    tabDlgSettingsAbout:                    "О программе",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Настройки",
+    tipStgBack:                             "Назад",
+    tabStgDisplay:                          "Отображение",
+    tabStgTime:                             "Время",
+    tabStgMeta:                             "Метаданные",
+    tabStgAbout:                            "О программе",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Язык",
-    lblDlgSettingsDisplayTheme:             "Тема",
-    btnDlgSettingsDisplayThemeDark:         "Тёмная",
-    btnDlgSettingsDisplayThemeLight:        "Светлая",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Язык",
+    lblStgDisplayTheme:                     "Тема",
+    btnStgDisplayThemeDark:                 "Тёмная",
+    btnStgDisplayThemeLight:                "Светлая",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Задержка редактирования",
-    lblDlgSettingsTimeReactionDelay:        "Задержка реакции",
-    lblDlgSettingsTimeVerificationDelay:    "Задержка верификации",
-    lblDlgSettingsTimeSeekDelay:            "Время перемотки",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Задержка редактирования",
+    lblStgTimeReactionDelay:                "Задержка реакции",
+    lblStgTimeVerificationDelay:            "Задержка верификации",
+    lblStgTimeSeekDelay:                    "Время перемотки",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Исполнитель",
-    plhDlgSettingsMetaArtist:               "Имя исполнителя",
-    lblDlgSettingsMetaSongwriter:           "Автор песни",
-    plhDlgSettingsMetaSongwriter:           "Поэт / автор песни",
-    lblDlgSettingsMetaLrcBy:                "LRC автор",
-    plhDlgSettingsMetaLrcBy:                "Создатель LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Исполнитель",
+    plhStgMetaArtist:                       "Имя исполнителя",
+    lblStgMetaSongwriter:                   "Автор песни",
+    plhStgMetaSongwriter:                   "Поэт / автор песни",
+    lblStgMetaLrcBy:                        "LRC автор",
+    plhStgMetaLrcBy:                        "Создатель LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "создание синхронизированных текстов.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "создание синхронизированных текстов.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаданные",
@@ -3734,35 +3764,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "ย้อนกลับหลายวินาที (←)",
     tipFtrSeekNext:                         "ข้ามไปข้างหน้าตามวินาที่กำหนด (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "การตั้งค่า",
-    tabDlgSettingsDisplay:                  "แสดงผล",
-    tabDlgSettingsTime:                     "เวลา",
-    tabDlgSettingsMeta:                     "ข้อมูลเมตา",
-    tabDlgSettingsAbout:                    "เกี่ยวกับ",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "การตั้งค่า",
+    tipStgBack:                             "ย้อนกลับ",
+    tabStgDisplay:                          "แสดงผล",
+    tabStgTime:                             "เวลา",
+    tabStgMeta:                             "ข้อมูลเมตา",
+    tabStgAbout:                            "เกี่ยวกับ",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "ภาษา",
-    lblDlgSettingsDisplayTheme:             "ธีม",
-    btnDlgSettingsDisplayThemeDark:         "มืด",
-    btnDlgSettingsDisplayThemeLight:        "สว่าง",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "ภาษา",
+    lblStgDisplayTheme:                     "ธีม",
+    btnStgDisplayThemeDark:                 "มืด",
+    btnStgDisplayThemeLight:                "สว่าง",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "หน่วงเวลาแก้ไขบรรทัด",
-    lblDlgSettingsTimeReactionDelay:        "หน่วงเวลาตอบสนอง",
-    lblDlgSettingsTimeVerificationDelay:    "ความล่าช้าการตรวจสอบ",
-    lblDlgSettingsTimeSeekDelay:            "เวลากระโดด",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "หน่วงเวลาแก้ไขบรรทัด",
+    lblStgTimeReactionDelay:                "หน่วงเวลาตอบสนอง",
+    lblStgTimeVerificationDelay:            "ความล่าช้าการตรวจสอบ",
+    lblStgTimeSeekDelay:                    "เวลากระโดด",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "ศิลปิน",
-    plhDlgSettingsMetaArtist:               "ชื่อศิลปิน",
-    lblDlgSettingsMetaSongwriter:           "นักแต่งเพลง",
-    plhDlgSettingsMetaSongwriter:           "กวี / นักแต่งเพลง",
-    lblDlgSettingsMetaLrcBy:                "LRC โดย",
-    plhDlgSettingsMetaLrcBy:                "ผู้สร้าง LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "ศิลปิน",
+    plhStgMetaArtist:                       "ชื่อศิลปิน",
+    lblStgMetaSongwriter:                   "นักแต่งเพลง",
+    plhStgMetaSongwriter:                   "กวี / นักแต่งเพลง",
+    lblStgMetaLrcBy:                        "LRC โดย",
+    plhStgMetaLrcBy:                        "ผู้สร้าง LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "สร้างไฟล์เนื้อเพลงที่ซิงค์",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "สร้างไฟล์เนื้อเพลงที่ซิงค์",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "ข้อมูลเมตา",
@@ -3856,35 +3887,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Seek back by configured seconds (←)",
     tipFtrSeekNext:                         "Перемотати вперед на задані секунди (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Settings",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Time",
-    tabDlgSettingsMeta:                     "Meta Data",
-    tabDlgSettingsAbout:                    "About",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Settings",
+    tipStgBack:                             "Назад",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Time",
+    tabStgMeta:                             "Meta Data",
+    tabStgAbout:                            "About",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Language",
-    lblDlgSettingsDisplayTheme:             "Theme",
-    btnDlgSettingsDisplayThemeDark:         "Dark",
-    btnDlgSettingsDisplayThemeLight:        "Light",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Language",
+    lblStgDisplayTheme:                     "Theme",
+    btnStgDisplayThemeDark:                 "Dark",
+    btnStgDisplayThemeLight:                "Light",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Line Edit Delay",
-    lblDlgSettingsTimeReactionDelay:        "Reaction Delay",
-    lblDlgSettingsTimeVerificationDelay:    "Затримка верифікації",
-    lblDlgSettingsTimeSeekDelay:            "Час перемотування",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Line Edit Delay",
+    lblStgTimeReactionDelay:                "Reaction Delay",
+    lblStgTimeVerificationDelay:            "Затримка верифікації",
+    lblStgTimeSeekDelay:                    "Час перемотування",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artist",
-    plhDlgSettingsMetaArtist:               "Artist name",
-    lblDlgSettingsMetaSongwriter:           "Songwriter",
-    plhDlgSettingsMetaSongwriter:           "Lyricist / songwriter",
-    lblDlgSettingsMetaLrcBy:                "LRC By",
-    plhDlgSettingsMetaLrcBy:                "LRC creator",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artist",
+    plhStgMetaArtist:                       "Artist name",
+    lblStgMetaSongwriter:                   "Songwriter",
+    plhStgMetaSongwriter:                   "Lyricist / songwriter",
+    lblStgMetaLrcBy:                        "LRC By",
+    plhStgMetaLrcBy:                        "LRC creator",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "create synchronized lyrics files.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "create synchronized lyrics files.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3978,35 +4010,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Հետ փնտրել կազմաձևված վայրկյաններով (←)",
     tipFtrSeekNext:                         "Առաջ կա噭ադլված վայրկյաններով (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Կարգավորումներ",
-    tabDlgSettingsDisplay:                  "Ցուցադրում",
-    tabDlgSettingsTime:                     "Ժամանակ",
-    tabDlgSettingsMeta:                     "Մետատվյալ",
-    tabDlgSettingsAbout:                    "Մասին",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Կարգավորումներ",
+    tipStgBack:                             "Հետ",
+    tabStgDisplay:                          "Ցուցադրում",
+    tabStgTime:                             "Ժամանակ",
+    tabStgMeta:                             "Մետատվյալ",
+    tabStgAbout:                            "Մասին",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Լեզու",
-    lblDlgSettingsDisplayTheme:             "Թեմա",
-    btnDlgSettingsDisplayThemeDark:         "Մութ",
-    btnDlgSettingsDisplayThemeLight:        "Բաց",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Լեզու",
+    lblStgDisplayTheme:                     "Թեմա",
+    btnStgDisplayThemeDark:                 "Մութ",
+    btnStgDisplayThemeLight:                "Բաց",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Տողի խմբագրման հապաղում",
-    lblDlgSettingsTimeReactionDelay:        "Արձագանքման հապաղում",
-    lblDlgSettingsTimeVerificationDelay:    "Ստուգման հապաղում",
-    lblDlgSettingsTimeSeekDelay:            "Անց ժամ",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Տողի խմբագրման հապաղում",
+    lblStgTimeReactionDelay:                "Արձագանքման հապաղում",
+    lblStgTimeVerificationDelay:            "Ստուգման հապաղում",
+    lblStgTimeSeekDelay:                    "Անց ժամ",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Կատարող",
-    plhDlgSettingsMetaArtist:               "Կատարողի անուն",
-    lblDlgSettingsMetaSongwriter:           "Հեղինակ",
-    plhDlgSettingsMetaSongwriter:           "Բառերի հեղինակ / կոմպոզիտոր",
-    lblDlgSettingsMetaLrcBy:                "LRC-ը ստեղծել է",
-    plhDlgSettingsMetaLrcBy:                "LRC-ի ստեղծող",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Կատարող",
+    plhStgMetaArtist:                       "Կատարողի անուն",
+    lblStgMetaSongwriter:                   "Հեղինակ",
+    plhStgMetaSongwriter:                   "Բառերի հեղինակ / կոմպոզիտոր",
+    lblStgMetaLrcBy:                        "LRC-ը ստեղծել է",
+    plhStgMetaLrcBy:                        "LRC-ի ստեղծող",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ստեղծել համաժամեցված երգի տեքստի ֆայլեր:",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ստեղծել համաժամեցված երգի տեքստի ֆայլեր:",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Մետատվյալ",
@@ -4100,35 +4133,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Назад с конфигурираните секунди (←)",
     tipFtrSeekNext:                         "Напредване с конфигурираните секунди (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Настройки",
-    tabDlgSettingsDisplay:                  "Изглед",
-    tabDlgSettingsTime:                     "Време",
-    tabDlgSettingsMeta:                     "Метаданни",
-    tabDlgSettingsAbout:                    "Относно",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Настройки",
+    tipStgBack:                             "Назад",
+    tabStgDisplay:                          "Изглед",
+    tabStgTime:                             "Време",
+    tabStgMeta:                             "Метаданни",
+    tabStgAbout:                            "Относно",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Език",
-    lblDlgSettingsDisplayTheme:             "Тема",
-    btnDlgSettingsDisplayThemeDark:         "Тъмна",
-    btnDlgSettingsDisplayThemeLight:        "Светла",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Език",
+    lblStgDisplayTheme:                     "Тема",
+    btnStgDisplayThemeDark:                 "Тъмна",
+    btnStgDisplayThemeLight:                "Светла",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Закъснение при редактиране",
-    lblDlgSettingsTimeReactionDelay:        "Закъснение на реакцията",
-    lblDlgSettingsTimeVerificationDelay:    "Закъснение на проверката",
-    lblDlgSettingsTimeSeekDelay:            "Време на прескок",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Закъснение при редактиране",
+    lblStgTimeReactionDelay:                "Закъснение на реакцията",
+    lblStgTimeVerificationDelay:            "Закъснение на проверката",
+    lblStgTimeSeekDelay:                    "Време на прескок",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Изпълнител",
-    plhDlgSettingsMetaArtist:               "Име на изпълнителя",
-    lblDlgSettingsMetaSongwriter:           "Автор",
-    plhDlgSettingsMetaSongwriter:           "Текстописец / автор",
-    lblDlgSettingsMetaLrcBy:                "LRC от",
-    plhDlgSettingsMetaLrcBy:                "Създател на LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Изпълнител",
+    plhStgMetaArtist:                       "Име на изпълнителя",
+    lblStgMetaSongwriter:                   "Автор",
+    plhStgMetaSongwriter:                   "Текстописец / автор",
+    lblStgMetaLrcBy:                        "LRC от",
+    plhStgMetaLrcBy:                        "Създател на LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "създавайте синхронизирани файлове с текст.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "създавайте синхронизирани файлове с текст.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаданни",
@@ -4222,35 +4256,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Retroceder os segundos configurados (←)",
     tipFtrSeekNext:                         "Avanzar os segundos configurados (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Configuración",
-    tabDlgSettingsDisplay:                  "Visualización",
-    tabDlgSettingsTime:                     "Tempo",
-    tabDlgSettingsMeta:                     "Metadatos",
-    tabDlgSettingsAbout:                    "Acerca de",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Configuración",
+    tipStgBack:                             "Atrás",
+    tabStgDisplay:                          "Visualización",
+    tabStgTime:                             "Tempo",
+    tabStgMeta:                             "Metadatos",
+    tabStgAbout:                            "Acerca de",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Idioma",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Escuro",
-    btnDlgSettingsDisplayThemeLight:        "Claro",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Idioma",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Escuro",
+    btnStgDisplayThemeLight:                "Claro",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Retardo de edición",
-    lblDlgSettingsTimeReactionDelay:        "Retardo de reacción",
-    lblDlgSettingsTimeVerificationDelay:    "Retardo de verificación",
-    lblDlgSettingsTimeSeekDelay:            "Tempo de salto",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Retardo de edición",
+    lblStgTimeReactionDelay:                "Retardo de reacción",
+    lblStgTimeVerificationDelay:            "Retardo de verificación",
+    lblStgTimeSeekDelay:                    "Tempo de salto",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Nome do artista",
-    lblDlgSettingsMetaSongwriter:           "Compositor",
-    plhDlgSettingsMetaSongwriter:           "Letrista / compositor",
-    lblDlgSettingsMetaLrcBy:                "LRC por",
-    plhDlgSettingsMetaLrcBy:                "Creador do LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Nome do artista",
+    lblStgMetaSongwriter:                   "Compositor",
+    plhStgMetaSongwriter:                   "Letrista / compositor",
+    lblStgMetaLrcBy:                        "LRC por",
+    plhStgMetaLrcBy:                        "Creador do LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "crea ficheiros de letra sincronizada.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "crea ficheiros de letra sincronizada.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadatos",
@@ -4344,35 +4379,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Visszatekerés a beállított másodpercekkel (←)",
     tipFtrSeekNext:                         "Ugorjon előre a beállított másodpercekkel (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Beállítások",
-    tabDlgSettingsDisplay:                  "Megjelenítés",
-    tabDlgSettingsTime:                     "Idő",
-    tabDlgSettingsMeta:                     "Metaadatok",
-    tabDlgSettingsAbout:                    "Névjegy",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Beállítások",
+    tipStgBack:                             "Vissza",
+    tabStgDisplay:                          "Megjelenítés",
+    tabStgTime:                             "Idő",
+    tabStgMeta:                             "Metaadatok",
+    tabStgAbout:                            "Névjegy",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Nyelv",
-    lblDlgSettingsDisplayTheme:             "Téma",
-    btnDlgSettingsDisplayThemeDark:         "Sötét",
-    btnDlgSettingsDisplayThemeLight:        "Világos",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Nyelv",
+    lblStgDisplayTheme:                     "Téma",
+    btnStgDisplayThemeDark:                 "Sötét",
+    btnStgDisplayThemeLight:                "Világos",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Szerkesztési késleltetés",
-    lblDlgSettingsTimeReactionDelay:        "Reakciókésleltetés",
-    lblDlgSettingsTimeVerificationDelay:    "Ellenőrzési késleltetés",
-    lblDlgSettingsTimeSeekDelay:            "Ugrási idő",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Szerkesztési késleltetés",
+    lblStgTimeReactionDelay:                "Reakciókésleltetés",
+    lblStgTimeVerificationDelay:            "Ellenőrzési késleltetés",
+    lblStgTimeSeekDelay:                    "Ugrási idő",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Előadó",
-    plhDlgSettingsMetaArtist:               "Előadó neve",
-    lblDlgSettingsMetaSongwriter:           "Dalszerző",
-    plhDlgSettingsMetaSongwriter:           "Szövegíró / dalszerző",
-    lblDlgSettingsMetaLrcBy:                "LRC készítette",
-    plhDlgSettingsMetaLrcBy:                "LRC létrehozója",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Előadó",
+    plhStgMetaArtist:                       "Előadó neve",
+    lblStgMetaSongwriter:                   "Dalszerző",
+    plhStgMetaSongwriter:                   "Szövegíró / dalszerző",
+    lblStgMetaLrcBy:                        "LRC készítette",
+    plhStgMetaLrcBy:                        "LRC létrehozója",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "szinkronizált dalszöveg fájlok létrehozása.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "szinkronizált dalszöveg fájlok létrehozása.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metaadatok",
@@ -4466,35 +4502,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Grįžti atgal sukonfigūruotais sekundėmis (←)",
     tipFtrSeekNext:                         "Perkelti nurodytus sekundes pirmyn (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Nustatymai",
-    tabDlgSettingsDisplay:                  "Rodymas",
-    tabDlgSettingsTime:                     "Laikas",
-    tabDlgSettingsMeta:                     "Metaduomenys",
-    tabDlgSettingsAbout:                    "Apie",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Nustatymai",
+    tipStgBack:                             "Atgal",
+    tabStgDisplay:                          "Rodymas",
+    tabStgTime:                             "Laikas",
+    tabStgMeta:                             "Metaduomenys",
+    tabStgAbout:                            "Apie",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Kalba",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Tamsi",
-    btnDlgSettingsDisplayThemeLight:        "Šviesi",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Kalba",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Tamsi",
+    btnStgDisplayThemeLight:                "Šviesi",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Eilutės redagavimo delsa",
-    lblDlgSettingsTimeReactionDelay:        "Reakcijos delsa",
-    lblDlgSettingsTimeVerificationDelay:    "Tikrinimo delsa",
-    lblDlgSettingsTimeSeekDelay:            "Šuolio trupmė",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Eilutės redagavimo delsa",
+    lblStgTimeReactionDelay:                "Reakcijos delsa",
+    lblStgTimeVerificationDelay:            "Tikrinimo delsa",
+    lblStgTimeSeekDelay:                    "Šuolio trupmė",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Atlikėjas",
-    plhDlgSettingsMetaArtist:               "Atlikėjo vardas",
-    lblDlgSettingsMetaSongwriter:           "Autorius",
-    plhDlgSettingsMetaSongwriter:           "Dainos žodžių autorius / kompozitorius",
-    lblDlgSettingsMetaLrcBy:                "LRC sukūrė",
-    plhDlgSettingsMetaLrcBy:                "LRC kūrėjas",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Atlikėjas",
+    plhStgMetaArtist:                       "Atlikėjo vardas",
+    lblStgMetaSongwriter:                   "Autorius",
+    plhStgMetaSongwriter:                   "Dainos žodžių autorius / kompozitorius",
+    lblStgMetaLrcBy:                        "LRC sukūrė",
+    plhStgMetaLrcBy:                        "LRC kūrėjas",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "kurti sinchronizuotus dainos žodžių failus.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "kurti sinchronizuotus dainos žodžių failus.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metaduomenys",
@@ -4588,35 +4625,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Назад со конфигурираните секунди (←)",
     tipFtrSeekNext:                         "Прескокнете ги конфигурираните секунди напред (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Поставки",
-    tabDlgSettingsDisplay:                  "Приказ",
-    tabDlgSettingsTime:                     "Време",
-    tabDlgSettingsMeta:                     "Метаподатоци",
-    tabDlgSettingsAbout:                    "За",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Поставки",
+    tipStgBack:                             "Назад",
+    tabStgDisplay:                          "Приказ",
+    tabStgTime:                             "Време",
+    tabStgMeta:                             "Метаподатоци",
+    tabStgAbout:                            "За",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Јазик",
-    lblDlgSettingsDisplayTheme:             "Тема",
-    btnDlgSettingsDisplayThemeDark:         "Темна",
-    btnDlgSettingsDisplayThemeLight:        "Светла",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Јазик",
+    lblStgDisplayTheme:                     "Тема",
+    btnStgDisplayThemeDark:                 "Темна",
+    btnStgDisplayThemeLight:                "Светла",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Задоцнување при уредување",
-    lblDlgSettingsTimeReactionDelay:        "Задоцнување на реакцијата",
-    lblDlgSettingsTimeVerificationDelay:    "Задоцнување на проверката",
-    lblDlgSettingsTimeSeekDelay:            "Време на прескок",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Задоцнување при уредување",
+    lblStgTimeReactionDelay:                "Задоцнување на реакцијата",
+    lblStgTimeVerificationDelay:            "Задоцнување на проверката",
+    lblStgTimeSeekDelay:                    "Време на прескок",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Изведувач",
-    plhDlgSettingsMetaArtist:               "Име на изведувачот",
-    lblDlgSettingsMetaSongwriter:           "Автор",
-    plhDlgSettingsMetaSongwriter:           "Текстописец / автор",
-    lblDlgSettingsMetaLrcBy:                "LRC од",
-    plhDlgSettingsMetaLrcBy:                "Создавач на LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Изведувач",
+    plhStgMetaArtist:                       "Име на изведувачот",
+    lblStgMetaSongwriter:                   "Автор",
+    plhStgMetaSongwriter:                   "Текстописец / автор",
+    lblStgMetaLrcBy:                        "LRC од",
+    plhStgMetaLrcBy:                        "Создавач на LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "создавајте синхронизирани фајлови со текст на песни.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "создавајте синхронизирани фајлови со текст на песни.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаподатоци",
@@ -4710,35 +4748,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Назад за конфигурисане секунде (←)",
     tipFtrSeekNext:                         "Прескочите конфигурисане секунде унапред (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Подешавања",
-    tabDlgSettingsDisplay:                  "Приказ",
-    tabDlgSettingsTime:                     "Време",
-    tabDlgSettingsMeta:                     "Метаподаци",
-    tabDlgSettingsAbout:                    "О апликацији",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Подешавања",
+    tipStgBack:                             "Назад",
+    tabStgDisplay:                          "Приказ",
+    tabStgTime:                             "Време",
+    tabStgMeta:                             "Метаподаци",
+    tabStgAbout:                            "О апликацији",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Језик",
-    lblDlgSettingsDisplayTheme:             "Тема",
-    btnDlgSettingsDisplayThemeDark:         "Тамна",
-    btnDlgSettingsDisplayThemeLight:        "Светла",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Језик",
+    lblStgDisplayTheme:                     "Тема",
+    btnStgDisplayThemeDark:                 "Тамна",
+    btnStgDisplayThemeLight:                "Светла",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Кашњење при уређивању",
-    lblDlgSettingsTimeReactionDelay:        "Кашњење реакције",
-    lblDlgSettingsTimeVerificationDelay:    "Кашњење провере",
-    lblDlgSettingsTimeSeekDelay:            "Трајање скока",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Кашњење при уређивању",
+    lblStgTimeReactionDelay:                "Кашњење реакције",
+    lblStgTimeVerificationDelay:            "Кашњење провере",
+    lblStgTimeSeekDelay:                    "Трајање скока",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Извођач",
-    plhDlgSettingsMetaArtist:               "Ime извођача",
-    lblDlgSettingsMetaSongwriter:           "Аутор",
-    plhDlgSettingsMetaSongwriter:           "Текстописац / аутор",
-    lblDlgSettingsMetaLrcBy:                "LRC направио",
-    plhDlgSettingsMetaLrcBy:                "Творац LRC-а",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Извођач",
+    plhStgMetaArtist:                       "Ime извођача",
+    lblStgMetaSongwriter:                   "Аутор",
+    plhStgMetaSongwriter:                   "Текстописац / аутор",
+    lblStgMetaLrcBy:                        "LRC направио",
+    plhStgMetaLrcBy:                        "Творац LRC-а",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "креирајте синхронизоване фајлове са текстом песама.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "креирајте синхронизоване фајлове са текстом песама.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаподаци",
@@ -4832,35 +4871,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Späť o nakonfigurované sekundy (←)",
     tipFtrSeekNext:                         "Posunutʹ vpred o nastavené sekundy (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Nastavenia",
-    tabDlgSettingsDisplay:                  "Zobrazenie",
-    tabDlgSettingsTime:                     "Čas",
-    tabDlgSettingsMeta:                     "Metadáta",
-    tabDlgSettingsAbout:                    "O programe",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Nastavenia",
+    tipStgBack:                             "Späť",
+    tabStgDisplay:                          "Zobrazenie",
+    tabStgTime:                             "Čas",
+    tabStgMeta:                             "Metadáta",
+    tabStgAbout:                            "O programe",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Jazyk",
-    lblDlgSettingsDisplayTheme:             "Téma",
-    btnDlgSettingsDisplayThemeDark:         "Tmavá",
-    btnDlgSettingsDisplayThemeLight:        "Svetlá",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Jazyk",
+    lblStgDisplayTheme:                     "Téma",
+    btnStgDisplayThemeDark:                 "Tmavá",
+    btnStgDisplayThemeLight:                "Svetlá",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Oneskorenie úpravy riadka",
-    lblDlgSettingsTimeReactionDelay:        "Oneskorenie reakcie",
-    lblDlgSettingsTimeVerificationDelay:    "Oneskorenie overenia",
-    lblDlgSettingsTimeSeekDelay:            "Čas skoku",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Oneskorenie úpravy riadka",
+    lblStgTimeReactionDelay:                "Oneskorenie reakcie",
+    lblStgTimeVerificationDelay:            "Oneskorenie overenia",
+    lblStgTimeSeekDelay:                    "Čas skoku",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Interpret",
-    plhDlgSettingsMetaArtist:               "Meno interpreta",
-    lblDlgSettingsMetaSongwriter:           "Autor",
-    plhDlgSettingsMetaSongwriter:           "Textár / skladateľ",
-    lblDlgSettingsMetaLrcBy:                "LRC vytvoril",
-    plhDlgSettingsMetaLrcBy:                "Tvorca LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Interpret",
+    plhStgMetaArtist:                       "Meno interpreta",
+    lblStgMetaSongwriter:                   "Autor",
+    plhStgMetaSongwriter:                   "Textár / skladateľ",
+    lblStgMetaLrcBy:                        "LRC vytvoril",
+    plhStgMetaLrcBy:                        "Tvorca LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "vytvárať synchronizované súbory s textom piesní.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "vytvárať synchronizované súbory s textom piesní.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadáta",
@@ -4954,35 +4994,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Nazaj za nastavljene sekunde (←)",
     tipFtrSeekNext:                         "Premakni naprej za nastavljene sekunde (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Nastavitve",
-    tabDlgSettingsDisplay:                  "Prikaz",
-    tabDlgSettingsTime:                     "Čas",
-    tabDlgSettingsMeta:                     "Metapodatki",
-    tabDlgSettingsAbout:                    "O programu",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Nastavitve",
+    tipStgBack:                             "Nazaj",
+    tabStgDisplay:                          "Prikaz",
+    tabStgTime:                             "Čas",
+    tabStgMeta:                             "Metapodatki",
+    tabStgAbout:                            "O programu",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Jezik",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Temna",
-    btnDlgSettingsDisplayThemeLight:        "Svetla",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Jezik",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Temna",
+    btnStgDisplayThemeLight:                "Svetla",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Zamik urejanja vrstice",
-    lblDlgSettingsTimeReactionDelay:        "Zamik reakcije",
-    lblDlgSettingsTimeVerificationDelay:    "Zamik preverjanja",
-    lblDlgSettingsTimeSeekDelay:            "Čas skoka",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Zamik urejanja vrstice",
+    lblStgTimeReactionDelay:                "Zamik reakcije",
+    lblStgTimeVerificationDelay:            "Zamik preverjanja",
+    lblStgTimeSeekDelay:                    "Čas skoka",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Izvajalec",
-    plhDlgSettingsMetaArtist:               "Ime izvajalca",
-    lblDlgSettingsMetaSongwriter:           "Avtor",
-    plhDlgSettingsMetaSongwriter:           "Pisec besedila / skladatelj",
-    lblDlgSettingsMetaLrcBy:                "LRC ustvaril",
-    plhDlgSettingsMetaLrcBy:                "Ustvarjalec LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Izvajalec",
+    plhStgMetaArtist:                       "Ime izvajalca",
+    lblStgMetaSongwriter:                   "Avtor",
+    plhStgMetaSongwriter:                   "Pisec besedila / skladatelj",
+    lblStgMetaLrcBy:                        "LRC ustvaril",
+    plhStgMetaLrcBy:                        "Ustvarjalec LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ustvarjajte sinhronizirane datoteke z besedili pesmi.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ustvarjajte sinhronizirane datoteke z besedili pesmi.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metapodatki",
@@ -5076,35 +5117,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "கட்டமைக்கப்பட்ட வினாடிகளால் பின்னோக்கி (←)",
     tipFtrSeekNext:                         "கட்டமைக்கப்பட்ட விநாடிகள் முன்னோக்கி செல் (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "அமைப்புகள்",
-    tabDlgSettingsDisplay:                  "காட்சி",
-    tabDlgSettingsTime:                     "நேரம்",
-    tabDlgSettingsMeta:                     "மெட்டாத் தரவு",
-    tabDlgSettingsAbout:                    "பற்றி",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "அமைப்புகள்",
+    tipStgBack:                             "பின்செல்",
+    tabStgDisplay:                          "காட்சி",
+    tabStgTime:                             "நேரம்",
+    tabStgMeta:                             "மெட்டாத் தரவு",
+    tabStgAbout:                            "பற்றி",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "மொழி",
-    lblDlgSettingsDisplayTheme:             "தீம்",
-    btnDlgSettingsDisplayThemeDark:         "இருண்ட",
-    btnDlgSettingsDisplayThemeLight:        "வெளிச்சமான",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "மொழி",
+    lblStgDisplayTheme:                     "தீம்",
+    btnStgDisplayThemeDark:                 "இருண்ட",
+    btnStgDisplayThemeLight:                "வெளிச்சமான",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "வரி திருத்த தாமதம்",
-    lblDlgSettingsTimeReactionDelay:        "எதிர்வினை தாமதம்",
-    lblDlgSettingsTimeVerificationDelay:    "சரிபார்ப்பு தாமதம்",
-    lblDlgSettingsTimeSeekDelay:            "தாவல் நேரம்",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "வரி திருத்த தாமதம்",
+    lblStgTimeReactionDelay:                "எதிர்வினை தாமதம்",
+    lblStgTimeVerificationDelay:            "சரிபார்ப்பு தாமதம்",
+    lblStgTimeSeekDelay:                    "தாவல் நேரம்",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "கலைஞர்",
-    plhDlgSettingsMetaArtist:               "கலைஞரின் பெயர்",
-    lblDlgSettingsMetaSongwriter:           "பாடலாசிரியர்",
-    plhDlgSettingsMetaSongwriter:           "வரிகள் ஆசிரியர் / இசையமைப்பாளர்",
-    lblDlgSettingsMetaLrcBy:                "LRC உருவாக்கியவர்",
-    plhDlgSettingsMetaLrcBy:                "LRC உருவாக்குனர்",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "கலைஞர்",
+    plhStgMetaArtist:                       "கலைஞரின் பெயர்",
+    lblStgMetaSongwriter:                   "பாடலாசிரியர்",
+    plhStgMetaSongwriter:                   "வரிகள் ஆசிரியர் / இசையமைப்பாளர்",
+    lblStgMetaLrcBy:                        "LRC உருவாக்கியவர்",
+    plhStgMetaLrcBy:                        "LRC உருவாக்குனர்",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ஒத்திசைக்கப்பட்ட பாடல் வரிகள் கோப்புகளை உருவாக்குங்கள்.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ஒத்திசைக்கப்பட்ட பாடல் வரிகள் கோப்புகளை உருவாக்குங்கள்.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "மெட்டாத் தரவு",
@@ -5198,35 +5240,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "कॉन्फ़िगर किए गए सेकंड पीछे (←)",
     tipFtrSeekNext:                         "निर्धारित सेकंड आगे जाएं (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "सेटिंग्स",
-    tabDlgSettingsDisplay:                  "प्रदर्शन",
-    tabDlgSettingsTime:                     "समय",
-    tabDlgSettingsMeta:                     "मेटाडेटा",
-    tabDlgSettingsAbout:                    "के बारे में",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "सेटिंग्स",
+    tipStgBack:                             "वापस",
+    tabStgDisplay:                          "प्रदर्शन",
+    tabStgTime:                             "समय",
+    tabStgMeta:                             "मेटाडेटा",
+    tabStgAbout:                            "के बारे में",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "भाषा",
-    lblDlgSettingsDisplayTheme:             "थीम",
-    btnDlgSettingsDisplayThemeDark:         "डार्क",
-    btnDlgSettingsDisplayThemeLight:        "लाइट",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "भाषा",
+    lblStgDisplayTheme:                     "थीम",
+    btnStgDisplayThemeDark:                 "डार्क",
+    btnStgDisplayThemeLight:                "लाइट",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "लाइन संपादन विलंब",
-    lblDlgSettingsTimeReactionDelay:        "प्रतिक्रिया विलंब",
-    lblDlgSettingsTimeVerificationDelay:    "सत्यापन विलंब",
-    lblDlgSettingsTimeSeekDelay:            "जम्प समय",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "लाइन संपादन विलंब",
+    lblStgTimeReactionDelay:                "प्रतिक्रिया विलंब",
+    lblStgTimeVerificationDelay:            "सत्यापन विलंब",
+    lblStgTimeSeekDelay:                    "जम्प समय",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "कलाकार",
-    plhDlgSettingsMetaArtist:               "कलाकार का नाम",
-    lblDlgSettingsMetaSongwriter:           "गीतकार",
-    plhDlgSettingsMetaSongwriter:           "गीतकार / संगीतकार",
-    lblDlgSettingsMetaLrcBy:                "LRC द्वारा",
-    plhDlgSettingsMetaLrcBy:                "LRC निर्माता",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "कलाकार",
+    plhStgMetaArtist:                       "कलाकार का नाम",
+    lblStgMetaSongwriter:                   "गीतकार",
+    plhStgMetaSongwriter:                   "गीतकार / संगीतकार",
+    lblStgMetaLrcBy:                        "LRC द्वारा",
+    plhStgMetaLrcBy:                        "LRC निर्माता",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "समन्वित गीत फ़ाइलें बनाएं।",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "समन्वित गीत फ़ाइलें बनाएं।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "मेटाडेटा",
@@ -5320,35 +5363,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "কনফিগার করা সেকেন্ড পিছনে যান (←)",
     tipFtrSeekNext:                         "নির্ধারিত সেকেন্ড এগিয়ে যান (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "সেটিংস",
-    tabDlgSettingsDisplay:                  "প্রদর্শন",
-    tabDlgSettingsTime:                     "সময়",
-    tabDlgSettingsMeta:                     "মেটাডেটা",
-    tabDlgSettingsAbout:                    "সম্পর্কে",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "সেটিংস",
+    tipStgBack:                             "পিছনে",
+    tabStgDisplay:                          "প্রদর্শন",
+    tabStgTime:                             "সময়",
+    tabStgMeta:                             "মেটাডেটা",
+    tabStgAbout:                            "সম্পর্কে",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "ভাষা",
-    lblDlgSettingsDisplayTheme:             "থিম",
-    btnDlgSettingsDisplayThemeDark:         "ডার্ক",
-    btnDlgSettingsDisplayThemeLight:        "লাইট",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "ভাষা",
+    lblStgDisplayTheme:                     "থিম",
+    btnStgDisplayThemeDark:                 "ডার্ক",
+    btnStgDisplayThemeLight:                "লাইট",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "লাইন সম্পাদনা বিলম্ব",
-    lblDlgSettingsTimeReactionDelay:        "প্রতিক্রিয়া বিলম্ব",
-    lblDlgSettingsTimeVerificationDelay:    "যাচাইকরণ বিলম্ব",
-    lblDlgSettingsTimeSeekDelay:            "জাম্প সময়",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "লাইন সম্পাদনা বিলম্ব",
+    lblStgTimeReactionDelay:                "প্রতিক্রিয়া বিলম্ব",
+    lblStgTimeVerificationDelay:            "যাচাইকরণ বিলম্ব",
+    lblStgTimeSeekDelay:                    "জাম্প সময়",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "শিল্পী",
-    plhDlgSettingsMetaArtist:               "শিল্পীর নাম",
-    lblDlgSettingsMetaSongwriter:           "গীতিকার",
-    plhDlgSettingsMetaSongwriter:           "গীতিকার / সুরকার",
-    lblDlgSettingsMetaLrcBy:                "LRC তৈরি করেছেন",
-    plhDlgSettingsMetaLrcBy:                "LRC নির্মাতা",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "শিল্পী",
+    plhStgMetaArtist:                       "শিল্পীর নাম",
+    lblStgMetaSongwriter:                   "গীতিকার",
+    plhStgMetaSongwriter:                   "গীতিকার / সুরকার",
+    lblStgMetaLrcBy:                        "LRC তৈরি করেছেন",
+    plhStgMetaLrcBy:                        "LRC নির্মাতা",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "সমন্বিত গানের কথার ফাইল তৈরি করুন।",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "সমন্বিত গানের কথার ফাইল তৈরি করুন।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "মেটাডেটা",
@@ -5442,35 +5486,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "ترتیب دیے گئے سیکنڈ پیچھے جائیں (←)",
     tipFtrSeekNext:                         "طے شدہ سیکنڈ آگے جائیں (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "ترتیبات",
-    tabDlgSettingsDisplay:                  "ڈسپلے",
-    tabDlgSettingsTime:                     "وقت",
-    tabDlgSettingsMeta:                     "میٹا ڈیٹا",
-    tabDlgSettingsAbout:                    "کے بارے میں",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "ترتیبات",
+    tipStgBack:                             "واپس",
+    tabStgDisplay:                          "ڈسپلے",
+    tabStgTime:                             "وقت",
+    tabStgMeta:                             "میٹا ڈیٹا",
+    tabStgAbout:                            "کے بارے میں",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "زبان",
-    lblDlgSettingsDisplayTheme:             "تھیم",
-    btnDlgSettingsDisplayThemeDark:         "گہرا",
-    btnDlgSettingsDisplayThemeLight:        "روشن",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "زبان",
+    lblStgDisplayTheme:                     "تھیم",
+    btnStgDisplayThemeDark:                 "گہرا",
+    btnStgDisplayThemeLight:                "روشن",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "لائن ترمیم تاخیر",
-    lblDlgSettingsTimeReactionDelay:        "رد عمل کی تاخیر",
-    lblDlgSettingsTimeVerificationDelay:    "تصدیق کی تاخیر",
-    lblDlgSettingsTimeSeekDelay:            "جمپ وقت",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "لائن ترمیم تاخیر",
+    lblStgTimeReactionDelay:                "رد عمل کی تاخیر",
+    lblStgTimeVerificationDelay:            "تصدیق کی تاخیر",
+    lblStgTimeSeekDelay:                    "جمپ وقت",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "فنکار",
-    plhDlgSettingsMetaArtist:               "فنکار کا نام",
-    lblDlgSettingsMetaSongwriter:           "نغمہ نگار",
-    plhDlgSettingsMetaSongwriter:           "نغمہ نگار / موسیقار",
-    lblDlgSettingsMetaLrcBy:                "LRC بنانے والا",
-    plhDlgSettingsMetaLrcBy:                "LRC بنانے والا",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "فنکار",
+    plhStgMetaArtist:                       "فنکار کا نام",
+    lblStgMetaSongwriter:                   "نغمہ نگار",
+    plhStgMetaSongwriter:                   "نغمہ نگار / موسیقار",
+    lblStgMetaLrcBy:                        "LRC بنانے والا",
+    plhStgMetaLrcBy:                        "LRC بنانے والا",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ہم آہنگ گانوں کی فائلیں بنائیں۔",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ہم آہنگ گانوں کی فائلیں بنائیں۔",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "میٹا ڈیٹا",
@@ -5564,35 +5609,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Rudi nyuma kwa sekunde zilizowekwa (←)",
     tipFtrSeekNext:                         "Ruka sekunde zilizosanidiwa mbele (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Mipangilio",
-    tabDlgSettingsDisplay:                  "Onyesho",
-    tabDlgSettingsTime:                     "Wakati",
-    tabDlgSettingsMeta:                     "Meta",
-    tabDlgSettingsAbout:                    "Kuhusu",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Mipangilio",
+    tipStgBack:                             "Rudi",
+    tabStgDisplay:                          "Onyesho",
+    tabStgTime:                             "Wakati",
+    tabStgMeta:                             "Meta",
+    tabStgAbout:                            "Kuhusu",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Lugha",
-    lblDlgSettingsDisplayTheme:             "Mandhari",
-    btnDlgSettingsDisplayThemeDark:         "Giza",
-    btnDlgSettingsDisplayThemeLight:        "Mwanga",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Lugha",
+    lblStgDisplayTheme:                     "Mandhari",
+    btnStgDisplayThemeDark:                 "Giza",
+    btnStgDisplayThemeLight:                "Mwanga",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Kuchelewa kwa uhariri wa mstari",
-    lblDlgSettingsTimeReactionDelay:        "Kuchelewa kwa majibu",
-    lblDlgSettingsTimeVerificationDelay:    "Kuchelewa kwa uthibitisho",
-    lblDlgSettingsTimeSeekDelay:            "Muda wa kuruka",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Kuchelewa kwa uhariri wa mstari",
+    lblStgTimeReactionDelay:                "Kuchelewa kwa majibu",
+    lblStgTimeVerificationDelay:            "Kuchelewa kwa uthibitisho",
+    lblStgTimeSeekDelay:                    "Muda wa kuruka",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Msanii",
-    plhDlgSettingsMetaArtist:               "Jina la msanii",
-    lblDlgSettingsMetaSongwriter:           "Mwandishi wa wimbo",
-    plhDlgSettingsMetaSongwriter:           "Mwandishi wa maneno / mtunzi",
-    lblDlgSettingsMetaLrcBy:                "LRC na",
-    plhDlgSettingsMetaLrcBy:                "Mtengenezaji wa LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Msanii",
+    plhStgMetaArtist:                       "Jina la msanii",
+    lblStgMetaSongwriter:                   "Mwandishi wa wimbo",
+    plhStgMetaSongwriter:                   "Mwandishi wa maneno / mtunzi",
+    lblStgMetaLrcBy:                        "LRC na",
+    plhStgMetaLrcBy:                        "Mtengenezaji wa LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "unda faili za maneno ya wimbo zilizosawazishwa.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "unda faili za maneno ya wimbo zilizosawazishwa.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -5686,35 +5732,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "ਸੰਰਚਿਤ ਸਕਿੰਟ ਪਿੱਛੇ ਜਾਓ (←)",
     tipFtrSeekNext:                         "ਨਿਰਧਾਰਿਤ ਸਕਿੰਟ ਅੱਗੇ ਜਾਓ (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "ਸੈਟਿੰਗਾਂ",
-    tabDlgSettingsDisplay:                  "ਡਿਸਪਲੇ",
-    tabDlgSettingsTime:                     "ਸਮਾਂ",
-    tabDlgSettingsMeta:                     "ਮੈਟਾਡੇਟਾ",
-    tabDlgSettingsAbout:                    "ਬਾਰੇ",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "ਸੈਟਿੰਗਾਂ",
+    tipStgBack:                             "ਵਾਪਸ",
+    tabStgDisplay:                          "ਡਿਸਪਲੇ",
+    tabStgTime:                             "ਸਮਾਂ",
+    tabStgMeta:                             "ਮੈਟਾਡੇਟਾ",
+    tabStgAbout:                            "ਬਾਰੇ",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "ਭਾਸ਼ਾ",
-    lblDlgSettingsDisplayTheme:             "ਥੀਮ",
-    btnDlgSettingsDisplayThemeDark:         "ਡਾਰਕ",
-    btnDlgSettingsDisplayThemeLight:        "ਲਾਈਟ",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "ਭਾਸ਼ਾ",
+    lblStgDisplayTheme:                     "ਥੀਮ",
+    btnStgDisplayThemeDark:                 "ਡਾਰਕ",
+    btnStgDisplayThemeLight:                "ਲਾਈਟ",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "ਲਾਈਨ ਸੰਪਾਦਨ ਦੇਰੀ",
-    lblDlgSettingsTimeReactionDelay:        "ਪ੍ਰਤੀਕਿਰਿਆ ਦੇਰੀ",
-    lblDlgSettingsTimeVerificationDelay:    "ਤਸਦੀਕ ਦੇਰੀ",
-    lblDlgSettingsTimeSeekDelay:            "ਜੰਪ ਸਮਾਂ",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "ਲਾਈਨ ਸੰਪਾਦਨ ਦੇਰੀ",
+    lblStgTimeReactionDelay:                "ਪ੍ਰਤੀਕਿਰਿਆ ਦੇਰੀ",
+    lblStgTimeVerificationDelay:            "ਤਸਦੀਕ ਦੇਰੀ",
+    lblStgTimeSeekDelay:                    "ਜੰਪ ਸਮਾਂ",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "ਕਲਾਕਾਰ",
-    plhDlgSettingsMetaArtist:               "ਕਲਾਕਾਰ ਦਾ ਨਾਮ",
-    lblDlgSettingsMetaSongwriter:           "ਗੀਤਕਾਰ",
-    plhDlgSettingsMetaSongwriter:           "ਗੀਤਕਾਰ / ਸੰਗੀਤਕਾਰ",
-    lblDlgSettingsMetaLrcBy:                "LRC ਦੁਆਰਾ",
-    plhDlgSettingsMetaLrcBy:                "LRC ਬਣਾਉਣ ਵਾਲਾ",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "ਕਲਾਕਾਰ",
+    plhStgMetaArtist:                       "ਕਲਾਕਾਰ ਦਾ ਨਾਮ",
+    lblStgMetaSongwriter:                   "ਗੀਤਕਾਰ",
+    plhStgMetaSongwriter:                   "ਗੀਤਕਾਰ / ਸੰਗੀਤਕਾਰ",
+    lblStgMetaLrcBy:                        "LRC ਦੁਆਰਾ",
+    plhStgMetaLrcBy:                        "LRC ਬਣਾਉਣ ਵਾਲਾ",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ਸਮਕਾਲੀ ਗੀਤ ਫਾਈਲਾਂ ਬਣਾਓ।",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ਸਮਕਾਲੀ ਗੀਤ ਫਾਈਲਾਂ ਬਣਾਓ।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "ਮੈਟਾਡੇਟਾ",
@@ -5808,35 +5855,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Koma baya da daƙiƙoƙin da aka tsara (←)",
     tipFtrSeekNext:                         "Ci gaba da daƙiƙoƙin da aka tsara (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Saitunan",
-    tabDlgSettingsDisplay:                  "Nuni",
-    tabDlgSettingsTime:                     "Lokaci",
-    tabDlgSettingsMeta:                     "Bayanan kula",
-    tabDlgSettingsAbout:                    "Game da",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Saitunan",
+    tipStgBack:                             "Baya",
+    tabStgDisplay:                          "Nuni",
+    tabStgTime:                             "Lokaci",
+    tabStgMeta:                             "Bayanan kula",
+    tabStgAbout:                            "Game da",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Harshe",
-    lblDlgSettingsDisplayTheme:             "Jigo",
-    btnDlgSettingsDisplayThemeDark:         "Duhu",
-    btnDlgSettingsDisplayThemeLight:        "Haske",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Harshe",
+    lblStgDisplayTheme:                     "Jigo",
+    btnStgDisplayThemeDark:                 "Duhu",
+    btnStgDisplayThemeLight:                "Haske",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Jinkirin gyara layi",
-    lblDlgSettingsTimeReactionDelay:        "Jinkirin martani",
-    lblDlgSettingsTimeVerificationDelay:    "Jinkirin tabbatarwa",
-    lblDlgSettingsTimeSeekDelay:            "Lokacin tsalle",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Jinkirin gyara layi",
+    lblStgTimeReactionDelay:                "Jinkirin martani",
+    lblStgTimeVerificationDelay:            "Jinkirin tabbatarwa",
+    lblStgTimeSeekDelay:                    "Lokacin tsalle",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Mawaƙi",
-    plhDlgSettingsMetaArtist:               "Sunan mawaƙi",
-    lblDlgSettingsMetaSongwriter:           "Marubucin waƙa",
-    plhDlgSettingsMetaSongwriter:           "Marubuci / Mawaƙi",
-    lblDlgSettingsMetaLrcBy:                "LRC ta",
-    plhDlgSettingsMetaLrcBy:                "Mai ƙirƙirar LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Mawaƙi",
+    plhStgMetaArtist:                       "Sunan mawaƙi",
+    lblStgMetaSongwriter:                   "Marubucin waƙa",
+    plhStgMetaSongwriter:                   "Marubuci / Mawaƙi",
+    lblStgMetaLrcBy:                        "LRC ta",
+    plhStgMetaLrcBy:                        "Mai ƙirƙirar LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ƙirƙira fayilolin waƙa masu daidaitawa.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ƙirƙira fayilolin waƙa masu daidaitawa.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Bayanan kula",
@@ -5930,35 +5978,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Padà sẹhin pẹlu ìṣẹjú tí a ṣètò (←)",
     tipFtrSeekNext:                         "Lọlọlọ siwaju ni iṣẹ̀ju-aaya ti a ṣeto (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Ètò",
-    tabDlgSettingsDisplay:                  "Ifihan",
-    tabDlgSettingsTime:                     "Àkókò",
-    tabDlgSettingsMeta:                     "Àlàyé àfikún",
-    tabDlgSettingsAbout:                    "Nípa",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Ètò",
+    tipStgBack:                             "Pada",
+    tabStgDisplay:                          "Ifihan",
+    tabStgTime:                             "Àkókò",
+    tabStgMeta:                             "Àlàyé àfikún",
+    tabStgAbout:                            "Nípa",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Èdè",
-    lblDlgSettingsDisplayTheme:             "Àwòrán",
-    btnDlgSettingsDisplayThemeDark:         "Òkùnkùn",
-    btnDlgSettingsDisplayThemeLight:        "Ìmọ́lẹ̀",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Èdè",
+    lblStgDisplayTheme:                     "Àwòrán",
+    btnStgDisplayThemeDark:                 "Òkùnkùn",
+    btnStgDisplayThemeLight:                "Ìmọ́lẹ̀",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Idaduro ìtúnṣe ìlà",
-    lblDlgSettingsTimeReactionDelay:        "Idaduro ìfèsì",
-    lblDlgSettingsTimeVerificationDelay:    "Idaduro ìdánwò",
-    lblDlgSettingsTimeSeekDelay:            "Akoko ờfờ",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Idaduro ìtúnṣe ìlà",
+    lblStgTimeReactionDelay:                "Idaduro ìfèsì",
+    lblStgTimeVerificationDelay:            "Idaduro ìdánwò",
+    lblStgTimeSeekDelay:                    "Akoko ờfờ",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Akọrin",
-    plhDlgSettingsMetaArtist:               "Orúkọ akọrin",
-    lblDlgSettingsMetaSongwriter:           "Olùkọ orin",
-    plhDlgSettingsMetaSongwriter:           "Olùkọ ọ̀rọ̀ / olùdásílẹ̀",
-    lblDlgSettingsMetaLrcBy:                "LRC láti ọwọ",
-    plhDlgSettingsMetaLrcBy:                "Olùdásílẹ̀ LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Akọrin",
+    plhStgMetaArtist:                       "Orúkọ akọrin",
+    lblStgMetaSongwriter:                   "Olùkọ orin",
+    plhStgMetaSongwriter:                   "Olùkọ ọ̀rọ̀ / olùdásílẹ̀",
+    lblStgMetaLrcBy:                        "LRC láti ọwọ",
+    plhStgMetaLrcBy:                        "Olùdásílẹ̀ LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "ṣẹdá àwọn fáìlì orin tí a dọgba.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "ṣẹdá àwọn fáìlì orin tí a dọgba.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Àlàyé àfikún",
@@ -6052,35 +6101,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "కాన్ఫిగర్ చేసిన సెకన్లు వెనక్కి (←)",
     tipFtrSeekNext:                         "కాన్ఫిగర్ చేసిన సెకన్లు ముందుకు వెళ్ళు (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "సెట్టింగులు",
-    tabDlgSettingsDisplay:                  "ప్రదర్శన",
-    tabDlgSettingsTime:                     "సమయం",
-    tabDlgSettingsMeta:                     "మెటా డేటా",
-    tabDlgSettingsAbout:                    "గురించి",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "సెట్టింగులు",
+    tipStgBack:                             "వెనుకకు",
+    tabStgDisplay:                          "ప్రదర్శన",
+    tabStgTime:                             "సమయం",
+    tabStgMeta:                             "మెటా డేటా",
+    tabStgAbout:                            "గురించి",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "భాష",
-    lblDlgSettingsDisplayTheme:             "థీమ్",
-    btnDlgSettingsDisplayThemeDark:         "చీకటి",
-    btnDlgSettingsDisplayThemeLight:        "వెలుతురు",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "భాష",
+    lblStgDisplayTheme:                     "థీమ్",
+    btnStgDisplayThemeDark:                 "చీకటి",
+    btnStgDisplayThemeLight:                "వెలుతురు",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "లైన్ సవరణ ఆలస్యం",
-    lblDlgSettingsTimeReactionDelay:        "ప్రతిస్పందన ఆలస్యం",
-    lblDlgSettingsTimeVerificationDelay:    "ధృవీకరణ ఆలస్యం",
-    lblDlgSettingsTimeSeekDelay:            "దాటు సమయం",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "లైన్ సవరణ ఆలస్యం",
+    lblStgTimeReactionDelay:                "ప్రతిస్పందన ఆలస్యం",
+    lblStgTimeVerificationDelay:            "ధృవీకరణ ఆలస్యం",
+    lblStgTimeSeekDelay:                    "దాటు సమయం",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "కళాకారుడు",
-    plhDlgSettingsMetaArtist:               "కళాకారుని పేరు",
-    lblDlgSettingsMetaSongwriter:           "పాటరచయిత",
-    plhDlgSettingsMetaSongwriter:           "గీతరచయిత / సంగీత స్వరకర్త",
-    lblDlgSettingsMetaLrcBy:                "LRC రూపొందించినవారు",
-    plhDlgSettingsMetaLrcBy:                "LRC సృష్టికర్త",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "కళాకారుడు",
+    plhStgMetaArtist:                       "కళాకారుని పేరు",
+    lblStgMetaSongwriter:                   "పాటరచయిత",
+    plhStgMetaSongwriter:                   "గీతరచయిత / సంగీత స్వరకర్త",
+    lblStgMetaLrcBy:                        "LRC రూపొందించినవారు",
+    plhStgMetaLrcBy:                        "LRC సృష్టికర్త",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "సమకాలీకరించిన పాట ఫైళ్ళు సృష్టించండి.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "సమకాలీకరించిన పాట ఫైళ్ళు సృష్టించండి.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "మెటా డేటా",
@@ -6174,35 +6224,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "कॉन्फिगर केलेल्या सेकंदांनी मागे (←)",
     tipFtrSeekNext:                         "कॉन्फिगर केलेल्या सेकंदांनी पुढे जा (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "सेटिंग्ज",
-    tabDlgSettingsDisplay:                  "प्रदर्शन",
-    tabDlgSettingsTime:                     "वेळ",
-    tabDlgSettingsMeta:                     "मेटाडेटा",
-    tabDlgSettingsAbout:                    "बद्दल",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "सेटिंग्ज",
+    tipStgBack:                             "मागे",
+    tabStgDisplay:                          "प्रदर्शन",
+    tabStgTime:                             "वेळ",
+    tabStgMeta:                             "मेटाडेटा",
+    tabStgAbout:                            "बद्दल",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "भाषा",
-    lblDlgSettingsDisplayTheme:             "थीम",
-    btnDlgSettingsDisplayThemeDark:         "गडद",
-    btnDlgSettingsDisplayThemeLight:        "प्रकाश",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "भाषा",
+    lblStgDisplayTheme:                     "थीम",
+    btnStgDisplayThemeDark:                 "गडद",
+    btnStgDisplayThemeLight:                "प्रकाश",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "ओळ संपादन विलंब",
-    lblDlgSettingsTimeReactionDelay:        "प्रतिक्रिया विलंब",
-    lblDlgSettingsTimeVerificationDelay:    "सत्यापन विलंब",
-    lblDlgSettingsTimeSeekDelay:            "उडी वेळ",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "ओळ संपादन विलंब",
+    lblStgTimeReactionDelay:                "प्रतिक्रिया विलंब",
+    lblStgTimeVerificationDelay:            "सत्यापन विलंब",
+    lblStgTimeSeekDelay:                    "उडी वेळ",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "कलाकार",
-    plhDlgSettingsMetaArtist:               "कलाकाराचे नाव",
-    lblDlgSettingsMetaSongwriter:           "गीतकार",
-    plhDlgSettingsMetaSongwriter:           "गीतकार / संगीतकार",
-    lblDlgSettingsMetaLrcBy:                "LRC द्वारे",
-    plhDlgSettingsMetaLrcBy:                "LRC निर्माता",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "कलाकार",
+    plhStgMetaArtist:                       "कलाकाराचे नाव",
+    lblStgMetaSongwriter:                   "गीतकार",
+    plhStgMetaSongwriter:                   "गीतकार / संगीतकार",
+    lblStgMetaLrcBy:                        "LRC द्वारे",
+    plhStgMetaLrcBy:                        "LRC निर्माता",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "समकालीन गीत फाइल्स तयार करा.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "समकालीन गीत फाइल्स तयार करा.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "मेटाडेटा",
@@ -6296,35 +6347,36 @@ const TRANSLATIONS = {
     tipFtrSeekBack:                         "Bumalik sa nakatakdang segundo (←)",
     tipFtrSeekNext:                         "Sumulong ng mga naka-configure na segundo (→)",
 
-    // Prefix:DlgSettings - Scope:settings dialog
-    ttlDlgSettings:                         "Mga Setting",
-    tabDlgSettingsDisplay:                  "Display",
-    tabDlgSettingsTime:                     "Oras",
-    tabDlgSettingsMeta:                     "Meta",
-    tabDlgSettingsAbout:                    "Tungkol sa",
+    // Prefix:Stg - Scope:settings view
+    ttlStg:                                 "Mga Setting",
+    tipStgBack:                             "Bumalik",
+    tabStgDisplay:                          "Display",
+    tabStgTime:                             "Oras",
+    tabStgMeta:                             "Meta",
+    tabStgAbout:                            "Tungkol sa",
 
-    // Prefix:DlgSettingsDisplay - Scope:settings dialog (Display tab)
-    lblDlgSettingsDisplayLang:              "Wika",
-    lblDlgSettingsDisplayTheme:             "Tema",
-    btnDlgSettingsDisplayThemeDark:         "Madilim",
-    btnDlgSettingsDisplayThemeLight:        "Maliwanag",
+    // Prefix:StgDisplay - Scope:settings view (Display tab)
+    lblStgDisplayLang:                      "Wika",
+    lblStgDisplayTheme:                     "Tema",
+    btnStgDisplayThemeDark:                 "Madilim",
+    btnStgDisplayThemeLight:                "Maliwanag",
 
-    // Prefix:DlgSettingsTime - Scope:settings dialog (Time tab)
-    lblDlgSettingsTimeShiftDelay:           "Pagkaantala ng pag-edit ng linya",
-    lblDlgSettingsTimeReactionDelay:        "Pagkaantala ng reaksyon",
-    lblDlgSettingsTimeVerificationDelay:    "Pagkaantala ng pagpapatunay",
-    lblDlgSettingsTimeSeekDelay:            "Oras ng talon",
+    // Prefix:StgTime - Scope:settings view (Time tab)
+    lblStgTimeShiftDelay:                   "Pagkaantala ng pag-edit ng linya",
+    lblStgTimeReactionDelay:                "Pagkaantala ng reaksyon",
+    lblStgTimeVerificationDelay:            "Pagkaantala ng pagpapatunay",
+    lblStgTimeSeekDelay:                    "Oras ng talon",
 
-    // Prefix:DlgSettingsMeta - Scope:settings dialog (Meta tab)
-    lblDlgSettingsMetaArtist:               "Artista",
-    plhDlgSettingsMetaArtist:               "Pangalan ng artista",
-    lblDlgSettingsMetaSongwriter:           "Manunulat ng kanta",
-    plhDlgSettingsMetaSongwriter:           "Manunulat ng liriko / kompositor",
-    lblDlgSettingsMetaLrcBy:                "LRC ni",
-    plhDlgSettingsMetaLrcBy:                "Tagalikha ng LRC",
+    // Prefix:StgMeta - Scope:settings view (Meta tab)
+    lblStgMetaArtist:                       "Artista",
+    plhStgMetaArtist:                       "Pangalan ng artista",
+    lblStgMetaSongwriter:                   "Manunulat ng kanta",
+    plhStgMetaSongwriter:                   "Manunulat ng liriko / kompositor",
+    lblStgMetaLrcBy:                        "LRC ni",
+    plhStgMetaLrcBy:                        "Tagalikha ng LRC",
 
-    // Prefix:DlgSettingsAbout - Scope:settings dialog (About tab)
-    msgDlgSettingsAboutDesc:                "lumikha ng mga naka-synchronize na liriko file.",
+    // Prefix:StgAbout - Scope:settings view (About tab)
+    msgStgAboutDesc:                        "lumikha ng mga naka-synchronize na liriko file.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",

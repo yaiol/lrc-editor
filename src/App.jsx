@@ -5,14 +5,14 @@
 //   language via the i18n key workflow. Full procedure: see CLAUDE-i18n.md.
 //   Never paste translations by hand. The scripts ARE the work.
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Settings, HelpCircle, Music, FolderOpen, Save, SavePlus, FilePlus, X, Play, Pause, Square, Moon, Sun, ScrollText, Upload, SkipBack, SkipForward, Volume1, Volume2, VolumeX, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Settings, HelpCircle, Music, FolderOpen, Save, SavePlus, FilePlus, X, Play, Pause, Square, Upload, SkipBack, SkipForward, Volume1, Volume2, VolumeX, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useT, LANGUAGES } from './i18n-gen';
 import pkg from '../package.json';
-import yaiolLogo from './assets/yaiol-logo.svg';
 import { checkForUpdate, getUrl } from './lib/update-check';
 import { UpdateBanner } from './lib/ui-update-banner';
 import { AppHeader } from './lib/ui-header';
 import { GithubIcon } from './lib/ui-icons';
+import { SettingsView } from './lib/ui-settings';
 import { Splitter } from './lib/ui-ctl-splitter';
 import { useToast } from './lib/ui-fx-toast';
 import { NumberField } from './lib/ui-ctl-numberfield';
@@ -322,7 +322,6 @@ export default function App() {
 
   const [showMeta, setShowMeta] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [tabSettingsActive, setTabSettingsActive] = useState('display');
   // Lifted clear of the player bar (42px .barh-footer + the toast's own 28px gap) so the pill
   // floats inside the content area instead of straddling the footer.
   const { showToast, toast } = useToast({ bottom: 70 });
@@ -546,7 +545,7 @@ export default function App() {
   useEffect(() => {
     function onKeyDown(e) {
       if (isInputFocused()) return;
-      if (showSettings || confirm) return;
+      if (confirm) return;
       switch (e.key) {
         case ' ': e.preventDefault(); doPlayPause(); break;
         case 'Escape': doStop(); break;
@@ -566,7 +565,7 @@ export default function App() {
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isInputFocused, showSettings, confirm, lrcData, activeLrcLine, mediaFilePath, position, reactionDelay, seekDelay]);
+  }, [isInputFocused, confirm, lrcData, activeLrcLine, mediaFilePath, position, reactionDelay, seekDelay]);
 
   // ─── Audio event handlers ─────────────────────────────────────
 
@@ -1063,126 +1062,72 @@ export default function App() {
     );
   }
 
-  // ─── Settings modal ──────────────────────────────────────────
+  // ─── Settings page ───────────────────────────────────────────
+  // The shared SettingsView plus this app's Time and Meta tabs.
 
-  function SettingsModal() {
-    return (
-      <div className="dl-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) closeSettings(); }}>
-        <div className="dlg" onKeyDown={e => {
-          if (e.key === 'Escape') closeSettings();
-          if (e.key !== 'Tab') return;
-          const els = [...e.currentTarget.querySelectorAll('button, input, select, [tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled && el.offsetParent !== null);
-          const first = els[0]; const last = els[els.length - 1];
-          if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
-          else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
-        }}>
-          {/* Header */}
-          <div className="dlg-head">
-            <span className="dlg-title"><Settings />{t('ttlDlgSettings')}</span>
-            <button ref={el => { if (el && !el.dataset.didFocus) { el.dataset.didFocus = '1'; el.focus(); } }}
-              onClick={() => closeSettings()} className="dl-close">
-              <X />
-            </button>
-          </div>
-          {/* Tab bar */}
-          <div className="tabs">
-            {[{ key: 'display', label: t('tabDlgSettingsDisplay'), icon: Sun }, { key: 'time', label: t('tabDlgSettingsTime'), icon: Clock }, { key: 'meta', label: t('tabDlgSettingsMeta'), icon: Tag }, { key: 'about', label: t('tabDlgSettingsAbout'), icon: ScrollText }].map(({ key, label, icon: TabIcon }) => {
-              const active = tabSettingsActive === key;
-              return (
-                <button key={key} onClick={() => setTabSettingsActive(key)} className={`tab ${active ? 'active' : ''}`}>
-                  <TabIcon />{label}
-                </button>
-              );
-            })}
-          </div>
-          {/* Content */}
-          {/* Grid stacks all tabs in the same cell - height = tallest tab, no yoyo */}
-          <div className="dlg-body" style={{ display: 'grid' }}>
-            <div style={{ gridArea: '1/1', visibility: tabSettingsActive === 'display' ? 'visible' : 'hidden', zIndex: tabSettingsActive === 'display' ? 1 : 0, background: 'var(--dlg-bgd)', transition: 'none' }}>
-              {/* Language */}
-              <div className="dlg-field">
-                <label className="dlg-field-label">{t('lblDlgSettingsDisplayLang')}</label>
-                <select value={langKey} onChange={e => setLangKey(e.target.value)} className="select">
-                  {LANGUAGES.map(l => <option key={l.key} value={l.key}>{l.label}</option>)}
-                </select>
-              </div>
-              {/* Theme */}
-              <div className="dlg-field divider">
-                <label className="dlg-field-label">{t('lblDlgSettingsDisplayTheme')}</label>
-                <div className="opt-btns">
-                  {[{ key: 'dark', Icon: Moon }, { key: 'light', Icon: Sun }].map(({ key: tk, Icon }) => {
-                    const active = themeKey === tk;
-                    return (
-                      <button key={tk} onClick={() => setThemeKey(tk)} className={`opt-btn ${active ? 'active' : ''}`}>
-                        <Icon />
-                        <span>{t(tk === 'dark' ? 'btnDlgSettingsDisplayThemeDark' : 'btnDlgSettingsDisplayThemeLight')}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
-            {/* time */}
-            <div style={{ gridArea: '1/1', visibility: tabSettingsActive === 'time' ? 'visible' : 'hidden', zIndex: tabSettingsActive === 'time' ? 1 : 0, background: 'var(--dlg-bgd)', transition: 'none' }}>
-              {/* Shift Delay */}
-              <div className="dlg-field">
-                <label className="dlg-field-label">{t('lblDlgSettingsTimeShiftDelay')}</label>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <NumberField min={100} step={100} value={txtSettingsTimeShiftDelay} onChange={setTxtSettingsTimeShiftDelay} width={64} />
-                  <span className="hint">ms</span>
-                </div>
-              </div>
-              {/* Reaction Delay */}
-              <div className="dlg-field divider">
-                <label className="dlg-field-label">{t('lblDlgSettingsTimeReactionDelay')}</label>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <NumberField min={0} step={100} value={txtSettingsTimeReactionDelay} onChange={setTxtSettingsTimeReactionDelay} width={64} />
-                  <span className="hint">ms</span>
-                </div>
-              </div>
-              {/* Verification Delay */}
-              <div className="dlg-field divider">
-                <label className="dlg-field-label">{t('lblDlgSettingsTimeVerificationDelay')}</label>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <NumberField min={0} step={100} value={txtSettingsTimeVerificationDelay} onChange={setTxtSettingsTimeVerificationDelay} width={64} />
-                  <span className="hint">ms</span>
-                </div>
-              </div>
-              {/* Seek Back */}
-              <div className="dlg-field divider">
-                <label className="dlg-field-label">{t('lblDlgSettingsTimeSeekDelay')}</label>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <NumberField min={1} step={1} value={txtSettingsTimeSeekDelay} onChange={setTxtSettingsTimeSeekDelay} width={64} />
-                  <span className="hint">s</span>
-                </div>
-              </div>
-            </div>
-            {/* meta */}
-            <div style={{ gridArea: '1/1', visibility: tabSettingsActive === 'meta' ? 'visible' : 'hidden', zIndex: tabSettingsActive === 'meta' ? 1 : 0, background: 'var(--dlg-bgd)', transition: 'none', display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {[
-                ['lblDlgSettingsMetaArtist', 'plhDlgSettingsMetaArtist', txtSettingsMetaArtist, setTxtSettingsMetaArtist],
-                ['lblDlgSettingsMetaSongwriter', 'plhDlgSettingsMetaSongwriter', txtSettingsMetaSongwriter, setTxtSettingsMetaSongwriter],
-                ['lblDlgSettingsMetaLrcBy', 'plhDlgSettingsMetaLrcBy', txtSettingsMetaLrcBy, setTxtSettingsMetaLrcBy],
-              ].map(([lbl, plh, val, setter]) => (
-                <div key={lbl} className="dlg-field">
-                  <label className="dlg-field-label">{t(lbl)}</label>
-                  <input className="input" value={val} placeholder={t(plh)} onChange={e => setter(e.target.value)} />
-                </div>
-              ))}
-            </div>
-            {/* about */}
-            <div className="dlg-about" style={{ gridArea: '1/1', visibility: tabSettingsActive === 'about' ? 'visible' : 'hidden', zIndex: tabSettingsActive === 'about' ? 1 : 0, background: 'var(--dlg-bgd)', transition: 'none' }}>
-              <img src={yaiolLogo} alt="Yaiol" style={{ width: 120, height: 'auto', flexShrink: 0 }} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 6, minWidth: 0 }}>
-                <div className="dlg-about-id">
-                  {APP_NAME} <b>v{APP_VERSION_BUILD}</b> by yaiol
-                </div>
-                <div className="dlg-about-desc">{t('msgDlgSettingsAboutDesc')}</div>
-              </div>
-            </div>
+  function SettingsPage() {
+    const time = (
+      <>
+        {/* Shift Delay */}
+        <div className="dlg-field">
+          <label className="dlg-field-label">{t('lblStgTimeShiftDelay')}</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <NumberField min={100} step={100} value={txtSettingsTimeShiftDelay} onChange={setTxtSettingsTimeShiftDelay} width={64} />
+            <span className="hint">ms</span>
           </div>
         </div>
+        {/* Reaction Delay */}
+        <div className="dlg-field divider">
+          <label className="dlg-field-label">{t('lblStgTimeReactionDelay')}</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <NumberField min={0} step={100} value={txtSettingsTimeReactionDelay} onChange={setTxtSettingsTimeReactionDelay} width={64} />
+            <span className="hint">ms</span>
+          </div>
+        </div>
+        {/* Verification Delay */}
+        <div className="dlg-field divider">
+          <label className="dlg-field-label">{t('lblStgTimeVerificationDelay')}</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <NumberField min={0} step={100} value={txtSettingsTimeVerificationDelay} onChange={setTxtSettingsTimeVerificationDelay} width={64} />
+            <span className="hint">ms</span>
+          </div>
+        </div>
+        {/* Seek Back */}
+        <div className="dlg-field divider">
+          <label className="dlg-field-label">{t('lblStgTimeSeekDelay')}</label>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <NumberField min={1} step={1} value={txtSettingsTimeSeekDelay} onChange={setTxtSettingsTimeSeekDelay} width={64} />
+            <span className="hint">s</span>
+          </div>
+        </div>
+      </>
+    );
+
+    const meta = (
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        {[
+          ['lblStgMetaArtist', 'plhStgMetaArtist', txtSettingsMetaArtist, setTxtSettingsMetaArtist],
+          ['lblStgMetaSongwriter', 'plhStgMetaSongwriter', txtSettingsMetaSongwriter, setTxtSettingsMetaSongwriter],
+          ['lblStgMetaLrcBy', 'plhStgMetaLrcBy', txtSettingsMetaLrcBy, setTxtSettingsMetaLrcBy],
+        ].map(([lbl, plh, val, setter]) => (
+          <div key={lbl} className="dlg-field">
+            <label className="dlg-field-label">{t(lbl)}</label>
+            <input className="input" value={val} placeholder={t(plh)} onChange={e => setter(e.target.value)} />
+          </div>
+        ))}
       </div>
+    );
+
+    return (
+      <SettingsView
+        t={t} appName={APP_NAME} appVersion={APP_VERSION_BUILD} languages={LANGUAGES}
+        lang={langKey} setLang={setLangKey} theme={themeKey} setTheme={setThemeKey}
+        tabs={[
+          { key: 'time', label: t('tabStgTime'), icon: Clock, content: time },
+          { key: 'meta', label: t('tabStgMeta'), icon: Tag, content: meta },
+        ]}
+        onClose={closeSettings}
+      />
     );
   }
 
@@ -1258,7 +1203,7 @@ export default function App() {
         <div className="barh-grp">
           <button className="btn icon" onClick={() => window.open(GITHUB_URL, '_blank')} title="GitHub"><GithubIcon /></button>
           <button className="btn icon" onClick={() => window.open(getUrl(pkg.name, langKey.replace(/_/g, '-'), 'help'), '_blank')} title={t('tipHdrHelp')}><HelpCircle /></button>
-          <button className="btn icon" onClick={() => setShowSettings(true)} title={t('tipHdrSettings')}><Settings /></button>
+          <button className={`btn icon stg-toggle ${showSettings ? 'active' : ''}`} onClick={() => setShowSettings(o => !o)} title={t('tipHdrSettings')} aria-pressed={showSettings}><Settings /></button>
         </div>
       </AppHeader>
 
@@ -1266,6 +1211,7 @@ export default function App() {
              here, so the blur covers content only, not the header / player bars).
              The row layout of panes lives INSIDE it (Rule 14). ──────────────── */}
       <div className="app-main" {...dropProps}>
+      {showSettings && SettingsPage()}
       <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
 
         {/* Notepad panel */}
@@ -1459,7 +1405,6 @@ export default function App() {
       {/* ── Modals ──────────────────────────────────────────── */}
       {ConfirmDialog()}
       {showMeta && MetaModal()}
-      {showSettings && SettingsModal()}
     </div>
   );
 }

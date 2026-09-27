@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.7 — 2026-09-27
+
+- Settings now opens as a full-window page instead of a dialog: tabs down the left (Display, Time, Meta Data, About), a back arrow to return, and the player bar hidden while it is open (a playing track keeps playing)
+- Dark theme: text fields are lighter, so they read as fields rather than holes in the surface
+- Notices now appear above an open dialog instead of behind it
+
 ## 1.0.6 — 2026-08-27
 
 - The playback cursor now marks where the player actually is in every state. It moved only while the track was playing and disappeared on stop; it now follows pauses and seeks too, so a freshly loaded file shows it on Start of Music - where pressing Play would begin. It is grey at rest and accent while the track is running
