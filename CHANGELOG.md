@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8 — 2026-09-28
+
+- The interface is now fully translated in Arabic, Catalan, Croatian, Czech, Danish, Dutch, Finnish, Greek, Hebrew, Norwegian, Persian, Polish, Romanian, Swedish, Turkish, Ukrainian and Vietnamese — most of its labels, buttons and messages were still showing in English
+
 ## 1.0.7 — 2026-09-27
 
 - Settings now opens as a full-window page instead of a dialog: tabs down the left (Display, Time, Meta Data, About), a back arrow to return, and the player bar hidden while it is open (a playing track keeps playing)
