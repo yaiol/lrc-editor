@@ -26,15 +26,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "New version available:",
-    lnkUpdateWhatsNew:                      "What's new",
     btnUpdateDownload:                      "Download",
-    lnkUpdateSkip:                          "Skip this version",
-    tipUpdateDismiss:                       "Dismiss",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Drop an audio or LRC file here",
     cfmAppUnsavedTitle:                     "Unsaved Changes",
     cfmAppUnsavedMsg:                       "Save the current file before continuing?",
+    lblNewsHideForever:                     "Don't show again",
+    btnNewsOpenLink:                        "Learn more",
+    tipNewsDismiss:                         "Close",
+    lblStgGeneralNews:                      "Show news from yaiol",
+    btnNewsClose:                           "Close",
+    lblAppTabUntitled:                      "Untitled",
+    tipAppTabClose:                         "Close",
     tstAppSaved:                            "File saved.",
     tstAppAutoLrcLoaded:                    "Lyrics file loaded automatically.",
     tstAppFileError:                        "Failed to open file.",
@@ -76,16 +80,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Settings",
     tipStgBack:                             "Back",
-    tabStgDisplay:                          "Display",
+    tabStgGeneral:                          "General",
     tabStgTime:                             "Time",
     tabStgMeta:                             "Meta Data",
     tabStgAbout:                            "About",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Language",
-    lblStgDisplayTheme:                     "Theme",
-    btnStgDisplayThemeDark:                 "Dark",
-    btnStgDisplayThemeLight:                "Light",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Language",
+    lblStgGeneralTheme:                     "Theme",
+    btnStgGeneralThemeDark:                 "Dark",
+    btnStgGeneralThemeLight:                "Light",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Line Edit Delay",
@@ -100,6 +104,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Lyricist / songwriter",
     lblStgMetaLrcBy:                        "LRC By",
     plhStgMetaLrcBy:                        "LRC creator",
+    lblStgMetaAutoFill:                     "Fill the metadata automatically from the song's tags when a new LRC is created",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "create synchronized lyrics files.",
@@ -150,15 +155,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nouvelle version disponible :",
-    lnkUpdateWhatsNew:                      "Nouveautés",
     btnUpdateDownload:                      "Télécharger",
-    lnkUpdateSkip:                          "Ignorer cette version",
-    tipUpdateDismiss:                       "Ignorer",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Déposez un fichier audio ou LRC ici",
     cfmAppUnsavedTitle:                     "Modifications non enregistrées",
     cfmAppUnsavedMsg:                       "Enregistrer avant de continuer ?",
+    lblNewsHideForever:                     "Ne plus afficher",
+    btnNewsOpenLink:                        "En savoir plus",
+    tipNewsDismiss:                         "Fermer",
+    lblStgGeneralNews:                      "Afficher les actualités de yaiol",
+    btnNewsClose:                           "Fermer",
+    lblAppTabUntitled:                      "Sans titre",
+    tipAppTabClose:                         "Fermer",
     tstAppSaved:                            "Fichier enregistré.",
     tstAppAutoLrcLoaded:                    "Fichier de paroles chargé automatiquement.",
     tstAppFileError:                        "Impossible d'ouvrir le fichier.",
@@ -200,16 +209,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Paramètres",
     tipStgBack:                             "Retour",
-    tabStgDisplay:                          "Affichage",
+    tabStgGeneral:                          "Général",
     tabStgTime:                             "Temps",
     tabStgMeta:                             "Métadonnées",
     tabStgAbout:                            "À propos",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Langue",
-    lblStgDisplayTheme:                     "Thème",
-    btnStgDisplayThemeDark:                 "Sombre",
-    btnStgDisplayThemeLight:                "Clair",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Langue",
+    lblStgGeneralTheme:                     "Thème",
+    btnStgGeneralThemeDark:                 "Sombre",
+    btnStgGeneralThemeLight:                "Clair",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Décalage édition",
@@ -224,6 +233,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Parolier / compositeur",
     lblStgMetaLrcBy:                        "LRC par",
     plhStgMetaLrcBy:                        "Créateur du LRC",
+    lblStgMetaAutoFill:                     "Remplir automatiquement les métadonnées à partir des tags du morceau lors de la création d'un nouveau LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "créez des fichiers de paroles synchronisées.",
@@ -273,15 +283,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Neue Version verfügbar:",
-    lnkUpdateWhatsNew:                      "Was ist neu",
     btnUpdateDownload:                      "Herunterladen",
-    lnkUpdateSkip:                          "Diese Version überspringen",
-    tipUpdateDismiss:                       "Schließen",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Audio- oder LRC-Datei hier ablegen",
     cfmAppUnsavedTitle:                     "Ungespeicherte Änderungen",
     cfmAppUnsavedMsg:                       "Vor dem Fortfahren speichern?",
+    lblNewsHideForever:                     "Nicht mehr anzeigen",
+    btnNewsOpenLink:                        "Mehr erfahren",
+    tipNewsDismiss:                         "Schließen",
+    lblStgGeneralNews:                      "Nachrichten von yaiol anzeigen",
+    btnNewsClose:                           "Schließen",
+    lblAppTabUntitled:                      "Unbenannt",
+    tipAppTabClose:                         "Schließen",
     tstAppSaved:                            "Datei gespeichert.",
     tstAppAutoLrcLoaded:                    "Liedtextdatei automatisch geladen.",
     tstAppFileError:                        "Datei konnte nicht geöffnet werden.",
@@ -323,16 +337,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Einstellungen",
     tipStgBack:                             "Zurück",
-    tabStgDisplay:                          "Anzeige",
+    tabStgGeneral:                          "Allgemein",
     tabStgTime:                             "Zeiten",
     tabStgMeta:                             "Metadaten",
     tabStgAbout:                            "Über",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Sprache",
-    lblStgDisplayTheme:                     "Design",
-    btnStgDisplayThemeDark:                 "Dunkel",
-    btnStgDisplayThemeLight:                "Hell",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Sprache",
+    lblStgGeneralTheme:                     "Design",
+    btnStgGeneralThemeDark:                 "Dunkel",
+    btnStgGeneralThemeLight:                "Hell",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Zeilenversatz",
@@ -347,6 +361,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Texter / Komponist",
     lblStgMetaLrcBy:                        "LRC von",
     plhStgMetaLrcBy:                        "LRC-Ersteller",
+    lblStgMetaAutoFill:                     "Metadaten beim Erstellen einer neuen LRC automatisch aus den Song-Tags füllen",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "synchronisierte Liedtextdateien erstellen.",
@@ -396,15 +411,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nueva versión disponible:",
-    lnkUpdateWhatsNew:                      "Novedades",
     btnUpdateDownload:                      "Descargar",
-    lnkUpdateSkip:                          "Omitir esta versión",
-    tipUpdateDismiss:                       "Descartar",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Suelta un archivo de audio o LRC aquí",
     cfmAppUnsavedTitle:                     "Cambios sin guardar",
     cfmAppUnsavedMsg:                       "¿Guardar antes de continuar?",
+    lblNewsHideForever:                     "No volver a mostrar",
+    btnNewsOpenLink:                        "Más información",
+    tipNewsDismiss:                         "Cerrar",
+    lblStgGeneralNews:                      "Mostrar noticias de yaiol",
+    btnNewsClose:                           "Cerrar",
+    lblAppTabUntitled:                      "Sin título",
+    tipAppTabClose:                         "Cerrar",
     tstAppSaved:                            "Archivo guardado.",
     tstAppAutoLrcLoaded:                    "Archivo de letras cargado automáticamente.",
     tstAppFileError:                        "Error al abrir el archivo.",
@@ -446,16 +465,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Configuración",
     tipStgBack:                             "Atrás",
-    tabStgDisplay:                          "Pantalla",
+    tabStgGeneral:                          "General",
     tabStgTime:                             "Tiempo",
     tabStgMeta:                             "Metadatos",
     tabStgAbout:                            "Acerca de",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Idioma",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Oscuro",
-    btnStgDisplayThemeLight:                "Claro",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Idioma",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Oscuro",
+    btnStgGeneralThemeLight:                "Claro",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Retardo de edición",
@@ -470,6 +489,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Letrista / compositor",
     lblStgMetaLrcBy:                        "LRC por",
     plhStgMetaLrcBy:                        "Creador del LRC",
+    lblStgMetaAutoFill:                     "Rellenar automáticamente los metadatos desde las etiquetas de la canción al crear un nuevo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crea archivos de letras sincronizadas.",
@@ -519,15 +539,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nova versão disponível:",
-    lnkUpdateWhatsNew:                      "Novidades",
     btnUpdateDownload:                      "Baixar",
-    lnkUpdateSkip:                          "Ignorar esta versão",
-    tipUpdateDismiss:                       "Dispensar",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Solte um arquivo de áudio ou LRC aqui",
     cfmAppUnsavedTitle:                     "Alterações não guardadas",
     cfmAppUnsavedMsg:                       "Guardar antes de continuar?",
+    lblNewsHideForever:                     "Não mostrar novamente",
+    btnNewsOpenLink:                        "Saiba mais",
+    tipNewsDismiss:                         "Fechar",
+    lblStgGeneralNews:                      "Mostrar notícias de yaiol",
+    btnNewsClose:                           "Fechar",
+    lblAppTabUntitled:                      "Sem título",
+    tipAppTabClose:                         "Fechar",
     tstAppSaved:                            "Ficheiro guardado.",
     tstAppAutoLrcLoaded:                    "Arquivo de letras carregado automaticamente.",
     tstAppFileError:                        "Erro ao abrir ficheiro.",
@@ -569,16 +593,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Definições",
     tipStgBack:                             "Voltar",
-    tabStgDisplay:                          "Exibição",
+    tabStgGeneral:                          "Geral",
     tabStgTime:                             "Tempo",
     tabStgMeta:                             "Metadados",
     tabStgAbout:                            "Sobre",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Idioma",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Escuro",
-    btnStgDisplayThemeLight:                "Claro",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Idioma",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Escuro",
+    btnStgGeneralThemeLight:                "Claro",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Atraso de edição",
@@ -593,6 +617,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Letrista / compositor",
     lblStgMetaLrcBy:                        "LRC por",
     plhStgMetaLrcBy:                        "Criador do LRC",
+    lblStgMetaAutoFill:                     "Preencher automaticamente os metadados a partir das tags da música ao criar um novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
@@ -642,15 +667,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nova versão disponível:",
-    lnkUpdateWhatsNew:                      "Novidades",
     btnUpdateDownload:                      "Transferir",
-    lnkUpdateSkip:                          "Ignorar esta versão",
-    tipUpdateDismiss:                       "Dispensar",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Solte um ficheiro de áudio ou LRC aqui",
     cfmAppUnsavedTitle:                     "Alterações não guardadas",
     cfmAppUnsavedMsg:                       "Guardar antes de continuar?",
+    lblNewsHideForever:                     "Não mostrar novamente",
+    btnNewsOpenLink:                        "Saber mais",
+    tipNewsDismiss:                         "Fechar",
+    lblStgGeneralNews:                      "Mostrar notícias de yaiol",
+    btnNewsClose:                           "Fechar",
+    lblAppTabUntitled:                      "Sem título",
+    tipAppTabClose:                         "Fechar",
     tstAppSaved:                            "Ficheiro guardado.",
     tstAppAutoLrcLoaded:                    "Ficheiro de letras carregado automaticamente.",
     tstAppFileError:                        "Erro ao abrir ficheiro.",
@@ -692,16 +721,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Definições",
     tipStgBack:                             "Voltar",
-    tabStgDisplay:                          "Visualização",
+    tabStgGeneral:                          "Geral",
     tabStgTime:                             "Tempo",
     tabStgMeta:                             "Metadados",
     tabStgAbout:                            "Sobre",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Idioma",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Escuro",
-    btnStgDisplayThemeLight:                "Claro",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Idioma",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Escuro",
+    btnStgGeneralThemeLight:                "Claro",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Atraso de edição",
@@ -716,6 +745,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Letrista / compositor",
     lblStgMetaLrcBy:                        "LRC por",
     plhStgMetaLrcBy:                        "Criador do LRC",
+    lblStgMetaAutoFill:                     "Preencher automaticamente os metadados a partir das etiquetas da música ao criar um novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
@@ -765,15 +795,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nuova versione disponibile:",
-    lnkUpdateWhatsNew:                      "Novità",
     btnUpdateDownload:                      "Scarica",
-    lnkUpdateSkip:                          "Salta questa versione",
-    tipUpdateDismiss:                       "Ignora",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Trascina qui un file audio o LRC",
     cfmAppUnsavedTitle:                     "Modifiche non salvate",
     cfmAppUnsavedMsg:                       "Salvare prima di continuare?",
+    lblNewsHideForever:                     "Non mostrare più",
+    btnNewsOpenLink:                        "Scopri di più",
+    tipNewsDismiss:                         "Chiudi",
+    lblStgGeneralNews:                      "Mostra notizie da yaiol",
+    btnNewsClose:                           "Chiudi",
+    lblAppTabUntitled:                      "Senza titolo",
+    tipAppTabClose:                         "Chiudi",
     tstAppSaved:                            "File salvato.",
     tstAppAutoLrcLoaded:                    "File testo caricato automaticamente.",
     tstAppFileError:                        "Impossibile aprire il file.",
@@ -815,16 +849,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Impostazioni",
     tipStgBack:                             "Indietro",
-    tabStgDisplay:                          "Visualizzazione",
+    tabStgGeneral:                          "Generale",
     tabStgTime:                             "Tempi",
     tabStgMeta:                             "Metadati",
     tabStgAbout:                            "Informazioni",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Lingua",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Scuro",
-    btnStgDisplayThemeLight:                "Chiaro",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Lingua",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Scuro",
+    btnStgGeneralThemeLight:                "Chiaro",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Ritardo modifica",
@@ -839,6 +873,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Paroliere / compositore",
     lblStgMetaLrcBy:                        "LRC di",
     plhStgMetaLrcBy:                        "Creatore LRC",
+    lblStgMetaAutoFill:                     "Compila automaticamente i metadati dai tag del brano quando viene creato un nuovo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crea file di testi sincronizzati.",
@@ -888,15 +923,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "新しいバージョンが利用可能です:",
-    lnkUpdateWhatsNew:                      "新機能",
     btnUpdateDownload:                      "ダウンロード",
-    lnkUpdateSkip:                          "このバージョンをスキップ",
-    tipUpdateDismiss:                       "閉じる",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "音声またはLRCファイルをここにドロップ",
     cfmAppUnsavedTitle:                     "未保存の変更",
     cfmAppUnsavedMsg:                       "続行する前に保存しますか？",
+    lblNewsHideForever:                     "今後表示しない",
+    btnNewsOpenLink:                        "詳細を見る",
+    tipNewsDismiss:                         "閉じる",
+    lblStgGeneralNews:                      "yaiol からのニュースを表示",
+    btnNewsClose:                           "閉じる",
+    lblAppTabUntitled:                      "無題",
+    tipAppTabClose:                         "閉じる",
     tstAppSaved:                            "ファイルを保存しました。",
     tstAppAutoLrcLoaded:                    "歌詞ファイルを自動的に読み込みました。",
     tstAppFileError:                        "ファイルを開けませんでした。",
@@ -938,16 +977,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "設定",
     tipStgBack:                             "戻る",
-    tabStgDisplay:                          "表示",
+    tabStgGeneral:                          "一般",
     tabStgTime:                             "タイミング",
     tabStgMeta:                             "メタデータ",
     tabStgAbout:                            "概要",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "言語",
-    lblStgDisplayTheme:                     "テーマ",
-    btnStgDisplayThemeDark:                 "ダーク",
-    btnStgDisplayThemeLight:                "ライト",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "言語",
+    lblStgGeneralTheme:                     "テーマ",
+    btnStgGeneralThemeDark:                 "ダーク",
+    btnStgGeneralThemeLight:                "ライト",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "編集ディレイ",
@@ -962,6 +1001,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "作詞家 / 作曲家",
     lblStgMetaLrcBy:                        "LRC作成者",
     plhStgMetaLrcBy:                        "LRC作成者",
+    lblStgMetaAutoFill:                     "新しいLRC作成時に、曲のタグからメタデータを自動的に入力する",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "同期歌詞ファイルを作成します。",
@@ -1011,15 +1051,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "새 버전 사용 가능:",
-    lnkUpdateWhatsNew:                      "새로운 기능",
     btnUpdateDownload:                      "다운로드",
-    lnkUpdateSkip:                          "이 버전 건너뛰기",
-    tipUpdateDismiss:                       "닫기",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "오디오 또는 LRC 파일을 여기에 놓으세요",
     cfmAppUnsavedTitle:                     "저장되지 않은 변경 사항",
     cfmAppUnsavedMsg:                       "계속하기 전에 저장하시겠습니까?",
+    lblNewsHideForever:                     "다시 표시 안 함",
+    btnNewsOpenLink:                        "자세히 알아보기",
+    tipNewsDismiss:                         "닫기",
+    lblStgGeneralNews:                      "yaiol 뉴스 표시",
+    btnNewsClose:                           "닫기",
+    lblAppTabUntitled:                      "제목 없음",
+    tipAppTabClose:                         "닫기",
     tstAppSaved:                            "파일이 저장되었습니다.",
     tstAppAutoLrcLoaded:                    "가사 파일이 자동으로 로드되었습니다.",
     tstAppFileError:                        "파일을 열 수 없습니다.",
@@ -1061,16 +1105,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "설정",
     tipStgBack:                             "뒤로",
-    tabStgDisplay:                          "표시",
+    tabStgGeneral:                          "일반",
     tabStgTime:                             "시간",
     tabStgMeta:                             "메타데이터",
     tabStgAbout:                            "정보",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "언어",
-    lblStgDisplayTheme:                     "테마",
-    btnStgDisplayThemeDark:                 "어둡게",
-    btnStgDisplayThemeLight:                "밝게",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "언어",
+    lblStgGeneralTheme:                     "테마",
+    btnStgGeneralThemeDark:                 "어둡게",
+    btnStgGeneralThemeLight:                "밝게",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "편집 딜레이",
@@ -1085,6 +1129,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "작사가 / 작곡가",
     lblStgMetaLrcBy:                        "LRC 작성자",
     plhStgMetaLrcBy:                        "LRC 작성자",
+    lblStgMetaAutoFill:                     "새 LRC 생성 시 노래 태그에서 메타데이터를 자동으로 채웁니다.",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "동기화된 가사 파일을 만듭니다.",
@@ -1134,15 +1179,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "新版本可用:",
-    lnkUpdateWhatsNew:                      "新功能",
     btnUpdateDownload:                      "下载",
-    lnkUpdateSkip:                          "跳过此版本",
-    tipUpdateDismiss:                       "忽略",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "将音频或LRC文件拖放到此处",
     cfmAppUnsavedTitle:                     "未保存的更改",
     cfmAppUnsavedMsg:                       "继续之前是否保存？",
+    lblNewsHideForever:                     "不再显示",
+    btnNewsOpenLink:                        "了解更多",
+    tipNewsDismiss:                         "关闭",
+    lblStgGeneralNews:                      "显示来自 yaiol 的新闻",
+    btnNewsClose:                           "关闭",
+    lblAppTabUntitled:                      "未命名",
+    tipAppTabClose:                         "关闭",
     tstAppSaved:                            "文件已保存。",
     tstAppAutoLrcLoaded:                    "歌词文件已自动加载。",
     tstAppFileError:                        "无法打开文件。",
@@ -1184,16 +1233,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "设置",
     tipStgBack:                             "返回",
-    tabStgDisplay:                          "显示",
+    tabStgGeneral:                          "常规",
     tabStgTime:                             "时间",
     tabStgMeta:                             "元数据",
     tabStgAbout:                            "关于",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "语言",
-    lblStgDisplayTheme:                     "主题",
-    btnStgDisplayThemeDark:                 "深色",
-    btnStgDisplayThemeLight:                "浅色",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "语言",
+    lblStgGeneralTheme:                     "主题",
+    btnStgGeneralThemeDark:                 "深色",
+    btnStgGeneralThemeLight:                "浅色",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "编辑延迟",
@@ -1208,6 +1257,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "词作者/曲作者",
     lblStgMetaLrcBy:                        "LRC制作",
     plhStgMetaLrcBy:                        "LRC创建者",
+    lblStgMetaAutoFill:                     "创建新LRC时，自动从歌曲标签填充元数据",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "创建同步歌词文件。",
@@ -1257,15 +1307,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "有新版本可用:",
-    lnkUpdateWhatsNew:                      "新功能",
     btnUpdateDownload:                      "下載",
-    lnkUpdateSkip:                          "跳過此版本",
-    tipUpdateDismiss:                       "忽略",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "將音訊或LRC檔案拖放到此處",
     cfmAppUnsavedTitle:                     "未儲存的變更",
     cfmAppUnsavedMsg:                       "繼續之前是否儲存？",
+    lblNewsHideForever:                     "不再顯示",
+    btnNewsOpenLink:                        "了解更多",
+    tipNewsDismiss:                         "關閉",
+    lblStgGeneralNews:                      "顯示來自 yaiol 的新聞",
+    btnNewsClose:                           "關閉",
+    lblAppTabUntitled:                      "未命名",
+    tipAppTabClose:                         "關閉",
     tstAppSaved:                            "檔案已儲存。",
     tstAppAutoLrcLoaded:                    "歌詞檔案已自動載入。",
     tstAppFileError:                        "無法開啟檔案。",
@@ -1307,16 +1361,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "設定",
     tipStgBack:                             "返回",
-    tabStgDisplay:                          "顯示",
+    tabStgGeneral:                          "一般",
     tabStgTime:                             "時間",
     tabStgMeta:                             "詮釋資料",
     tabStgAbout:                            "關於",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "語言",
-    lblStgDisplayTheme:                     "主題",
-    btnStgDisplayThemeDark:                 "深色",
-    btnStgDisplayThemeLight:                "淺色",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "語言",
+    lblStgGeneralTheme:                     "主題",
+    btnStgGeneralThemeDark:                 "深色",
+    btnStgGeneralThemeLight:                "淺色",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "編輯延遲",
@@ -1331,6 +1385,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "詞作者/曲作者",
     lblStgMetaLrcBy:                        "LRC製作",
     plhStgMetaLrcBy:                        "LRC建立者",
+    lblStgMetaAutoFill:                     "建立新LRC時，自動從歌曲標籤填入中繼資料",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "建立同步歌詞檔案。",
@@ -1380,15 +1435,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "إصدار جديد متوفر:",
-    lnkUpdateWhatsNew:                      "ما الجديد",
     btnUpdateDownload:                      "تنزيل",
-    lnkUpdateSkip:                          "تخطي هذا الإصدار",
-    tipUpdateDismiss:                       "تجاهل",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "أسقط ملف صوت أو LRC هنا",
     cfmAppUnsavedTitle:                     "تغييرات غير محفوظة",
     cfmAppUnsavedMsg:                       "هل تريد حفظ الملف الحالي قبل المتابعة؟",
+    lblNewsHideForever:                     "عدم الإظهار مرة أخرى",
+    btnNewsOpenLink:                        "تعرّف على المزيد",
+    tipNewsDismiss:                         "إغلاق",
+    lblStgGeneralNews:                      "إظهار الأخبار من yaiol",
+    btnNewsClose:                           "إغلاق",
+    lblAppTabUntitled:                      "بدون عنوان",
+    tipAppTabClose:                         "إغلاق",
     tstAppSaved:                            "تم حفظ الملف.",
     tstAppAutoLrcLoaded:                    "تم تحميل ملف الكلمات تلقائيًا.",
     tstAppFileError:                        "فشل فتح الملف.",
@@ -1430,16 +1489,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "الإعدادات",
     tipStgBack:                             "رجوع",
-    tabStgDisplay:                          "عرض",
+    tabStgGeneral:                          "عام",
     tabStgTime:                             "الوقت",
     tabStgMeta:                             "بيانات وصفية",
     tabStgAbout:                            "حول",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "لغة",
-    lblStgDisplayTheme:                     "سمة",
-    btnStgDisplayThemeDark:                 "داكن",
-    btnStgDisplayThemeLight:                "فاتح",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "لغة",
+    lblStgGeneralTheme:                     "سمة",
+    btnStgGeneralThemeDark:                 "داكن",
+    btnStgGeneralThemeLight:                "فاتح",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "تأخير تعديل السطر",
@@ -1454,6 +1513,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "كاتب كلمات / كاتب أغاني",
     lblStgMetaLrcBy:                        "كلمات بواسطة",
     plhStgMetaLrcBy:                        "منشئ LRC",
+    lblStgMetaAutoFill:                     "ملء البيانات الوصفية تلقائيًا من علامات الأغنية عند إنشاء LRC جديد",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "إنشاء ملفات كلمات متزامنة.",
@@ -1503,15 +1563,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nova versió disponible:",
-    lnkUpdateWhatsNew:                      "Novetats",
     btnUpdateDownload:                      "Descarregar",
-    lnkUpdateSkip:                          "Omet aquesta versió",
-    tipUpdateDismiss:                       "Descarta",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Arrossegueu un fitxer d'àudio o LRC aquí",
     cfmAppUnsavedTitle:                     "Canvis sense desar",
     cfmAppUnsavedMsg:                       "Voleu desar el fitxer actual abans de continuar?",
+    lblNewsHideForever:                     "No tornar a mostrar",
+    btnNewsOpenLink:                        "Més informació",
+    tipNewsDismiss:                         "Tancar",
+    lblStgGeneralNews:                      "Mostrar notícies de yaiol",
+    btnNewsClose:                           "Tancar",
+    lblAppTabUntitled:                      "Sense títol",
+    tipAppTabClose:                         "Tancar",
     tstAppSaved:                            "Fitxer desat.",
     tstAppAutoLrcLoaded:                    "Fitxer de lletres carregat automàticament.",
     tstAppFileError:                        "No s'ha pogut obrir el fitxer.",
@@ -1553,16 +1617,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Configuració",
     tipStgBack:                             "Enrere",
-    tabStgDisplay:                          "Pantalla",
+    tabStgGeneral:                          "General",
     tabStgTime:                             "Hora",
     tabStgMeta:                             "Metadades",
     tabStgAbout:                            "Quant a",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Idioma",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Fosc",
-    btnStgDisplayThemeLight:                "Clar",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Idioma",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Fosc",
+    btnStgGeneralThemeLight:                "Clar",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Retard d'edició de línia",
@@ -1577,6 +1641,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Lletrista / compositor",
     lblStgMetaLrcBy:                        "Lletra per",
     plhStgMetaLrcBy:                        "Creador de LRC",
+    lblStgMetaAutoFill:                     "Emplenar automàticament les metadades a partir de les etiquetes de la cançó quan es crea un nou LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crear fitxers de lletres sincronitzades.",
@@ -1626,15 +1691,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nová verze je k dispozici:",
-    lnkUpdateWhatsNew:                      "Co je nového",
     btnUpdateDownload:                      "Stáhnout",
-    lnkUpdateSkip:                          "Přeskočit tuto verzi",
-    tipUpdateDismiss:                       "Zavřít",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Přetáhněte sem zvukový soubor nebo soubor LRC",
     cfmAppUnsavedTitle:                     "Neuložené změny",
     cfmAppUnsavedMsg:                       "Uložit aktuální soubor před pokračováním?",
+    lblNewsHideForever:                     "Nezobrazovat znovu",
+    btnNewsOpenLink:                        "Další informace",
+    tipNewsDismiss:                         "Zavřít",
+    lblStgGeneralNews:                      "Zobrazovat zprávy z yaiol",
+    btnNewsClose:                           "Zavřít",
+    lblAppTabUntitled:                      "Bez názvu",
+    tipAppTabClose:                         "Zavřít",
     tstAppSaved:                            "Soubor uložen.",
     tstAppAutoLrcLoaded:                    "Soubor s texty byl načten automaticky.",
     tstAppFileError:                        "Nepodařilo se otevřít soubor.",
@@ -1676,16 +1745,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Nastavení",
     tipStgBack:                             "Zpět",
-    tabStgDisplay:                          "Zobrazení",
+    tabStgGeneral:                          "Obecné",
     tabStgTime:                             "Čas",
     tabStgMeta:                             "Metadata",
     tabStgAbout:                            "O aplikaci",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Jazyk",
-    lblStgDisplayTheme:                     "Motiv",
-    btnStgDisplayThemeDark:                 "Tmavý",
-    btnStgDisplayThemeLight:                "Světlý",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Jazyk",
+    lblStgGeneralTheme:                     "Motiv",
+    btnStgGeneralThemeDark:                 "Tmavý",
+    btnStgGeneralThemeLight:                "Světlý",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Zpoždění úpravy řádku",
@@ -1700,6 +1769,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Textař / skladatel",
     lblStgMetaLrcBy:                        "Texty od",
     plhStgMetaLrcBy:                        "Tvůrce LRC",
+    lblStgMetaAutoFill:                     "Automaticky vyplnit metadata z tagů skladby při vytvoření nového LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "vytvářet synchronizované soubory textů.",
@@ -1749,15 +1819,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Ny version tilgængelig:",
-    lnkUpdateWhatsNew:                      "Hvad er nyt",
     btnUpdateDownload:                      "Download",
-    lnkUpdateSkip:                          "Spring denne version over",
-    tipUpdateDismiss:                       "Afvis",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Slip en lyd- eller LRC-fil her",
     cfmAppUnsavedTitle:                     "Ugemte ændringer",
     cfmAppUnsavedMsg:                       "Gem den aktuelle fil, før du fortsætter?",
+    lblNewsHideForever:                     "Vis ikke igen",
+    btnNewsOpenLink:                        "Læs mere",
+    tipNewsDismiss:                         "Luk",
+    lblStgGeneralNews:                      "Vis nyheder fra yaiol",
+    btnNewsClose:                           "Luk",
+    lblAppTabUntitled:                      "Uden navn",
+    tipAppTabClose:                         "Luk",
     tstAppSaved:                            "Fil gemt.",
     tstAppAutoLrcLoaded:                    "Tekstfil indlæst automatisk.",
     tstAppFileError:                        "Kunne ikke åbne fil.",
@@ -1799,16 +1873,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Indstillinger",
     tipStgBack:                             "Tilbage",
-    tabStgDisplay:                          "Visning",
+    tabStgGeneral:                          "Generelt",
     tabStgTime:                             "Tid",
     tabStgMeta:                             "Metadata",
     tabStgAbout:                            "Om",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Sprog",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Mørk",
-    btnStgDisplayThemeLight:                "Lys",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Sprog",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Mørk",
+    btnStgGeneralThemeLight:                "Lys",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Linjeredigeringsforsinkelse",
@@ -1823,6 +1897,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Tekstforfatter / sangskriver",
     lblStgMetaLrcBy:                        "Tekst af",
     plhStgMetaLrcBy:                        "LRC-skaber",
+    lblStgMetaAutoFill:                     "Udfyld automatisk metadata fra sangens tags, når en ny LRC oprettes",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "opret synkroniserede sangtekstfiler.",
@@ -1872,15 +1947,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nieuwe versie beschikbaar:",
-    lnkUpdateWhatsNew:                      "Wat is nieuw",
     btnUpdateDownload:                      "Downloaden",
-    lnkUpdateSkip:                          "Deze versie overslaan",
-    tipUpdateDismiss:                       "Sluiten",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Sleep hier een audio- of LRC-bestand naartoe",
     cfmAppUnsavedTitle:                     "Niet-opgeslagen wijzigingen",
     cfmAppUnsavedMsg:                       "Huidig bestand opslaan voordat u verdergaat?",
+    lblNewsHideForever:                     "Niet meer tonen",
+    btnNewsOpenLink:                        "Meer informatie",
+    tipNewsDismiss:                         "Sluiten",
+    lblStgGeneralNews:                      "Nieuws van yaiol tonen",
+    btnNewsClose:                           "Sluiten",
+    lblAppTabUntitled:                      "Naamloos",
+    tipAppTabClose:                         "Sluiten",
     tstAppSaved:                            "Bestand opgeslagen.",
     tstAppAutoLrcLoaded:                    "Tekstbestand automatisch geladen.",
     tstAppFileError:                        "Kan bestand niet openen.",
@@ -1922,16 +2001,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Instellingen",
     tipStgBack:                             "Terug",
-    tabStgDisplay:                          "Weergave",
+    tabStgGeneral:                          "Algemeen",
     tabStgTime:                             "Tijd",
     tabStgMeta:                             "Metadata",
     tabStgAbout:                            "Over",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Taal",
-    lblStgDisplayTheme:                     "Thema",
-    btnStgDisplayThemeDark:                 "Donker",
-    btnStgDisplayThemeLight:                "Licht",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Taal",
+    lblStgGeneralTheme:                     "Thema",
+    btnStgGeneralThemeDark:                 "Donker",
+    btnStgGeneralThemeLight:                "Licht",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Lijneditievertraging",
@@ -1946,6 +2025,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Tekstschrijver / songwriter",
     lblStgMetaLrcBy:                        "Tekst door",
     plhStgMetaLrcBy:                        "LRC-maker",
+    lblStgMetaAutoFill:                     "Vul de metadata automatisch in vanuit de songtags wanneer een nieuwe LRC wordt gemaakt",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "gesynchroniseerde songtekstbestanden maken.",
@@ -1995,15 +2075,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Uusi versio saatavilla:",
-    lnkUpdateWhatsNew:                      "Mitä uutta",
     btnUpdateDownload:                      "Lataa",
-    lnkUpdateSkip:                          "Ohita tämä versio",
-    tipUpdateDismiss:                       "Hylkää",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Pudota äänitiedosto tai LRC-tiedosto tähän",
     cfmAppUnsavedTitle:                     "Tallentamattomat muutokset",
     cfmAppUnsavedMsg:                       "Tallennetaanko nykyinen tiedosto ennen jatkamista?",
+    lblNewsHideForever:                     "Älä näytä uudelleen",
+    btnNewsOpenLink:                        "Lue lisää",
+    tipNewsDismiss:                         "Sulje",
+    lblStgGeneralNews:                      "Näytä uutiset yaiolista",
+    btnNewsClose:                           "Sulje",
+    lblAppTabUntitled:                      "Nimetön",
+    tipAppTabClose:                         "Sulje",
     tstAppSaved:                            "Tiedosto tallennettu.",
     tstAppAutoLrcLoaded:                    "Sanoitustiedosto ladattu automaattisesti.",
     tstAppFileError:                        "Tiedoston avaaminen epäonnistui.",
@@ -2045,16 +2129,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Asetukset",
     tipStgBack:                             "Takaisin",
-    tabStgDisplay:                          "Näyttö",
+    tabStgGeneral:                          "Yleiset",
     tabStgTime:                             "Aika",
     tabStgMeta:                             "Metatiedot",
     tabStgAbout:                            "Tietoja",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Kieli",
-    lblStgDisplayTheme:                     "Teema",
-    btnStgDisplayThemeDark:                 "Tumma",
-    btnStgDisplayThemeLight:                "Vaalea",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Kieli",
+    lblStgGeneralTheme:                     "Teema",
+    btnStgGeneralThemeDark:                 "Tumma",
+    btnStgGeneralThemeLight:                "Vaalea",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Rivin muokkausviive",
@@ -2069,6 +2153,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Sanoittaja / lauluntekijä",
     lblStgMetaLrcBy:                        "Sanat:",
     plhStgMetaLrcBy:                        "LRC-luoja",
+    lblStgMetaAutoFill:                     "Täytä metatiedot automaattisesti kappaleen tunnisteista, kun uusi LRC luodaan",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "luo synkronoituja sanoitustiedostoja.",
@@ -2118,15 +2203,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Νέα έκδοση διαθέσιμη:",
-    lnkUpdateWhatsNew:                      "Τι νέο υπάρχει",
     btnUpdateDownload:                      "Λήψη",
-    lnkUpdateSkip:                          "Παράλειψη αυτής της έκδοσης",
-    tipUpdateDismiss:                       "Απόρριψη",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Σύρετε ένα αρχείο ήχου ή LRC εδώ",
     cfmAppUnsavedTitle:                     "Μη αποθηκευμένες αλλαγές",
     cfmAppUnsavedMsg:                       "Να αποθηκευτεί το τρέχον αρχείο πριν συνεχίσετε;",
+    lblNewsHideForever:                     "Να μην εμφανιστεί ξανά",
+    btnNewsOpenLink:                        "Μάθετε περισσότερα",
+    tipNewsDismiss:                         "Κλείσιμο",
+    lblStgGeneralNews:                      "Εμφάνιση ειδήσεων από το yaiol",
+    btnNewsClose:                           "Κλείσιμο",
+    lblAppTabUntitled:                      "Χωρίς τίτλο",
+    tipAppTabClose:                         "Κλείσιμο",
     tstAppSaved:                            "Το αρχείο αποθηκεύτηκε.",
     tstAppAutoLrcLoaded:                    "Το αρχείο στίχων φορτώθηκε αυτόματα.",
     tstAppFileError:                        "Αποτυχία ανοίγματος αρχείου.",
@@ -2168,16 +2257,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Ρυθμίσεις",
     tipStgBack:                             "Πίσω",
-    tabStgDisplay:                          "Οθόνη",
+    tabStgGeneral:                          "Γενικά",
     tabStgTime:                             "Ώρα",
     tabStgMeta:                             "Μεταδεδομένα",
     tabStgAbout:                            "Σχετικά",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Γλώσσα",
-    lblStgDisplayTheme:                     "Θέμα",
-    btnStgDisplayThemeDark:                 "Σκούρο",
-    btnStgDisplayThemeLight:                "Ανοιχτό",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Γλώσσα",
+    lblStgGeneralTheme:                     "Θέμα",
+    btnStgGeneralThemeDark:                 "Σκούρο",
+    btnStgGeneralThemeLight:                "Ανοιχτό",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Καθυστέρηση Επεξεργασίας Γραμμής",
@@ -2192,6 +2281,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Στιχουργός / συνθέτης",
     lblStgMetaLrcBy:                        "Στίχοι από",
     plhStgMetaLrcBy:                        "Δημιουργός LRC",
+    lblStgMetaAutoFill:                     "Αυτόματη συμπλήρωση των μεταδεδομένων από τις ετικέτες του τραγουδιού κατά τη δημιουργία νέου LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "δημιουργία συγχρονισμένων αρχείων στίχων.",
@@ -2241,15 +2331,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "גרסה חדשה זמינה:",
-    lnkUpdateWhatsNew:                      "מה חדש",
     btnUpdateDownload:                      "הורדה",
-    lnkUpdateSkip:                          "דלג על גרסה זו",
-    tipUpdateDismiss:                       "בטל",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "גרור קובץ שמע או LRC לכאן",
     cfmAppUnsavedTitle:                     "שינויים שלא נשמרו",
     cfmAppUnsavedMsg:                       "לשמור את הקובץ הנוכחי לפני שממשיכים?",
+    lblNewsHideForever:                     "אל תציג שוב",
+    btnNewsOpenLink:                        "למידע נוסף",
+    tipNewsDismiss:                         "סגור",
+    lblStgGeneralNews:                      "הצג חדשות מ-yaiol",
+    btnNewsClose:                           "סגור",
+    lblAppTabUntitled:                      "ללא כותרת",
+    tipAppTabClose:                         "סגור",
     tstAppSaved:                            "קובץ נשמר.",
     tstAppAutoLrcLoaded:                    "קובץ מילים נטען אוטומטית.",
     tstAppFileError:                        "נכשל פתיחת קובץ.",
@@ -2291,16 +2385,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "הגדרות",
     tipStgBack:                             "חזור",
-    tabStgDisplay:                          "תצוגה",
+    tabStgGeneral:                          "כללי",
     tabStgTime:                             "זמן",
     tabStgMeta:                             "מטא נתונים",
     tabStgAbout:                            "אודות",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "שפה",
-    lblStgDisplayTheme:                     "ערכת נושא",
-    btnStgDisplayThemeDark:                 "כהה",
-    btnStgDisplayThemeLight:                "בהיר",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "שפה",
+    lblStgGeneralTheme:                     "ערכת נושא",
+    btnStgGeneralThemeDark:                 "כהה",
+    btnStgGeneralThemeLight:                "בהיר",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "השהיית עריכת שורה",
@@ -2315,6 +2409,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "פזמונאי / כותב שירים",
     lblStgMetaLrcBy:                        "מילים מאת",
     plhStgMetaLrcBy:                        "יוצר LRC",
+    lblStgMetaAutoFill:                     "מילוי אוטומטי של מטא נתונים מתגי השיר בעת יצירת LRC חדש",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "יצירת קבצי מילים מסונכרנים.",
@@ -2364,15 +2459,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nova verzija dostupna:",
-    lnkUpdateWhatsNew:                      "Što je novo",
     btnUpdateDownload:                      "Preuzmi",
-    lnkUpdateSkip:                          "Preskoči ovu verziju",
-    tipUpdateDismiss:                       "Odbaci",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Povucite audio ili LRC datoteku ovdje",
     cfmAppUnsavedTitle:                     "Nespremljene promjene",
     cfmAppUnsavedMsg:                       "Spremiti trenutnu datoteku prije nastavka?",
+    lblNewsHideForever:                     "Ne prikazuj ponovno",
+    btnNewsOpenLink:                        "Saznajte više",
+    tipNewsDismiss:                         "Zatvori",
+    lblStgGeneralNews:                      "Prikaži vijesti iz yaiol",
+    btnNewsClose:                           "Zatvori",
+    lblAppTabUntitled:                      "Bez naslova",
+    tipAppTabClose:                         "Zatvori",
     tstAppSaved:                            "Datoteka spremljena.",
     tstAppAutoLrcLoaded:                    "Datoteka stihova automatski učitana.",
     tstAppFileError:                        "Nije uspjelo otvaranje datoteke.",
@@ -2414,16 +2513,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Postavke",
     tipStgBack:                             "Natrag",
-    tabStgDisplay:                          "Prikaz",
+    tabStgGeneral:                          "Općenito",
     tabStgTime:                             "Vrijeme",
     tabStgMeta:                             "Metapodaci",
     tabStgAbout:                            "O programu",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Jezik",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Tamno",
-    btnStgDisplayThemeLight:                "Svijetlo",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Jezik",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Tamno",
+    btnStgGeneralThemeLight:                "Svijetlo",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Kašnjenje uređivanja retka",
@@ -2438,6 +2537,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Tekstopisac / autor pjesama",
     lblStgMetaLrcBy:                        "Tekst napisao",
     plhStgMetaLrcBy:                        "LRC autor",
+    lblStgMetaAutoFill:                     "Automatski popuni metapodatke iz oznaka pjesme prilikom stvaranja novog LRC-a",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "stvaranje sinkroniziranih datoteka stihova.",
@@ -2487,15 +2587,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Ny versjon tilgjengelig:",
-    lnkUpdateWhatsNew:                      "Hva er nytt",
     btnUpdateDownload:                      "Last ned",
-    lnkUpdateSkip:                          "Hopp over denne versjonen",
-    tipUpdateDismiss:                       "Avvis",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Slipp en lyd- eller LRC-fil her",
     cfmAppUnsavedTitle:                     "Ulagrede endringer",
     cfmAppUnsavedMsg:                       "Lagre gjeldende fil før du fortsetter?",
+    lblNewsHideForever:                     "Ikke vis igjen",
+    btnNewsOpenLink:                        "Les mer",
+    tipNewsDismiss:                         "Lukk",
+    lblStgGeneralNews:                      "Vis nyheter fra yaiol",
+    btnNewsClose:                           "Lukk",
+    lblAppTabUntitled:                      "Uten navn",
+    tipAppTabClose:                         "Lukk",
     tstAppSaved:                            "Fil lagret.",
     tstAppAutoLrcLoaded:                    "Tekstfil lastet automatisk.",
     tstAppFileError:                        "Kunne ikke åpne fil.",
@@ -2537,16 +2641,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Innstillinger",
     tipStgBack:                             "Tilbake",
-    tabStgDisplay:                          "Visning",
+    tabStgGeneral:                          "Generelt",
     tabStgTime:                             "Tid",
     tabStgMeta:                             "Metadata",
     tabStgAbout:                            "Om",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Språk",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Mørk",
-    btnStgDisplayThemeLight:                "Lys",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Språk",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Mørk",
+    btnStgGeneralThemeLight:                "Lys",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Linjeredigeringsforsinkelse",
@@ -2561,6 +2665,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Tekstforfatter / låtskriver",
     lblStgMetaLrcBy:                        "Tekst av",
     plhStgMetaLrcBy:                        "LRC-skaper",
+    lblStgMetaAutoFill:                     "Fyll metadata automatisk fra sangens tagger når en ny LRC opprettes",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "opprett synkroniserte tekstfiler.",
@@ -2610,15 +2715,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "نسخه جدید موجود است:",
-    lnkUpdateWhatsNew:                      "چه خبر",
     btnUpdateDownload:                      "دانلود",
-    lnkUpdateSkip:                          "رد کردن این نسخه",
-    tipUpdateDismiss:                       "رد کردن",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "یک فایل صوتی یا LRC را اینجا رها کنید",
     cfmAppUnsavedTitle:                     "تغییرات ذخیره نشده",
     cfmAppUnsavedMsg:                       "فایل فعلی را قبل از ادامه ذخیره می‌کنید؟",
+    lblNewsHideForever:                     "دیگر نمایش نده",
+    btnNewsOpenLink:                        "بیشتر بدانید",
+    tipNewsDismiss:                         "بستن",
+    lblStgGeneralNews:                      "نمایش اخبار از yaiol",
+    btnNewsClose:                           "بستن",
+    lblAppTabUntitled:                      "بدون عنوان",
+    tipAppTabClose:                         "بستن",
     tstAppSaved:                            "فایل ذخیره شد.",
     tstAppAutoLrcLoaded:                    "فایل متن ترانه به صورت خودکار بارگذاری شد.",
     tstAppFileError:                        "باز کردن فایل ناموفق بود.",
@@ -2660,16 +2769,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "تنظیمات",
     tipStgBack:                             "بازگشت",
-    tabStgDisplay:                          "نمایش",
+    tabStgGeneral:                          "عمومی",
     tabStgTime:                             "زمان",
     tabStgMeta:                             "فراداده",
     tabStgAbout:                            "درباره",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "زبان",
-    lblStgDisplayTheme:                     "پوسته",
-    btnStgDisplayThemeDark:                 "تیره",
-    btnStgDisplayThemeLight:                "روشن",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "زبان",
+    lblStgGeneralTheme:                     "پوسته",
+    btnStgGeneralThemeDark:                 "تیره",
+    btnStgGeneralThemeLight:                "روشن",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "تأخیر ویرایش خط",
@@ -2684,6 +2793,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "ترانه‌سرا / آهنگساز",
     lblStgMetaLrcBy:                        "متن ترانه توسط",
     plhStgMetaLrcBy:                        "سازنده LRC",
+    lblStgMetaAutoFill:                     "پر کردن خودکار فراداده از برچسب‌های آهنگ هنگام ایجاد LRC جدید",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ایجاد فایل‌های متن ترانه همگام‌سازی شده.",
@@ -2733,15 +2843,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Dostępna nowa wersja:",
-    lnkUpdateWhatsNew:                      "Co nowego",
     btnUpdateDownload:                      "Pobierz",
-    lnkUpdateSkip:                          "Pomiń tę wersję",
-    tipUpdateDismiss:                       "Zamknij",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Upuść tutaj plik audio lub LRC",
     cfmAppUnsavedTitle:                     "Niezapisane zmiany",
     cfmAppUnsavedMsg:                       "Zapisać bieżący plik przed kontynuowaniem?",
+    lblNewsHideForever:                     "Nie pokazuj ponownie",
+    btnNewsOpenLink:                        "Dowiedz się więcej",
+    tipNewsDismiss:                         "Zamknij",
+    lblStgGeneralNews:                      "Pokaż wiadomości z yaiol",
+    btnNewsClose:                           "Zamknij",
+    lblAppTabUntitled:                      "Bez tytułu",
+    tipAppTabClose:                         "Zamknij",
     tstAppSaved:                            "Plik zapisany.",
     tstAppAutoLrcLoaded:                    "Plik z tekstami został załadowany automatycznie.",
     tstAppFileError:                        "Nie udało się otworzyć pliku.",
@@ -2783,16 +2897,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Ustawienia",
     tipStgBack:                             "Wstecz",
-    tabStgDisplay:                          "Wyświetlanie",
+    tabStgGeneral:                          "Ogólne",
     tabStgTime:                             "Czas",
     tabStgMeta:                             "Metadane",
     tabStgAbout:                            "Informacje",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Język",
-    lblStgDisplayTheme:                     "Motyw",
-    btnStgDisplayThemeDark:                 "Ciemny",
-    btnStgDisplayThemeLight:                "Jasny",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Język",
+    lblStgGeneralTheme:                     "Motyw",
+    btnStgGeneralThemeDark:                 "Ciemny",
+    btnStgGeneralThemeLight:                "Jasny",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Opóźnienie edycji linii",
@@ -2807,6 +2921,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Autor tekstu / autor piosenek",
     lblStgMetaLrcBy:                        "Tekst:",
     plhStgMetaLrcBy:                        "Twórca LRC",
+    lblStgMetaAutoFill:                     "Automatycznie wypełniaj metadane z tagów utworu podczas tworzenia nowego LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "tworzenie zsynchronizowanych plików tekstów.",
@@ -2856,15 +2971,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Versiune nouă disponibilă:",
-    lnkUpdateWhatsNew:                      "Ce e nou",
     btnUpdateDownload:                      "Descarcă",
-    lnkUpdateSkip:                          "Omite această versiune",
-    tipUpdateDismiss:                       "Ignoră",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Plasați un fișier audio sau LRC aici",
     cfmAppUnsavedTitle:                     "Modificări nesalvate",
     cfmAppUnsavedMsg:                       "Salvați fișierul curent înainte de a continua?",
+    lblNewsHideForever:                     "Nu mai afișa",
+    btnNewsOpenLink:                        "Află mai multe",
+    tipNewsDismiss:                         "Închide",
+    lblStgGeneralNews:                      "Afișează știri de la yaiol",
+    btnNewsClose:                           "Închide",
+    lblAppTabUntitled:                      "Fără titlu",
+    tipAppTabClose:                         "Închide",
     tstAppSaved:                            "Fișier salvat.",
     tstAppAutoLrcLoaded:                    "Fișierul de versuri a fost încărcat automat.",
     tstAppFileError:                        "Nu s-a putut deschide fișierul.",
@@ -2906,16 +3025,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Setări",
     tipStgBack:                             "Înapoi",
-    tabStgDisplay:                          "Afișare",
+    tabStgGeneral:                          "General",
     tabStgTime:                             "Timp",
     tabStgMeta:                             "Metadate",
     tabStgAbout:                            "Despre",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Limbă",
-    lblStgDisplayTheme:                     "Temă",
-    btnStgDisplayThemeDark:                 "Întunecat",
-    btnStgDisplayThemeLight:                "Luminos",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Limbă",
+    lblStgGeneralTheme:                     "Temă",
+    btnStgGeneralThemeDark:                 "Întunecat",
+    btnStgGeneralThemeLight:                "Luminos",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Întârziere editare linie",
@@ -2930,6 +3049,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Textier / compozitor",
     lblStgMetaLrcBy:                        "Versuri de",
     plhStgMetaLrcBy:                        "Creator LRC",
+    lblStgMetaAutoFill:                     "Completează automat metadatele din etichetele melodiei la crearea unui LRC nou",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "creează fișiere de versuri sincronizate.",
@@ -2979,15 +3099,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Ny version tillgänglig:",
-    lnkUpdateWhatsNew:                      "Vad är nytt",
     btnUpdateDownload:                      "Ladda ner",
-    lnkUpdateSkip:                          "Hoppa över den här versionen",
-    tipUpdateDismiss:                       "Avfärda",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Släpp en ljud- eller LRC-fil här",
     cfmAppUnsavedTitle:                     "Osparade ändringar",
     cfmAppUnsavedMsg:                       "Spara den aktuella filen innan du fortsätter?",
+    lblNewsHideForever:                     "Visa inte igen",
+    btnNewsOpenLink:                        "Läs mer",
+    tipNewsDismiss:                         "Stäng",
+    lblStgGeneralNews:                      "Visa nyheter från yaiol",
+    btnNewsClose:                           "Stäng",
+    lblAppTabUntitled:                      "Namnlös",
+    tipAppTabClose:                         "Stäng",
     tstAppSaved:                            "Filen sparad.",
     tstAppAutoLrcLoaded:                    "Låttextfilen laddades automatiskt.",
     tstAppFileError:                        "Det gick inte att öppna filen.",
@@ -3029,16 +3153,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Inställningar",
     tipStgBack:                             "Tillbaka",
-    tabStgDisplay:                          "Visning",
+    tabStgGeneral:                          "Allmänt",
     tabStgTime:                             "Tid",
     tabStgMeta:                             "Metadata",
     tabStgAbout:                            "Om",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Språk",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Mörk",
-    btnStgDisplayThemeLight:                "Ljus",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Språk",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Mörk",
+    btnStgGeneralThemeLight:                "Ljus",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Radredigeringsfördröjning",
@@ -3053,6 +3177,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Textförfattare / låtskrivare",
     lblStgMetaLrcBy:                        "Text av",
     plhStgMetaLrcBy:                        "LRC-skapare",
+    lblStgMetaAutoFill:                     "Fyll i metadata automatiskt från låtens taggar när en ny LRC skapas",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "skapa synkroniserade textfiler.",
@@ -3102,15 +3227,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Phiên bản mới có sẵn:",
-    lnkUpdateWhatsNew:                      "Có gì mới",
     btnUpdateDownload:                      "Tải xuống",
-    lnkUpdateSkip:                          "Bỏ qua phiên bản này",
-    tipUpdateDismiss:                       "Bỏ qua",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Kéo thả tệp âm thanh hoặc LRC vào đây",
     cfmAppUnsavedTitle:                     "Thay đổi chưa lưu",
     cfmAppUnsavedMsg:                       "Lưu tệp hiện tại trước khi tiếp tục?",
+    lblNewsHideForever:                     "Không hiển thị lại",
+    btnNewsOpenLink:                        "Tìm hiểu thêm",
+    tipNewsDismiss:                         "Đóng",
+    lblStgGeneralNews:                      "Hiển thị tin tức từ yaiol",
+    btnNewsClose:                           "Đóng",
+    lblAppTabUntitled:                      "Không có tiêu đề",
+    tipAppTabClose:                         "Đóng",
     tstAppSaved:                            "Đã lưu tệp.",
     tstAppAutoLrcLoaded:                    "Tệp lời bài hát đã được tải tự động.",
     tstAppFileError:                        "Không thể mở tệp.",
@@ -3152,16 +3281,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Cài đặt",
     tipStgBack:                             "Quay lại",
-    tabStgDisplay:                          "Hiển thị",
+    tabStgGeneral:                          "Chung",
     tabStgTime:                             "Thời gian",
     tabStgMeta:                             "Siêu dữ liệu",
     tabStgAbout:                            "Giới thiệu",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Ngôn ngữ",
-    lblStgDisplayTheme:                     "Chủ đề",
-    btnStgDisplayThemeDark:                 "Tối",
-    btnStgDisplayThemeLight:                "Sáng",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Ngôn ngữ",
+    lblStgGeneralTheme:                     "Chủ đề",
+    btnStgGeneralThemeDark:                 "Tối",
+    btnStgGeneralThemeLight:                "Sáng",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Độ trễ chỉnh sửa dòng",
@@ -3176,6 +3305,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Người viết lời / nhạc sĩ",
     lblStgMetaLrcBy:                        "Lời bởi",
     plhStgMetaLrcBy:                        "Người tạo LRC",
+    lblStgMetaAutoFill:                     "Tự động điền siêu dữ liệu từ thẻ bài hát khi tạo LRC mới",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "tạo tệp lời bài hát được đồng bộ hóa.",
@@ -3225,15 +3355,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Yeni sürüm mevcut:",
-    lnkUpdateWhatsNew:                      "Yenilikler",
     btnUpdateDownload:                      "İndir",
-    lnkUpdateSkip:                          "Bu sürümü atla",
-    tipUpdateDismiss:                       "Kapat",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Bir ses veya LRC dosyasını buraya bırakın",
     cfmAppUnsavedTitle:                     "Kaydedilmemiş Değişiklikler",
     cfmAppUnsavedMsg:                       "Devam etmeden önce geçerli dosyayı kaydet?",
+    lblNewsHideForever:                     "Bir daha gösterme",
+    btnNewsOpenLink:                        "Daha fazla bilgi edin",
+    tipNewsDismiss:                         "Kapat",
+    lblStgGeneralNews:                      "yaiol'dan haberleri göster",
+    btnNewsClose:                           "Kapat",
+    lblAppTabUntitled:                      "Başlıksız",
+    tipAppTabClose:                         "Kapat",
     tstAppSaved:                            "Dosya kaydedildi.",
     tstAppAutoLrcLoaded:                    "Şarkı sözü dosyası otomatik olarak yüklendi.",
     tstAppFileError:                        "Dosya açılamadı.",
@@ -3275,16 +3409,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Ayarlar",
     tipStgBack:                             "Geri",
-    tabStgDisplay:                          "Görüntü",
+    tabStgGeneral:                          "Genel",
     tabStgTime:                             "Zaman",
     tabStgMeta:                             "Meta Verileri",
     tabStgAbout:                            "Hakkında",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Dil",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Koyu",
-    btnStgDisplayThemeLight:                "Açık",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Dil",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Koyu",
+    btnStgGeneralThemeLight:                "Açık",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Satır Düzenleme Gecikmesi",
@@ -3299,6 +3433,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Söz yazarı / besteci",
     lblStgMetaLrcBy:                        "Şarkı Sözleri:",
     plhStgMetaLrcBy:                        "LRC oluşturucu",
+    lblStgMetaAutoFill:                     "Yeni bir LRC oluşturulduğunda meta verileri şarkının etiketlerinden otomatik olarak doldur",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "senkronize şarkı sözü dosyaları oluştur.",
@@ -3348,15 +3483,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Versi baru tersedia:",
-    lnkUpdateWhatsNew:                      "Apa yang baru",
     btnUpdateDownload:                      "Unduh",
-    lnkUpdateSkip:                          "Lewati versi ini",
-    tipUpdateDismiss:                       "Abaikan",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Drop an audio or LRC file here",
     cfmAppUnsavedTitle:                     "Perubahan Belum Tersimpan",
     cfmAppUnsavedMsg:                       "Simpan file saat ini sebelum melanjutkan?",
+    lblNewsHideForever:                     "Jangan tampilkan lagi",
+    btnNewsOpenLink:                        "Pelajari lebih lanjut",
+    tipNewsDismiss:                         "Tutup",
+    lblStgGeneralNews:                      "Tampilkan berita dari yaiol",
+    btnNewsClose:                           "Tutup",
+    lblAppTabUntitled:                      "Tanpa judul",
+    tipAppTabClose:                         "Tutup",
     tstAppSaved:                            "File tersimpan.",
     tstAppAutoLrcLoaded:                    "File lirik dimuat secara otomatis.",
     tstAppFileError:                        "Gagal membuka file.",
@@ -3398,16 +3537,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Pengaturan",
     tipStgBack:                             "Kembali",
-    tabStgDisplay:                          "Tampilan",
+    tabStgGeneral:                          "Umum",
     tabStgTime:                             "Waktu",
     tabStgMeta:                             "Meta Data",
     tabStgAbout:                            "Tentang",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Bahasa",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Gelap",
-    btnStgDisplayThemeLight:                "Terang",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Bahasa",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Gelap",
+    btnStgGeneralThemeLight:                "Terang",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Penundaan Edit Baris",
@@ -3422,6 +3561,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Penyair / penulis lagu",
     lblStgMetaLrcBy:                        "LRC Oleh",
     plhStgMetaLrcBy:                        "Pembuat LRC",
+    lblStgMetaAutoFill:                     "Isi metadata secara otomatis dari tag lagu saat LRC baru dibuat",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "buat file lirik yang tersinkronisasi.",
@@ -3471,15 +3611,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Versi baharu tersedia:",
-    lnkUpdateWhatsNew:                      "Apa yang baharu",
     btnUpdateDownload:                      "Muat turun",
-    lnkUpdateSkip:                          "Langkau versi ini",
-    tipUpdateDismiss:                       "Abaikan",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Drop an audio or LRC file here",
     cfmAppUnsavedTitle:                     "Perubahan Belum Disimpan",
     cfmAppUnsavedMsg:                       "Simpan fail semasa sebelum meneruskan?",
+    lblNewsHideForever:                     "Jangan tunjuk lagi",
+    btnNewsOpenLink:                        "Ketahui lebih lanjut",
+    tipNewsDismiss:                         "Tutup",
+    lblStgGeneralNews:                      "Tunjukkan berita dari yaiol",
+    btnNewsClose:                           "Tutup",
+    lblAppTabUntitled:                      "Tanpa tajuk",
+    tipAppTabClose:                         "Tutup",
     tstAppSaved:                            "Fail disimpan.",
     tstAppAutoLrcLoaded:                    "Fail lirik dimuatkan secara automatik.",
     tstAppFileError:                        "Gagal membuka fail.",
@@ -3521,16 +3665,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Tetapan",
     tipStgBack:                             "Kembali",
-    tabStgDisplay:                          "Paparan",
+    tabStgGeneral:                          "Umum",
     tabStgTime:                             "Masa",
     tabStgMeta:                             "Meta Data",
     tabStgAbout:                            "Tentang",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Bahasa",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Gelap",
-    btnStgDisplayThemeLight:                "Cerah",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Bahasa",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Gelap",
+    btnStgGeneralThemeLight:                "Cerah",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Kelewatan Edit Baris",
@@ -3545,6 +3689,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Penyajak / penulis lagu",
     lblStgMetaLrcBy:                        "LRC Oleh",
     plhStgMetaLrcBy:                        "Pencipta LRC",
+    lblStgMetaAutoFill:                     "Isi metadata secara automatik daripada tag lagu apabila LRC baharu dicipta",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "cipta fail lirik yang disegerakkan.",
@@ -3594,15 +3739,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Доступна новая версия:",
-    lnkUpdateWhatsNew:                      "Что нового",
     btnUpdateDownload:                      "Скачать",
-    lnkUpdateSkip:                          "Пропустить эту версию",
-    tipUpdateDismiss:                       "Закрыть",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Drop an audio or LRC file here",
     cfmAppUnsavedTitle:                     "Несохранённые изменения",
     cfmAppUnsavedMsg:                       "Сохранить текущий файл перед продолжением?",
+    lblNewsHideForever:                     "Больше не показывать",
+    btnNewsOpenLink:                        "Узнать больше",
+    tipNewsDismiss:                         "Закрыть",
+    lblStgGeneralNews:                      "Показывать новости от yaiol",
+    btnNewsClose:                           "Закрыть",
+    lblAppTabUntitled:                      "Без названия",
+    tipAppTabClose:                         "Закрыть",
     tstAppSaved:                            "Файл сохранён.",
     tstAppAutoLrcLoaded:                    "Файл текста загружен автоматически.",
     tstAppFileError:                        "Не удалось открыть файл.",
@@ -3644,16 +3793,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Настройки",
     tipStgBack:                             "Назад",
-    tabStgDisplay:                          "Отображение",
+    tabStgGeneral:                          "Общие",
     tabStgTime:                             "Время",
     tabStgMeta:                             "Метаданные",
     tabStgAbout:                            "О программе",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Язык",
-    lblStgDisplayTheme:                     "Тема",
-    btnStgDisplayThemeDark:                 "Тёмная",
-    btnStgDisplayThemeLight:                "Светлая",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Язык",
+    lblStgGeneralTheme:                     "Тема",
+    btnStgGeneralThemeDark:                 "Тёмная",
+    btnStgGeneralThemeLight:                "Светлая",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Задержка редактирования",
@@ -3668,6 +3817,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Поэт / автор песни",
     lblStgMetaLrcBy:                        "LRC автор",
     plhStgMetaLrcBy:                        "Создатель LRC",
+    lblStgMetaAutoFill:                     "Автоматически заполнять метаданные из тегов песни при создании нового LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "создание синхронизированных текстов.",
@@ -3717,15 +3867,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "มีเวอร์ชันใหม่:",
-    lnkUpdateWhatsNew:                      "มีอะไรใหม่",
     btnUpdateDownload:                      "ดาวน์โหลด",
-    lnkUpdateSkip:                          "ข้ามเวอร์ชันนี้",
-    tipUpdateDismiss:                       "ปิด",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Drop an audio or LRC file here",
     cfmAppUnsavedTitle:                     "การเปลี่ยนแปลงที่ยังไม่บันทึก",
     cfmAppUnsavedMsg:                       "บันทึกไฟล์ปัจจุบันก่อนดำเนินการต่อ?",
+    lblNewsHideForever:                     "ไม่ต้องแสดงอีก",
+    btnNewsOpenLink:                        "เรียนรู้เพิ่มเติม",
+    tipNewsDismiss:                         "ปิด",
+    lblStgGeneralNews:                      "แสดงข่าวสารจาก yaiol",
+    btnNewsClose:                           "ปิด",
+    lblAppTabUntitled:                      "ไม่มีชื่อ",
+    tipAppTabClose:                         "ปิด",
     tstAppSaved:                            "บันทึกไฟล์แล้ว",
     tstAppAutoLrcLoaded:                    "โหลดไฟล์เนื้อเพลงอัตโนมัติแล้ว",
     tstAppFileError:                        "ไม่สามารถเปิดไฟล์ได้",
@@ -3767,16 +3921,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "การตั้งค่า",
     tipStgBack:                             "ย้อนกลับ",
-    tabStgDisplay:                          "แสดงผล",
+    tabStgGeneral:                          "ทั่วไป",
     tabStgTime:                             "เวลา",
     tabStgMeta:                             "ข้อมูลเมตา",
     tabStgAbout:                            "เกี่ยวกับ",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "ภาษา",
-    lblStgDisplayTheme:                     "ธีม",
-    btnStgDisplayThemeDark:                 "มืด",
-    btnStgDisplayThemeLight:                "สว่าง",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "ภาษา",
+    lblStgGeneralTheme:                     "ธีม",
+    btnStgGeneralThemeDark:                 "มืด",
+    btnStgGeneralThemeLight:                "สว่าง",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "หน่วงเวลาแก้ไขบรรทัด",
@@ -3791,6 +3945,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "กวี / นักแต่งเพลง",
     lblStgMetaLrcBy:                        "LRC โดย",
     plhStgMetaLrcBy:                        "ผู้สร้าง LRC",
+    lblStgMetaAutoFill:                     "กรอกข้อมูลเมตาโดยอัตโนมัติจากแท็กเพลงเมื่อสร้าง LRC ใหม่",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "สร้างไฟล์เนื้อเพลงที่ซิงค์",
@@ -3840,15 +3995,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Доступна нова версія:",
-    lnkUpdateWhatsNew:                      "Що нового",
     btnUpdateDownload:                      "Завантажити",
-    lnkUpdateSkip:                          "Пропустити цю версію",
-    tipUpdateDismiss:                       "Закрити",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Перетягніть аудіо- або LRC-файл сюди",
     cfmAppUnsavedTitle:                     "Незбережені зміни",
     cfmAppUnsavedMsg:                       "Зберегти поточний файл перед продовженням?",
+    lblNewsHideForever:                     "Більше не показувати",
+    btnNewsOpenLink:                        "Дізнатися більше",
+    tipNewsDismiss:                         "Закрити",
+    lblStgGeneralNews:                      "Показувати новини від yaiol",
+    btnNewsClose:                           "Закрити",
+    lblAppTabUntitled:                      "Без назви",
+    tipAppTabClose:                         "Закрити",
     tstAppSaved:                            "Файл збережено.",
     tstAppAutoLrcLoaded:                    "Файл текстів пісень завантажено автоматично.",
     tstAppFileError:                        "Не вдалося відкрити файл.",
@@ -3890,16 +4049,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Налаштування",
     tipStgBack:                             "Назад",
-    tabStgDisplay:                          "Відображення",
+    tabStgGeneral:                          "Загальні",
     tabStgTime:                             "Час",
     tabStgMeta:                             "Метадані",
     tabStgAbout:                            "Про програму",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Мова",
-    lblStgDisplayTheme:                     "Тема",
-    btnStgDisplayThemeDark:                 "Темний",
-    btnStgDisplayThemeLight:                "Світлий",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Мова",
+    lblStgGeneralTheme:                     "Тема",
+    btnStgGeneralThemeDark:                 "Темний",
+    btnStgGeneralThemeLight:                "Світлий",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Затримка редагування рядка",
@@ -3914,6 +4073,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Автор тексту / автор пісні",
     lblStgMetaLrcBy:                        "Слова:",
     plhStgMetaLrcBy:                        "Творець LRC",
+    lblStgMetaAutoFill:                     "Автоматично заповнювати метадані з тегів пісні при створенні нового LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "створювати синхронізовані файли текстів.",
@@ -3963,15 +4123,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Նոր տարբերակ հասանելի է:",
-    lnkUpdateWhatsNew:                      "Ինչ նորություն կա",
     btnUpdateDownload:                      "Ներբեռնել",
-    lnkUpdateSkip:                          "Բաց թողնել այս տարբերակը",
-    tipUpdateDismiss:                       "Մերժել",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Քաշեք ձայնային կամ LRC ֆայլ այստեղ",
     cfmAppUnsavedTitle:                     "Չպահված փոփոխություններ",
     cfmAppUnsavedMsg:                       "Պահե՞լ ֆայլը շարունակելուց առաջ:",
+    lblNewsHideForever:                     "Այլևս չցուցադրել",
+    btnNewsOpenLink:                        "Իմանալ ավելին",
+    tipNewsDismiss:                         "Փակել",
+    lblStgGeneralNews:                      "Ցուցադրել նորություններ yaiol-ից",
+    btnNewsClose:                           "Փակել",
+    lblAppTabUntitled:                      "Անվերնագիր",
+    tipAppTabClose:                         "Փակել",
     tstAppSaved:                            "Ֆայլը պահված է:",
     tstAppAutoLrcLoaded:                    "Տեքստի ֆայլը ավտոմատ բեռնված է:",
     tstAppFileError:                        "Չհաջողվեց բացել ֆայլը:",
@@ -4013,16 +4177,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Կարգավորումներ",
     tipStgBack:                             "Հետ",
-    tabStgDisplay:                          "Ցուցադրում",
+    tabStgGeneral:                          "Ընդհանուր",
     tabStgTime:                             "Ժամանակ",
     tabStgMeta:                             "Մետատվյալ",
     tabStgAbout:                            "Մասին",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Լեզու",
-    lblStgDisplayTheme:                     "Թեմա",
-    btnStgDisplayThemeDark:                 "Մութ",
-    btnStgDisplayThemeLight:                "Բաց",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Լեզու",
+    lblStgGeneralTheme:                     "Թեմա",
+    btnStgGeneralThemeDark:                 "Մութ",
+    btnStgGeneralThemeLight:                "Բաց",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Տողի խմբագրման հապաղում",
@@ -4037,6 +4201,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Բառերի հեղինակ / կոմպոզիտոր",
     lblStgMetaLrcBy:                        "LRC-ը ստեղծել է",
     plhStgMetaLrcBy:                        "LRC-ի ստեղծող",
+    lblStgMetaAutoFill:                     "Ավտոմատ լրացնել մետատվյալները երգի թեգերից՝ նոր LRC ստեղծելիս",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ստեղծել համաժամեցված երգի տեքստի ֆայլեր:",
@@ -4086,15 +4251,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Налична е нова версия:",
-    lnkUpdateWhatsNew:                      "Какво ново",
     btnUpdateDownload:                      "Изтегли",
-    lnkUpdateSkip:                          "Пропусни тази версия",
-    tipUpdateDismiss:                       "Отхвърли",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Пуснете аудио или LRC файл тук",
     cfmAppUnsavedTitle:                     "Незапазени промени",
     cfmAppUnsavedMsg:                       "Запази файла преди да продължиш?",
+    lblNewsHideForever:                     "Не показвай отново",
+    btnNewsOpenLink:                        "Научете повече",
+    tipNewsDismiss:                         "Затвори",
+    lblStgGeneralNews:                      "Показвай новини от yaiol",
+    btnNewsClose:                           "Затвори",
+    lblAppTabUntitled:                      "Без заглавие",
+    tipAppTabClose:                         "Затвори",
     tstAppSaved:                            "Файлът е запазен.",
     tstAppAutoLrcLoaded:                    "Файлът с текст е зареден автоматично.",
     tstAppFileError:                        "Неуспешно отваряне на файла.",
@@ -4136,16 +4305,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Настройки",
     tipStgBack:                             "Назад",
-    tabStgDisplay:                          "Изглед",
+    tabStgGeneral:                          "Общи",
     tabStgTime:                             "Време",
     tabStgMeta:                             "Метаданни",
     tabStgAbout:                            "Относно",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Език",
-    lblStgDisplayTheme:                     "Тема",
-    btnStgDisplayThemeDark:                 "Тъмна",
-    btnStgDisplayThemeLight:                "Светла",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Език",
+    lblStgGeneralTheme:                     "Тема",
+    btnStgGeneralThemeDark:                 "Тъмна",
+    btnStgGeneralThemeLight:                "Светла",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Закъснение при редактиране",
@@ -4160,6 +4329,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Текстописец / автор",
     lblStgMetaLrcBy:                        "LRC от",
     plhStgMetaLrcBy:                        "Създател на LRC",
+    lblStgMetaAutoFill:                     "Автоматично попълване на метаданните от таговете на песента при създаване на нов LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "създавайте синхронизирани файлове с текст.",
@@ -4209,15 +4379,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Nova versión dispoñible:",
-    lnkUpdateWhatsNew:                      "Novidades",
     btnUpdateDownload:                      "Descargar",
-    lnkUpdateSkip:                          "Omitir esta versión",
-    tipUpdateDismiss:                       "Descartar",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Solta un ficheiro de audio ou LRC aquí",
     cfmAppUnsavedTitle:                     "Cambios non gardados",
     cfmAppUnsavedMsg:                       "Gardar o ficheiro antes de continuar?",
+    lblNewsHideForever:                     "Non mostrar de novo",
+    btnNewsOpenLink:                        "Máis información",
+    tipNewsDismiss:                         "Pechar",
+    lblStgGeneralNews:                      "Mostrar noticias de yaiol",
+    btnNewsClose:                           "Pechar",
+    lblAppTabUntitled:                      "Sen título",
+    tipAppTabClose:                         "Pechar",
     tstAppSaved:                            "Ficheiro gardado.",
     tstAppAutoLrcLoaded:                    "Ficheiro de letra cargado automaticamente.",
     tstAppFileError:                        "Erro ao abrir o ficheiro.",
@@ -4259,16 +4433,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Configuración",
     tipStgBack:                             "Atrás",
-    tabStgDisplay:                          "Visualización",
+    tabStgGeneral:                          "Xeral",
     tabStgTime:                             "Tempo",
     tabStgMeta:                             "Metadatos",
     tabStgAbout:                            "Acerca de",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Idioma",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Escuro",
-    btnStgDisplayThemeLight:                "Claro",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Idioma",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Escuro",
+    btnStgGeneralThemeLight:                "Claro",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Retardo de edición",
@@ -4283,6 +4457,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Letrista / compositor",
     lblStgMetaLrcBy:                        "LRC por",
     plhStgMetaLrcBy:                        "Creador do LRC",
+    lblStgMetaAutoFill:                     "Encher automaticamente os metadatos das etiquetas da canción ao crear un novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "crea ficheiros de letra sincronizada.",
@@ -4332,15 +4507,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Új verzió elérhető:",
-    lnkUpdateWhatsNew:                      "Újdonságok",
     btnUpdateDownload:                      "Letöltés",
-    lnkUpdateSkip:                          "Verzió kihagyása",
-    tipUpdateDismiss:                       "Elvetés",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Húzzon ide egy hang- vagy LRC fájlt",
     cfmAppUnsavedTitle:                     "Nem mentett változások",
     cfmAppUnsavedMsg:                       "Menti a fájlt a folytatás előtt?",
+    lblNewsHideForever:                     "Ne mutasd újra",
+    btnNewsOpenLink:                        "Tudjon meg többet",
+    tipNewsDismiss:                         "Bezárás",
+    lblStgGeneralNews:                      "Hírek megjelenítése a yaiol-tól",
+    btnNewsClose:                           "Bezárás",
+    lblAppTabUntitled:                      "Névtelen",
+    tipAppTabClose:                         "Bezárás",
     tstAppSaved:                            "Fájl mentve.",
     tstAppAutoLrcLoaded:                    "Dalszöveg fájl automatikusan betöltve.",
     tstAppFileError:                        "Nem sikerült megnyitni a fájlt.",
@@ -4382,16 +4561,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Beállítások",
     tipStgBack:                             "Vissza",
-    tabStgDisplay:                          "Megjelenítés",
+    tabStgGeneral:                          "Általános",
     tabStgTime:                             "Idő",
     tabStgMeta:                             "Metaadatok",
     tabStgAbout:                            "Névjegy",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Nyelv",
-    lblStgDisplayTheme:                     "Téma",
-    btnStgDisplayThemeDark:                 "Sötét",
-    btnStgDisplayThemeLight:                "Világos",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Nyelv",
+    lblStgGeneralTheme:                     "Téma",
+    btnStgGeneralThemeDark:                 "Sötét",
+    btnStgGeneralThemeLight:                "Világos",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Szerkesztési késleltetés",
@@ -4406,6 +4585,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Szövegíró / dalszerző",
     lblStgMetaLrcBy:                        "LRC készítette",
     plhStgMetaLrcBy:                        "LRC létrehozója",
+    lblStgMetaAutoFill:                     "Automatikus metaadat-kitöltés a dal címkéiből új LRC létrehozásakor",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "szinkronizált dalszöveg fájlok létrehozása.",
@@ -4455,15 +4635,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Yra nauja versija:",
-    lnkUpdateWhatsNew:                      "Kas naujo",
     btnUpdateDownload:                      "Atsisiųsti",
-    lnkUpdateSkip:                          "Praleisti šią versiją",
-    tipUpdateDismiss:                       "Atmesti",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Numeskite garso arba LRC failą čia",
     cfmAppUnsavedTitle:                     "Neišsaugoti pakeitimai",
     cfmAppUnsavedMsg:                       "Išsaugoti failą prieš tęsiant?",
+    lblNewsHideForever:                     "Daugiau nerodyti",
+    btnNewsOpenLink:                        "Sužinoti daugiau",
+    tipNewsDismiss:                         "Uždaryti",
+    lblStgGeneralNews:                      "Rodyti naujienas iš yaiol",
+    btnNewsClose:                           "Uždaryti",
+    lblAppTabUntitled:                      "Be pavadinimo",
+    tipAppTabClose:                         "Uždaryti",
     tstAppSaved:                            "Failas išsaugotas.",
     tstAppAutoLrcLoaded:                    "Žodžių failas įkeltas automatiškai.",
     tstAppFileError:                        "Nepavyko atidaryti failo.",
@@ -4505,16 +4689,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Nustatymai",
     tipStgBack:                             "Atgal",
-    tabStgDisplay:                          "Rodymas",
+    tabStgGeneral:                          "Bendra",
     tabStgTime:                             "Laikas",
     tabStgMeta:                             "Metaduomenys",
     tabStgAbout:                            "Apie",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Kalba",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Tamsi",
-    btnStgDisplayThemeLight:                "Šviesi",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Kalba",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Tamsi",
+    btnStgGeneralThemeLight:                "Šviesi",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Eilutės redagavimo delsa",
@@ -4529,6 +4713,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Dainos žodžių autorius / kompozitorius",
     lblStgMetaLrcBy:                        "LRC sukūrė",
     plhStgMetaLrcBy:                        "LRC kūrėjas",
+    lblStgMetaAutoFill:                     "Automatiškai užpildyti metaduomenis iš dainos žymų, kai sukuriamas naujas LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "kurti sinchronizuotus dainos žodžių failus.",
@@ -4578,15 +4763,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Достапна е нова верзија:",
-    lnkUpdateWhatsNew:                      "Што е ново",
     btnUpdateDownload:                      "Преземи",
-    lnkUpdateSkip:                          "Прескокни ја оваа верзија",
-    tipUpdateDismiss:                       "Отфрли",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Пуштете аудио или LRC фајл овде",
     cfmAppUnsavedTitle:                     "Незачувани промени",
     cfmAppUnsavedMsg:                       "Зачувај го фајлот пред да продолжиш?",
+    lblNewsHideForever:                     "Не прикажувај повторно",
+    btnNewsOpenLink:                        "Дознајте повеќе",
+    tipNewsDismiss:                         "Затвори",
+    lblStgGeneralNews:                      "Прикажи вести од yaiol",
+    btnNewsClose:                           "Затвори",
+    lblAppTabUntitled:                      "Без наслов",
+    tipAppTabClose:                         "Затвори",
     tstAppSaved:                            "Фајлот е зачуван.",
     tstAppAutoLrcLoaded:                    "Фајлот со текст е вчитан автоматски.",
     tstAppFileError:                        "Неуспешно отворање на фајлот.",
@@ -4628,16 +4817,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Поставки",
     tipStgBack:                             "Назад",
-    tabStgDisplay:                          "Приказ",
+    tabStgGeneral:                          "Општо",
     tabStgTime:                             "Време",
     tabStgMeta:                             "Метаподатоци",
     tabStgAbout:                            "За",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Јазик",
-    lblStgDisplayTheme:                     "Тема",
-    btnStgDisplayThemeDark:                 "Темна",
-    btnStgDisplayThemeLight:                "Светла",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Јазик",
+    lblStgGeneralTheme:                     "Тема",
+    btnStgGeneralThemeDark:                 "Темна",
+    btnStgGeneralThemeLight:                "Светла",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Задоцнување при уредување",
@@ -4652,6 +4841,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Текстописец / автор",
     lblStgMetaLrcBy:                        "LRC од",
     plhStgMetaLrcBy:                        "Создавач на LRC",
+    lblStgMetaAutoFill:                     "Автоматски пополнувај ги метаподатоците од ознаките на песната кога се креира нов LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "создавајте синхронизирани фајлови со текст на песни.",
@@ -4701,15 +4891,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Доступна је нова верзија:",
-    lnkUpdateWhatsNew:                      "Шта је ново",
     btnUpdateDownload:                      "Преузми",
-    lnkUpdateSkip:                          "Прескочи ову верзију",
-    tipUpdateDismiss:                       "Одбаци",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Превуците аудио или LRC фајл овде",
     cfmAppUnsavedTitle:                     "Несачуване измене",
     cfmAppUnsavedMsg:                       "Сачувати фајл пре наставка?",
+    lblNewsHideForever:                     "Не приказуј поново",
+    btnNewsOpenLink:                        "Сазнајте више",
+    tipNewsDismiss:                         "Затвори",
+    lblStgGeneralNews:                      "Прикажи вести из yaiol",
+    btnNewsClose:                           "Затвори",
+    lblAppTabUntitled:                      "Без наслова",
+    tipAppTabClose:                         "Затвори",
     tstAppSaved:                            "Фајл је сачуван.",
     tstAppAutoLrcLoaded:                    "Фајл са текстом је аутоматски учитан.",
     tstAppFileError:                        "Отварање фајла није успело.",
@@ -4751,16 +4945,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Подешавања",
     tipStgBack:                             "Назад",
-    tabStgDisplay:                          "Приказ",
+    tabStgGeneral:                          "Опште",
     tabStgTime:                             "Време",
     tabStgMeta:                             "Метаподаци",
     tabStgAbout:                            "О апликацији",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Језик",
-    lblStgDisplayTheme:                     "Тема",
-    btnStgDisplayThemeDark:                 "Тамна",
-    btnStgDisplayThemeLight:                "Светла",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Језик",
+    lblStgGeneralTheme:                     "Тема",
+    btnStgGeneralThemeDark:                 "Тамна",
+    btnStgGeneralThemeLight:                "Светла",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Кашњење при уређивању",
@@ -4775,6 +4969,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Текстописац / аутор",
     lblStgMetaLrcBy:                        "LRC направио",
     plhStgMetaLrcBy:                        "Творац LRC-а",
+    lblStgMetaAutoFill:                     "Аутоматски попуни метаподатке из ознака песме када се креира нови LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "креирајте синхронизоване фајлове са текстом песама.",
@@ -4824,15 +5019,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "K dispozícii je nová verzia:",
-    lnkUpdateWhatsNew:                      "Čo je nové",
     btnUpdateDownload:                      "Stiahnuť",
-    lnkUpdateSkip:                          "Preskočiť túto verziu",
-    tipUpdateDismiss:                       "Zavrieť",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Presuňte sem zvukový alebo LRC súbor",
     cfmAppUnsavedTitle:                     "Neuložené zmeny",
     cfmAppUnsavedMsg:                       "Uložiť súbor pred pokračovaním?",
+    lblNewsHideForever:                     "Nezobrazovať znova",
+    btnNewsOpenLink:                        "Zistiť viac",
+    tipNewsDismiss:                         "Zavrieť",
+    lblStgGeneralNews:                      "Zobrazovať správy z yaiol",
+    btnNewsClose:                           "Zavrieť",
+    lblAppTabUntitled:                      "Bez názvu",
+    tipAppTabClose:                         "Zavrieť",
     tstAppSaved:                            "Súbor uložený.",
     tstAppAutoLrcLoaded:                    "Súbor s textom bol načítaný automaticky.",
     tstAppFileError:                        "Nepodarilo sa otvoriť súbor.",
@@ -4874,16 +5073,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Nastavenia",
     tipStgBack:                             "Späť",
-    tabStgDisplay:                          "Zobrazenie",
+    tabStgGeneral:                          "Všeobecné",
     tabStgTime:                             "Čas",
     tabStgMeta:                             "Metadáta",
     tabStgAbout:                            "O programe",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Jazyk",
-    lblStgDisplayTheme:                     "Téma",
-    btnStgDisplayThemeDark:                 "Tmavá",
-    btnStgDisplayThemeLight:                "Svetlá",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Jazyk",
+    lblStgGeneralTheme:                     "Téma",
+    btnStgGeneralThemeDark:                 "Tmavá",
+    btnStgGeneralThemeLight:                "Svetlá",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Oneskorenie úpravy riadka",
@@ -4898,6 +5097,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Textár / skladateľ",
     lblStgMetaLrcBy:                        "LRC vytvoril",
     plhStgMetaLrcBy:                        "Tvorca LRC",
+    lblStgMetaAutoFill:                     "Automaticky vyplniť metadáta z tagov skladby pri vytvorení nového LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "vytvárať synchronizované súbory s textom piesní.",
@@ -4947,15 +5147,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Na voljo je nova različica:",
-    lnkUpdateWhatsNew:                      "Kaj je novega",
     btnUpdateDownload:                      "Prenesi",
-    lnkUpdateSkip:                          "Preskoči to različico",
-    tipUpdateDismiss:                       "Zavrni",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Spustite zvočno ali LRC datoteko sem",
     cfmAppUnsavedTitle:                     "Neshranjene spremembe",
     cfmAppUnsavedMsg:                       "Shraniti datoteko pred nadaljevanjem?",
+    lblNewsHideForever:                     "Ne prikazuj več",
+    btnNewsOpenLink:                        "Več o tem",
+    tipNewsDismiss:                         "Zapri",
+    lblStgGeneralNews:                      "Prikaži novice iz yaiol",
+    btnNewsClose:                           "Zapri",
+    lblAppTabUntitled:                      "Brez naslova",
+    tipAppTabClose:                         "Zapri",
     tstAppSaved:                            "Datoteka shranjena.",
     tstAppAutoLrcLoaded:                    "Datoteka z besedilom je bila samodejno naložena.",
     tstAppFileError:                        "Odpiranje datoteke ni uspelo.",
@@ -4997,16 +5201,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Nastavitve",
     tipStgBack:                             "Nazaj",
-    tabStgDisplay:                          "Prikaz",
+    tabStgGeneral:                          "Splošno",
     tabStgTime:                             "Čas",
     tabStgMeta:                             "Metapodatki",
     tabStgAbout:                            "O programu",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Jezik",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Temna",
-    btnStgDisplayThemeLight:                "Svetla",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Jezik",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Temna",
+    btnStgGeneralThemeLight:                "Svetla",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Zamik urejanja vrstice",
@@ -5021,6 +5225,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Pisec besedila / skladatelj",
     lblStgMetaLrcBy:                        "LRC ustvaril",
     plhStgMetaLrcBy:                        "Ustvarjalec LRC",
+    lblStgMetaAutoFill:                     "Samodejno izpolni metapodatke iz oznak pesmi ob ustvarjanju novega LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ustvarjajte sinhronizirane datoteke z besedili pesmi.",
@@ -5070,15 +5275,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "புதிய பதிப்பு உள்ளது:",
-    lnkUpdateWhatsNew:                      "புதியது என்ன",
     btnUpdateDownload:                      "பதிவிறக்கு",
-    lnkUpdateSkip:                          "இந்த பதிப்பைத் தவிர்க்கவும்",
-    tipUpdateDismiss:                       "நிராகரி",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "ஒரு ஆடியோ அல்லது LRC கோப்பை இங்கே இழுத்து விடுங்கள்",
     cfmAppUnsavedTitle:                     "சேமிக்கப்படாத மாற்றங்கள்",
     cfmAppUnsavedMsg:                       "தொடர்வதற்கு முன் தற்போதைய கோப்பை சேமிக்கவா?",
+    lblNewsHideForever:                     "மீண்டும் காட்டாதே",
+    btnNewsOpenLink:                        "மேலும் அறிக",
+    tipNewsDismiss:                         "மூடு",
+    lblStgGeneralNews:                      "yaiol இலிருந்து செய்திகளைக் காட்டு",
+    btnNewsClose:                           "மூடு",
+    lblAppTabUntitled:                      "தலைப்பற்றது",
+    tipAppTabClose:                         "மூடு",
     tstAppSaved:                            "கோப்பு சேமிக்கப்பட்டது.",
     tstAppAutoLrcLoaded:                    "பாடல் வரிகள் கோப்பு தானாக ஏற்றப்பட்டது.",
     tstAppFileError:                        "கோப்பைத் திறக்க முடியவில்லை.",
@@ -5120,16 +5329,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "அமைப்புகள்",
     tipStgBack:                             "பின்செல்",
-    tabStgDisplay:                          "காட்சி",
+    tabStgGeneral:                          "பொது",
     tabStgTime:                             "நேரம்",
     tabStgMeta:                             "மெட்டாத் தரவு",
     tabStgAbout:                            "பற்றி",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "மொழி",
-    lblStgDisplayTheme:                     "தீம்",
-    btnStgDisplayThemeDark:                 "இருண்ட",
-    btnStgDisplayThemeLight:                "வெளிச்சமான",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "மொழி",
+    lblStgGeneralTheme:                     "தீம்",
+    btnStgGeneralThemeDark:                 "இருண்ட",
+    btnStgGeneralThemeLight:                "வெளிச்சமான",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "வரி திருத்த தாமதம்",
@@ -5144,6 +5353,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "வரிகள் ஆசிரியர் / இசையமைப்பாளர்",
     lblStgMetaLrcBy:                        "LRC உருவாக்கியவர்",
     plhStgMetaLrcBy:                        "LRC உருவாக்குனர்",
+    lblStgMetaAutoFill:                     "புதிய LRC உருவாக்கும்போது பாடலின் குறிச்சொற்களிலிருந்து மெட்டாடேட்டாவை தானாக நிரப்பு",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ஒத்திசைக்கப்பட்ட பாடல் வரிகள் கோப்புகளை உருவாக்குங்கள்.",
@@ -5193,15 +5403,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "नया संस्करण उपलब्ध है:",
-    lnkUpdateWhatsNew:                      "नया क्या है",
     btnUpdateDownload:                      "डाउनलोड करें",
-    lnkUpdateSkip:                          "इस संस्करण को छोड़ें",
-    tipUpdateDismiss:                       "खारिज करें",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "यहाँ ऑडियो या LRC फ़ाइल छोड़ें",
     cfmAppUnsavedTitle:                     "असहेजे परिवर्तन",
     cfmAppUnsavedMsg:                       "जारी रखने से पहले फ़ाइल सहेजें?",
+    lblNewsHideForever:                     "दोबारा न दिखाएँ",
+    btnNewsOpenLink:                        "और जानें",
+    tipNewsDismiss:                         "बंद करें",
+    lblStgGeneralNews:                      "yaiol से समाचार दिखाएँ",
+    btnNewsClose:                           "बंद करें",
+    lblAppTabUntitled:                      "अनाम",
+    tipAppTabClose:                         "बंद करें",
     tstAppSaved:                            "फ़ाइल सहेजी गई।",
     tstAppAutoLrcLoaded:                    "गीत फ़ाइल स्वचालित रूप से लोड हुई।",
     tstAppFileError:                        "फ़ाइल खोलने में विफल।",
@@ -5243,16 +5457,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "सेटिंग्स",
     tipStgBack:                             "वापस",
-    tabStgDisplay:                          "प्रदर्शन",
+    tabStgGeneral:                          "सामान्य",
     tabStgTime:                             "समय",
     tabStgMeta:                             "मेटाडेटा",
     tabStgAbout:                            "के बारे में",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "भाषा",
-    lblStgDisplayTheme:                     "थीम",
-    btnStgDisplayThemeDark:                 "डार्क",
-    btnStgDisplayThemeLight:                "लाइट",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "भाषा",
+    lblStgGeneralTheme:                     "थीम",
+    btnStgGeneralThemeDark:                 "डार्क",
+    btnStgGeneralThemeLight:                "लाइट",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "लाइन संपादन विलंब",
@@ -5267,6 +5481,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "गीतकार / संगीतकार",
     lblStgMetaLrcBy:                        "LRC द्वारा",
     plhStgMetaLrcBy:                        "LRC निर्माता",
+    lblStgMetaAutoFill:                     "नया LRC बनाते समय गाने के टैग से मेटाडेटा स्वचालित रूप से भरें",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "समन्वित गीत फ़ाइलें बनाएं।",
@@ -5316,15 +5531,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "নতুন সংস্করণ উপলব্ধ:",
-    lnkUpdateWhatsNew:                      "নতুন কি আছে",
     btnUpdateDownload:                      "ডাউনলোড করুন",
-    lnkUpdateSkip:                          "এই সংস্করণটি এড়িয়ে যান",
-    tipUpdateDismiss:                       "খারিজ করুন",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "এখানে অডিও বা LRC ফাইল ড্রপ করুন",
     cfmAppUnsavedTitle:                     "অসংরক্ষিত পরিবর্তন",
     cfmAppUnsavedMsg:                       "চালিয়ে যাওয়ার আগে ফাইল সংরক্ষণ করবেন?",
+    lblNewsHideForever:                     "আবার দেখাবেন না",
+    btnNewsOpenLink:                        "আরও জানুন",
+    tipNewsDismiss:                         "বন্ধ করুন",
+    lblStgGeneralNews:                      "yaiol থেকে খবর দেখান",
+    btnNewsClose:                           "বন্ধ করুন",
+    lblAppTabUntitled:                      "শিরোনামহীন",
+    tipAppTabClose:                         "বন্ধ করুন",
     tstAppSaved:                            "ফাইল সংরক্ষিত হয়েছে।",
     tstAppAutoLrcLoaded:                    "গানের কথার ফাইল স্বয়ংক্রিয়ভাবে লোড হয়েছে।",
     tstAppFileError:                        "ফাইল খুলতে ব্যর্থ।",
@@ -5366,16 +5585,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "সেটিংস",
     tipStgBack:                             "পিছনে",
-    tabStgDisplay:                          "প্রদর্শন",
+    tabStgGeneral:                          "সাধারণ",
     tabStgTime:                             "সময়",
     tabStgMeta:                             "মেটাডেটা",
     tabStgAbout:                            "সম্পর্কে",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "ভাষা",
-    lblStgDisplayTheme:                     "থিম",
-    btnStgDisplayThemeDark:                 "ডার্ক",
-    btnStgDisplayThemeLight:                "লাইট",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "ভাষা",
+    lblStgGeneralTheme:                     "থিম",
+    btnStgGeneralThemeDark:                 "ডার্ক",
+    btnStgGeneralThemeLight:                "লাইট",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "লাইন সম্পাদনা বিলম্ব",
@@ -5390,6 +5609,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "গীতিকার / সুরকার",
     lblStgMetaLrcBy:                        "LRC তৈরি করেছেন",
     plhStgMetaLrcBy:                        "LRC নির্মাতা",
+    lblStgMetaAutoFill:                     "নতুন LRC তৈরি করার সময় গানের ট্যাগ থেকে মেটাডেটা স্বয়ংক্রিয়ভাবে পূরণ করুন",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "সমন্বিত গানের কথার ফাইল তৈরি করুন।",
@@ -5439,15 +5659,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "نیا ورژن دستیاب ہے:",
-    lnkUpdateWhatsNew:                      "نیا کیا ہے",
     btnUpdateDownload:                      "ڈاؤن لوڈ کریں",
-    lnkUpdateSkip:                          "اس ورژن کو چھوڑ دیں",
-    tipUpdateDismiss:                       "مسترد کریں",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "یہاں آڈیو یا LRC فائل ڈراپ کریں",
     cfmAppUnsavedTitle:                     "غیر محفوظ تبدیلیاں",
     cfmAppUnsavedMsg:                       "جاری رکھنے سے پہلے فائل محفوظ کریں؟",
+    lblNewsHideForever:                     "دوبارہ نہ دکھائیں",
+    btnNewsOpenLink:                        "مزید جانیں",
+    tipNewsDismiss:                         "بند کریں",
+    lblStgGeneralNews:                      "yaiol سے خبریں دکھائیں",
+    btnNewsClose:                           "بند کریں",
+    lblAppTabUntitled:                      "بے عنوان",
+    tipAppTabClose:                         "بند کریں",
     tstAppSaved:                            "فائل محفوظ ہو گئی۔",
     tstAppAutoLrcLoaded:                    "گانے کی فائل خودکار طور پر لوڈ ہو گئی۔",
     tstAppFileError:                        "فائل کھولنے میں ناکامی۔",
@@ -5489,16 +5713,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "ترتیبات",
     tipStgBack:                             "واپس",
-    tabStgDisplay:                          "ڈسپلے",
+    tabStgGeneral:                          "عمومی",
     tabStgTime:                             "وقت",
     tabStgMeta:                             "میٹا ڈیٹا",
     tabStgAbout:                            "کے بارے میں",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "زبان",
-    lblStgDisplayTheme:                     "تھیم",
-    btnStgDisplayThemeDark:                 "گہرا",
-    btnStgDisplayThemeLight:                "روشن",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "زبان",
+    lblStgGeneralTheme:                     "تھیم",
+    btnStgGeneralThemeDark:                 "گہرا",
+    btnStgGeneralThemeLight:                "روشن",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "لائن ترمیم تاخیر",
@@ -5513,6 +5737,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "نغمہ نگار / موسیقار",
     lblStgMetaLrcBy:                        "LRC بنانے والا",
     plhStgMetaLrcBy:                        "LRC بنانے والا",
+    lblStgMetaAutoFill:                     "نئی LRC بناتے وقت گانے کے ٹیگز سے میٹا ڈیٹا خود بخود پُر کریں",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ہم آہنگ گانوں کی فائلیں بنائیں۔",
@@ -5562,15 +5787,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Toleo jipya linapatikana:",
-    lnkUpdateWhatsNew:                      "Nini kipya",
     btnUpdateDownload:                      "Pakua",
-    lnkUpdateSkip:                          "Ruka toleo hili",
-    tipUpdateDismiss:                       "Futa",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Dondosha faili la sauti au LRC hapa",
     cfmAppUnsavedTitle:                     "Mabadiliko ambayo hayajahifadhiwa",
     cfmAppUnsavedMsg:                       "Hifadhi faili la sasa kabla ya kuendelea?",
+    lblNewsHideForever:                     "Usionyeshe tena",
+    btnNewsOpenLink:                        "Jifunze zaidi",
+    tipNewsDismiss:                         "Funga",
+    lblStgGeneralNews:                      "Onyesha habari kutoka yaiol",
+    btnNewsClose:                           "Funga",
+    lblAppTabUntitled:                      "Bila jina",
+    tipAppTabClose:                         "Funga",
     tstAppSaved:                            "Faili limehifadhiwa.",
     tstAppAutoLrcLoaded:                    "Faili la maneno limepakiwa kiotomatiki.",
     tstAppFileError:                        "Imeshindwa kufungua faili.",
@@ -5612,16 +5841,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Mipangilio",
     tipStgBack:                             "Rudi",
-    tabStgDisplay:                          "Onyesho",
+    tabStgGeneral:                          "Jumla",
     tabStgTime:                             "Wakati",
     tabStgMeta:                             "Meta",
     tabStgAbout:                            "Kuhusu",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Lugha",
-    lblStgDisplayTheme:                     "Mandhari",
-    btnStgDisplayThemeDark:                 "Giza",
-    btnStgDisplayThemeLight:                "Mwanga",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Lugha",
+    lblStgGeneralTheme:                     "Mandhari",
+    btnStgGeneralThemeDark:                 "Giza",
+    btnStgGeneralThemeLight:                "Mwanga",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Kuchelewa kwa uhariri wa mstari",
@@ -5636,6 +5865,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Mwandishi wa maneno / mtunzi",
     lblStgMetaLrcBy:                        "LRC na",
     plhStgMetaLrcBy:                        "Mtengenezaji wa LRC",
+    lblStgMetaAutoFill:                     "Jaza metadata kiotomatiki kutoka kwa vitambulisho vya wimbo wakati LRC mpya inaundwa",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "unda faili za maneno ya wimbo zilizosawazishwa.",
@@ -5685,15 +5915,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "ਨਵਾਂ ਸੰਸਕਰਨ ਉਪਲਬਧ ਹੈ:",
-    lnkUpdateWhatsNew:                      "ਨਵਾਂ ਕੀ ਹੈ",
     btnUpdateDownload:                      "ਡਾਊਨਲੋਡ ਕਰੋ",
-    lnkUpdateSkip:                          "ਇਸ ਸੰਸਕਰਨ ਨੂੰ ਛੱਡੋ",
-    tipUpdateDismiss:                       "ਖਾਰਜ ਕਰੋ",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "ਇੱਥੇ ਆਡੀਓ ਜਾਂ LRC ਫਾਈਲ ਛੱਡੋ",
     cfmAppUnsavedTitle:                     "ਅਣਸੁਰੱਖਿਅਤ ਬਦਲਾਅ",
     cfmAppUnsavedMsg:                       "ਜਾਰੀ ਰੱਖਣ ਤੋਂ ਪਹਿਲਾਂ ਫਾਈਲ ਸੰਭਾਲੋ?",
+    lblNewsHideForever:                     "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
+    btnNewsOpenLink:                        "ਹੋਰ ਜਾਣੋ",
+    tipNewsDismiss:                         "ਬੰਦ ਕਰੋ",
+    lblStgGeneralNews:                      "yaiol ਤੋਂ ਖ਼ਬਰਾਂ ਦਿਖਾਓ",
+    btnNewsClose:                           "ਬੰਦ ਕਰੋ",
+    lblAppTabUntitled:                      "ਬੇਨਾਮ",
+    tipAppTabClose:                         "ਬੰਦ ਕਰੋ",
     tstAppSaved:                            "ਫਾਈਲ ਸੁਰੱਖਿਅਤ ਹੋ ਗਈ।",
     tstAppAutoLrcLoaded:                    "ਗੀਤ ਫਾਈਲ ਆਪਣੇ ਆਪ ਲੋਡ ਹੋ ਗਈ।",
     tstAppFileError:                        "ਫਾਈਲ ਖੋਲ੍ਹਣ ਵਿੱਚ ਅਸਫਲ।",
@@ -5735,16 +5969,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "ਸੈਟਿੰਗਾਂ",
     tipStgBack:                             "ਵਾਪਸ",
-    tabStgDisplay:                          "ਡਿਸਪਲੇ",
+    tabStgGeneral:                          "ਆਮ",
     tabStgTime:                             "ਸਮਾਂ",
     tabStgMeta:                             "ਮੈਟਾਡੇਟਾ",
     tabStgAbout:                            "ਬਾਰੇ",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "ਭਾਸ਼ਾ",
-    lblStgDisplayTheme:                     "ਥੀਮ",
-    btnStgDisplayThemeDark:                 "ਡਾਰਕ",
-    btnStgDisplayThemeLight:                "ਲਾਈਟ",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "ਭਾਸ਼ਾ",
+    lblStgGeneralTheme:                     "ਥੀਮ",
+    btnStgGeneralThemeDark:                 "ਡਾਰਕ",
+    btnStgGeneralThemeLight:                "ਲਾਈਟ",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "ਲਾਈਨ ਸੰਪਾਦਨ ਦੇਰੀ",
@@ -5759,6 +5993,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "ਗੀਤਕਾਰ / ਸੰਗੀਤਕਾਰ",
     lblStgMetaLrcBy:                        "LRC ਦੁਆਰਾ",
     plhStgMetaLrcBy:                        "LRC ਬਣਾਉਣ ਵਾਲਾ",
+    lblStgMetaAutoFill:                     "ਨਵਾਂ LRC ਬਣਾਉਣ ਵੇਲੇ ਗੀਤ ਦੇ ਟੈਗਸ ਤੋਂ ਮੈਟਾਡੇਟਾ ਆਪਣੇ ਆਪ ਭਰੋ",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ਸਮਕਾਲੀ ਗੀਤ ਫਾਈਲਾਂ ਬਣਾਓ।",
@@ -5808,15 +6043,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Sabon sigar yana nan:",
-    lnkUpdateWhatsNew:                      "Menene sabo",
     btnUpdateDownload:                      "Zazzage",
-    lnkUpdateSkip:                          "Tsallake wannan sigar",
-    tipUpdateDismiss:                       "Watsar",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Sauke fayil ɗin sauti ko LRC a nan",
     cfmAppUnsavedTitle:                     "Canje-canje da ba a ajiye ba",
     cfmAppUnsavedMsg:                       "Ajiye fayil ɗin kafin ci gaba?",
+    lblNewsHideForever:                     "Kada a sake nunawa",
+    btnNewsOpenLink:                        "Koyi game da shi",
+    tipNewsDismiss:                         "Rufe",
+    lblStgGeneralNews:                      "Nuna labarai daga yaiol",
+    btnNewsClose:                           "Rufe",
+    lblAppTabUntitled:                      "Ba taken",
+    tipAppTabClose:                         "Rufe",
     tstAppSaved:                            "An ajiye fayil ɗin.",
     tstAppAutoLrcLoaded:                    "An loda fayil ɗin waƙa kai tsaye.",
     tstAppFileError:                        "An kasa buɗe fayil ɗin.",
@@ -5858,16 +6097,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Saitunan",
     tipStgBack:                             "Baya",
-    tabStgDisplay:                          "Nuni",
+    tabStgGeneral:                          "Gabaɗaya",
     tabStgTime:                             "Lokaci",
     tabStgMeta:                             "Bayanan kula",
     tabStgAbout:                            "Game da",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Harshe",
-    lblStgDisplayTheme:                     "Jigo",
-    btnStgDisplayThemeDark:                 "Duhu",
-    btnStgDisplayThemeLight:                "Haske",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Harshe",
+    lblStgGeneralTheme:                     "Jigo",
+    btnStgGeneralThemeDark:                 "Duhu",
+    btnStgGeneralThemeLight:                "Haske",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Jinkirin gyara layi",
@@ -5882,6 +6121,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Marubuci / Mawaƙi",
     lblStgMetaLrcBy:                        "LRC ta",
     plhStgMetaLrcBy:                        "Mai ƙirƙirar LRC",
+    lblStgMetaAutoFill:                     "Cika metadata ta atomatik daga alamomin waƙar lokacin da aka ƙirƙiri sabon LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ƙirƙira fayilolin waƙa masu daidaitawa.",
@@ -5931,15 +6171,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "Ẹya tuntun wa:",
-    lnkUpdateWhatsNew:                      "Kí ni titun",
     btnUpdateDownload:                      "Ṣe igbasilẹ",
-    lnkUpdateSkip:                          "Fo ẹya yii",
-    tipUpdateDismiss:                       "Foju pa",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Jọ̀ fáìlì ohun tabi LRC síbí",
     cfmAppUnsavedTitle:                     "Àwọn ìyípadà tí a kò pamọ",
     cfmAppUnsavedMsg:                       "Pamọ fáìlì lọwọlọwọ ṣáájú tẹsiwaju?",
+    lblNewsHideForever:                     "Maṣe fi han mọ",
+    btnNewsOpenLink:                        "Kọ́ ẹ̀kọ́ síwájú",
+    tipNewsDismiss:                         "Pa",
+    lblStgGeneralNews:                      "Fi iroyin lati yaiol han",
+    btnNewsClose:                           "Pade",
+    lblAppTabUntitled:                      "Ailori",
+    tipAppTabClose:                         "Pa",
     tstAppSaved:                            "A ti pamọ fáìlì.",
     tstAppAutoLrcLoaded:                    "A ti ṣii fáìlì orin laifọwọyi.",
     tstAppFileError:                        "Kò ṣeéṣe láti ṣii fáìlì.",
@@ -5981,16 +6225,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Ètò",
     tipStgBack:                             "Pada",
-    tabStgDisplay:                          "Ifihan",
+    tabStgGeneral:                          "Gbogbogbo",
     tabStgTime:                             "Àkókò",
     tabStgMeta:                             "Àlàyé àfikún",
     tabStgAbout:                            "Nípa",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Èdè",
-    lblStgDisplayTheme:                     "Àwòrán",
-    btnStgDisplayThemeDark:                 "Òkùnkùn",
-    btnStgDisplayThemeLight:                "Ìmọ́lẹ̀",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Èdè",
+    lblStgGeneralTheme:                     "Àwòrán",
+    btnStgGeneralThemeDark:                 "Òkùnkùn",
+    btnStgGeneralThemeLight:                "Ìmọ́lẹ̀",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Idaduro ìtúnṣe ìlà",
@@ -6005,6 +6249,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Olùkọ ọ̀rọ̀ / olùdásílẹ̀",
     lblStgMetaLrcBy:                        "LRC láti ọwọ",
     plhStgMetaLrcBy:                        "Olùdásílẹ̀ LRC",
+    lblStgMetaAutoFill:                     "Fọwọsi metadata laifọwọyi lati awọn ami orin nigbati a ba ṣẹda LRC tuntun",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "ṣẹdá àwọn fáìlì orin tí a dọgba.",
@@ -6054,15 +6299,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "కొత్త వెర్షన్ అందుబాటులో ఉంది:",
-    lnkUpdateWhatsNew:                      "కొత్తవి ఏమిటి",
     btnUpdateDownload:                      "డౌన్‌లోడ్ చేయండి",
-    lnkUpdateSkip:                          "ఈ వెర్షన్‌ను దాటవేయి",
-    tipUpdateDismiss:                       "తిరస్కరించు",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "ఇక్కడ ఆడియో లేదా LRC ఫైల్ వదలండి",
     cfmAppUnsavedTitle:                     "సేవ్ చేయని మార్పులు",
     cfmAppUnsavedMsg:                       "కొనసాగే ముందు ప్రస్తుత ఫైల్ సేవ్ చేయాలా?",
+    lblNewsHideForever:                     "మళ్ళీ చూపవద్దు",
+    btnNewsOpenLink:                        "మరింత తెలుసుకోండి",
+    tipNewsDismiss:                         "మూసివేయండి",
+    lblStgGeneralNews:                      "yaiol నుండి వార్తలను చూపించు",
+    btnNewsClose:                           "మూసివేయి",
+    lblAppTabUntitled:                      "పేరులేనిది",
+    tipAppTabClose:                         "మూసివేయి",
     tstAppSaved:                            "ఫైల్ సేవ్ చేయబడింది.",
     tstAppAutoLrcLoaded:                    "పాట ఫైల్ స్వయంచాలకంగా లోడ్ చేయబడింది.",
     tstAppFileError:                        "ఫైల్ తెరవడం విఫలమైంది.",
@@ -6104,16 +6353,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "సెట్టింగులు",
     tipStgBack:                             "వెనుకకు",
-    tabStgDisplay:                          "ప్రదర్శన",
+    tabStgGeneral:                          "సాధారణ",
     tabStgTime:                             "సమయం",
     tabStgMeta:                             "మెటా డేటా",
     tabStgAbout:                            "గురించి",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "భాష",
-    lblStgDisplayTheme:                     "థీమ్",
-    btnStgDisplayThemeDark:                 "చీకటి",
-    btnStgDisplayThemeLight:                "వెలుతురు",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "భాష",
+    lblStgGeneralTheme:                     "థీమ్",
+    btnStgGeneralThemeDark:                 "చీకటి",
+    btnStgGeneralThemeLight:                "వెలుతురు",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "లైన్ సవరణ ఆలస్యం",
@@ -6128,6 +6377,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "గీతరచయిత / సంగీత స్వరకర్త",
     lblStgMetaLrcBy:                        "LRC రూపొందించినవారు",
     plhStgMetaLrcBy:                        "LRC సృష్టికర్త",
+    lblStgMetaAutoFill:                     "కొత్త LRC సృష్టించినప్పుడు పాట ట్యాగ్‌ల నుండి మెటాడేటాను స్వయంచాలకంగా పూరించండి",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "సమకాలీకరించిన పాట ఫైళ్ళు సృష్టించండి.",
@@ -6177,15 +6427,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "नवीन आवृत्ती उपलब्ध आहे:",
-    lnkUpdateWhatsNew:                      "नवीन काय आहे",
     btnUpdateDownload:                      "डाउनलोड करा",
-    lnkUpdateSkip:                          "ही आवृत्ती वगळा",
-    tipUpdateDismiss:                       "डिसमिस करा",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "येथे ऑडिओ किंवा LRC फाइल ड्रॉप करा",
     cfmAppUnsavedTitle:                     "न जतन केलेले बदल",
     cfmAppUnsavedMsg:                       "पुढे सुरू ठेवण्यापूर्वी फाइल जतन करायची आहे का?",
+    lblNewsHideForever:                     "पुन्हा दाखवू नका",
+    btnNewsOpenLink:                        "अधिक जाणून घ्या",
+    tipNewsDismiss:                         "बंद करा",
+    lblStgGeneralNews:                      "yaiol कडून बातम्या दाखवा",
+    btnNewsClose:                           "बंद करा",
+    lblAppTabUntitled:                      "अनामिक",
+    tipAppTabClose:                         "बंद करा",
     tstAppSaved:                            "फाइल जतन केली.",
     tstAppAutoLrcLoaded:                    "गीत फाइल आपोआप लोड झाली.",
     tstAppFileError:                        "फाइल उघडण्यात अयशस्वी.",
@@ -6227,16 +6481,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "सेटिंग्ज",
     tipStgBack:                             "मागे",
-    tabStgDisplay:                          "प्रदर्शन",
+    tabStgGeneral:                          "सामान्य",
     tabStgTime:                             "वेळ",
     tabStgMeta:                             "मेटाडेटा",
     tabStgAbout:                            "बद्दल",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "भाषा",
-    lblStgDisplayTheme:                     "थीम",
-    btnStgDisplayThemeDark:                 "गडद",
-    btnStgDisplayThemeLight:                "प्रकाश",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "भाषा",
+    lblStgGeneralTheme:                     "थीम",
+    btnStgGeneralThemeDark:                 "गडद",
+    btnStgGeneralThemeLight:                "प्रकाश",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "ओळ संपादन विलंब",
@@ -6251,6 +6505,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "गीतकार / संगीतकार",
     lblStgMetaLrcBy:                        "LRC द्वारे",
     plhStgMetaLrcBy:                        "LRC निर्माता",
+    lblStgMetaAutoFill:                     "नवीन LRC तयार करताना गाण्याच्या टॅग्समधून मेटाडेटा आपोआप भरा",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "समकालीन गीत फाइल्स तयार करा.",
@@ -6300,15 +6555,19 @@ const TRANSLATIONS = {
 
     // Prefix:Update - Scope:in-app update notification banner
     lblUpdateAvailable:                     "May bagong bersyon:",
-    lnkUpdateWhatsNew:                      "Ano ang bago",
     btnUpdateDownload:                      "I-download",
-    lnkUpdateSkip:                          "Laktawan ang bersyon na ito",
-    tipUpdateDismiss:                       "Balewalain",
 
     // Prefix:App - Scope:app-level messages, confirms, toasts, empty states
     empAppDropFile:                         "Mag-drop ng audio o LRC file dito",
     cfmAppUnsavedTitle:                     "Mga hindi na-save na pagbabago",
     cfmAppUnsavedMsg:                       "I-save ang kasalukuyang file bago magpatuloy?",
+    lblNewsHideForever:                     "Huwag nang ipakita muli",
+    btnNewsOpenLink:                        "Matuto pa",
+    tipNewsDismiss:                         "Isara",
+    lblStgGeneralNews:                      "Ipakita ang balita mula sa yaiol",
+    btnNewsClose:                           "Isara",
+    lblAppTabUntitled:                      "Walang pamagat",
+    tipAppTabClose:                         "Isara",
     tstAppSaved:                            "Na-save ang file.",
     tstAppAutoLrcLoaded:                    "Awtomatikong na-load ang liriko file.",
     tstAppFileError:                        "Nabigong buksan ang file.",
@@ -6350,16 +6609,16 @@ const TRANSLATIONS = {
     // Prefix:Stg - Scope:settings view
     ttlStg:                                 "Mga Setting",
     tipStgBack:                             "Bumalik",
-    tabStgDisplay:                          "Display",
+    tabStgGeneral:                          "Pangkalahatan",
     tabStgTime:                             "Oras",
     tabStgMeta:                             "Meta",
     tabStgAbout:                            "Tungkol sa",
 
-    // Prefix:StgDisplay - Scope:settings view (Display tab)
-    lblStgDisplayLang:                      "Wika",
-    lblStgDisplayTheme:                     "Tema",
-    btnStgDisplayThemeDark:                 "Madilim",
-    btnStgDisplayThemeLight:                "Maliwanag",
+    // Prefix:StgGeneral - Scope:settings view (General tab)
+    lblStgGeneralLang:                      "Wika",
+    lblStgGeneralTheme:                     "Tema",
+    btnStgGeneralThemeDark:                 "Madilim",
+    btnStgGeneralThemeLight:                "Maliwanag",
 
     // Prefix:StgTime - Scope:settings view (Time tab)
     lblStgTimeShiftDelay:                   "Pagkaantala ng pag-edit ng linya",
@@ -6374,6 +6633,7 @@ const TRANSLATIONS = {
     plhStgMetaSongwriter:                   "Manunulat ng liriko / kompositor",
     lblStgMetaLrcBy:                        "LRC ni",
     plhStgMetaLrcBy:                        "Tagalikha ng LRC",
+    lblStgMetaAutoFill:                     "Awtomatikong punan ang metadata mula sa mga tag ng kanta kapag may bagong LRC na nilikha",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
     msgStgAboutDesc:                        "lumikha ng mga naka-synchronize na liriko file.",

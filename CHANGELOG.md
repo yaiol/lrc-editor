@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.9 — 2026-10-23
+
+- Several songs can be open at once, in tabs: a song opened from outside (a second launch, Open, drag-and-drop of one or more .lrc files) gets its own tab unless the current tab is still blank; each tab keeps its own lyrics, player position and undo history, and closing a tab asks about unsaved changes
+- A second launch no longer starts a second instance: it brings the open window forward and hands it the new .lrc or song, which opens in a tab (before, a second process ran on empty settings)
+- A new Settings option fills Artist, Album and Title from the song's tags whenever a new LRC is created
+- A newer version now appears as a card in a news dialog instead of a banner strip: the card lists the release notes newer than the running version, links to the download page, and Don't show again hides it until a still newer version is out; occasional yaiol announcements appear in the same dialog, and Settings > General has a Show news from yaiol switch for them
+- The Settings Display tab is renamed General
+- Number fields show the corrected value at once when a value outside the allowed range is typed
+
 ## 1.0.8 — 2026-09-28
 
 - The interface is now fully translated in Arabic, Catalan, Croatian, Czech, Danish, Dutch, Finnish, Greek, Hebrew, Norwegian, Persian, Polish, Romanian, Swedish, Turkish, Ukrainian and Vietnamese — most of its labels, buttons and messages were still showing in English

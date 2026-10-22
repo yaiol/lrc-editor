@@ -8,8 +8,9 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Settings, HelpCircle, Music, FolderOpen, Save, SavePlus, FilePlus, X, Play, Pause, Square, Upload, SkipBack, SkipForward, Volume1, Volume2, VolumeX, Clock, Tag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useT, LANGUAGES } from './i18n-gen';
 import pkg from '../package.json';
-import { checkForUpdate, getUrl } from './lib/update-check';
-import { UpdateBanner } from './lib/ui-update-banner';
+import { getUrl } from './lib/site-url';
+import { NewsLoader } from './lib/ui-news-loader';
+import { NewsSetting } from './lib/ui-news-setting';
 import { AppHeader } from './lib/ui-header';
 import { GithubIcon } from './lib/ui-icons';
 import { SettingsView } from './lib/ui-settings';
@@ -265,11 +266,14 @@ export default function App() {
   const [themeKey, setThemeKey] = useState(() => localStorage.getItem(`${STORAGE_PREFIX}-theme`) || 'light');
   const t = useT(langKey);
 
-  const [updateInfo, setUpdateInfo]         = useState(null);
+  const [newsEnabled, setNewsEnabled] = useState(true);
   useEffect(() => {
-    checkForUpdate({ appId: pkg.name, alias: STORAGE_PREFIX, currentVersion: APP_VERSION })
-      .then(u => { if (u) setUpdateInfo(u); });
+    fetch(`${API}/news-settings`).then(r => r.json()).then(s => setNewsEnabled(s.enabled)).catch(() => {});
   }, []);
+  function toggleNews(enabled) {
+    setNewsEnabled(enabled);
+    fetch(`${API}/news-settings`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ enabled }) }).catch(() => {});
+  }
 
 
   // LRC data model
@@ -317,6 +321,7 @@ export default function App() {
   const [txtSettingsMetaArtist, setTxtSettingsMetaArtist]         = useState(() => localStorage.getItem(`${STORAGE_PREFIX}-default-artist`) || '');
   const [txtSettingsMetaSongwriter, setTxtSettingsMetaSongwriter] = useState(() => localStorage.getItem(`${STORAGE_PREFIX}-default-songwriter`) || '');
   const [txtSettingsMetaLrcBy, setTxtSettingsMetaLrcBy]           = useState(() => localStorage.getItem(`${STORAGE_PREFIX}-default-lrcby`) || '');
+  const [chkSettingsMetaAutoFill, setChkSettingsMetaAutoFill]     = useState(() => localStorage.getItem(`${STORAGE_PREFIX}-meta-autofill`) === '1');
   const [endLyricsTime, setEndLyricsTime]           = useState(0);
   const [endLyricsTimeDraft, setEndLyricsTimeDraft] = useState(null);
 
@@ -335,6 +340,102 @@ export default function App() {
   const splitCursorRef = useRef({ idx: -1, pos: 0 });
   const pendingCaretRef = useRef(null);
   const undoStackRef = useRef([]);
+
+  // ─── Documents (tabs) ──────────────────────────────────────────
+  // ⚠ CLAUDE: the editor's state below stays flat and belongs to the ACTIVE document only. A tab switch
+  // stashes it into that tab's `snap` and restores the target's - do NOT turn these into per-tab
+  // objects. The active tab's own `snap` is stale by design (live state is the truth); it is refreshed
+  // only at the moment the tab is left.
+  const [docs, setDocs] = useState([{ id: 1, snap: null }]);
+  const [activeDocId, setActiveDocId] = useState(1);
+  const nextDocIdRef = useRef(2);
+  const pendingCloseRef = useRef(null);
+  const resumeAtRef = useRef(0);
+  const launchRef = useRef(null);
+
+  function captureDoc() {
+    return { lrcData, unsaved, lrcFileName, mediaFilePath, mediaFileUrl, mediaTitle, position, duration,
+      activeLrcLine, cursorLine, notepadText, endLyricsTime, undo: undoStackRef.current };
+  }
+
+  function emptyDoc() {
+    const empty = EMPTY_LRC();
+    empty.editorVersion = APP_VERSION;
+    return { lrcData: empty, unsaved: false, lrcFileName: null, mediaFilePath: null, mediaFileUrl: null, mediaTitle: null,
+      position: 0, duration: 0, activeLrcLine: -1, cursorLine: -1, notepadText: '', endLyricsTime: 0, undo: [] };
+  }
+
+  function restoreDoc(s) {
+    const audio = audioRef.current;
+    if (audio) audio.pause();
+    clearTimeout(verifyTimeoutRef.current);
+    undoStackRef.current = s.undo;
+    setLrcData(s.lrcData); setUnsaved(s.unsaved); setLrcFileName(s.lrcFileName);
+    setMediaFilePath(s.mediaFilePath); setMediaFileUrl(s.mediaFileUrl); setMediaTitle(s.mediaTitle);
+    setPlaybackState('stopped'); setIsVerifyMode(false);
+    setPosition(s.position); setDuration(s.duration);
+    setLrcDraftTimes({}); setEndLyricsTimeDraft(null);
+    setActiveLrcLine(s.activeLrcLine); setCursorLine(s.cursorLine);
+    setNotepadText(s.notepadText); setEndLyricsTime(s.endLyricsTime);
+    // A different url reloads the <audio> (the position is re-applied on loadedmetadata); the same url does not.
+    if (s.mediaFileUrl === mediaFileUrl && audio) { audio.currentTime = s.position; resumeAtRef.current = 0; }
+    else resumeAtRef.current = s.position;
+  }
+
+  const stashActiveDoc = (ds) => ds.map(d => d.id === activeDocId ? { ...d, snap: captureDoc() } : d);
+
+  function switchDoc(id) {
+    if (id === activeDocId) return;
+    const target = docs.find(d => d.id === id);
+    if (!target) return;
+    setDocs(stashActiveDoc);
+    restoreDoc(target.snap);
+    setActiveDocId(id);
+  }
+
+  function openNewDoc() {
+    const id = nextDocIdRef.current++;
+    setDocs(ds => [...stashActiveDoc(ds), { id, snap: null }]);
+    restoreDoc(emptyDoc());
+    setActiveDocId(id);
+  }
+
+  // A file arriving from outside (second launch, Open, drop) gets its own tab - unless the
+  // current tab is still blank, which it simply fills.
+  function prepareIncomingDoc() {
+    if (unsaved || lrcFileName || mediaFilePath || lrcData.lines.length > 0) openNewDoc();
+  }
+
+  async function closeActiveDoc() {
+    if (!(await allowUnsaved())) return;
+    const idx = docs.findIndex(d => d.id === activeDocId);
+    const rest = docs.filter(d => d.id !== activeDocId);
+    if (rest.length === 0) { restoreDoc(emptyDoc()); return; }
+    const next = rest[Math.min(idx, rest.length - 1)];
+    setDocs(rest);
+    restoreDoc(next.snap);
+    setActiveDocId(next.id);
+  }
+
+  function closeDoc(id) {
+    if (id === activeDocId) { closeActiveDoc(); return; }
+    const target = docs.find(d => d.id === id);
+    if (!target) return;
+    if (!target.snap.unsaved) { setDocs(ds => ds.filter(d => d.id !== id)); return; }
+    // An unsaved tab can only be saved while active: switch to it, then ask.
+    pendingCloseRef.current = id;
+    switchDoc(id);
+  }
+
+  useEffect(() => {
+    if (pendingCloseRef.current === activeDocId) { pendingCloseRef.current = null; closeActiveDoc(); }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeDocId]);
+
+  function docLabel(s) {
+    const f = s.lrcFileName || s.mediaFilePath;
+    return f ? f.replace(/.*[\\/]/, '') : (s.mediaTitle || t('lblAppTabUntitled'));
+  }
 
   // ─── Helpers ───────────────────────────────────────────────────
 
@@ -407,13 +508,17 @@ export default function App() {
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-default-artist`, txtSettingsMetaArtist); }, [txtSettingsMetaArtist]);
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-default-songwriter`, txtSettingsMetaSongwriter); }, [txtSettingsMetaSongwriter]);
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-default-lrcby`, txtSettingsMetaLrcBy); }, [txtSettingsMetaLrcBy]);
+  useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-meta-autofill`, chkSettingsMetaAutoFill ? '1' : '0'); }, [chkSettingsMetaAutoFill]);
 
-  // Startup: check MPL handoff first, then fall back to .lrc file association
-  useEffect(() => {
-    async function init() {
+  // Launch: check MPL handoff first, then fall back to .lrc file association. Runs at startup and again
+  // for every later launch the main process forwards - each song lands in its own tab.
+  // ⚠ CLAUDE: the listener calls launchRef, refreshed every render. Registered once with a direct
+  // reference it would run on the FIRST render's state forever and could never see the open tabs.
+  async function initLaunch() {
       // Case 1: launched from MPL with a handoff file
       const handoff = await fetch(`${API}/handoff`).then(r => r.json());
       if (handoff) {
+        prepareIncomingDoc();
         if (handoff.mediaPath) {
           const mediaResult = await fetch(`${API}/open-music-path`, {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -429,6 +534,8 @@ export default function App() {
           if (lrcResult) applyLrcResult(lrcResult);
         } else if (handoff.lyrics) {
           applyLrcResult({ text: handoff.lyrics, ext: 'txt' });
+          // lyrics without a timed file = a NEW lrc for that song
+          if (chkSettingsMetaAutoFill && handoff.mediaPath) fillMetaFromTags(handoff.mediaPath, false);
         }
         return;
       }
@@ -440,11 +547,18 @@ export default function App() {
         body: JSON.stringify({ filePath }),
       }).then(r => r.json());
       if (!result) return;
+      prepareIncomingDoc();
       applyLrcResult(result);
       await tryAutoMedia(filePath);
-    }
-    init();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }
+  launchRef.current = initLaunch;
+
+  // A second launch (MPL "open in LRC Editor" while this window is open) is forwarded by the main process.
+  useEffect(() => {
+    const onLaunch = () => launchRef.current();
+    launchRef.current();
+    window.addEventListener('lrce-launch', onLaunch);
+    return () => window.removeEventListener('lrce-launch', onLaunch);
   }, []);
 
   // Audio src
@@ -579,7 +693,11 @@ export default function App() {
     const audio = audioRef.current;
     if (!audio) return;
     setDuration(audio.duration || 0);
-    setPosition(0);
+    // a tab switch parks the saved playhead here; a fresh load starts at 0
+    const at = resumeAtRef.current;
+    resumeAtRef.current = 0;
+    if (at > 0) audio.currentTime = at;
+    setPosition(at);
   }
 
   function handleEnded() {
@@ -765,22 +883,10 @@ export default function App() {
     return false;
   }
 
-  function doNewFile() {
-    allowUnsaved().then(ok => {
-      if (!ok) return;
-      const empty = EMPTY_LRC();
-      empty.editorVersion = APP_VERSION;
-      setLrcData(empty);
-      setUnsaved(false);
-      setLrcFileName(null);
-      setActiveLrcLine(-1);
-    });
-  }
-
   async function doOpenLyrics() {
-    if (!(await allowUnsaved())) return;
     const result = await fetch(`${API}/open-lyrics`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ title: t('ttlOsdOpenLyrics') }) }).then(r => r.json());
     if (!result) return;
+    prepareIncomingDoc();
     try {
       applyLrcResult(result);
       if (result.ext !== 'txt') await tryAutoMedia(result.filePath);
@@ -873,7 +979,10 @@ export default function App() {
     return true;
   }
 
-  function resetLrc() {
+  // A brand-new LRC for a song just opened. ⚠ CLAUDE: `songPath` is passed, not read from state: the media state set by
+  // applyMediaResult is not visible yet in this render's closure. With the "fill the metadata automatically" setting on,
+  // the new LRC is filled from the song's tags right away (and is NOT marked unsaved: the user typed nothing).
+  function resetLrc(songPath) {
     const empty = EMPTY_LRC();
     empty.editorVersion = APP_VERSION;
     setLrcData(empty);
@@ -881,6 +990,7 @@ export default function App() {
     setEndLyricsTime(0);
     setUnsaved(false);
     setActiveLrcLine(-1);
+    if (chkSettingsMetaAutoFill && songPath) fillMetaFromTags(songPath, false);
   }
 
   async function tryAutoMedia(lrcFilePath) {
@@ -900,7 +1010,7 @@ export default function App() {
     applyMediaResult(result);
     if (unsaved && !(await allowUnsaved())) return;
     const found = await tryAutoLrc(result.filePath);
-    if (!found) resetLrc();
+    if (!found) resetLrc(result.filePath);
   }
 
   // Load a dropped audio or LRC file — routed by extension. The shared useFileDrop
@@ -920,14 +1030,14 @@ export default function App() {
       applyMediaResult(result);
       if (unsaved && !(await allowUnsaved())) return;
       const found = await tryAutoLrc(result.filePath);
-      if (!found) resetLrc();
+      if (!found) resetLrc(result.filePath);
     } else if (LRC_EXTS.has(ext)) {
-      if (!(await allowUnsaved())) return;
       const result = await fetch(`${API}/open-lrc-path`, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ filePath }),
       }).then(r => r.json());
       if (!result) return;
+      prepareIncomingDoc();
       applyLrcResult(result);
       await tryAutoMedia(filePath);
     }
@@ -951,9 +1061,9 @@ export default function App() {
     });
   }
 
-  async function doAutoFillMeta() {
-    if (!mediaFilePath) return;
-    const meta = await fetch(`${API}/metadata?path=${encodeURIComponent(mediaFilePath)}`).then(r => r.json());
+  // The ONE metadata fill, used by the dialog's button and by the automatic fill of a new LRC.
+  async function fillMetaFromTags(songPath, markUnsaved) {
+    const meta = await fetch(`${API}/metadata?path=${encodeURIComponent(songPath)}`).then(r => r.json()).catch(() => null);
     if (!meta) return;
     setLrcData(prev => ({
       ...prev,
@@ -964,7 +1074,11 @@ export default function App() {
       editor: 'LRC Editor',
       editorVersion: APP_VERSION,
     }));
-    setUnsaved(true);
+    if (markUnsaved) setUnsaved(true);
+  }
+
+  function doAutoFillMeta() {
+    if (mediaFilePath) fillMetaFromTags(mediaFilePath, true);
   }
 
   function startNotepadResize(e) {
@@ -1105,6 +1219,12 @@ export default function App() {
 
     const meta = (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <div className="dlg-field">
+          <label className="check-label">
+            <input type="checkbox" className="check-box" checked={chkSettingsMetaAutoFill} onChange={e => setChkSettingsMetaAutoFill(e.target.checked)} />
+            {t('lblStgMetaAutoFill')}
+          </label>
+        </div>
         {[
           ['lblStgMetaArtist', 'plhStgMetaArtist', txtSettingsMetaArtist, setTxtSettingsMetaArtist],
           ['lblStgMetaSongwriter', 'plhStgMetaSongwriter', txtSettingsMetaSongwriter, setTxtSettingsMetaSongwriter],
@@ -1122,6 +1242,9 @@ export default function App() {
       <SettingsView
         t={t} appName={APP_NAME} appVersion={APP_VERSION_BUILD} languages={LANGUAGES}
         lang={langKey} setLang={setLangKey} theme={themeKey} setTheme={setThemeKey}
+        generalExtra={(
+          <NewsSetting enabled={newsEnabled} onChange={toggleNews} label={t('lblStgGeneralNews')} />
+        )}
         tabs={[
           { key: 'time', label: t('tabStgTime'), icon: Clock, content: time },
           { key: 'meta', label: t('tabStgMeta'), icon: Tag, content: meta },
@@ -1182,8 +1305,8 @@ export default function App() {
     <div className="app-root" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       <style>{buildCss()}</style>
 
-      {/* ── Update banner ── */}
-      <UpdateBanner info={updateInfo} appId={pkg.name} lang={langKey} storagePrefix={STORAGE_PREFIX} t={t} onClose={() => setUpdateInfo(null)} />
+      {/* ── A new version (first) and the yaiol news, in one dialog ── */}
+      <NewsLoader api={API} lang={langKey} t={t} />
 
       {/* ── Header ──────────────────────────────────────────── */}
       <AppHeader appName={APP_NAME} appVersion={APP_VERSION_BUILD}>
@@ -1191,7 +1314,7 @@ export default function App() {
             Open-Music keeps the Music-note icon (audio, distinct from the LRC open); it sits
             right after Open-LRC. Standard file icons per CLAUDE-ui-standards. */}
         <div className="barh-grp">
-          <button className="btn icon" onClick={doNewFile} title={t('tipHdrNew')}><FilePlus /></button>
+          <button className="btn icon" onClick={openNewDoc} title={t('tipHdrNew')}><FilePlus /></button>
           <button className="btn icon" onClick={doOpenLyrics} title={t('tipHdrOpenLyrics')}><FolderOpen /></button>
           <button className="btn icon" onClick={doOpenMusic} title={t('tipHdrOpenMusic')}><Music /></button>
           <button className="btn icon" onClick={doSave} title={t('tipHdrSaveLrc')}><Save /></button>
@@ -1206,6 +1329,35 @@ export default function App() {
           <button className={`btn icon stg-toggle ${showSettings ? 'active' : ''}`} onClick={() => setShowSettings(o => !o)} title={t('tipHdrSettings')} aria-pressed={showSettings}><Settings /></button>
         </div>
       </AppHeader>
+
+      {/* ── Tab bar ── one tab per open song; copied from markzen's document strip. The settings page hides it. */}
+      {!showSettings && (
+        <div style={{
+          display: 'flex', alignItems: 'center', flexShrink: 0,
+          background: 'var(--bg-elev)', borderBottom: '1px solid var(--border)',
+          overflowX: 'auto', overflowY: 'hidden',
+        }}>
+          {docs.map(doc => {
+            const isActive = doc.id === activeDocId;
+            const view = isActive ? { lrcFileName, mediaFilePath, mediaTitle, unsaved } : doc.snap;
+            return (
+              <div key={doc.id} onClick={() => switchDoc(doc.id)} style={{
+                display: 'flex', alignItems: 'center', flexShrink: 0,
+                height: 30, padding: '0 6px 0 12px', cursor: 'pointer',
+                background: isActive ? 'var(--bg)' : 'transparent',
+                borderRight: '1px solid var(--border)',
+                borderBottom: isActive ? '2px solid var(--accent)' : '2px solid transparent',
+                color: isActive ? 'var(--text)' : 'var(--text-mute)',
+                fontSize: 13, minWidth: 80, maxWidth: 200, overflow: 'hidden',
+              }}>
+                {view.unsaved && <span style={{ color: 'var(--accent)', marginRight: 4, fontSize: 10 }}>●</span>}
+                <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{docLabel(view)}</span>
+                <button className="btn icon small subtle" title={t('tipAppTabClose')} onClick={e => { e.stopPropagation(); closeDoc(doc.id); }}><X /></button>
+              </div>
+            );
+          })}
+        </div>
+      )}
 
       {/* ── .app-main content region = also the file-drop zone (overlay scoped
              here, so the blur covers content only, not the header / player bars).

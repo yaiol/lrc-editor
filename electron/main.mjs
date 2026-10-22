@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import pkg from "../package.json" with { type: "json" };
 import { mark, dumpStartupTiming } from "./startup-timing.mjs";
 import { lastDir, rememberDir } from "./dialog-memory.mjs";
+import { registerNewsRoutes } from "./news.mjs";
 mark("electron boot + module imports");
 
 // ESM has no __dirname - derive it from import.meta.url.
@@ -84,20 +85,19 @@ function readFlacMetadataManual(filePath) {
 let mainWindow = null;
 let SERVER_PORT = 4000;
 
-// File path passed by Windows when the app is launched via a .lrc file association.
-// In packaged builds argv[1] is the file; in dev argv[2] (argv[1] is the script path).
-const launchFilePath = (() => {
-  const args = process.argv.slice(isDev ? 2 : 1);
-  const lrc = args.find(a => /\.lrc$/i.test(a) && fs.existsSync(a));
-  return lrc || null;
-})();
-
-// Handoff file path - passed by MPL via --handoff=PATH when opening LRC Editor for a song.
-const handoffFilePath = (() => {
-  const args = process.argv.slice(isDev ? 2 : 1);
-  const arg = args.find(a => a.startsWith('--handoff='));
-  return arg ? arg.slice('--handoff='.length) : null;
-})();
+// launchFilePath: file passed by Windows when the app is launched via a .lrc file association.
+// handoffFilePath: passed by MPL via --handoff=PATH when opening LRC Editor for a song.
+// Both are re-read from a second launch's argv (see 'second-instance'), so they are mutable.
+// In packaged builds argv[1] is the first arg; in dev argv[2] (argv[1] is the script path).
+let launchFilePath = null;
+let handoffFilePath = null;
+function readLaunchArgs(argv) {
+  const args = argv.slice(isDev ? 2 : 1);
+  launchFilePath = args.find(a => /\.lrc$/i.test(a) && fs.existsSync(a)) || null;
+  const handoff = args.find(a => a.startsWith('--handoff='));
+  handoffFilePath = handoff ? handoff.slice('--handoff='.length) : null;
+}
+readLaunchArgs(process.argv);
 
 function startServer(callback) {
   function findFreePort(port, cb) {
@@ -366,6 +366,8 @@ function startServer(callback) {
     }
   });
 
+  registerNewsRoutes(api, { appId: pkg.name, appVersion: pkg.version });
+
   findFreePort(4000, (port) => {
     SERVER_PORT = port;
     api.listen(port, () => {
@@ -419,7 +421,24 @@ function createWindow(port) {
   }
 }
 
-app.whenReady().then(() => { mark("app.whenReady");
+// ⚠ CLAUDE: ONE instance per profile. A second process shares userData and cannot open the first one's
+// locked storage, so it ran on empty settings (defaults) - a different library, a flat app list. The
+// second launch now just brings the first window forward.
+const gotInstanceLock = app.requestSingleInstanceLock();
+if (!gotInstanceLock) app.quit();
+app.on('second-instance', (_event, argv) => {
+  if (mainWindow) {
+    if (mainWindow.isMinimized()) mainWindow.restore();
+    mainWindow.focus();
+    // ⚠ CLAUDE: the second launch carries the new song (--handoff / .lrc). Re-read its argv and tell the
+    // already-open window to load it - focusing alone silently dropped the request. No preload exists,
+    // so the nudge is a DOM event the renderer listens for.
+    readLaunchArgs(argv);
+    if (handoffFilePath || launchFilePath) mainWindow.webContents.executeJavaScript(`window.dispatchEvent(new Event('lrce-launch'))`);
+  }
+});
+
+if (gotInstanceLock) app.whenReady().then(() => { mark("app.whenReady");
   Menu.setApplicationMenu(null);
   startServer((port) => createWindow(port));
 });
