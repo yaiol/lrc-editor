@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.10 — 2026-11-13
+
+- The window now has its own title bar: Settings, Help and GitHub sit at its left beside the app icon, the name and version are in the middle, and it follows the Windows title-bar colour
+- New reminder button in the title bar when a newer version is out: it stays after the new-version card is closed or hidden with Don't show again, and a click reopens the card with the release notes and the download link
+- New News button in the title bar while yaiol has an announcement for the app: a click reopens the announcements, including the ones hidden with Don't show again. It does not appear when Show news from yaiol is off
+- Don't show again can be undone: reopen a card from its title-bar button and untick the box, and it shows again at the next launch
+- The position and volume sliders have a new look
+- The About page and the package now carry a one-line description of the app, and the Settings button's tooltip reads "Settings" instead of "Open settings"
+
 ## 1.0.9 — 2026-10-23
 
 - Several songs can be open at once, in tabs: a song opened from outside (a second launch, Open, drag-and-drop of one or more .lrc files) gets its own tab unless the current tab is still blank; each tab keeps its own lyrics, player position and undo history, and closing a tab asks about unsaved changes

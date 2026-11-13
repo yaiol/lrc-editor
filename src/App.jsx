@@ -9,16 +9,16 @@ import { Settings, HelpCircle, Music, FolderOpen, Save, SavePlus, FilePlus, X, P
 import { useT, LANGUAGES } from './i18n-gen';
 import pkg from '../package.json';
 import { getUrl } from './lib/site-url';
-import { NewsLoader } from './lib/ui-news-loader';
-import { NewsSetting } from './lib/ui-news-setting';
-import { AppHeader } from './lib/ui-header';
-import { GithubIcon } from './lib/ui-icons';
-import { SettingsView } from './lib/ui-settings';
-import { Splitter } from './lib/ui-ctl-splitter';
-import { useToast } from './lib/ui-fx-toast';
-import { NumberField } from './lib/ui-ctl-numberfield';
-import { CollapseToggle } from './lib/ui-ctl-collapsetoggle';
-import { useFileDrop } from './lib/ui-fx-filedrop';
+import { UisNewsLoader, UisBtnUpdate, UisBtnNews } from './lib/uis-news-loader';
+import { UisAppHeader } from './lib/uis-header';
+import { UisBarWindow, LbsHokWindow } from './lib/uis-bar-window';
+import { UisIcoGithub } from './lib/uis-icons';
+import { UisStgView } from './lib/uis-stg-view';
+import { UisPnlSplitter } from './lib/uis-pnl-splitter';
+import { LbsHokToast } from './lib/uis-fx-toast';
+import { UisNum } from './lib/uis-num';
+import { UisPnlToggle } from './lib/uis-pnl-toggle';
+import { LbsHokFileDrop } from './lib/uis-fx-filedrop';
 // Storage namespace - single source: package.json `storagePrefix`. Never hardcode a prefix.
 const STORAGE_PREFIX = pkg.storagePrefix;
 
@@ -209,51 +209,49 @@ const GITHUB_URL = `https://github.com/yaiol/${pkg.name}`;
 // ─────────────────────────────────────────────────────────────────
 
 
-// Colors come from the shared palette (src/assets/ui-colors.css) via var(--token).
+// Colors come from the shared palette (src/assets/uis-colors.css) via var(--token).
 
 function buildCss() {
   return `
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
-    /* Palette (--bg, --accent, --text, --border, --gradient, --shadow, …) comes from
-       the shared ui-colors.css, keyed on data-theme. No token bridge here. */
+    /* Palette (--uis-bg, --uis-accent, --uis-text, --uis-border, --uis-gradient, --uis-shadow, …) comes from
+       the shared uis-colors.css, keyed on data-theme. No token bridge here. */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html, body, #root { height: 100%; overflow: hidden; }
-    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; }
+    body { background: var(--uis-bg); color: var(--uis-text); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; }
     button { cursor: pointer; border: none; background: none; color: inherit; font-family: inherit; font-size: inherit; }
-    button:focus-visible { outline: 2px solid var(--accent) !important; outline-offset: 2px; border-radius: 4px; }
-    input, textarea, select { font-family: inherit; font-size: inherit; color: var(--text); background: var(--bg-input); border: 1px solid var(--border); border-radius: 4px; outline: none; }
-    input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+    button:focus-visible { outline: 2px solid var(--uis-accent) !important; outline-offset: 2px; border-radius: 4px; }
+    input, textarea, select { font-family: inherit; font-size: inherit; color: var(--uis-text); background: var(--uis-bg-input); border: 1px solid var(--uis-border); border-radius: 4px; outline: none; }
+    input:focus, textarea:focus, select:focus { border-color: var(--uis-accent); }
     textarea { resize: none; }
-    /* .barh-app-version — shared, unscoped, in ui-app.css (bg = --bar-bgd). Not redefined here. */
-    .lyric-line { padding: 5px 10px; cursor: pointer; border-bottom: 1px solid var(--border)20; display: flex; align-items: center; min-height: 28px; user-select: none; }
-    .lyric-line.selected { background: var(--bg-hov); color: var(--accent); }
-    .lyric-line:hover:not(.selected) { background: var(--bg-row); }
-    .lyric-line input { width: 100%; background: transparent; border: none; color: var(--text); padding: 0; outline: none; }
+    /* .uis-barh-app-version — shared, unscoped, in uis-app.css (bg = --uis-bar-bgd). Not redefined here. */
+    .lyric-line { padding: 5px 10px; cursor: pointer; border-bottom: 1px solid var(--uis-border)20; display: flex; align-items: center; min-height: 28px; user-select: none; }
+    .lyric-line.selected { background: var(--uis-bg-hov); color: var(--uis-accent); }
+    .lyric-line:hover:not(.selected) { background: var(--uis-bg-row); }
+    .lyric-line input { width: 100%; background: transparent; border: none; color: var(--uis-text); padding: 0; outline: none; }
     .lyric-line input:focus { outline: none; }
-    .empty-state { padding: 32px 16px; text-align: center; color: var(--text-mute); font-size: 12px; }
-input[type=range] { accent-color: var(--accent); cursor: pointer; }
-    input[type=range]:disabled { opacity: 0.4; }
-    .lrc-out-line { display: flex; align-items: center; padding: 4px 6px 4px 4px; min-height: 28px; cursor: pointer; border-bottom: 1px solid var(--border)20; font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; user-select: none; }
+    .empty-state { padding: 32px 16px; text-align: center; color: var(--uis-text-mute); font-size: 12px; }
+    .lrc-out-line { display: flex; align-items: center; padding: 4px 6px 4px 4px; min-height: 28px; cursor: pointer; border-bottom: 1px solid var(--uis-border)20; font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; user-select: none; }
     .lrc-out-line.active { background: #22ff8822; border-left: 3px solid #22ff8888; }
     /* .cursor = the row the playhead sits on, in every state. The list carries .is-playing only
        while audio actually runs, so the cursor is grey at rest and accent only when it is moving. */
-    .lrc-out-line.cursor { background: var(--text-mute)18; border-left: 3px solid var(--text-mute)66; }
-    .lrc-out-line.active.cursor { background: var(--bg-hov); border-left: 3px solid var(--text-mute); }
-    .is-playing .lrc-out-line.cursor { background: var(--accent)22; border-left: 3px solid var(--accent)88; }
-    .is-playing .lrc-out-line.active.cursor { background: var(--bg-hov); border-left: 3px solid var(--accent); }
-    .lrc-out-line:hover:not(.active) { background: var(--bg-row); }
-    .lrc-out-line .lrc-time { color: var(--accent); flex-shrink: 0; margin-right: 6px; opacity: 0.8; }
+    .lrc-out-line.cursor { background: var(--uis-text-mute)18; border-left: 3px solid var(--uis-text-mute)66; }
+    .lrc-out-line.active.cursor { background: var(--uis-bg-hov); border-left: 3px solid var(--uis-text-mute); }
+    .is-playing .lrc-out-line.cursor { background: var(--uis-accent)22; border-left: 3px solid var(--uis-accent)88; }
+    .is-playing .lrc-out-line.active.cursor { background: var(--uis-bg-hov); border-left: 3px solid var(--uis-accent); }
+    .lrc-out-line:hover:not(.active) { background: var(--uis-bg-row); }
+    .lrc-out-line .lrc-time { color: var(--uis-accent); flex-shrink: 0; margin-right: 6px; opacity: 0.8; }
     .lrc-out-line.active .lrc-time { opacity: 1; }
-    .lrc-out-line input { background: transparent; border: none; color: var(--text); font-family: inherit; font-size: inherit; padding: 0; outline: none; }
+    .lrc-out-line input { background: transparent; border: none; color: var(--uis-text); font-family: inherit; font-size: inherit; padding: 0; outline: none; }
     .lrc-out-line input.lrc-text-input { flex: 1; min-width: 0; padding: 0 2px; }
-    .lrc-out-line input.lrc-time-input { width: 9ch; color: var(--accent); flex-shrink: 0; padding: 0 2px; }
-    .lrc-seek-btn { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--text-mute); margin-right: 4px; opacity: 0; transition: opacity 0.15s; }
-    .lrc-out-line.cursor .lrc-seek-btn { opacity: 1; color: var(--text-mute); }
-    .is-playing .lrc-out-line.cursor .lrc-seek-btn { color: var(--accent); }
-    .lrc-seek-btn:hover { background: var(--accent)20; color: var(--accent) !important; opacity: 1 !important; }
-    .lrc-nudge-btn { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--text-mute); opacity: 0; transition: opacity 0.15s; background: none; border: none; cursor: pointer; padding: 0; }
-    .lrc-out-line.active .lrc-nudge-btn { opacity: 1; color: var(--text-dim); }
-    .lrc-nudge-btn:hover { background: var(--accent)20; color: var(--accent) !important; opacity: 1 !important; }
+    .lrc-out-line input.lrc-time-input { width: 9ch; color: var(--uis-accent); flex-shrink: 0; padding: 0 2px; }
+    .lrc-seek-btn { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--uis-text-mute); margin-right: 4px; opacity: 0; transition: opacity 0.15s; }
+    .lrc-out-line.cursor .lrc-seek-btn { opacity: 1; color: var(--uis-text-mute); }
+    .is-playing .lrc-out-line.cursor .lrc-seek-btn { color: var(--uis-accent); }
+    .lrc-seek-btn:hover { background: var(--uis-accent)20; color: var(--uis-accent) !important; opacity: 1 !important; }
+    .lrc-nudge-btn { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--uis-text-mute); opacity: 0; transition: opacity 0.15s; background: none; border: none; cursor: pointer; padding: 0; }
+    .lrc-out-line.active .lrc-nudge-btn { opacity: 1; color: var(--uis-text-dim); }
+    .lrc-nudge-btn:hover { background: var(--uis-accent)20; color: var(--uis-accent) !important; opacity: 1 !important; }
   `;
 }
 
@@ -327,9 +325,11 @@ export default function App() {
 
   const [showMeta, setShowMeta] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  // Lifted clear of the player bar (42px .barh-footer + the toast's own 28px gap) so the pill
+  // The window bar: its three buttons act through the main process, which also says when the window is maximized.
+  const windowBar = LbsHokWindow(API);
+  // Lifted clear of the player bar (42px .uis-barh-footer + the toast's own 28px gap) so the pill
   // floats inside the content area instead of straddling the footer.
-  const { showToast, toast } = useToast({ bottom: 70 });
+  const { showToast, toast } = LbsHokToast({ bottom: 70 });
   const [confirm, setConfirm] = useState(null);
 
   // Refs
@@ -499,7 +499,7 @@ export default function App() {
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-lang`, langKey); }, [langKey]);
   useEffect(() => {
     localStorage.setItem(`${STORAGE_PREFIX}-theme`, themeKey);
-    document.documentElement.setAttribute('data-theme', themeKey); // resolves the shared :root[data-theme] palette (ui-*.css)
+    document.documentElement.setAttribute('data-theme', themeKey); // resolves the shared :root[data-theme] palette (uis-*.css)
   }, [themeKey]);
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-reaction-delay`, txtSettingsTimeReactionDelay); }, [txtSettingsTimeReactionDelay]);
   useEffect(() => { localStorage.setItem(`${STORAGE_PREFIX}-verification-delay`, txtSettingsTimeVerificationDelay); }, [txtSettingsTimeVerificationDelay]);
@@ -1013,7 +1013,7 @@ export default function App() {
     if (!found) resetLrc(result.filePath);
   }
 
-  // Load a dropped audio or LRC file — routed by extension. The shared useFileDrop
+  // Load a dropped audio or LRC file — routed by extension. The shared LbsHokFileDrop
   // hook handles the drag wiring + overlay; this only opens the resolved file, the
   // same path the header Open buttons use. Needs the OS path (to stream / read from
   // disk), so it goes through webUtils.getPathForFile (window.electronAPI).
@@ -1043,11 +1043,11 @@ export default function App() {
     }
   }
 
-  // Shared drag-and-drop file loading (useFileDrop). dropProps + overlay are scoped
+  // Shared drag-and-drop file loading (LbsHokFileDrop). dropProps + overlay are scoped
   // to the main content area (see render), so the blur covers the lyric view only —
   // the header and player bars stay sharp. Accepts the same audio + LRC extensions
   // the header Open dialogs allow.
-  const { dropProps, overlay: dropOverlay } = useFileDrop({
+  const { dropProps, overlay: dropOverlay } = LbsHokFileDrop({
     accept: [...AUDIO_EXTS, ...LRC_EXTS].map((e) => `.${e}`),
     onFile: (file) => openDroppedFile(file),
     label: t('empAppDropFile'),
@@ -1131,8 +1131,8 @@ export default function App() {
 
   function MetaModal() {
     return (
-      <div className="dl-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) setShowMeta(false); }}>
-        <div className="dlg"
+      <div className="uis-dl-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) setShowMeta(false); }}>
+        <div className="uis-dlg"
           onKeyDown={e => {
             if (e.key === 'Escape') setShowMeta(false);
             if (e.key !== 'Tab') return;
@@ -1141,14 +1141,14 @@ export default function App() {
             if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
             else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
           }}>
-          <div className="dlg-head">
-            <span className="dlg-title">{t('ttlDlgMeta')}</span>
+          <div className="uis-dlg-head">
+            <span className="uis-dlg-title">{t('ttlDlgMeta')}</span>
             <button ref={el => { if (el && !el.dataset.didFocus) { el.dataset.didFocus = '1'; el.focus(); } }}
-              onClick={() => setShowMeta(false)} className="dl-close">
+              onClick={() => setShowMeta(false)} className="uis-dl-close">
               <X />
             </button>
           </div>
-          <div className="dlg-body" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <div className="uis-dlg-body" style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {[
               ['lblDlgMetaArtist','plhDlgMetaArtist','artist', txtSettingsMetaArtist],
               ['lblDlgMetaAlbum','plhDlgMetaAlbum','album', ''],
@@ -1156,17 +1156,17 @@ export default function App() {
               ['lblDlgMetaSongwriter','plhDlgMetaSongwriter','songwriter', txtSettingsMetaSongwriter],
               ['lblDlgMetaLrcBy','plhDlgMetaLrcBy','lrcBy', txtSettingsMetaLrcBy],
             ].map(([lbl, plh, field, defVal]) => (
-              <div key={field} className="dlg-field">
-                <label className="dlg-field-label">{t(lbl)}</label>
-                <input className="input" value={lrcData[field]} placeholder={defVal || t(plh)} onChange={e => updateMeta(field, e.target.value)} />
+              <div key={field} className="uis-fld-labelled">
+                <label className="uis-fld-labelled-label">{t(lbl)}</label>
+                <input className="uis-txt" value={lrcData[field]} placeholder={defVal || t(plh)} onChange={e => updateMeta(field, e.target.value)} />
               </div>
             ))}
-            <div className="dlg-field">
-              <label className="dlg-field-label">{t('lblDlgMetaOffsetMs')}</label>
-              <NumberField value={lrcData.offsetMs} onChange={v => updateMeta('offsetMs', v)} width={90} />
+            <div className="uis-fld-labelled">
+              <label className="uis-fld-labelled-label">{t('lblDlgMetaOffsetMs')}</label>
+              <UisNum value={lrcData.offsetMs} onChange={v => updateMeta('offsetMs', v)} width={90} />
             </div>
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <button className="btn primary" onClick={doAutoFillMeta} title={t('tipDlgMetaAutoFill')} disabled={!hasMusic}>
+              <button className="uis-btn primary" onClick={doAutoFillMeta} title={t('tipDlgMetaAutoFill')} disabled={!hasMusic}>
                 {t('btnDlgMetaAutoFill')}
               </button>
             </div>
@@ -1177,41 +1177,41 @@ export default function App() {
   }
 
   // ─── Settings page ───────────────────────────────────────────
-  // The shared SettingsView plus this app's Time and Meta tabs.
+  // The shared UisStgView plus this app's Time and Meta tabs.
 
   function SettingsPage() {
     const time = (
       <>
         {/* Shift Delay */}
-        <div className="dlg-field">
-          <label className="dlg-field-label">{t('lblStgTimeShiftDelay')}</label>
+        <div className="uis-fld-labelled">
+          <label className="uis-fld-labelled-label">{t('lblStgTimeShiftDelay')}</label>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <NumberField min={100} step={100} value={txtSettingsTimeShiftDelay} onChange={setTxtSettingsTimeShiftDelay} width={64} />
-            <span className="hint">ms</span>
+            <UisNum min={100} step={100} value={txtSettingsTimeShiftDelay} onChange={setTxtSettingsTimeShiftDelay} width={64} />
+            <span className="uis-hnt">ms</span>
           </div>
         </div>
         {/* Reaction Delay */}
-        <div className="dlg-field divider">
-          <label className="dlg-field-label">{t('lblStgTimeReactionDelay')}</label>
+        <div className="uis-fld-labelled divider">
+          <label className="uis-fld-labelled-label">{t('lblStgTimeReactionDelay')}</label>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <NumberField min={0} step={100} value={txtSettingsTimeReactionDelay} onChange={setTxtSettingsTimeReactionDelay} width={64} />
-            <span className="hint">ms</span>
+            <UisNum min={0} step={100} value={txtSettingsTimeReactionDelay} onChange={setTxtSettingsTimeReactionDelay} width={64} />
+            <span className="uis-hnt">ms</span>
           </div>
         </div>
         {/* Verification Delay */}
-        <div className="dlg-field divider">
-          <label className="dlg-field-label">{t('lblStgTimeVerificationDelay')}</label>
+        <div className="uis-fld-labelled divider">
+          <label className="uis-fld-labelled-label">{t('lblStgTimeVerificationDelay')}</label>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <NumberField min={0} step={100} value={txtSettingsTimeVerificationDelay} onChange={setTxtSettingsTimeVerificationDelay} width={64} />
-            <span className="hint">ms</span>
+            <UisNum min={0} step={100} value={txtSettingsTimeVerificationDelay} onChange={setTxtSettingsTimeVerificationDelay} width={64} />
+            <span className="uis-hnt">ms</span>
           </div>
         </div>
         {/* Seek Back */}
-        <div className="dlg-field divider">
-          <label className="dlg-field-label">{t('lblStgTimeSeekDelay')}</label>
+        <div className="uis-fld-labelled divider">
+          <label className="uis-fld-labelled-label">{t('lblStgTimeSeekDelay')}</label>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <NumberField min={1} step={1} value={txtSettingsTimeSeekDelay} onChange={setTxtSettingsTimeSeekDelay} width={64} />
-            <span className="hint">s</span>
+            <UisNum min={1} step={1} value={txtSettingsTimeSeekDelay} onChange={setTxtSettingsTimeSeekDelay} width={64} />
+            <span className="uis-hnt">s</span>
           </div>
         </div>
       </>
@@ -1219,9 +1219,9 @@ export default function App() {
 
     const meta = (
       <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <div className="dlg-field">
-          <label className="check-label">
-            <input type="checkbox" className="check-box" checked={chkSettingsMetaAutoFill} onChange={e => setChkSettingsMetaAutoFill(e.target.checked)} />
+        <div className="uis-fld-labelled">
+          <label className="uis-chk-lbl">
+            <input type="checkbox" className="uis-chk-box" checked={chkSettingsMetaAutoFill} onChange={e => setChkSettingsMetaAutoFill(e.target.checked)} />
             {t('lblStgMetaAutoFill')}
           </label>
         </div>
@@ -1230,20 +1230,20 @@ export default function App() {
           ['lblStgMetaSongwriter', 'plhStgMetaSongwriter', txtSettingsMetaSongwriter, setTxtSettingsMetaSongwriter],
           ['lblStgMetaLrcBy', 'plhStgMetaLrcBy', txtSettingsMetaLrcBy, setTxtSettingsMetaLrcBy],
         ].map(([lbl, plh, val, setter]) => (
-          <div key={lbl} className="dlg-field">
-            <label className="dlg-field-label">{t(lbl)}</label>
-            <input className="input" value={val} placeholder={t(plh)} onChange={e => setter(e.target.value)} />
+          <div key={lbl} className="uis-fld-labelled">
+            <label className="uis-fld-labelled-label">{t(lbl)}</label>
+            <input className="uis-txt" value={val} placeholder={t(plh)} onChange={e => setter(e.target.value)} />
           </div>
         ))}
       </div>
     );
 
     return (
-      <SettingsView
+      <UisStgView
         t={t} appName={APP_NAME} appVersion={APP_VERSION_BUILD} languages={LANGUAGES}
         lang={langKey} setLang={setLangKey} theme={themeKey} setTheme={setThemeKey}
         generalExtra={(
-          <NewsSetting enabled={newsEnabled} onChange={toggleNews} label={t('lblStgGeneralNews')} />
+          <div className="uis-fld-labelled divider"><label className="uis-chk-lbl"><input type="checkbox" className="uis-chk-box" checked={newsEnabled} onChange={e => toggleNews(e.target.checked)} />{t('lblStgGeneralNews')}</label></div>
         )}
         tabs={[
           { key: 'time', label: t('tabStgTime'), icon: Clock, content: time },
@@ -1259,8 +1259,8 @@ export default function App() {
   function ConfirmDialog() {
     if (!confirm) return null;
     return (
-      <div className="dl-backdrop" style={{ zIndex: 900 }}>
-        <div className="dlp" onKeyDown={e => {
+      <div className="uis-dl-backdrop" style={{ zIndex: 900 }}>
+        <div className="uis-dlp" onKeyDown={e => {
           if (e.key === 'Escape' && !confirm.noCancel) handleConfirmCancel();
           if (e.key !== 'Tab') return;
           const els = [...e.currentTarget.querySelectorAll('button')].filter(el => !el.disabled && el.offsetParent !== null);
@@ -1268,25 +1268,25 @@ export default function App() {
           if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
           else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
         }}>
-            <button className="dl-close" onClick={handleConfirmCancel}><X /></button>
-            <div className="dlp-title">{confirm.title}</div>
-            <div className="dlp-sub">{confirm.msg}</div>
-            <div className="dlp-foot">
+            <button className="uis-dl-close" onClick={handleConfirmCancel}><X /></button>
+            <div className="uis-dlp-title">{confirm.title}</div>
+            <div className="uis-dlp-sub">{confirm.msg}</div>
+            <div className="uis-dlp-foot">
             {!confirm.noCancel && (
               <button
                 ref={el => { if (el && !el.dataset.didFocus) { el.dataset.didFocus = '1'; el.focus(); } }}
-                className="btn subtle"
+                className="uis-btn subtle"
                 onClick={handleConfirmCancel}>
                 {t('btnGlbCancel')}
               </button>
             )}
             <button
               ref={confirm.noCancel ? el => { if (el && !el.dataset.didFocus) { el.dataset.didFocus = '1'; el.focus(); } } : undefined}
-              className="btn subtle"
+              className="uis-btn subtle"
               onClick={handleConfirmNo}>
               {t('btnGlbNo')}
             </button>
-            <button onClick={handleConfirmYes} className="btn primary">
+            <button onClick={handleConfirmYes} className="uis-btn primary">
               {t('btnGlbYes')}
             </button>
             </div>
@@ -1302,39 +1302,45 @@ export default function App() {
   const currentPos = isSeeking ? seekValue : position;
 
   return (
-    <div className="app-root" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+    <div className="uis-app-root" style={{ background: 'var(--uis-bg)', color: 'var(--uis-text)' }}>
       <style>{buildCss()}</style>
 
       {/* ── A new version (first) and the yaiol news, in one dialog ── */}
-      <NewsLoader api={API} lang={langKey} t={t} />
+      <UisNewsLoader api={API} lang={langKey} t={t} />
 
       {/* ── Header ──────────────────────────────────────────── */}
-      <AppHeader appName={APP_NAME} appVersion={APP_VERSION_BUILD}>
+      {/* ── Window bar ── the app's own title bar: the window has no system frame. */}
+      <UisBarWindow appName={APP_NAME} appVersion={APP_VERSION_BUILD} iconSrc="./app.png" maximized={windowBar.maximized}
+        tipMinimize={t('tipWinMinimize')} tipMaximize={t('tipWinMaximize')} tipRestore={t('tipWinRestore')} tipClose={t('tipWinClose')}
+        onMinimize={windowBar.minimize} onMaximize={windowBar.maximize} onClose={windowBar.close}>
+        <button className={`uis-barh-window-btn uis-stg-toggle ${showSettings ? 'active' : ''}`} onClick={() => setShowSettings(o => !o)} title={t('tipHdrSettings')} aria-pressed={showSettings}><Settings /></button>
+        <button className="uis-barh-window-btn" onClick={() => window.open(getUrl(pkg.name, langKey.replace(/_/g, '-'), 'help'), '_blank')} title={t('tipHdrHelp')}><HelpCircle /></button>
+        <button className="uis-barh-window-btn" onClick={() => window.open(GITHUB_URL, '_blank')} title="GitHub"><UisIcoGithub /></button>
+        <UisBtnUpdate t={t} />
+        <UisBtnNews t={t} />
+      </UisBarWindow>
+
+      {/* The name and the version are in the window bar, so the header holds the work buttons only. */}
+      <UisAppHeader appName={APP_NAME} appVersion={APP_VERSION_BUILD} bare>
         {/* File actions — one welded group: New · Open LRC · Open Music · Save · Save As.
             Open-Music keeps the Music-note icon (audio, distinct from the LRC open); it sits
-            right after Open-LRC. Standard file icons per CLAUDE-ui-standards. */}
-        <div className="barh-grp">
-          <button className="btn icon" onClick={openNewDoc} title={t('tipHdrNew')}><FilePlus /></button>
-          <button className="btn icon" onClick={doOpenLyrics} title={t('tipHdrOpenLyrics')}><FolderOpen /></button>
-          <button className="btn icon" onClick={doOpenMusic} title={t('tipHdrOpenMusic')}><Music /></button>
-          <button className="btn icon" onClick={doSave} title={t('tipHdrSaveLrc')}><Save /></button>
-          <button className="btn icon" onClick={doSaveAs} title={t('tipHdrSaveLrcAs')}><SavePlus /></button>
+            right after Open-LRC. Standard file icons per CLAUDE-ui-shared. */}
+        <div className="uis-barh-grp">
+          <button className="uis-btn ico" onClick={openNewDoc} title={t('tipHdrNew')}><FilePlus /></button>
+          <button className="uis-btn ico" onClick={doOpenLyrics} title={t('tipHdrOpenLyrics')}><FolderOpen /></button>
+          <button className="uis-btn ico" onClick={doOpenMusic} title={t('tipHdrOpenMusic')}><Music /></button>
+          <button className="uis-btn ico" onClick={doSave} title={t('tipHdrSaveLrc')}><Save /></button>
+          <button className="uis-btn ico" onClick={doSaveAs} title={t('tipHdrSaveLrcAs')}><SavePlus /></button>
         </div>
-        <button className="btn" onClick={() => setShowMeta(true)} title={t('tipHdrMeta')}>{t('btnHdrMeta')}</button>
-        <button className="btn icon" onClick={doSaveTxt} title={t('tipHdrSaveTxt')}><Upload /></button>
-        <div style={{ flex: 1 }} />
-        <div className="barh-grp">
-          <button className="btn icon" onClick={() => window.open(GITHUB_URL, '_blank')} title="GitHub"><GithubIcon /></button>
-          <button className="btn icon" onClick={() => window.open(getUrl(pkg.name, langKey.replace(/_/g, '-'), 'help'), '_blank')} title={t('tipHdrHelp')}><HelpCircle /></button>
-          <button className={`btn icon stg-toggle ${showSettings ? 'active' : ''}`} onClick={() => setShowSettings(o => !o)} title={t('tipHdrSettings')} aria-pressed={showSettings}><Settings /></button>
-        </div>
-      </AppHeader>
+        <button className="uis-btn" onClick={() => setShowMeta(true)} title={t('tipHdrMeta')}>{t('btnHdrMeta')}</button>
+        <button className="uis-btn ico" onClick={doSaveTxt} title={t('tipHdrSaveTxt')}><Upload /></button>
+      </UisAppHeader>
 
       {/* ── Tab bar ── one tab per open song; copied from markzen's document strip. The settings page hides it. */}
       {!showSettings && (
         <div style={{
           display: 'flex', alignItems: 'center', flexShrink: 0,
-          background: 'var(--bg-elev)', borderBottom: '1px solid var(--border)',
+          background: 'var(--uis-bg-elev)', borderBottom: '1px solid var(--uis-border)',
           overflowX: 'auto', overflowY: 'hidden',
         }}>
           {docs.map(doc => {
@@ -1344,39 +1350,39 @@ export default function App() {
               <div key={doc.id} onClick={() => switchDoc(doc.id)} style={{
                 display: 'flex', alignItems: 'center', flexShrink: 0,
                 height: 30, padding: '0 6px 0 12px', cursor: 'pointer',
-                background: isActive ? 'var(--bg)' : 'transparent',
-                borderRight: '1px solid var(--border)',
-                borderBottom: isActive ? '2px solid var(--accent)' : '2px solid transparent',
-                color: isActive ? 'var(--text)' : 'var(--text-mute)',
+                background: isActive ? 'var(--uis-bg)' : 'transparent',
+                borderRight: '1px solid var(--uis-border)',
+                borderBottom: isActive ? '2px solid var(--uis-accent)' : '2px solid transparent',
+                color: isActive ? 'var(--uis-text)' : 'var(--uis-text-mute)',
                 fontSize: 13, minWidth: 80, maxWidth: 200, overflow: 'hidden',
               }}>
-                {view.unsaved && <span style={{ color: 'var(--accent)', marginRight: 4, fontSize: 10 }}>●</span>}
+                {view.unsaved && <span style={{ color: 'var(--uis-accent)', marginRight: 4, fontSize: 10 }}>●</span>}
                 <span style={{ flex: 1, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{docLabel(view)}</span>
-                <button className="btn icon small subtle" title={t('tipAppTabClose')} onClick={e => { e.stopPropagation(); closeDoc(doc.id); }}><X /></button>
+                <button className="uis-btn ico small subtle" title={t('tipAppTabClose')} onClick={e => { e.stopPropagation(); closeDoc(doc.id); }}><X /></button>
               </div>
             );
           })}
         </div>
       )}
 
-      {/* ── .app-main content region = also the file-drop zone (overlay scoped
+      {/* ── .uis-app-main content region = also the file-drop zone (overlay scoped
              here, so the blur covers content only, not the header / player bars).
              The row layout of panes lives INSIDE it (Rule 14). ──────────────── */}
-      <div className="app-main" {...dropProps}>
+      <div className="uis-app-main" {...dropProps}>
       {showSettings && SettingsPage()}
       <div style={{ flex: 1, display: 'flex', overflow: 'hidden' }}>
 
         {/* Notepad panel */}
         {showNotepad && <div style={{ width: notepadWidth, display: 'flex', flexDirection: 'column', flexShrink: 0 }}>
-          <div style={{ padding: '4px 10px', borderBottom: `1px solid var(--border)`, fontSize: 11, color: 'var(--text-dim)', background: 'var(--bg-elev)', flexShrink: 0 }}>
+          <div style={{ padding: '4px 10px', borderBottom: `1px solid var(--uis-border)`, fontSize: 11, color: 'var(--uis-text-dim)', background: 'var(--uis-bg-elev)', flexShrink: 0 }}>
             {t('lblNotepad')}
           </div>
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 8, gap: 8, overflow: 'hidden' }}>
-            <textarea className="textarea" style={{ flex: 1, resize: 'none' }}
+            <textarea className="uis-txt-area" style={{ flex: 1, resize: 'none' }}
               value={notepadText} onChange={e => setNotepadText(e.target.value)}
               placeholder={t('plhNotepad')} spellCheck={false} />
             <div>
-              <button className="btn primary" onClick={copyNotepadToList} title={t('tipNotepadSetLyrics')}>
+              <button className="uis-btn primary" onClick={copyNotepadToList} title={t('tipNotepadSetLyrics')}>
                 {t('btnNotepadSetLyrics')}
               </button>
             </div>
@@ -1384,14 +1390,14 @@ export default function App() {
         </div>}
 
         {/* Resize handle */}
-        {showNotepad && <Splitter theme={themeKey} onResizeStart={startNotepadResize} />}
+        {showNotepad && <UisPnlSplitter theme={themeKey} onResizeStart={startNotepadResize} />}
 
         {/* Notepad toggle tab */}
-        <CollapseToggle open={showNotepad} onToggle={() => setShowNotepad(v => !v)} side="left" title={showNotepad ? t('tipNotepadHide') : t('tipNotepadShow')} />
+        <UisPnlToggle open={showNotepad} onToggle={() => setShowNotepad(v => !v)} side="left" title={showNotepad ? t('tipNotepadHide') : t('tipNotepadShow')} />
 
         {/* LRC edit panel */}
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-          <div style={{ padding: '4px 10px', borderBottom: `1px solid var(--border)`, fontSize: 11, color: 'var(--text-dim)', background: 'var(--bg-elev)', flexShrink: 0 }}>
+          <div style={{ padding: '4px 10px', borderBottom: `1px solid var(--uis-border)`, fontSize: 11, color: 'var(--uis-text-dim)', background: 'var(--uis-bg-elev)', flexShrink: 0 }}>
             {lrcFileName ? basename(lrcFileName) : t('lblSyncNewFile')}{unsaved ? ' *' : ''} - {lrcData.lines.length} {t('lblSyncLines')}
           </div>
           <div ref={lrcOutputListRef} className={isPlaying ? 'is-playing' : ''} style={{ flex: 1, overflowY: 'auto' }}>
@@ -1401,9 +1407,9 @@ export default function App() {
               style={{ cursor: 'default', userSelect: 'none' }}>
               <button className="lrc-seek-btn" style={{ marginRight: 4 }} title="Seek to 00:00.00"
                 onClick={e => { e.stopPropagation(); doSeekTo(0); if (playbackState !== 'playing') doPlayPause(); }}>▶</button>
-              <span style={{ width: '9ch', color: 'var(--accent)', fontFamily: 'monospace', flexShrink: 0, padding: '0 2px', fontSize: 12 }}>00:00.00</span>
+              <span style={{ width: '9ch', color: 'var(--uis-accent)', fontFamily: 'monospace', flexShrink: 0, padding: '0 2px', fontSize: 12 }}>00:00.00</span>
               <span style={{ width: 18, flexShrink: 0 }} /><span style={{ width: 18, flexShrink: 0 }} />
-              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncStartOfMusic')}</span>
+              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--uis-text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncStartOfMusic')}</span>
             </div>
             {lrcData.lines.map((line, idx) => (
               <div key={idx}
@@ -1440,7 +1446,7 @@ export default function App() {
                   onKeyUp={e => { splitCursorRef.current = { idx, pos: e.target.selectionStart ?? 0 }; }}
                   onBlur={e => { splitCursorRef.current = { idx, pos: e.target.selectionStart ?? 0 }; }}
                   placeholder="-"
-                  style={{ color: line.text === '' ? 'var(--text-mute)' : 'var(--text)' }} />
+                  style={{ color: line.text === '' ? 'var(--uis-text-mute)' : 'var(--uis-text)' }} />
               </div>
             ))}
             {/* End of Lyrics sentinel - timestamp editable, text fixed, saved as trailing empty line */}
@@ -1471,7 +1477,7 @@ export default function App() {
                 onClick={() => { setEndLyricsTime(prev => Math.max(0, prev - txtSettingsTimeShiftDelay / 1000)); setUnsaved(true); }}>‹</button>
               <button className="lrc-nudge-btn" title={t('tipSyncLater')}
                 onClick={() => { setEndLyricsTime(prev => prev + txtSettingsTimeShiftDelay / 1000); setUnsaved(true); }}>›</button>
-              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncEndOfLyrics')}</span>
+              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--uis-text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncEndOfLyrics')}</span>
             </div>
             {/* End of Music sentinel - fully non-editable, display-only, not saved */}
             <div className="lrc-out-line" style={{ cursor: 'default', userSelect: 'none' }}>
@@ -1479,11 +1485,11 @@ export default function App() {
                 onClick={() => { if (duration > 0) { doSeekTo(duration); if (playbackState !== 'playing') doPlayPause(); } }}>
                 ▶
               </button>
-              <span style={{ width: '9ch', color: 'var(--accent)', fontFamily: 'monospace', flexShrink: 0, padding: '0 2px', fontSize: 12 }}>
+              <span style={{ width: '9ch', color: 'var(--uis-accent)', fontFamily: 'monospace', flexShrink: 0, padding: '0 2px', fontSize: 12 }}>
                 {duration > 0 ? convertToLRCTime(duration) : '-'}
               </span>
               <span style={{ width: 18, flexShrink: 0 }} /><span style={{ width: 18, flexShrink: 0 }} />
-              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncEndOfMusic')}</span>
+              <span style={{ flex: 1, padding: '0 2px', fontSize: 12, color: 'var(--uis-text-mute)', fontFamily: 'Consolas, monospace', fontStyle: 'italic' }}>{t('lblSyncEndOfMusic')}</span>
             </div>
           </div>
         </div>
@@ -1493,54 +1499,54 @@ export default function App() {
       </div>
 
       {/* ── Player bar ──────────────────────────────────────── */}
-      <div className="barh-footer"> {/* shared canonical footer bar — ui-app.css */}
-        <button className="btn primary" onClick={doSyncTime} title={t('tipFtrSyncTime')} disabled={!isPlaying || activeLrcLine < 0}>{t('btnFtrSyncTime')}</button>
+      <div className="uis-barh-footer"> {/* shared canonical footer bar — uis-app.css */}
+        <button className="uis-btn primary" onClick={doSyncTime} title={t('tipFtrSyncTime')} disabled={!isPlaying || activeLrcLine < 0}>{t('btnFtrSyncTime')}</button>
         {/* ⚠ CLAUDE: These inline inputs are intentional - they let the user tune per-song without entering Settings. */}
         {/* Do NOT remove them even if Settings > Time has the same values. Rule C-1. */}
         {/* reactionDelay (ms) before play group, seekDelay (s) after seek-back button - matches original layout. */}
-        <NumberField min={0} step={100} value={reactionDelay} onChange={setReactionDelay} title={t('lblFtrReactionDelay')} width={70} />
-        <div className="barh-grp">
-          <button className="btn icon" onClick={doPlayPause} title={t('tipFtrPlayPause')} disabled={!hasMusic}
-            style={{ background: isPlaying && !isVerifyMode ? 'var(--accent)' : undefined, color: isPlaying && !isVerifyMode ? '#fff' : undefined }}>
+        <UisNum min={0} step={100} value={reactionDelay} onChange={setReactionDelay} title={t('lblFtrReactionDelay')} width={70} />
+        <div className="uis-barh-grp">
+          <button className="uis-btn ico" onClick={doPlayPause} title={t('tipFtrPlayPause')} disabled={!hasMusic}
+            style={{ background: isPlaying && !isVerifyMode ? 'var(--uis-accent)' : undefined, color: isPlaying && !isVerifyMode ? '#fff' : undefined }}>
             {isPlaying && !isVerifyMode ? <Pause /> : <Play />}
           </button>
-          <button className="btn icon" onClick={doStop} title={t('tipFtrStop')} disabled={!hasMusic} style={{ color: 'var(--danger)' }}>
+          <button className="uis-btn ico" onClick={doStop} title={t('tipFtrStop')} disabled={!hasMusic} style={{ color: 'var(--uis-danger)' }}>
             <Square />
           </button>
         </div>
-        <div className="barh-grp">
-          <button className="btn icon" onClick={doVerifyPlay} title={t('tipFtrVerify')} disabled={!hasMusic}
-            style={{ background: isVerifyMode && isPlaying ? 'var(--accent)' : undefined, color: isVerifyMode && isPlaying ? '#fff' : undefined }}>
+        <div className="uis-barh-grp">
+          <button className="uis-btn ico" onClick={doVerifyPlay} title={t('tipFtrVerify')} disabled={!hasMusic}
+            style={{ background: isVerifyMode && isPlaying ? 'var(--uis-accent)' : undefined, color: isVerifyMode && isPlaying ? '#fff' : undefined }}>
             {isVerifyMode && isPlaying ? <Pause /> : <Play />}
           </button>
-          <NumberField min={0} step={100} value={verificationDelay} onChange={setVerificationDelay} title={t('lblFtrVerificationDelay')} width={70} />
-          <button className="btn icon" onClick={doGoPrevStamp} title={t('tipFtrPrevStamp')} disabled={!hasMusic}><SkipBack /></button>
-          <button className="btn icon" onClick={doGoNextStamp} title={t('tipFtrNextStamp')} disabled={!hasMusic}><SkipForward /></button>
+          <UisNum min={0} step={100} value={verificationDelay} onChange={setVerificationDelay} title={t('lblFtrVerificationDelay')} width={70} />
+          <button className="uis-btn ico" onClick={doGoPrevStamp} title={t('tipFtrPrevStamp')} disabled={!hasMusic}><SkipBack /></button>
+          <button className="uis-btn ico" onClick={doGoNextStamp} title={t('tipFtrNextStamp')} disabled={!hasMusic}><SkipForward /></button>
         </div>
-        <div className="barh-grp">
-          <NumberField min={0} step={1} value={seekDelay} onChange={setSeekDelay} title={t('lblFtrSeekDelay')} width={54} />
-          <button className="btn icon" onClick={() => doSeekBy(-seekDelay)} title={t('tipFtrSeekBack')} disabled={!hasMusic}><ChevronLeft /></button>
-          <button className="btn icon" onClick={() => doSeekBy(seekDelay)} title={t('tipFtrSeekNext')} disabled={!hasMusic}><ChevronRight /></button>
+        <div className="uis-barh-grp">
+          <UisNum min={0} step={1} value={seekDelay} onChange={setSeekDelay} title={t('lblFtrSeekDelay')} width={54} />
+          <button className="uis-btn ico" onClick={() => doSeekBy(-seekDelay)} title={t('tipFtrSeekBack')} disabled={!hasMusic}><ChevronLeft /></button>
+          <button className="uis-btn ico" onClick={() => doSeekBy(seekDelay)} title={t('tipFtrSeekNext')} disabled={!hasMusic}><ChevronRight /></button>
         </div>
-        <span style={{ fontWeight: 600, color: 'var(--text)', flexShrink: 0, maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
+        <span style={{ fontWeight: 600, color: 'var(--uis-text)', flexShrink: 0, maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}
           title={mediaFilePath || ''}>
           {mediaFilePath ? (mediaTitle || basename(mediaFilePath)) : '-'}
         </span>
-        <input type="range" min={0} max={duration || 1} step={0.1}
+        <input type="range" className="uis-sld" min={0} max={duration || 1} step={0.1}
           value={isSeeking ? seekValue : currentPos}
           onMouseDown={() => { setIsSeeking(true); setSeekValue(currentPos); }}
           onChange={e => setSeekValue(parseFloat(e.target.value))}
           onMouseUp={e => { doSeekTo(parseFloat(e.target.value)); setIsSeeking(false); }}
           disabled={!hasMusic}
-          style={{ flex: 1, height: 4 }} />
-        <span className="hint mono" style={{ minWidth: 88, textAlign: 'center', fontVariantNumeric: 'tabular-nums' }}>
+          style={{ flex: 1 }} />
+        <span className="uis-hnt mono" style={{ minWidth: 88, textAlign: 'center', fontVariantNumeric: 'tabular-nums' }}>
           {formatTime(currentPos)} / {formatTime(duration)}
         </span>
-        <div className="barh-sep" />
-        {(() => { const VolumeIcon = volume === 0 ? VolumeX : volume < 50 ? Volume1 : Volume2; return <VolumeIcon className="bar-glyph" style={{ color: 'var(--text-dim)' }} />; })()}
-        <input type="range" min={0} max={100} value={volume}
+        <div className="uis-barh-sep" />
+        {(() => { const VolumeIcon = volume === 0 ? VolumeX : volume < 50 ? Volume1 : Volume2; return <VolumeIcon className="uis-bar-glyph" style={{ color: 'var(--uis-text-dim)' }} />; })()}
+        <input type="range" className="uis-sld" min={0} max={100} value={volume}
           onChange={e => setVolume(parseInt(e.target.value, 10))}
-          style={{ width: 65, height: 4 }} />
+          style={{ width: 65 }} />
       </div>
 
       {/* ── Hidden audio element ─────────────────────────────── */}
@@ -1551,7 +1557,7 @@ export default function App() {
         onError={handleAudioError}
       />
 
-      {/* ── Toast ───────────────────────────────────────────── */}
+      {/* ── LbsToast ───────────────────────────────────────────── */}
       {toast}
 
       {/* ── Modals ──────────────────────────────────────────── */}

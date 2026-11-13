@@ -35,6 +35,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Don't show again",
     btnNewsOpenLink:                        "Learn more",
     tipNewsDismiss:                         "Close",
+    tipNewsShow:                            "News",
     lblStgGeneralNews:                      "Show news from yaiol",
     btnNewsClose:                           "Close",
     lblAppTabUntitled:                      "Untitled",
@@ -60,8 +61,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Edit song metadata",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Export lyric list to .txt file",
-    tipHdrSettings:                         "Open settings",
+    tipHdrSettings:                         "Settings",
     tipHdrHelp:                             "Help",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimize",
+    tipWinMaximize:                         "Maximize",
+    tipWinRestore:                          "Restore",
+    tipWinClose:                            "Close",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Stamp current line with player time and advance (Enter)",
@@ -107,7 +114,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Fill the metadata automatically from the song's tags when a new LRC is created",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "create synchronized lyrics files.",
+    msgStgAboutDesc:                        "Create synchronized lyrics (LRC) files: load the audio, paste the lyrics, stamp each line with a keypress.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -164,6 +171,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Ne plus afficher",
     btnNewsOpenLink:                        "En savoir plus",
     tipNewsDismiss:                         "Fermer",
+    tipNewsShow:                            "Actualités",
     lblStgGeneralNews:                      "Afficher les actualités de yaiol",
     btnNewsClose:                           "Fermer",
     lblAppTabUntitled:                      "Sans titre",
@@ -189,8 +197,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Modifier les métadonnées du morceau",
     btnHdrMeta:                             "Métadonnées",
     tipHdrSaveTxt:                          "Exporter vers .txt",
-    tipHdrSettings:                         "Ouvrir les paramètres",
+    tipHdrSettings:                         "Paramètres",
     tipHdrHelp:                             "Aide",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimiser",
+    tipWinMaximize:                         "Agrandir",
+    tipWinRestore:                          "Restaurer",
+    tipWinClose:                            "Fermer",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Horodater la ligne actuelle et avancer (Entrée)",
@@ -236,7 +250,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Remplir automatiquement les métadonnées à partir des tags du morceau lors de la création d'un nouveau LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "créez des fichiers de paroles synchronisées.",
+    msgStgAboutDesc:                        "Créez des fichiers LRC synchronisés : chargez l'audio, collez les paroles, marquez chaque ligne par une touche.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Métadonnées",
@@ -292,6 +306,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Nicht mehr anzeigen",
     btnNewsOpenLink:                        "Mehr erfahren",
     tipNewsDismiss:                         "Schließen",
+    tipNewsShow:                            "Nachrichten",
     lblStgGeneralNews:                      "Nachrichten von yaiol anzeigen",
     btnNewsClose:                           "Schließen",
     lblAppTabUntitled:                      "Unbenannt",
@@ -317,8 +332,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Songmetadaten bearbeiten",
     btnHdrMeta:                             "Metadaten",
     tipHdrSaveTxt:                          "Liedtextliste als .txt exportieren",
-    tipHdrSettings:                         "Einstellungen öffnen",
+    tipHdrSettings:                         "Einstellungen",
     tipHdrHelp:                             "Hilfe",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimieren",
+    tipWinMaximize:                         "Maximieren",
+    tipWinRestore:                          "Wiederherstellen",
+    tipWinClose:                            "Schließen",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Aktuelle Zeile mit Spielerzeit stempeln und vorrücken (Enter)",
@@ -364,7 +385,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Metadaten beim Erstellen einer neuen LRC automatisch aus den Song-Tags füllen",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "synchronisierte Liedtextdateien erstellen.",
+    msgStgAboutDesc:                        "Synchronisierte Liedtextdateien (LRC) erstellen: Audio laden, Text einfügen, jede Zeile per Tastendruck markieren.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadaten",
@@ -420,6 +441,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "No volver a mostrar",
     btnNewsOpenLink:                        "Más información",
     tipNewsDismiss:                         "Cerrar",
+    tipNewsShow:                            "Noticias",
     lblStgGeneralNews:                      "Mostrar noticias de yaiol",
     btnNewsClose:                           "Cerrar",
     lblAppTabUntitled:                      "Sin título",
@@ -445,8 +467,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editar metadatos de la canción",
     btnHdrMeta:                             "Metadatos",
     tipHdrSaveTxt:                          "Exportar lista como .txt",
-    tipHdrSettings:                         "Abrir configuración",
+    tipHdrSettings:                         "Ajustes",
     tipHdrHelp:                             "Ayuda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimizar",
+    tipWinMaximize:                         "Maximizar",
+    tipWinRestore:                          "Restaurar",
+    tipWinClose:                            "Cerrar",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marcar la línea actual con el tiempo del reproductor y avanzar (Enter)",
@@ -492,7 +520,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Rellenar automáticamente los metadatos desde las etiquetas de la canción al crear un nuevo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crea archivos de letras sincronizadas.",
+    msgStgAboutDesc:                        "Cree archivos LRC sincronizados: cargue el audio, pegue las letras, marque cada línea con una pulsación.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadatos",
@@ -548,6 +576,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Não mostrar novamente",
     btnNewsOpenLink:                        "Saiba mais",
     tipNewsDismiss:                         "Fechar",
+    tipNewsShow:                            "Notícias",
     lblStgGeneralNews:                      "Mostrar notícias de yaiol",
     btnNewsClose:                           "Fechar",
     lblAppTabUntitled:                      "Sem título",
@@ -573,8 +602,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editar metadados da música",
     btnHdrMeta:                             "Metadados",
     tipHdrSaveTxt:                          "Exportar lista para .txt",
-    tipHdrSettings:                         "Abrir definições",
+    tipHdrSettings:                         "Configurações",
     tipHdrHelp:                             "Ajuda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimizar",
+    tipWinMaximize:                         "Maximizar",
+    tipWinRestore:                          "Restaurar",
+    tipWinClose:                            "Fechar",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marcar a linha atual com o tempo do reprodutor e avançar (Enter)",
@@ -620,7 +655,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Preencher automaticamente os metadados a partir das tags da música ao criar um novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
+    msgStgAboutDesc:                        "Crie arquivos LRC sincronizados: carregue o áudio, cole as letras, marque cada linha com uma tecla.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadados",
@@ -676,6 +711,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Não mostrar novamente",
     btnNewsOpenLink:                        "Saber mais",
     tipNewsDismiss:                         "Fechar",
+    tipNewsShow:                            "Notícias",
     lblStgGeneralNews:                      "Mostrar notícias de yaiol",
     btnNewsClose:                           "Fechar",
     lblAppTabUntitled:                      "Sem título",
@@ -701,8 +737,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editar metadados da música",
     btnHdrMeta:                             "Metadados",
     tipHdrSaveTxt:                          "Exportar lista para .txt",
-    tipHdrSettings:                         "Abrir definições",
+    tipHdrSettings:                         "Definições",
     tipHdrHelp:                             "Ajuda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimizar",
+    tipWinMaximize:                         "Maximizar",
+    tipWinRestore:                          "Restaurar",
+    tipWinClose:                            "Fechar",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marcar a linha atual com o tempo do reprodutor e avançar (Enter)",
@@ -748,7 +790,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Preencher automaticamente os metadados a partir das etiquetas da música ao criar um novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crie ficheiros de letras sincronizadas.",
+    msgStgAboutDesc:                        "Crie ficheiros LRC sincronizados: carregue o áudio, cole as letras, marque cada linha com uma tecla.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadados",
@@ -804,6 +846,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Non mostrare più",
     btnNewsOpenLink:                        "Scopri di più",
     tipNewsDismiss:                         "Chiudi",
+    tipNewsShow:                            "Notizie",
     lblStgGeneralNews:                      "Mostra notizie da yaiol",
     btnNewsClose:                           "Chiudi",
     lblAppTabUntitled:                      "Senza titolo",
@@ -829,8 +872,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Modifica metadati del brano",
     btnHdrMeta:                             "Metadati",
     tipHdrSaveTxt:                          "Esporta lista come .txt",
-    tipHdrSettings:                         "Apri impostazioni",
+    tipHdrSettings:                         "Impostazioni",
     tipHdrHelp:                             "Aiuto",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Riduci a icona",
+    tipWinMaximize:                         "Ingrandisci",
+    tipWinRestore:                          "Ripristina",
+    tipWinClose:                            "Chiudi",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Registra la riga corrente con il tempo del player e avanza (Invio)",
@@ -876,7 +925,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Compila automaticamente i metadati dai tag del brano quando viene creato un nuovo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crea file di testi sincronizzati.",
+    msgStgAboutDesc:                        "Crea file LRC sincronizzati: carica l'audio, incolla i testi, marca ogni riga con una pressione.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadati",
@@ -932,6 +981,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "今後表示しない",
     btnNewsOpenLink:                        "詳細を見る",
     tipNewsDismiss:                         "閉じる",
+    tipNewsShow:                            "ニュース",
     lblStgGeneralNews:                      "yaiol からのニュースを表示",
     btnNewsClose:                           "閉じる",
     lblAppTabUntitled:                      "無題",
@@ -957,8 +1007,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "曲のメタデータを編集",
     btnHdrMeta:                             "メタデータ",
     tipHdrSaveTxt:                          "リストを.txtとしてエクスポート",
-    tipHdrSettings:                         "設定を開く",
+    tipHdrSettings:                         "設定",
     tipHdrHelp:                             "ヘルプ",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "最小化",
+    tipWinMaximize:                         "最大化",
+    tipWinRestore:                          "元に戻す",
+    tipWinClose:                            "閉じる",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "現在の行にプレーヤーの時刻を記録して次へ進む (Enter)",
@@ -1004,7 +1060,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "新しいLRC作成時に、曲のタグからメタデータを自動的に入力する",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "同期歌詞ファイルを作成します。",
+    msgStgAboutDesc:                        "同期歌詞（LRC）ファイルを作成：音声を読み込み、歌詞を貼り付け、キー操作で各行をマーク。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "メタデータ",
@@ -1060,6 +1116,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "다시 표시 안 함",
     btnNewsOpenLink:                        "자세히 알아보기",
     tipNewsDismiss:                         "닫기",
+    tipNewsShow:                            "뉴스",
     lblStgGeneralNews:                      "yaiol 뉴스 표시",
     btnNewsClose:                           "닫기",
     lblAppTabUntitled:                      "제목 없음",
@@ -1085,8 +1142,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "곡 메타데이터 편집",
     btnHdrMeta:                             "메타데이터",
     tipHdrSaveTxt:                          "목록을 .txt로 내보내기",
-    tipHdrSettings:                         "설정 열기",
+    tipHdrSettings:                         "설정",
     tipHdrHelp:                             "도움말",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "최소화",
+    tipWinMaximize:                         "최대화",
+    tipWinRestore:                          "이전 크기로",
+    tipWinClose:                            "닫기",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "현재 줄에 플레이어 시간을 기록하고 다음으로 이동 (Enter)",
@@ -1132,7 +1195,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "새 LRC 생성 시 노래 태그에서 메타데이터를 자동으로 채웁니다.",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "동기화된 가사 파일을 만듭니다.",
+    msgStgAboutDesc:                        "동기화된 가사(LRC) 파일 생성: 오디오 로드, 가사 붙여넣기, 키 입력으로 각 줄 표시.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "메타데이터",
@@ -1188,6 +1251,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "不再显示",
     btnNewsOpenLink:                        "了解更多",
     tipNewsDismiss:                         "关闭",
+    tipNewsShow:                            "新闻",
     lblStgGeneralNews:                      "显示来自 yaiol 的新闻",
     btnNewsClose:                           "关闭",
     lblAppTabUntitled:                      "未命名",
@@ -1213,8 +1277,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "编辑歌曲元数据",
     btnHdrMeta:                             "元数据",
     tipHdrSaveTxt:                          "导出列表为.txt",
-    tipHdrSettings:                         "打开设置",
+    tipHdrSettings:                         "设置",
     tipHdrHelp:                             "帮助",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "最小化",
+    tipWinMaximize:                         "最大化",
+    tipWinRestore:                          "还原",
+    tipWinClose:                            "关闭",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "记录当前行时间并前进（Enter）",
@@ -1260,7 +1330,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "创建新LRC时，自动从歌曲标签填充元数据",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "创建同步歌词文件。",
+    msgStgAboutDesc:                        "创建同步歌词 (LRC) 文件：加载音频，粘贴歌词，按键标记每行。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "元数据",
@@ -1316,6 +1386,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "不再顯示",
     btnNewsOpenLink:                        "了解更多",
     tipNewsDismiss:                         "關閉",
+    tipNewsShow:                            "新聞",
     lblStgGeneralNews:                      "顯示來自 yaiol 的新聞",
     btnNewsClose:                           "關閉",
     lblAppTabUntitled:                      "未命名",
@@ -1341,8 +1412,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "編輯歌曲中繼資料",
     btnHdrMeta:                             "中繼資料",
     tipHdrSaveTxt:                          "匯出清單為 .txt",
-    tipHdrSettings:                         "開啟設定",
+    tipHdrSettings:                         "設定",
     tipHdrHelp:                             "說明",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "最小化",
+    tipWinMaximize:                         "最大化",
+    tipWinRestore:                          "還原",
+    tipWinClose:                            "關閉",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "記錄目前行時間並前進（Enter）",
@@ -1388,7 +1465,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "建立新LRC時，自動從歌曲標籤填入中繼資料",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "建立同步歌詞檔案。",
+    msgStgAboutDesc:                        "建立同步歌詞 (LRC) 檔案：載入音訊，貼上歌詞，按鍵標記每行。",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "詮釋資料",
@@ -1444,6 +1521,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "عدم الإظهار مرة أخرى",
     btnNewsOpenLink:                        "تعرّف على المزيد",
     tipNewsDismiss:                         "إغلاق",
+    tipNewsShow:                            "الأخبار",
     lblStgGeneralNews:                      "إظهار الأخبار من yaiol",
     btnNewsClose:                           "إغلاق",
     lblAppTabUntitled:                      "بدون عنوان",
@@ -1469,8 +1547,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "تعديل بيانات الأغنية الوصفية",
     btnHdrMeta:                             "بيانات وصفية",
     tipHdrSaveTxt:                          "تصدير قائمة الكلمات إلى ملف .txt",
-    tipHdrSettings:                         "فتح الإعدادات",
+    tipHdrSettings:                         "الإعدادات",
     tipHdrHelp:                             "مساعدة",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "تصغير",
+    tipWinMaximize:                         "تكبير",
+    tipWinRestore:                          "استعادة",
+    tipWinClose:                            "إغلاق",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "ختم السطر الحالي بوقت المشغل والتقدم (Enter)",
@@ -1516,7 +1600,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "ملء البيانات الوصفية تلقائيًا من علامات الأغنية عند إنشاء LRC جديد",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "إنشاء ملفات كلمات متزامنة.",
+    msgStgAboutDesc:                        "إنشاء ملفات LRC متزامنة: حمّل الصوت، الصق الكلمات، ضع علامة على كل سطر بضغطة.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "البيانات الوصفية",
@@ -1572,6 +1656,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "No tornar a mostrar",
     btnNewsOpenLink:                        "Més informació",
     tipNewsDismiss:                         "Tancar",
+    tipNewsShow:                            "Notícies",
     lblStgGeneralNews:                      "Mostrar notícies de yaiol",
     btnNewsClose:                           "Tancar",
     lblAppTabUntitled:                      "Sense títol",
@@ -1597,8 +1682,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editar metadades de la cançó",
     btnHdrMeta:                             "Metadades",
     tipHdrSaveTxt:                          "Exporta la llista de lletres a un fitxer .txt",
-    tipHdrSettings:                         "Obre la configuració",
+    tipHdrSettings:                         "Configuració",
     tipHdrHelp:                             "Ajuda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimitzar",
+    tipWinMaximize:                         "Maximitzar",
+    tipWinRestore:                          "Restaurar",
+    tipWinClose:                            "Tancar",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marcar la línia actual amb el temps del reproductor i avançar (Retorn)",
@@ -1644,7 +1735,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Emplenar automàticament les metadades a partir de les etiquetes de la cançó quan es crea un nou LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crear fitxers de lletres sincronitzades.",
+    msgStgAboutDesc:                        "Creeu fitxers LRC sincronitzats: carregueu l'àudio, enganxeu les lletres, marqueu cada línia amb una pulsació.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadades",
@@ -1700,6 +1791,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Nezobrazovat znovu",
     btnNewsOpenLink:                        "Další informace",
     tipNewsDismiss:                         "Zavřít",
+    tipNewsShow:                            "Zprávy",
     lblStgGeneralNews:                      "Zobrazovat zprávy z yaiol",
     btnNewsClose:                           "Zavřít",
     lblAppTabUntitled:                      "Bez názvu",
@@ -1725,8 +1817,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Upravit metadata skladby",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Exportovat seznam textů do souboru .txt",
-    tipHdrSettings:                         "Otevřít nastavení",
+    tipHdrSettings:                         "Nastavení",
     tipHdrHelp:                             "Nápověda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimalizovat",
+    tipWinMaximize:                         "Maximalizovat",
+    tipWinRestore:                          "Obnovit",
+    tipWinClose:                            "Zavřít",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Označit aktuální řádek časem přehrávače a posunout se (Enter)",
@@ -1772,7 +1870,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automaticky vyplnit metadata z tagů skladby při vytvoření nového LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "vytvářet synchronizované soubory textů.",
+    msgStgAboutDesc:                        "Vytvořte synchronizované LRC soubory: načtěte zvuk, vložte texty, označte každý řádek stiskem klávesy.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1828,6 +1926,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Vis ikke igen",
     btnNewsOpenLink:                        "Læs mere",
     tipNewsDismiss:                         "Luk",
+    tipNewsShow:                            "Nyheder",
     lblStgGeneralNews:                      "Vis nyheder fra yaiol",
     btnNewsClose:                           "Luk",
     lblAppTabUntitled:                      "Uden navn",
@@ -1853,8 +1952,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Rediger sangmetadata",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Eksporter sangtekstliste til .txt-fil",
-    tipHdrSettings:                         "Åbn indstillinger",
+    tipHdrSettings:                         "Indstillinger",
     tipHdrHelp:                             "Hjælp",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimer",
+    tipWinMaximize:                         "Maksimer",
+    tipWinRestore:                          "Gendan",
+    tipWinClose:                            "Luk",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Stempel nuværende linje med afspillerens tid og ryk frem (Enter)",
@@ -1900,7 +2005,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Udfyld automatisk metadata fra sangens tags, når en ny LRC oprettes",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "opret synkroniserede sangtekstfiler.",
+    msgStgAboutDesc:                        "Opret synkroniserede LRC-filer: indlæs lyd, indsæt tekst, stempel hver linje med et tastetryk.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -1956,6 +2061,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Niet meer tonen",
     btnNewsOpenLink:                        "Meer informatie",
     tipNewsDismiss:                         "Sluiten",
+    tipNewsShow:                            "Nieuws",
     lblStgGeneralNews:                      "Nieuws van yaiol tonen",
     btnNewsClose:                           "Sluiten",
     lblAppTabUntitled:                      "Naamloos",
@@ -1981,8 +2087,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Songmetadata bewerken",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Tekstlijst exporteren naar .txt-bestand",
-    tipHdrSettings:                         "Instellingen openen",
+    tipHdrSettings:                         "Instellingen",
     tipHdrHelp:                             "Hulp",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimaliseren",
+    tipWinMaximize:                         "Maximaliseren",
+    tipWinRestore:                          "Herstellen",
+    tipWinClose:                            "Sluiten",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Huidige regel markeren met speeltijd en verdergaan (Enter)",
@@ -2028,7 +2140,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Vul de metadata automatisch in vanuit de songtags wanneer een nieuwe LRC wordt gemaakt",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "gesynchroniseerde songtekstbestanden maken.",
+    msgStgAboutDesc:                        "Maak gesynchroniseerde LRC-bestanden: laad audio, plak songtekst, stempel elke regel met een toetsaanslag.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2084,6 +2196,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Älä näytä uudelleen",
     btnNewsOpenLink:                        "Lue lisää",
     tipNewsDismiss:                         "Sulje",
+    tipNewsShow:                            "Uutiset",
     lblStgGeneralNews:                      "Näytä uutiset yaiolista",
     btnNewsClose:                           "Sulje",
     lblAppTabUntitled:                      "Nimetön",
@@ -2109,8 +2222,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Muokkaa kappaleen metatietoja",
     btnHdrMeta:                             "Metatiedot",
     tipHdrSaveTxt:                          "Vie sanoitusluettelo .txt-tiedostoon",
-    tipHdrSettings:                         "Avaa asetukset",
+    tipHdrSettings:                         "Asetukset",
     tipHdrHelp:                             "Ohje",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Pienennä",
+    tipWinMaximize:                         "Suurenna",
+    tipWinRestore:                          "Palauta",
+    tipWinClose:                            "Sulje",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Leimaa nykyinen rivi soittimen ajalla ja etene (Enter)",
@@ -2156,7 +2275,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Täytä metatiedot automaattisesti kappaleen tunnisteista, kun uusi LRC luodaan",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "luo synkronoituja sanoitustiedostoja.",
+    msgStgAboutDesc:                        "Luo synkronoituja LRC-tiedostoja: lataa ääni, liitä sanoitukset, leimaa jokainen rivi näppäinpainalluksella.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metatiedot",
@@ -2212,6 +2331,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Να μην εμφανιστεί ξανά",
     btnNewsOpenLink:                        "Μάθετε περισσότερα",
     tipNewsDismiss:                         "Κλείσιμο",
+    tipNewsShow:                            "Ειδήσεις",
     lblStgGeneralNews:                      "Εμφάνιση ειδήσεων από το yaiol",
     btnNewsClose:                           "Κλείσιμο",
     lblAppTabUntitled:                      "Χωρίς τίτλο",
@@ -2237,8 +2357,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Επεξεργασία μεταδεδομένων τραγουδιού",
     btnHdrMeta:                             "Μεταδεδομένα",
     tipHdrSaveTxt:                          "Εξαγωγή λίστας στίχων σε αρχείο .txt",
-    tipHdrSettings:                         "Άνοιγμα ρυθμίσεων",
+    tipHdrSettings:                         "Ρυθμίσεις",
     tipHdrHelp:                             "Βοήθεια",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Ελαχιστοποίηση",
+    tipWinMaximize:                         "Μεγιστοποίηση",
+    tipWinRestore:                          "Επαναφορά",
+    tipWinClose:                            "Κλείσιμο",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Σφράγιση τρέχουσας γραμμής με χρόνο αναπαραγωγής και προώθηση (Enter)",
@@ -2284,7 +2410,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Αυτόματη συμπλήρωση των μεταδεδομένων από τις ετικέτες του τραγουδιού κατά τη δημιουργία νέου LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "δημιουργία συγχρονισμένων αρχείων στίχων.",
+    msgStgAboutDesc:                        "Δημιουργία συγχρονισμένων αρχείων LRC: φορτώστε τον ήχο, επικολλήστε τους στίχους, σημειώστε κάθε γραμμή με ένα πάτημα.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Μεταδεδομένα",
@@ -2340,6 +2466,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "אל תציג שוב",
     btnNewsOpenLink:                        "למידע נוסף",
     tipNewsDismiss:                         "סגור",
+    tipNewsShow:                            "חדשות",
     lblStgGeneralNews:                      "הצג חדשות מ-yaiol",
     btnNewsClose:                           "סגור",
     lblAppTabUntitled:                      "ללא כותרת",
@@ -2365,8 +2492,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "ערוך מטא נתונים של שיר",
     btnHdrMeta:                             "מטא נתונים",
     tipHdrSaveTxt:                          "ייצא רשימת מילים לקובץ .txt",
-    tipHdrSettings:                         "פתח הגדרות",
+    tipHdrSettings:                         "הגדרות",
     tipHdrHelp:                             "עזרה",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "מזער",
+    tipWinMaximize:                         "הגדל",
+    tipWinRestore:                          "שחזר",
+    tipWinClose:                            "סגור",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "החתם שורה נוכחית עם זמן נגן והתקדם (Enter)",
@@ -2412,7 +2545,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "מילוי אוטומטי של מטא נתונים מתגי השיר בעת יצירת LRC חדש",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "יצירת קבצי מילים מסונכרנים.",
+    msgStgAboutDesc:                        "צור קובצי LRC מסונכרנים: טען שמע, הדבק מילים, הטבע כל שורה בלחיצת מקש.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "מטא נתונים",
@@ -2468,6 +2601,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Ne prikazuj ponovno",
     btnNewsOpenLink:                        "Saznajte više",
     tipNewsDismiss:                         "Zatvori",
+    tipNewsShow:                            "Vijesti",
     lblStgGeneralNews:                      "Prikaži vijesti iz yaiol",
     btnNewsClose:                           "Zatvori",
     lblAppTabUntitled:                      "Bez naslova",
@@ -2493,8 +2627,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Uredi metapodatke pjesme",
     btnHdrMeta:                             "Metapodaci",
     tipHdrSaveTxt:                          "Izvezi popis stihova u .txt datoteku",
-    tipHdrSettings:                         "Otvori postavke",
+    tipHdrSettings:                         "Postavke",
     tipHdrHelp:                             "Pomoć",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimiziraj",
+    tipWinMaximize:                         "Maksimiziraj",
+    tipWinRestore:                          "Vrati",
+    tipWinClose:                            "Zatvori",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Označite trenutni redak vremenom reprodukcije i napredujte (Enter)",
@@ -2540,7 +2680,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automatski popuni metapodatke iz oznaka pjesme prilikom stvaranja novog LRC-a",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "stvaranje sinkroniziranih datoteka stihova.",
+    msgStgAboutDesc:                        "Stvorite sinkronizirane LRC datoteke: učitajte zvuk, zalijepite stihove, označite svaki redak pritiskom tipke.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metapodaci",
@@ -2596,6 +2736,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Ikke vis igjen",
     btnNewsOpenLink:                        "Les mer",
     tipNewsDismiss:                         "Lukk",
+    tipNewsShow:                            "Nyheter",
     lblStgGeneralNews:                      "Vis nyheter fra yaiol",
     btnNewsClose:                           "Lukk",
     lblAppTabUntitled:                      "Uten navn",
@@ -2621,8 +2762,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Rediger sangmetadata",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Eksporter tekstliste til .txt-fil",
-    tipHdrSettings:                         "Åpne innstillinger",
+    tipHdrSettings:                         "Innstillinger",
     tipHdrHelp:                             "Hjelp",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimer",
+    tipWinMaximize:                         "Maksimer",
+    tipWinRestore:                          "Gjenopprett",
+    tipWinClose:                            "Lukk",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Stemple gjeldende linje med avspillingstid og gå videre (Enter)",
@@ -2668,7 +2815,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Fyll metadata automatisk fra sangens tagger når en ny LRC opprettes",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "opprett synkroniserte tekstfiler.",
+    msgStgAboutDesc:                        "Opprett synkroniserte LRC-filer: last inn lyd, lim inn tekst, stemple hver linje med et tastetrykk.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -2724,6 +2871,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "دیگر نمایش نده",
     btnNewsOpenLink:                        "بیشتر بدانید",
     tipNewsDismiss:                         "بستن",
+    tipNewsShow:                            "اخبار",
     lblStgGeneralNews:                      "نمایش اخبار از yaiol",
     btnNewsClose:                           "بستن",
     lblAppTabUntitled:                      "بدون عنوان",
@@ -2749,8 +2897,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "ویرایش فراداده آهنگ",
     btnHdrMeta:                             "فراداده",
     tipHdrSaveTxt:                          "خروجی گرفتن از لیست متن ترانه به فایل .txt",
-    tipHdrSettings:                         "باز کردن تنظیمات",
+    tipHdrSettings:                         "تنظیمات",
     tipHdrHelp:                             "راهنما",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "کوچک‌نمایی",
+    tipWinMaximize:                         "بزرگ‌نمایی",
+    tipWinRestore:                          "بازیابی",
+    tipWinClose:                            "بستن",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "برچسب‌گذاری خط فعلی با زمان پخش‌کننده و پیشروی (Enter)",
@@ -2796,7 +2950,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "پر کردن خودکار فراداده از برچسب‌های آهنگ هنگام ایجاد LRC جدید",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ایجاد فایل‌های متن ترانه همگام‌سازی شده.",
+    msgStgAboutDesc:                        "ایجاد فایل‌های LRC همگام‌سازی شده: بارگذاری صدا، چسباندن متن ترانه، مهر زدن هر خط با یک کلید.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "فراداده",
@@ -2852,6 +3006,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Nie pokazuj ponownie",
     btnNewsOpenLink:                        "Dowiedz się więcej",
     tipNewsDismiss:                         "Zamknij",
+    tipNewsShow:                            "Wiadomości",
     lblStgGeneralNews:                      "Pokaż wiadomości z yaiol",
     btnNewsClose:                           "Zamknij",
     lblAppTabUntitled:                      "Bez tytułu",
@@ -2877,8 +3032,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Edytuj metadane utworu",
     btnHdrMeta:                             "Metadane",
     tipHdrSaveTxt:                          "Eksportuj listę tekstów do pliku .txt",
-    tipHdrSettings:                         "Otwórz ustawienia",
+    tipHdrSettings:                         "Ustawienia",
     tipHdrHelp:                             "Pomoc",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimalizuj",
+    tipWinMaximize:                         "Maksymalizuj",
+    tipWinRestore:                          "Przywróć",
+    tipWinClose:                            "Zamknij",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Oznacz bieżącą linię czasem odtwarzacza i przejdź dalej (Enter)",
@@ -2924,7 +3085,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automatycznie wypełniaj metadane z tagów utworu podczas tworzenia nowego LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "tworzenie zsynchronizowanych plików tekstów.",
+    msgStgAboutDesc:                        "Twórz zsynchronizowane pliki LRC: załaduj audio, wklej teksty, oznacz każdą linię naciśnięciem klawisza.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadane",
@@ -2980,6 +3141,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Nu mai afișa",
     btnNewsOpenLink:                        "Află mai multe",
     tipNewsDismiss:                         "Închide",
+    tipNewsShow:                            "Știri",
     lblStgGeneralNews:                      "Afișează știri de la yaiol",
     btnNewsClose:                           "Închide",
     lblAppTabUntitled:                      "Fără titlu",
@@ -3005,8 +3167,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editează metadatele melodiei",
     btnHdrMeta:                             "Metadate",
     tipHdrSaveTxt:                          "Exportă lista de versuri în fișier .txt",
-    tipHdrSettings:                         "Deschide setările",
+    tipHdrSettings:                         "Setări",
     tipHdrHelp:                             "Ajutor",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimizare",
+    tipWinMaximize:                         "Maximizare",
+    tipWinRestore:                          "Restaurare",
+    tipWinClose:                            "Închidere",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marchează linia curentă cu timpul playerului și avansează (Enter)",
@@ -3052,7 +3220,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Completează automat metadatele din etichetele melodiei la crearea unui LRC nou",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "creează fișiere de versuri sincronizate.",
+    msgStgAboutDesc:                        "Creați fișiere LRC sincronizate: încărcați audio, lipiți versurile, marcați fiecare rând cu o apăsare de tastă.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadate",
@@ -3108,6 +3276,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Visa inte igen",
     btnNewsOpenLink:                        "Läs mer",
     tipNewsDismiss:                         "Stäng",
+    tipNewsShow:                            "Nyheter",
     lblStgGeneralNews:                      "Visa nyheter från yaiol",
     btnNewsClose:                           "Stäng",
     lblAppTabUntitled:                      "Namnlös",
@@ -3133,8 +3302,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Redigera låtmetadata",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Exportera låtlista till .txt-fil",
-    tipHdrSettings:                         "Öppna inställningar",
+    tipHdrSettings:                         "Inställningar",
     tipHdrHelp:                             "Hjälp",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimera",
+    tipWinMaximize:                         "Maximera",
+    tipWinRestore:                          "Återställ",
+    tipWinClose:                            "Stäng",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Stämpla aktuell rad med spelartid och gå vidare (Enter)",
@@ -3180,7 +3355,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Fyll i metadata automatiskt från låtens taggar när en ny LRC skapas",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "skapa synkroniserade textfiler.",
+    msgStgAboutDesc:                        "Skapa synkroniserade LRC-filer: ladda ljud, klistra in text, stämpla varje rad med ett tangenttryck.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3236,6 +3411,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Không hiển thị lại",
     btnNewsOpenLink:                        "Tìm hiểu thêm",
     tipNewsDismiss:                         "Đóng",
+    tipNewsShow:                            "Tin tức",
     lblStgGeneralNews:                      "Hiển thị tin tức từ yaiol",
     btnNewsClose:                           "Đóng",
     lblAppTabUntitled:                      "Không có tiêu đề",
@@ -3261,8 +3437,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Chỉnh sửa siêu dữ liệu bài hát",
     btnHdrMeta:                             "Siêu dữ liệu",
     tipHdrSaveTxt:                          "Xuất danh sách lời bài hát ra tệp .txt",
-    tipHdrSettings:                         "Mở cài đặt",
+    tipHdrSettings:                         "Cài đặt",
     tipHdrHelp:                             "Trợ giúp",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Thu nhỏ",
+    tipWinMaximize:                         "Phóng to",
+    tipWinRestore:                          "Khôi phục",
+    tipWinClose:                            "Đóng",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Đóng dấu dòng hiện tại bằng thời gian trình phát và tiến lên (Enter)",
@@ -3308,7 +3490,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Tự động điền siêu dữ liệu từ thẻ bài hát khi tạo LRC mới",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "tạo tệp lời bài hát được đồng bộ hóa.",
+    msgStgAboutDesc:                        "Tạo tệp LRC đồng bộ: tải âm thanh, dán lời bài hát, đóng dấu từng dòng bằng phím.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Siêu dữ liệu",
@@ -3364,6 +3546,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Bir daha gösterme",
     btnNewsOpenLink:                        "Daha fazla bilgi edin",
     tipNewsDismiss:                         "Kapat",
+    tipNewsShow:                            "Haberler",
     lblStgGeneralNews:                      "yaiol'dan haberleri göster",
     btnNewsClose:                           "Kapat",
     lblAppTabUntitled:                      "Başlıksız",
@@ -3389,8 +3572,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Şarkı meta verilerini düzenle",
     btnHdrMeta:                             "Meta Veri",
     tipHdrSaveTxt:                          "Şarkı sözü listesini .txt dosyasına aktar",
-    tipHdrSettings:                         "Ayarları aç",
+    tipHdrSettings:                         "Ayarlar",
     tipHdrHelp:                             "Yardım",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Küçült",
+    tipWinMaximize:                         "Ekranı kapla",
+    tipWinRestore:                          "Geri yükle",
+    tipWinClose:                            "Kapat",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Geçerli satırı oynatıcı zamanıyla damgala ve ilerle (Enter)",
@@ -3436,7 +3625,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Yeni bir LRC oluşturulduğunda meta verileri şarkının etiketlerinden otomatik olarak doldur",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "senkronize şarkı sözü dosyaları oluştur.",
+    msgStgAboutDesc:                        "Senkronize LRC dosyaları oluşturun: sesi yükleyin, şarkı sözlerini yapıştırın, her satırı bir tuşla damgalayın.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Meta Verileri",
@@ -3492,6 +3681,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Jangan tampilkan lagi",
     btnNewsOpenLink:                        "Pelajari lebih lanjut",
     tipNewsDismiss:                         "Tutup",
+    tipNewsShow:                            "Berita",
     lblStgGeneralNews:                      "Tampilkan berita dari yaiol",
     btnNewsClose:                           "Tutup",
     lblAppTabUntitled:                      "Tanpa judul",
@@ -3517,8 +3707,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Edit metadata lagu",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Ekspor daftar lirik ke file .txt",
-    tipHdrSettings:                         "Buka pengaturan",
+    tipHdrSettings:                         "Pengaturan",
     tipHdrHelp:                             "Bantuan",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimalkan",
+    tipWinMaximize:                         "Maksimalkan",
+    tipWinRestore:                          "Pulihkan",
+    tipWinClose:                            "Tutup",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Tandai baris saat ini dengan waktu player dan lanjutkan (Enter)",
@@ -3564,7 +3760,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Isi metadata secara otomatis dari tag lagu saat LRC baru dibuat",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "buat file lirik yang tersinkronisasi.",
+    msgStgAboutDesc:                        "Buat file LRC tersinkronisasi: muat audio, tempel lirik, cap setiap baris dengan tombol.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3620,6 +3816,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Jangan tunjuk lagi",
     btnNewsOpenLink:                        "Ketahui lebih lanjut",
     tipNewsDismiss:                         "Tutup",
+    tipNewsShow:                            "Berita",
     lblStgGeneralNews:                      "Tunjukkan berita dari yaiol",
     btnNewsClose:                           "Tutup",
     lblAppTabUntitled:                      "Tanpa tajuk",
@@ -3645,8 +3842,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Edit metadata lagu",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Eksport senarai lirik ke fail .txt",
-    tipHdrSettings:                         "Buka tetapan",
+    tipHdrSettings:                         "Tetapan",
     tipHdrHelp:                             "Bantuan",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimumkan",
+    tipWinMaximize:                         "Maksimumkan",
+    tipWinRestore:                          "Pulihkan",
+    tipWinClose:                            "Tutup",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Cap baris semasa dengan masa pemain dan teruskan (Enter)",
@@ -3692,7 +3895,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Isi metadata secara automatik daripada tag lagu apabila LRC baharu dicipta",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "cipta fail lirik yang disegerakkan.",
+    msgStgAboutDesc:                        "Cipta fail LRC terselaras: muatkan audio, tampal lirik, cap setiap baris dengan kekunci.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -3748,6 +3951,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Больше не показывать",
     btnNewsOpenLink:                        "Узнать больше",
     tipNewsDismiss:                         "Закрыть",
+    tipNewsShow:                            "Новости",
     lblStgGeneralNews:                      "Показывать новости от yaiol",
     btnNewsClose:                           "Закрыть",
     lblAppTabUntitled:                      "Без названия",
@@ -3773,8 +3977,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Редактировать метаданные",
     btnHdrMeta:                             "Метаданные",
     tipHdrSaveTxt:                          "Экспортировать список текста в файл .txt",
-    tipHdrSettings:                         "Открыть настройки",
+    tipHdrSettings:                         "Настройки",
     tipHdrHelp:                             "Справка",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Свернуть",
+    tipWinMaximize:                         "Развернуть",
+    tipWinRestore:                          "Восстановить",
+    tipWinClose:                            "Закрыть",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Отметить текущую строку временем плеера и перейти далее (Enter)",
@@ -3820,7 +4030,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Автоматически заполнять метаданные из тегов песни при создании нового LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "создание синхронизированных текстов.",
+    msgStgAboutDesc:                        "Создавайте синхронизированные LRC-файлы: загрузите аудио, вставьте текст, отметьте каждую строку нажатием клавиши.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаданные",
@@ -3876,6 +4086,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "ไม่ต้องแสดงอีก",
     btnNewsOpenLink:                        "เรียนรู้เพิ่มเติม",
     tipNewsDismiss:                         "ปิด",
+    tipNewsShow:                            "ข่าว",
     lblStgGeneralNews:                      "แสดงข่าวสารจาก yaiol",
     btnNewsClose:                           "ปิด",
     lblAppTabUntitled:                      "ไม่มีชื่อ",
@@ -3901,8 +4112,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "แก้ไขข้อมูลเมตาของเพลง",
     btnHdrMeta:                             "ข้อมูลเมตา",
     tipHdrSaveTxt:                          "ส่งออกรายการเนื้อเพลงเป็นไฟล์ .txt",
-    tipHdrSettings:                         "เปิดการตั้งค่า",
+    tipHdrSettings:                         "การตั้งค่า",
     tipHdrHelp:                             "วิธีใช้",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "ย่อ",
+    tipWinMaximize:                         "ขยาย",
+    tipWinRestore:                          "คืนค่า",
+    tipWinClose:                            "ปิด",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "ประทับเวลาบรรทัดปัจจุบันและเลื่อนไป (Enter)",
@@ -3948,7 +4165,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "กรอกข้อมูลเมตาโดยอัตโนมัติจากแท็กเพลงเมื่อสร้าง LRC ใหม่",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "สร้างไฟล์เนื้อเพลงที่ซิงค์",
+    msgStgAboutDesc:                        "สร้างไฟล์ LRC ที่ซิงค์: โหลดเสียง, วางเนื้อเพลง, ประทับเวลาแต่ละบรรทัดด้วยการกดปุ่ม.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "ข้อมูลเมตา",
@@ -4004,6 +4221,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Більше не показувати",
     btnNewsOpenLink:                        "Дізнатися більше",
     tipNewsDismiss:                         "Закрити",
+    tipNewsShow:                            "Новини",
     lblStgGeneralNews:                      "Показувати новини від yaiol",
     btnNewsClose:                           "Закрити",
     lblAppTabUntitled:                      "Без назви",
@@ -4029,8 +4247,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Редагувати метадані пісні",
     btnHdrMeta:                             "Метадані",
     tipHdrSaveTxt:                          "Експортувати список текстів у файл .txt",
-    tipHdrSettings:                         "Відкрити налаштування",
+    tipHdrSettings:                         "Налаштування",
     tipHdrHelp:                             "Довідка",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Згорнути",
+    tipWinMaximize:                         "Розгорнути",
+    tipWinRestore:                          "Відновити",
+    tipWinClose:                            "Закрити",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Позначити поточний рядок часом програвача та перейти далі (Enter)",
@@ -4076,7 +4300,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Автоматично заповнювати метадані з тегів пісні при створенні нового LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "створювати синхронізовані файли текстів.",
+    msgStgAboutDesc:                        "Створюйте синхронізовані LRC-файли: завантажте аудіо, вставте текст, позначте кожен рядок натисканням клавіші.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метадані",
@@ -4132,6 +4356,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Այլևս չցուցադրել",
     btnNewsOpenLink:                        "Իմանալ ավելին",
     tipNewsDismiss:                         "Փակել",
+    tipNewsShow:                            "Նորություններ",
     lblStgGeneralNews:                      "Ցուցադրել նորություններ yaiol-ից",
     btnNewsClose:                           "Փակել",
     lblAppTabUntitled:                      "Անվերնագիր",
@@ -4157,8 +4382,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Խմբագրել երգի մետատվյալը",
     btnHdrMeta:                             "Մետատվյալ",
     tipHdrSaveTxt:                          "Արտահանել տողերի ցուցակը .txt ֆայլ",
-    tipHdrSettings:                         "Բացել կարգավորումները",
+    tipHdrSettings:                         "Կարգավորումներ",
     tipHdrHelp:                             "Օգնություն",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Նվազեցնել",
+    tipWinMaximize:                         "Առավելագույնի հասցնել",
+    tipWinRestore:                          "Վերականգնել",
+    tipWinClose:                            "Փակել",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Ժամանակ դնել ընթացիկ տողին և անցնել հաջորդին (Enter)",
@@ -4204,7 +4435,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Ավտոմատ լրացնել մետատվյալները երգի թեգերից՝ նոր LRC ստեղծելիս",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ստեղծել համաժամեցված երգի տեքստի ֆայլեր:",
+    msgStgAboutDesc:                        "Ստեղծեք համաժամեցված LRC ֆայլեր. բեռնեք աուդիոն, տեղադրեք երգի տեքստը, դրոշմեք յուրաքանչյուր տող ստեղնաշարի սեղմումով։",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Մետատվյալ",
@@ -4260,6 +4491,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Не показвай отново",
     btnNewsOpenLink:                        "Научете повече",
     tipNewsDismiss:                         "Затвори",
+    tipNewsShow:                            "Новини",
     lblStgGeneralNews:                      "Показвай новини от yaiol",
     btnNewsClose:                           "Затвори",
     lblAppTabUntitled:                      "Без заглавие",
@@ -4285,8 +4517,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Редактирай метаданните на песента",
     btnHdrMeta:                             "Метаданни",
     tipHdrSaveTxt:                          "Експортирай списъка с текст в .txt файл",
-    tipHdrSettings:                         "Отвори настройките",
+    tipHdrSettings:                         "Настройки",
     tipHdrHelp:                             "Помощ",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Минимизиране",
+    tipWinMaximize:                         "Максимизиране",
+    tipWinRestore:                          "Възстановяване",
+    tipWinClose:                            "Затваряне",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Маркирай текущия ред с времето на плейъра и напредни (Enter)",
@@ -4332,7 +4570,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Автоматично попълване на метаданните от таговете на песента при създаване на нов LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "създавайте синхронизирани файлове с текст.",
+    msgStgAboutDesc:                        "Създайте синхронизирани LRC файлове: заредете аудиото, поставете текстовете, маркирайте всеки ред с натискане на клавиш.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаданни",
@@ -4388,6 +4626,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Non mostrar de novo",
     btnNewsOpenLink:                        "Máis información",
     tipNewsDismiss:                         "Pechar",
+    tipNewsShow:                            "Novas",
     lblStgGeneralNews:                      "Mostrar noticias de yaiol",
     btnNewsClose:                           "Pechar",
     lblAppTabUntitled:                      "Sen título",
@@ -4413,8 +4652,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Editar metadatos da canción",
     btnHdrMeta:                             "Metadatos",
     tipHdrSaveTxt:                          "Exportar lista de letras a ficheiro .txt",
-    tipHdrSettings:                         "Abrir configuración",
+    tipHdrSettings:                         "Configuración",
     tipHdrHelp:                             "Axuda",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimizar",
+    tipWinMaximize:                         "Maximizar",
+    tipWinRestore:                          "Restaurar",
+    tipWinClose:                            "Pechar",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Marcar a liña actual co tempo do reprodutor e avanzar (Enter)",
@@ -4460,7 +4705,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Encher automaticamente os metadatos das etiquetas da canción ao crear un novo LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "crea ficheiros de letra sincronizada.",
+    msgStgAboutDesc:                        "Cree ficheiros LRC sincronizados: cargue o audio, pegue as letras, marque cada liña cunha pulsación.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadatos",
@@ -4516,6 +4761,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Ne mutasd újra",
     btnNewsOpenLink:                        "Tudjon meg többet",
     tipNewsDismiss:                         "Bezárás",
+    tipNewsShow:                            "Hírek",
     lblStgGeneralNews:                      "Hírek megjelenítése a yaiol-tól",
     btnNewsClose:                           "Bezárás",
     lblAppTabUntitled:                      "Névtelen",
@@ -4541,8 +4787,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Dal metaadatainak szerkesztése",
     btnHdrMeta:                             "Metaadatok",
     tipHdrSaveTxt:                          "Dalszöveglista exportálása .txt fájlba",
-    tipHdrSettings:                         "Beállítások megnyitása",
+    tipHdrSettings:                         "Beállítások",
     tipHdrHelp:                             "Súgó",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Kis méretre",
+    tipWinMaximize:                         "Teljes méretre",
+    tipWinRestore:                          "Visszaállítás",
+    tipWinClose:                            "Bezárás",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Aktuális sor időbélyegzése és továbblépés (Enter)",
@@ -4588,7 +4840,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automatikus metaadat-kitöltés a dal címkéiből új LRC létrehozásakor",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "szinkronizált dalszöveg fájlok létrehozása.",
+    msgStgAboutDesc:                        "Szinkronizált LRC fájlok létrehozása: töltse be az audiót, illessze be a dalszöveget, bélyegezze meg minden sort egy billentyűnyomással.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metaadatok",
@@ -4644,6 +4896,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Daugiau nerodyti",
     btnNewsOpenLink:                        "Sužinoti daugiau",
     tipNewsDismiss:                         "Uždaryti",
+    tipNewsShow:                            "Naujienos",
     lblStgGeneralNews:                      "Rodyti naujienas iš yaiol",
     btnNewsClose:                           "Uždaryti",
     lblAppTabUntitled:                      "Be pavadinimo",
@@ -4669,8 +4922,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Redaguoti dainos metaduomenis",
     btnHdrMeta:                             "Metaduomenys",
     tipHdrSaveTxt:                          "Eksportuoti žodžių sąrašą į .txt failą",
-    tipHdrSettings:                         "Atidaryti nustatymus",
+    tipHdrSettings:                         "Nustatymai",
     tipHdrHelp:                             "Pagalba",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Mažinti",
+    tipWinMaximize:                         "Didinti",
+    tipWinRestore:                          "Atkurti",
+    tipWinClose:                            "Uždaryti",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Pažymėti esamą eilutę grotuvo laiku ir pereiti prie kitos (Enter)",
@@ -4716,7 +4975,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automatiškai užpildyti metaduomenis iš dainos žymų, kai sukuriamas naujas LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "kurti sinchronizuotus dainos žodžių failus.",
+    msgStgAboutDesc:                        "Kurkite sinchronizuotus LRC failus: įkelkite garso įrašą, įklijuokite dainų tekstus, pažymėkite kiekvieną eilutę klavišo paspaudimu.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metaduomenys",
@@ -4772,6 +5031,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Не прикажувај повторно",
     btnNewsOpenLink:                        "Дознајте повеќе",
     tipNewsDismiss:                         "Затвори",
+    tipNewsShow:                            "Вести",
     lblStgGeneralNews:                      "Прикажи вести од yaiol",
     btnNewsClose:                           "Затвори",
     lblAppTabUntitled:                      "Без наслов",
@@ -4797,8 +5057,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Уреди метаподатоци на песната",
     btnHdrMeta:                             "Метаподатоци",
     tipHdrSaveTxt:                          "Извези листа со текст во .txt фајл",
-    tipHdrSettings:                         "Отвори поставки",
+    tipHdrSettings:                         "Поставки",
     tipHdrHelp:                             "Помош",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Минимизирај",
+    tipWinMaximize:                         "Максимизирај",
+    tipWinRestore:                          "Врати",
+    tipWinClose:                            "Затвори",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Означи го тековниот ред со времето на плеерот и напредни (Enter)",
@@ -4844,7 +5110,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Автоматски пополнувај ги метаподатоците од ознаките на песната кога се креира нов LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "создавајте синхронизирани фајлови со текст на песни.",
+    msgStgAboutDesc:                        "Креирајте синхронизирани LRC датотеки: вчитајте го аудиото, залепете ги стиховите, означете ја секоја линија со притискање на копче.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаподатоци",
@@ -4900,6 +5166,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Не приказуј поново",
     btnNewsOpenLink:                        "Сазнајте више",
     tipNewsDismiss:                         "Затвори",
+    tipNewsShow:                            "Вести",
     lblStgGeneralNews:                      "Прикажи вести из yaiol",
     btnNewsClose:                           "Затвори",
     lblAppTabUntitled:                      "Без наслова",
@@ -4925,8 +5192,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Уреди метаподатке песме",
     btnHdrMeta:                             "Метаподаци",
     tipHdrSaveTxt:                          "Извези листу са текстом у .txt фајл",
-    tipHdrSettings:                         "Отвори подешавања",
+    tipHdrSettings:                         "Подешавања",
     tipHdrHelp:                             "Помоћ",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Минимизуј",
+    tipWinMaximize:                         "Максимизуј",
+    tipWinRestore:                          "Врати",
+    tipWinClose:                            "Затвори",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Означи тренутни ред временом плејера и пређи на следећи (Enter)",
@@ -4972,7 +5245,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Аутоматски попуни метаподатке из ознака песме када се креира нови LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "креирајте синхронизоване фајлове са текстом песама.",
+    msgStgAboutDesc:                        "Креирајте синхронизоване LRC датотеке: учитајте аудио, налепите текстове, означите сваки ред притиском на тастер.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Метаподаци",
@@ -5028,6 +5301,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Nezobrazovať znova",
     btnNewsOpenLink:                        "Zistiť viac",
     tipNewsDismiss:                         "Zavrieť",
+    tipNewsShow:                            "Správy",
     lblStgGeneralNews:                      "Zobrazovať správy z yaiol",
     btnNewsClose:                           "Zavrieť",
     lblAppTabUntitled:                      "Bez názvu",
@@ -5053,8 +5327,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Upraviť metadáta skladby",
     btnHdrMeta:                             "Metadáta",
     tipHdrSaveTxt:                          "Exportovať zoznam textu do súboru .txt",
-    tipHdrSettings:                         "Otvoriť nastavenia",
+    tipHdrSettings:                         "Nastavenia",
     tipHdrHelp:                             "Pomoc",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Minimalizovať",
+    tipWinMaximize:                         "Maximalizovať",
+    tipWinRestore:                          "Obnoviť",
+    tipWinClose:                            "Zavrieť",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Označiť aktuálny riadok časom prehrávača a postúpiť (Enter)",
@@ -5100,7 +5380,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Automaticky vyplniť metadáta z tagov skladby pri vytvorení nového LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "vytvárať synchronizované súbory s textom piesní.",
+    msgStgAboutDesc:                        "Vytvorte synchronizované LRC súbory: načítajte zvuk, vložte texty, označte každý riadok stlačením klávesu.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadáta",
@@ -5156,6 +5436,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Ne prikazuj več",
     btnNewsOpenLink:                        "Več o tem",
     tipNewsDismiss:                         "Zapri",
+    tipNewsShow:                            "Novice",
     lblStgGeneralNews:                      "Prikaži novice iz yaiol",
     btnNewsClose:                           "Zapri",
     lblAppTabUntitled:                      "Brez naslova",
@@ -5181,8 +5462,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Uredi metapodatke pesmi",
     btnHdrMeta:                             "Metapodatki",
     tipHdrSaveTxt:                          "Izvozi seznam besedil v datoteko .txt",
-    tipHdrSettings:                         "Odpri nastavitve",
+    tipHdrSettings:                         "Nastavitve",
     tipHdrHelp:                             "Pomoč",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Pomanjšaj",
+    tipWinMaximize:                         "Povečaj",
+    tipWinRestore:                          "Obnovi",
+    tipWinClose:                            "Zapri",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Označi trenutno vrstico s časom predvajalnika in nadaljuj (Enter)",
@@ -5228,7 +5515,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Samodejno izpolni metapodatke iz oznak pesmi ob ustvarjanju novega LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ustvarjajte sinhronizirane datoteke z besedili pesmi.",
+    msgStgAboutDesc:                        "Ustvarite sinhronizirane LRC datoteke: naložite zvok, prilepite besedila, označite vsako vrstico s pritiskom tipke.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metapodatki",
@@ -5284,6 +5571,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "மீண்டும் காட்டாதே",
     btnNewsOpenLink:                        "மேலும் அறிக",
     tipNewsDismiss:                         "மூடு",
+    tipNewsShow:                            "செய்திகள்",
     lblStgGeneralNews:                      "yaiol இலிருந்து செய்திகளைக் காட்டு",
     btnNewsClose:                           "மூடு",
     lblAppTabUntitled:                      "தலைப்பற்றது",
@@ -5309,8 +5597,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "பாடலின் மெட்டாத் தரவை திருத்து",
     btnHdrMeta:                             "மெட்டாத் தரவு",
     tipHdrSaveTxt:                          "பாடல் வரிகள் பட்டியலை .txt கோப்பாக ஏற்றுமதி செய்",
-    tipHdrSettings:                         "அமைப்புகளை திற",
+    tipHdrSettings:                         "அமைப்புகள்",
     tipHdrHelp:                             "உதவி",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "சுருக்கு",
+    tipWinMaximize:                         "பெரிதாக்கு",
+    tipWinRestore:                          "மீட்டமை",
+    tipWinClose:                            "மூடு",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "தற்போதைய வரியை இயக்க நேரத்துடன் முத்திரையிட்டு முன்னேறு (Enter)",
@@ -5356,7 +5650,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "புதிய LRC உருவாக்கும்போது பாடலின் குறிச்சொற்களிலிருந்து மெட்டாடேட்டாவை தானாக நிரப்பு",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ஒத்திசைக்கப்பட்ட பாடல் வரிகள் கோப்புகளை உருவாக்குங்கள்.",
+    msgStgAboutDesc:                        "ஒத்திசைக்கப்பட்ட LRC கோப்புகளை உருவாக்கவும்: ஆடியோவை ஏற்றவும், பாடல் வரிகளை ஒட்டவும், ஒவ்வொரு வரியையும் ஒரு விசை அழுத்தத்துடன் முத்திரையிடவும்.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "மெட்டாத் தரவு",
@@ -5412,6 +5706,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "दोबारा न दिखाएँ",
     btnNewsOpenLink:                        "और जानें",
     tipNewsDismiss:                         "बंद करें",
+    tipNewsShow:                            "समाचार",
     lblStgGeneralNews:                      "yaiol से समाचार दिखाएँ",
     btnNewsClose:                           "बंद करें",
     lblAppTabUntitled:                      "अनाम",
@@ -5437,8 +5732,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "गाने का मेटाडेटा संपादित करें",
     btnHdrMeta:                             "मेटाडेटा",
     tipHdrSaveTxt:                          "गीत सूची को .txt फ़ाइल में निर्यात करें",
-    tipHdrSettings:                         "सेटिंग्स खोलें",
+    tipHdrSettings:                         "सेटिंग्स",
     tipHdrHelp:                             "सहायता",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "छोटा करें",
+    tipWinMaximize:                         "बड़ा करें",
+    tipWinRestore:                          "पुनर्स्थापित करें",
+    tipWinClose:                            "बंद करें",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "वर्तमान पंक्ति को प्लेयर समय से टैग करें और आगे बढ़ें (Enter)",
@@ -5484,7 +5785,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "नया LRC बनाते समय गाने के टैग से मेटाडेटा स्वचालित रूप से भरें",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "समन्वित गीत फ़ाइलें बनाएं।",
+    msgStgAboutDesc:                        "समकालिक LRC फ़ाइलें बनाएँ: ऑडियो लोड करें, गीत चिपकाएँ, प्रत्येक पंक्ति को एक कीप्रेस के साथ स्टैंप करें।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "मेटाडेटा",
@@ -5540,6 +5841,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "আবার দেখাবেন না",
     btnNewsOpenLink:                        "আরও জানুন",
     tipNewsDismiss:                         "বন্ধ করুন",
+    tipNewsShow:                            "খবর",
     lblStgGeneralNews:                      "yaiol থেকে খবর দেখান",
     btnNewsClose:                           "বন্ধ করুন",
     lblAppTabUntitled:                      "শিরোনামহীন",
@@ -5565,8 +5867,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "গানের মেটাডেটা সম্পাদনা করুন",
     btnHdrMeta:                             "মেটাডেটা",
     tipHdrSaveTxt:                          "গানের কথার তালিকা .txt ফাইলে রপ্তানি করুন",
-    tipHdrSettings:                         "সেটিংস খুলুন",
+    tipHdrSettings:                         "সেটিংস",
     tipHdrHelp:                             "সাহায্য",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "ছোট করুন",
+    tipWinMaximize:                         "বড় করুন",
+    tipWinRestore:                          "পুনরুদ্ধার করুন",
+    tipWinClose:                            "বন্ধ করুন",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "বর্তমান লাইনকে প্লেয়ার সময় দিয়ে চিহ্নিত করুন এবং এগিয়ে যান (Enter)",
@@ -5612,7 +5920,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "নতুন LRC তৈরি করার সময় গানের ট্যাগ থেকে মেটাডেটা স্বয়ংক্রিয়ভাবে পূরণ করুন",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "সমন্বিত গানের কথার ফাইল তৈরি করুন।",
+    msgStgAboutDesc:                        "সিঙ্ক্রোনাইজড LRC ফাইল তৈরি করুন: অডিও লোড করুন, লিরিক্স পেস্ট করুন, একটি কীপ্রেস দিয়ে প্রতিটি লাইন স্ট্যাম্প করুন।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "মেটাডেটা",
@@ -5668,6 +5976,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "دوبارہ نہ دکھائیں",
     btnNewsOpenLink:                        "مزید جانیں",
     tipNewsDismiss:                         "بند کریں",
+    tipNewsShow:                            "خبریں",
     lblStgGeneralNews:                      "yaiol سے خبریں دکھائیں",
     btnNewsClose:                           "بند کریں",
     lblAppTabUntitled:                      "بے عنوان",
@@ -5693,8 +6002,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "گانے کا میٹا ڈیٹا ترمیم کریں",
     btnHdrMeta:                             "میٹا ڈیٹا",
     tipHdrSaveTxt:                          "گانوں کی فہرست .txt فائل میں برآمد کریں",
-    tipHdrSettings:                         "ترتیبات کھولیں",
+    tipHdrSettings:                         "ترتیبات",
     tipHdrHelp:                             "مدد",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "چھوٹا کریں",
+    tipWinMaximize:                         "بڑا کریں",
+    tipWinRestore:                          "بحال کریں",
+    tipWinClose:                            "بند کریں",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "موجودہ لائن کو پلیئر وقت سے نشان زد کریں اور آگے بڑھیں (Enter)",
@@ -5740,7 +6055,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "نئی LRC بناتے وقت گانے کے ٹیگز سے میٹا ڈیٹا خود بخود پُر کریں",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ہم آہنگ گانوں کی فائلیں بنائیں۔",
+    msgStgAboutDesc:                        "ہم آہنگ LRC فائلیں بنائیں: آڈیو لوڈ کریں، دھن چسپاں کریں، ہر سطر کو ایک کی پریس کے ساتھ مہر لگائیں۔",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "میٹا ڈیٹا",
@@ -5796,6 +6111,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Usionyeshe tena",
     btnNewsOpenLink:                        "Jifunze zaidi",
     tipNewsDismiss:                         "Funga",
+    tipNewsShow:                            "Habari",
     lblStgGeneralNews:                      "Onyesha habari kutoka yaiol",
     btnNewsClose:                           "Funga",
     lblAppTabUntitled:                      "Bila jina",
@@ -5821,8 +6137,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Hariri metadata ya wimbo",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "Hamisha orodha ya maneno kwenye faili la .txt",
-    tipHdrSettings:                         "Fungua mipangilio",
+    tipHdrSettings:                         "Mipangilio",
     tipHdrHelp:                             "Msaada",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Punguza",
+    tipWinMaximize:                         "Ongeza",
+    tipWinRestore:                          "Rejesha",
+    tipWinClose:                            "Funga",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Weka alama ya mstari wa sasa na wakati wa mchezaji na endelea (Enter)",
@@ -5868,7 +6190,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Jaza metadata kiotomatiki kutoka kwa vitambulisho vya wimbo wakati LRC mpya inaundwa",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "unda faili za maneno ya wimbo zilizosawazishwa.",
+    msgStgAboutDesc:                        "Unda faili za LRC zilizosawazishwa: pakia sauti, bandika maneno ya nyimbo, weka muhuri kila mstari kwa kubonyeza kitufe.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",
@@ -5924,6 +6246,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ",
     btnNewsOpenLink:                        "ਹੋਰ ਜਾਣੋ",
     tipNewsDismiss:                         "ਬੰਦ ਕਰੋ",
+    tipNewsShow:                            "ਖ਼ਬਰਾਂ",
     lblStgGeneralNews:                      "yaiol ਤੋਂ ਖ਼ਬਰਾਂ ਦਿਖਾਓ",
     btnNewsClose:                           "ਬੰਦ ਕਰੋ",
     lblAppTabUntitled:                      "ਬੇਨਾਮ",
@@ -5949,8 +6272,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "ਗੀਤ ਦਾ ਮੈਟਾਡੇਟਾ ਸੰਪਾਦਿਤ ਕਰੋ",
     btnHdrMeta:                             "ਮੈਟਾਡੇਟਾ",
     tipHdrSaveTxt:                          "ਗੀਤ ਸੂਚੀ .txt ਫਾਈਲ ਵਿੱਚ ਨਿਰਯਾਤ ਕਰੋ",
-    tipHdrSettings:                         "ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ",
+    tipHdrSettings:                         "ਸੈਟਿੰਗਾਂ",
     tipHdrHelp:                             "ਮਦਦ",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "ਛੋਟਾ ਕਰੋ",
+    tipWinMaximize:                         "ਵੱਡਾ ਕਰੋ",
+    tipWinRestore:                          "ਮੁੜ-ਬਹਾਲ ਕਰੋ",
+    tipWinClose:                            "ਬੰਦ ਕਰੋ",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "ਮੌਜੂਦਾ ਲਾਈਨ ਨੂੰ ਪਲੇਅਰ ਸਮੇਂ ਨਾਲ ਮਾਰਕ ਕਰੋ ਅਤੇ ਅੱਗੇ ਵਧੋ (Enter)",
@@ -5996,7 +6325,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "ਨਵਾਂ LRC ਬਣਾਉਣ ਵੇਲੇ ਗੀਤ ਦੇ ਟੈਗਸ ਤੋਂ ਮੈਟਾਡੇਟਾ ਆਪਣੇ ਆਪ ਭਰੋ",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ਸਮਕਾਲੀ ਗੀਤ ਫਾਈਲਾਂ ਬਣਾਓ।",
+    msgStgAboutDesc:                        "ਸਿੰਕ੍ਰੋਨਾਈਜ਼ਡ LRC ਫਾਈਲਾਂ ਬਣਾਓ: ਆਡੀਓ ਲੋਡ ਕਰੋ, ਬੋਲ ਪੇਸਟ ਕਰੋ, ਹਰੇਕ ਲਾਈਨ ਨੂੰ ਇੱਕ ਕੀਪ੍ਰੈਸ ਨਾਲ ਸਟੈਂਪ ਕਰੋ।",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "ਮੈਟਾਡੇਟਾ",
@@ -6052,6 +6381,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Kada a sake nunawa",
     btnNewsOpenLink:                        "Koyi game da shi",
     tipNewsDismiss:                         "Rufe",
+    tipNewsShow:                            "Labarai",
     lblStgGeneralNews:                      "Nuna labarai daga yaiol",
     btnNewsClose:                           "Rufe",
     lblAppTabUntitled:                      "Ba taken",
@@ -6077,8 +6407,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Gyara bayanan kula na waƙa",
     btnHdrMeta:                             "Bayanan kula",
     tipHdrSaveTxt:                          "Fitar da jerin waƙa zuwa fayil ɗin .txt",
-    tipHdrSettings:                         "Buɗe saitunan",
+    tipHdrSettings:                         "Saituna",
     tipHdrHelp:                             "Taimako",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Rage girma",
+    tipWinMaximize:                         "Ƙara girma",
+    tipWinRestore:                          "Mayar",
+    tipWinClose:                            "Rufe",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Alamta layin yanzu da lokacin mai kunna waƙa kuma ci gaba (Enter)",
@@ -6124,7 +6460,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Cika metadata ta atomatik daga alamomin waƙar lokacin da aka ƙirƙiri sabon LRC",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ƙirƙira fayilolin waƙa masu daidaitawa.",
+    msgStgAboutDesc:                        "Ƙirƙiri fayilolin LRC masu daidaitawa: ɗora sauti, liƙa waƙoƙin, buga kowane layi da maɓalli.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Bayanan kula",
@@ -6180,6 +6516,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Maṣe fi han mọ",
     btnNewsOpenLink:                        "Kọ́ ẹ̀kọ́ síwájú",
     tipNewsDismiss:                         "Pa",
+    tipNewsShow:                            "Ìròyìn",
     lblStgGeneralNews:                      "Fi iroyin lati yaiol han",
     btnNewsClose:                           "Pade",
     lblAppTabUntitled:                      "Ailori",
@@ -6205,8 +6542,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "Ṣàtúnṣe àlàyé àfikún orin",
     btnHdrMeta:                             "Àlàyé àfikún",
     tipHdrSaveTxt:                          "Gbé àkójọ orin jáde sí fáìlì .txt",
-    tipHdrSettings:                         "Ṣii ètò",
+    tipHdrSettings:                         "Ètò",
     tipHdrHelp:                             "Iranlọwọ",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Din-kekere",
+    tipWinMaximize:                         "Din-nla",
+    tipWinRestore:                          "Mu pada",
+    tipWinClose:                            "Pa",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Samisi ìlà lọwọlọwọ pẹlu àkókò olùṣere kí o sì tẹsiwaju (Enter)",
@@ -6252,7 +6595,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Fọwọsi metadata laifọwọyi lati awọn ami orin nigbati a ba ṣẹda LRC tuntun",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "ṣẹdá àwọn fáìlì orin tí a dọgba.",
+    msgStgAboutDesc:                        "Ṣẹda awọn faili LRC ti o muṣiṣẹpọ: gbe ohun sori ẹrọ, lẹẹ orin, fi ontẹ si ila kọọkan pẹlu titẹ bọtini.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Àlàyé àfikún",
@@ -6308,6 +6651,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "మళ్ళీ చూపవద్దు",
     btnNewsOpenLink:                        "మరింత తెలుసుకోండి",
     tipNewsDismiss:                         "మూసివేయండి",
+    tipNewsShow:                            "వార్తలు",
     lblStgGeneralNews:                      "yaiol నుండి వార్తలను చూపించు",
     btnNewsClose:                           "మూసివేయి",
     lblAppTabUntitled:                      "పేరులేనిది",
@@ -6333,8 +6677,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "పాట మెటా డేటా సవరించు",
     btnHdrMeta:                             "మెటా డేటా",
     tipHdrSaveTxt:                          "పాట జాబితాను .txt ఫైల్‌కు ఎగుమతి చేయి",
-    tipHdrSettings:                         "సెట్టింగులు తెరవండి",
+    tipHdrSettings:                         "సెట్టింగ్‌లు",
     tipHdrHelp:                             "సహాయం",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "చిన్నది చేయి",
+    tipWinMaximize:                         "పెద్దది చేయి",
+    tipWinRestore:                          "పునరుద్ధరించు",
+    tipWinClose:                            "మూసివేయి",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "ప్రస్తుత లైన్‌ను ప్లేయర్ సమయంతో గుర్తించి ముందుకు వెళ్ళు (Enter)",
@@ -6380,7 +6730,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "కొత్త LRC సృష్టించినప్పుడు పాట ట్యాగ్‌ల నుండి మెటాడేటాను స్వయంచాలకంగా పూరించండి",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "సమకాలీకరించిన పాట ఫైళ్ళు సృష్టించండి.",
+    msgStgAboutDesc:                        "సమకాలీకరించిన LRC ఫైల్‌లను సృష్టించండి: ఆడియోను లోడ్ చేయండి, సాహిత్యాన్ని అతికించండి, కీప్రెస్‌తో ప్రతి పంక్తిని స్టాంప్ చేయండి.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "మెటా డేటా",
@@ -6436,6 +6786,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "पुन्हा दाखवू नका",
     btnNewsOpenLink:                        "अधिक जाणून घ्या",
     tipNewsDismiss:                         "बंद करा",
+    tipNewsShow:                            "बातम्या",
     lblStgGeneralNews:                      "yaiol कडून बातम्या दाखवा",
     btnNewsClose:                           "बंद करा",
     lblAppTabUntitled:                      "अनामिक",
@@ -6461,8 +6812,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "गाण्याचा मेटाडेटा संपादित करा",
     btnHdrMeta:                             "मेटाडेटा",
     tipHdrSaveTxt:                          "गीत यादी .txt फाइलमध्ये निर्यात करा",
-    tipHdrSettings:                         "सेटिंग्ज उघडा",
+    tipHdrSettings:                         "सेटिंग्ज",
     tipHdrHelp:                             "मदत",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "लहान करा",
+    tipWinMaximize:                         "मोठे करा",
+    tipWinRestore:                          "पुनर्संचयित करा",
+    tipWinClose:                            "बंद करा",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "वर्तमान ओळीला प्लेयर वेळाने टाइमस्टॅम्प करा आणि पुढे जा (Enter)",
@@ -6508,7 +6865,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "नवीन LRC तयार करताना गाण्याच्या टॅग्समधून मेटाडेटा आपोआप भरा",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "समकालीन गीत फाइल्स तयार करा.",
+    msgStgAboutDesc:                        "सिंक्रोनाइझ्ड LRC फाइल्स तयार करा: ऑडिओ लोड करा, लिरिक्स पेस्ट करा, कीप्रेसने प्रत्येक ओळीवर स्टॅम्प करा.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "मेटाडेटा",
@@ -6564,6 +6921,7 @@ const TRANSLATIONS = {
     lblNewsHideForever:                     "Huwag nang ipakita muli",
     btnNewsOpenLink:                        "Matuto pa",
     tipNewsDismiss:                         "Isara",
+    tipNewsShow:                            "Balita",
     lblStgGeneralNews:                      "Ipakita ang balita mula sa yaiol",
     btnNewsClose:                           "Isara",
     lblAppTabUntitled:                      "Walang pamagat",
@@ -6589,8 +6947,14 @@ const TRANSLATIONS = {
     tipHdrMeta:                             "I-edit ang metadata ng kanta",
     btnHdrMeta:                             "Metadata",
     tipHdrSaveTxt:                          "I-export ang listahan ng liriko sa .txt file",
-    tipHdrSettings:                         "Buksan ang mga setting",
+    tipHdrSettings:                         "Mga Setting",
     tipHdrHelp:                             "Tulong",
+
+    // Prefix:Win - Scope:window bar (the app's own title bar)
+    tipWinMinimize:                         "Paliitin",
+    tipWinMaximize:                         "Palakihin",
+    tipWinRestore:                          "Ibalik",
+    tipWinClose:                            "Isara",
 
     // Prefix:Footer - Scope:bottom player bar controls
     tipFtrSyncTime:                         "Markahan ang kasalukuyang linya gamit ang oras ng player at sumulong (Enter)",
@@ -6636,7 +7000,7 @@ const TRANSLATIONS = {
     lblStgMetaAutoFill:                     "Awtomatikong punan ang metadata mula sa mga tag ng kanta kapag may bagong LRC na nilikha",
 
     // Prefix:StgAbout - Scope:settings view (About tab)
-    msgStgAboutDesc:                        "lumikha ng mga naka-synchronize na liriko file.",
+    msgStgAboutDesc:                        "Gumawa ng mga naka-synchronize na LRC file: i-load ang audio, i-paste ang lyrics, tatakan ang bawat linya sa pamamagitan ng pagpindot ng key.",
 
     // Prefix:DlgMeta - Scope:metadata dialog
     ttlDlgMeta:                             "Metadata",

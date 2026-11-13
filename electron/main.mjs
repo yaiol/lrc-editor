@@ -9,6 +9,7 @@ import pkg from "../package.json" with { type: "json" };
 import { mark, dumpStartupTiming } from "./startup-timing.mjs";
 import { lastDir, rememberDir } from "./dialog-memory.mjs";
 import { registerNewsRoutes } from "./news.mjs";
+import { registerWindowRoutes, watchWindowState } from "./window-bar.mjs";
 mark("electron boot + module imports");
 
 // ESM has no __dirname - derive it from import.meta.url.
@@ -116,6 +117,8 @@ function startServer(callback) {
     if (req.method === "OPTIONS") { res.sendStatus(204); return; }
     next();
   });
+
+  registerWindowRoutes(api, () => mainWindow);
 
   api.get("/version", (req, res) => {
     res.json({ version: app.getVersion() });
@@ -385,7 +388,7 @@ function createWindow(port) {
     height: 720,
     minWidth: 700,
     minHeight: 500,
-    frame: true,
+    frame: false,   // the app draws its own window bar (UisBarWindow)
     icon: path.join(__dirname, isDev ? '../public/app.ico' : '../dist/app.ico'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -399,6 +402,7 @@ function createWindow(port) {
   } else {
     mainWindow.loadFile(path.join(__dirname, "../dist/index.html"), { query: { apiPort: String(port) } });
   }
+  watchWindowState(mainWindow);
   mark("BrowserWindow created");
   mainWindow.webContents.once('did-finish-load', () => { mark("renderer did-finish-load"); dumpStartupTiming({ appName: APP_NAME, isDev, userDataPath: app.getPath("userData") }); });
   mainWindow.webContents.on('did-finish-load', () => mainWindow.setTitle(isDev ? `${APP_NAME} (Dev)` : APP_NAME));
