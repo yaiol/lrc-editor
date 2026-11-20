@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* The app's own CSS, copied rule for rule from the Electron app's own CSS block. The palette and every shared class come
+   from the catalog CSS files that load before this one. */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #main { height: 100%; overflow: hidden; }
+body { background: var(--uis-bg); color: var(--uis-text); font-family: 'Inter', system-ui, sans-serif; font-size: 13px; }
+button { cursor: pointer; border: none; background: none; color: inherit; font-family: inherit; font-size: inherit; }
+button:focus-visible { outline: 2px solid var(--uis-accent) !important; outline-offset: 2px; border-radius: 4px; }
+input, textarea, select { font-family: inherit; font-size: inherit; color: var(--uis-text); background: var(--uis-bg-input); border: 1px solid var(--uis-border); border-radius: 4px; outline: none; }
+input:focus, textarea:focus, select:focus { border-color: var(--uis-accent); }
+textarea { resize: none; }
+.empty-state { padding: 32px 16px; text-align: center; color: var(--uis-text-mute); font-size: 12px; }
+.lrc-out-line { display: flex; align-items: center; padding: 4px 6px 4px 4px; min-height: 28px; cursor: pointer; border-bottom: 1px solid var(--uis-border)20; font-family: 'Consolas', 'Courier New', monospace; font-size: 12px; user-select: none; }
+.lrc-out-line.active { background: #22ff8822; border-left: 3px solid #22ff8888; }
+/* .cursor = the row the playhead sits on, in every state. The list carries .is-playing only
+   while audio actually runs, so the cursor is grey at rest and accent only when it is moving. */
+.lrc-out-line.cursor { background: var(--uis-text-mute)18; border-left: 3px solid var(--uis-text-mute)66; }
+.lrc-out-line.active.cursor { background: var(--uis-bg-hov); border-left: 3px solid var(--uis-text-mute); }
+.is-playing .lrc-out-line.cursor { background: var(--uis-accent)22; border-left: 3px solid var(--uis-accent)88; }
+.is-playing .lrc-out-line.active.cursor { background: var(--uis-bg-hov); border-left: 3px solid var(--uis-accent); }
+.lrc-out-line:hover:not(.active) { background: var(--uis-bg-row); }
+.lrc-out-line input { background: transparent; border: none; color: var(--uis-text); font-family: inherit; font-size: inherit; padding: 0; outline: none; }
+.lrc-out-line input.lrc-text-input { flex: 1; min-width: 0; padding: 0 2px; }
+.lrc-out-line input.lrc-time-input { width: 9ch; color: var(--uis-accent); flex-shrink: 0; padding: 0 2px; }
+.lrc-seek-btn { width: 20px; height: 20px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--uis-text-mute); margin-right: 4px; opacity: 0; transition: opacity 0.15s; }
+.lrc-out-line.cursor .lrc-seek-btn { opacity: 1; color: var(--uis-text-mute); }
+.is-playing .lrc-out-line.cursor .lrc-seek-btn { color: var(--uis-accent); }
+.lrc-seek-btn:hover { background: var(--uis-accent)20; color: var(--uis-accent) !important; opacity: 1 !important; }
+.lrc-nudge-btn { width: 18px; height: 18px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border-radius: 3px; color: var(--uis-text-mute); opacity: 0; transition: opacity 0.15s; background: none; border: none; cursor: pointer; padding: 0; }
+.lrc-out-line.active .lrc-nudge-btn { opacity: 1; color: var(--uis-text-dim); }
+.lrc-nudge-btn:hover { background: var(--uis-accent)20; color: var(--uis-accent) !important; opacity: 1 !important; }
