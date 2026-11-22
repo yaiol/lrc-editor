@@ -1,6 +1,6 @@
 [package]
 name = "lrc-editor"
-version = "2.0.0"
+version = "2.0.1"
 edition = "2024"
 description = "Create synchronized lyrics (LRC) files: load the audio, paste the lyrics, stamp each line with a keypress."
 
